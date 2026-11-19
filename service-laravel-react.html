@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laravel & React / Next.js Full-Stack Web Applications — Yankee Tech</title>
+  <meta name="description" content="When off-the-shelf software falls short, we engineer custom web applications that scale effortlessly. We combine resilient Laravel 11 backends with snappy React 18 and Next.js interfaces, delivering customer portals, multi-tenant SaaS tools, and high-concurrency APIs." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="antialiased selection:bg-brand-600 selection:text-white bg-white text-gray-900">
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- ==========================================
+       1. STICKY HEADER / NAVBAR
+       ========================================== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-purple-100/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group shrink-0">
+        <div class="w-10 h-10 rounded-xl bg-[#120924] flex items-center justify-center shadow-md border border-purple-500/30 group-hover:border-purple-500 transition">
+          <span class="font-display font-extrabold text-lg tracking-tighter bg-gradient-to-tr from-purple-400 via-fuchsia-400 to-indigo-300 bg-clip-text text-transparent">YT</span>
+        </div>
+        <div class="leading-none">
+          <span class="block font-display font-extrabold text-lg text-gray-900 tracking-tight">Yankee Tech</span>
+          <span class="block text-[10px] font-medium text-gray-400 tracking-wider uppercase mt-0.5">Infinite Possibilities</span>
+        </div>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold text-gray-700">
+        <a href="index.html" class="hover:text-brand-600 transition py-2">Home</a>
+        <a href="about.html" class="hover:text-brand-600 transition py-2">About Us</a>
+        <a href="services.html" class="text-brand-600 font-bold bg-purple-50 border border-purple-200/60 px-3 py-1.5 rounded-full transition shadow-xs">Services</a>
+        <a href="index.html#use-cases" class="hover:text-brand-600 transition py-2">Use Cases</a>
+        <a href="index.html#contact" class="hover:text-brand-600 transition py-2">Contact Us</a>
+      </nav>
+
+      <!-- Right CTA -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <a href="index.html#contact" class="hidden sm:inline-flex btn-purple magnetic-btn text-white text-xs font-semibold px-4 sm:px-5 py-2.5 rounded-full items-center gap-2 shadow-sm">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+        <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="md:hidden w-10 h-10 rounded-xl border border-purple-200/90 flex items-center justify-center text-gray-700 hover:bg-purple-50 transition active:scale-95">
+          <i class="fa-solid fa-bars text-base"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white/98 backdrop-blur-2xl border-b border-purple-100 px-5 sm:px-6 py-5 space-y-3 text-sm font-medium text-gray-700 shadow-2xl max-h-[calc(100vh-5rem)] overflow-y-auto">
+      <a href="index.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Home</a>
+      <a href="about.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">About Us</a>
+      <a href="services.html" class="block py-1.5 text-brand-600 font-bold border-b border-purple-50">Services Overview</a>
+      <a href="index.html#use-cases" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Use Cases</a>
+      <a href="index.html#contact" class="block py-1.5 hover:text-brand-600 transition">Contact Us</a>
+      <div class="pt-2">
+        <a href="index.html#contact" class="btn-purple text-white text-xs font-semibold py-3 px-5 rounded-full w-full flex items-center justify-center gap-2 shadow-sm">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         2. BREADCRUMBS & HERO SECTION
+         ========================================== -->
+    <section class="hero-bg relative overflow-hidden pt-8 pb-16 lg:pt-12 lg:pb-24 border-b border-purple-100/70">
+      <div class="pointer-events-none absolute -top-24 right-1/4 w-[600px] h-[400px] bg-purple-400/20 rounded-full blur-3xl"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Breadcrumbs -->
+        <nav class="flex items-center gap-2 text-[11px] text-gray-500 font-medium mb-6">
+          <a href="index.html" class="hover:text-brand-600 transition">Home</a>
+          <span class="text-gray-300">/</span>
+          <a href="services.html" class="hover:text-brand-600 transition">Services</a>
+          <span class="text-gray-300">/</span>
+          <span class="text-brand-600 font-bold">Laravel & React / Next.js Full-Stack Web Applications</span>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <!-- Left Column -->
+          <div class="lg:col-span-7 space-y-5">
+            <div data-anim="fade-up" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100/80 border border-purple-300/60 shadow-xs">
+              <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+              <span class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-brand-700">CORE 02 • SCALABLE WEB APPS</span>
+            </div>
+
+            <h1 data-anim="fade-up" data-delay="1" class="font-display font-extrabold text-3xl sm:text-4xl lg:text-[44px] text-[#110c22] leading-[1.15] tracking-tight">
+              Enterprise Full-Stack Web Applications Engineered for Scale
+            </h1>
+
+            <p data-anim="fade-up" data-delay="2" class="text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl">
+              When off-the-shelf software falls short, we engineer custom web applications that scale effortlessly. We combine resilient Laravel 11 backends with snappy React 18 and Next.js interfaces, delivering customer portals, multi-tenant SaaS tools, and high-concurrency APIs.
+            </p>
+
+            <!-- Metrics Grid -->
+            <div data-anim="fade-up" data-delay="3" class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+              
+    <div class="bg-white/85 backdrop-blur-md p-3.5 rounded-2xl border border-purple-100/90 shadow-sm">
+      <div class="font-display font-extrabold text-xl sm:text-2xl text-brand-700">99.9%</div>
+      <div class="text-[11px] text-gray-500 font-medium mt-0.5">Uptime Reliability SLA</div>
+    </div>
+  
+    <div class="bg-white/85 backdrop-blur-md p-3.5 rounded-2xl border border-purple-100/90 shadow-sm">
+      <div class="font-display font-extrabold text-xl sm:text-2xl text-brand-700"><120ms</div>
+      <div class="text-[11px] text-gray-500 font-medium mt-0.5">Average API Response</div>
+    </div>
+  
+    <div class="bg-white/85 backdrop-blur-md p-3.5 rounded-2xl border border-purple-100/90 shadow-sm">
+      <div class="font-display font-extrabold text-xl sm:text-2xl text-brand-700">100%</div>
+      <div class="text-[11px] text-gray-500 font-medium mt-0.5">Role-Based Access (RBAC)</div>
+    </div>
+  
+    <div class="bg-white/85 backdrop-blur-md p-3.5 rounded-2xl border border-purple-100/90 shadow-sm">
+      <div class="font-display font-extrabold text-xl sm:text-2xl text-brand-700">REST & GraphQL</div>
+      <div class="text-[11px] text-gray-500 font-medium mt-0.5">API Architecture</div>
+    </div>
+  
+            </div>
+
+            <div data-anim="fade-up" data-delay="4" class="flex flex-wrap items-center gap-4 pt-3">
+              <a href="index.html#estimator" onclick="selectEstimatorPreset('fullstack')" class="btn-purple magnetic-btn text-white text-xs font-semibold px-6 py-3.5 rounded-full inline-flex items-center gap-2 shadow-md">
+                <span>Configure Live Project Estimate</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+              <a href="index.html#contact" class="px-5 py-3.5 rounded-full text-xs font-semibold text-gray-700 bg-white/90 hover:bg-white border border-purple-200/80 transition hover:border-brand-400 inline-flex items-center gap-2 shadow-xs">
+                <span>Book Discovery Call</span>
+                <i class="fa-solid fa-calendar-check text-[10px] text-brand-600"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Column: Vector Graphic -->
+          <div class="lg:col-span-5" data-anim="scale-in" data-delay="2">
+            <div class="rounded-3xl bg-gradient-to-br from-[#120727] via-[#1a0938] to-[#280c54] p-5 text-white border border-purple-500/30 shadow-2xl relative overflow-hidden tilt-card">
+              <div class="flex items-center justify-between pb-3 border-b border-purple-500/20">
+                <span class="text-[10px] font-mono text-purple-300">service-laravel-react.svg</span>
+                <span class="text-[9px] font-mono text-emerald-400 bg-emerald-500/20 px-2 py-0.5 rounded-full">SPEC VERIFIED</span>
+              </div>
+              <div class="py-4">
+                
+        <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-md">
+          <rect x="20" y="20" width="360" height="200" rx="20" fill="#13072b" stroke="#843dff" stroke-width="1.5" />
+          <g transform="translate(45, 50)">
+            <rect width="130" height="50" rx="12" fill="#1e0a40" stroke="#38bdf8" stroke-width="1.5" />
+            <text x="65" y="28" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700">React / Next.js</text>
+            <text x="65" y="41" text-anchor="middle" fill="#7dd3fc" font-size="8" font-family="monospace">Client UI &amp; SSR</text>
+          </g>
+          <path d="M 175 75 H 225" stroke="#843dff" stroke-width="2" stroke-dasharray="3 3" />
+          <g transform="translate(225, 50)">
+            <rect width="130" height="50" rx="12" fill="#1e0a40" stroke="#f43f5e" stroke-width="1.5" />
+            <text x="65" y="28" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700">Laravel 11 API</text>
+            <text x="65" y="41" text-anchor="middle" fill="#fda4af" font-size="8" font-family="monospace">Auth, Queues &amp; RBAC</text>
+          </g>
+          <path d="M 290 100 V 135" stroke="#10b981" stroke-width="2" />
+          <g transform="translate(225, 135)">
+            <rect width="130" height="50" rx="12" fill="#1e0a40" stroke="#10b981" stroke-width="1.5" />
+            <text x="65" y="28" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700">PostgreSQL DB</text>
+            <text x="65" y="41" text-anchor="middle" fill="#6ee7b7" font-size="8" font-family="monospace">Multi-Tenant Store</text>
+          </g>
+          <g transform="translate(45, 135)">
+            <rect width="130" height="50" rx="12" fill="#1e0a40" stroke="#eab308" stroke-width="1.5" />
+            <text x="65" y="28" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="700">Redis Cache</text>
+            <text x="65" y="41" text-anchor="middle" fill="#fde047" font-size="8" font-family="monospace">&lt;15ms Latency</text>
+          </g>
+          <path d="M 175 160 H 225" stroke="#eab308" stroke-width="2" stroke-dasharray="3 3" />
+        </svg>
+      
+              </div>
+              <div class="pt-2 border-t border-purple-500/20 flex items-center justify-between text-[10px] text-purple-300 font-mono">
+                <span>Yankee Tech Production Standard</span>
+                <span>2026 Core</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         3. KEY CAPABILITIES & FEATURES
+         ========================================== -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14" data-anim="fade-up">
+          <span class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-brand-600 block mb-2">TECHNICAL HIGHLIGHTS</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900 tracking-tight">
+            What Sets Our Engineering Apart
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-500 mt-2">
+            Engineered with strict code integrity, high scalability, and measurable commercial results.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+    <div data-anim="fade-up" data-delay="1" class="rounded-3xl p-6 service-card-bg border border-purple-100 flex flex-col justify-between">
+      <div class="space-y-3">
+        <div class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-lg shadow-xs">
+          <i class="fa-solid fa-layer-group"></i>
+        </div>
+        <h3 class="font-display font-bold text-base text-gray-900">Multi-Tenant Database Architecture</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">Scoped multi-tenancy or isolated database schemas ensuring enterprise compliance, data isolation, and smooth customer onboarding.</p>
+      </div>
+    </div>
+  
+    <div data-anim="fade-up" data-delay="2" class="rounded-3xl p-6 service-card-bg border border-purple-100 flex flex-col justify-between">
+      <div class="space-y-3">
+        <div class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-lg shadow-xs">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <h3 class="font-display font-bold text-base text-gray-900">Granular Role-Based Access Control</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">Secure JWT/Sanctum authentication, team hierarchies, permission-scoped actions, and tamper-proof audit event logging.</p>
+      </div>
+    </div>
+  
+    <div data-anim="fade-up" data-delay="3" class="rounded-3xl p-6 service-card-bg border border-purple-100 flex flex-col justify-between">
+      <div class="space-y-3">
+        <div class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-lg shadow-xs">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <h3 class="font-display font-bold text-base text-gray-900">Snappy React 18 & Next.js Frontends</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">Server-Side Rendering (SSR), optimistic UI updates, responsive Tailwind components, and real-time state synchronization.</p>
+      </div>
+    </div>
+  
+    <div data-anim="fade-up" data-delay="4" class="rounded-3xl p-6 service-card-bg border border-purple-100 flex flex-col justify-between">
+      <div class="space-y-3">
+        <div class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-lg shadow-xs">
+          <i class="fa-solid fa-credit-card"></i>
+        </div>
+        <h3 class="font-display font-bold text-base text-gray-900">Stripe Billing & Subscription Engines</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">Tiered subscription billing, seat management, metered usage calculations, customer billing portals, and automated tax handling.</p>
+      </div>
+    </div>
+  
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         4. STEP-BY-STEP EXECUTION PROCESS
+         ========================================== -->
+    <section class="py-20 bg-[#faf8ff] border-y border-purple-100/70">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14" data-anim="fade-up">
+          <span class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-brand-600 block mb-2">OUR FRAMEWORK</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900 tracking-tight">
+            How We Execute This Service
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-500 mt-2">
+            A 4-step agile lifecycle ensuring on-time delivery with zero technical surprises.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+    <div data-anim="fade-up" data-delay="1" class="bg-white rounded-3xl p-6 border border-purple-100 shadow-sm relative group hover:border-brand-300 transition">
+      <div class="flex items-center justify-between mb-3">
+        <span class="font-mono text-xs font-bold text-purple-400">STAGE 01</span>
+        <span class="w-7 h-7 rounded-lg bg-purple-50 text-brand-600 flex items-center justify-center text-[10px] font-bold">✓</span>
+      </div>
+      <h4 class="font-display font-bold text-sm text-gray-900">Data Modeling & PRD</h4>
+      <p class="text-xs text-gray-500 mt-2 leading-relaxed">Detailed schema design, ERD diagrams, user flow mapping, and API contract specifications.</p>
+    </div>
+  
+    <div data-anim="fade-up" data-delay="2" class="bg-white rounded-3xl p-6 border border-purple-100 shadow-sm relative group hover:border-brand-300 transition">
+      <div class="flex items-center justify-between mb-3">
+        <span class="font-mono text-xs font-bold text-purple-400">STAGE 02</span>
+        <span class="w-7 h-7 rounded-lg bg-purple-50 text-brand-600 flex items-center justify-center text-[10px] font-bold">✓</span>
+      </div>
+      <h4 class="font-display font-bold text-sm text-gray-900">Backend API & Business Logic</h4>
+      <p class="text-xs text-gray-500 mt-2 leading-relaxed">Laravel REST/GraphQL endpoints, validation rules, queue workers, and unit tests.</p>
+    </div>
+  
+    <div data-anim="fade-up" data-delay="3" class="bg-white rounded-3xl p-6 border border-purple-100 shadow-sm relative group hover:border-brand-300 transition">
+      <div class="flex items-center justify-between mb-3">
+        <span class="font-mono text-xs font-bold text-purple-400">STAGE 03</span>
+        <span class="w-7 h-7 rounded-lg bg-purple-50 text-brand-600 flex items-center justify-center text-[10px] font-bold">✓</span>
+      </div>
+      <h4 class="font-display font-bold text-sm text-gray-900">Reactive Frontend Engineering</h4>
+      <p class="text-xs text-gray-500 mt-2 leading-relaxed">React/Next.js UI implementation with interactive dashboards, forms, and charts.</p>
+    </div>
+  
+    <div data-anim="fade-up" data-delay="4" class="bg-white rounded-3xl p-6 border border-purple-100 shadow-sm relative group hover:border-brand-300 transition">
+      <div class="flex items-center justify-between mb-3">
+        <span class="font-mono text-xs font-bold text-purple-400">STAGE 04</span>
+        <span class="w-7 h-7 rounded-lg bg-purple-50 text-brand-600 flex items-center justify-center text-[10px] font-bold">✓</span>
+      </div>
+      <h4 class="font-display font-bold text-sm text-gray-900">Dockerized Staging & Deploy</h4>
+      <p class="text-xs text-gray-500 mt-2 leading-relaxed">CI/CD pipeline configuration, PostgreSQL indexing, and automated production rollout.</p>
+    </div>
+  
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         5. DELIVERABLES & SPECS MATRIX
+         ========================================== -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12" data-anim="fade-up">
+          <span class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-brand-600 block mb-2">SERVICE SPECIFICATIONS</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900 tracking-tight">
+            Technical Deliverables &amp; Standards
+          </h2>
+        </div>
+
+        <div class="bg-white rounded-3xl border border-purple-100 shadow-md overflow-hidden" data-anim="fade-up">
+          <table class="w-full text-left text-xs">
+            <thead>
+              <tr class="border-b border-purple-100 bg-purple-50/60">
+                <th class="py-4 px-5 font-bold text-gray-700 uppercase tracking-wider text-[10px]">Specification / Deliverable</th>
+                <th class="py-4 px-5 font-bold text-brand-700 uppercase tracking-wider text-[10px]">Yankee Tech Deliverable</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-purple-50">
+              
+    <tr>
+      <td class="py-3.5 px-5 font-semibold text-gray-900">Backend Framework</td>
+      <td class="py-3.5 px-5 font-mono font-bold text-brand-700 bg-purple-50/40">Laravel 11 / PHP 8.3</td>
+    </tr>
+  
+    <tr>
+      <td class="py-3.5 px-5 font-semibold text-gray-900">Frontend Framework</td>
+      <td class="py-3.5 px-5 font-mono font-bold text-brand-700 bg-purple-50/40">React 18 / Next.js 14 + Tailwind CSS</td>
+    </tr>
+  
+    <tr>
+      <td class="py-3.5 px-5 font-semibold text-gray-900">Database & Queues</td>
+      <td class="py-3.5 px-5 font-mono font-bold text-brand-700 bg-purple-50/40">PostgreSQL / MySQL + Redis Queue Workers</td>
+    </tr>
+  
+    <tr>
+      <td class="py-3.5 px-5 font-semibold text-gray-900">API Standards</td>
+      <td class="py-3.5 px-5 font-mono font-bold text-brand-700 bg-purple-50/40">OpenAPI v3 RESTful & GraphQL Contracts</td>
+    </tr>
+  
+    <tr>
+      <td class="py-3.5 px-5 font-semibold text-gray-900">Deployment Target</td>
+      <td class="py-3.5 px-5 font-mono font-bold text-brand-700 bg-purple-50/40">AWS, DigitalOcean, Forge or Dockerized VPS</td>
+    </tr>
+  
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         6. SERVICE FAQS
+         ========================================== -->
+    <section class="py-16 bg-[#faf8ff] border-t border-purple-100/70">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10" data-anim="fade-up">
+          <span class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-brand-600 block mb-2">QUESTIONS &amp; ANSWERS</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900 tracking-tight">
+            Frequently Asked Questions
+          </h2>
+        </div>
+
+        <div class="space-y-3" data-anim="fade-up">
+          
+    <div class="p-4 rounded-2xl border border-purple-100 bg-purple-50/20">
+      <button type="button" onclick="toggleFaq(0)" class="w-full flex items-center justify-between text-left text-xs sm:text-sm font-bold text-gray-900">
+        <span>Can this platform handle high traffic and concurrent users?</span>
+        <i id="faq-icon-0" class="fa-solid fa-plus text-xs text-gray-400 shrink-0 ml-2 transition-transform"></i>
+      </button>
+      <div id="faq-body-0" class=" pt-3 text-xs text-gray-600 leading-relaxed border-t border-purple-100/80 mt-2.5">
+        Yes. Our Laravel architectures utilize Redis queues for background tasks, database read/write replicas, and optimized query indexing capable of handling thousands of concurrent requests seamlessly.
+      </div>
+    </div>
+  
+    <div class="p-4 rounded-2xl border border-purple-100 bg-purple-50/20">
+      <button type="button" onclick="toggleFaq(1)" class="w-full flex items-center justify-between text-left text-xs sm:text-sm font-bold text-gray-900">
+        <span>Who owns the intellectual property and code?</span>
+        <i id="faq-icon-1" class="fa-solid fa-plus text-xs text-gray-400 shrink-0 ml-2 transition-transform"></i>
+      </button>
+      <div id="faq-body-1" class="hidden pt-3 text-xs text-gray-600 leading-relaxed border-t border-purple-100/80 mt-2.5">
+        You do. 100% of the repository, database schemas, and documentation are transferred to your company upon project milestone sign-off with zero licensing fees.
+      </div>
+    </div>
+  
+    <div class="p-4 rounded-2xl border border-purple-100 bg-purple-50/20">
+      <button type="button" onclick="toggleFaq(2)" class="w-full flex items-center justify-between text-left text-xs sm:text-sm font-bold text-gray-900">
+        <span>Do you provide ongoing feature development after launch?</span>
+        <i id="faq-icon-2" class="fa-solid fa-plus text-xs text-gray-400 shrink-0 ml-2 transition-transform"></i>
+      </button>
+      <div id="faq-body-2" class="hidden pt-3 text-xs text-gray-600 leading-relaxed border-t border-purple-100/80 mt-2.5">
+        Yes, we offer dedicated monthly sprint retainers or fixed-scope milestone upgrades for continuous feature releases and scaling support.
+      </div>
+    </div>
+  
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         7. CALL TO ACTION (COSMIC DARK)
+         ========================================== -->
+    <section class="py-20 dark-cosmic-bg text-white relative overflow-hidden">
+      <div class="pointer-events-none absolute -bottom-20 right-1/4 w-96 h-96 bg-brand-600/30 rounded-full blur-3xl"></div>
+
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6" data-anim="fade-up">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 border border-brand-400/30 text-purple-200 text-[10px] font-extrabold uppercase tracking-widest">
+          LET'S BUILD SOMETHING EXTRAORDINARY
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight">
+          Ready to Start Your Laravel & React / Next.js Full-Stack Web Applications?
+        </h2>
+        <p class="text-xs sm:text-sm text-purple-200/80 max-w-2xl mx-auto leading-relaxed">
+          Get an instant price estimate with our live calculator or schedule a 30-minute discovery call with our senior architects.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+          <a href="index.html#estimator" onclick="selectEstimatorPreset('fullstack')" class="btn-purple magnetic-btn text-white text-xs font-semibold px-7 py-3.5 rounded-full inline-flex items-center gap-2 shadow-glow">
+            <span>Calculate Project Estimate</span>
+            <i class="fa-solid fa-calculator text-[10px] text-amber-300"></i>
+          </a>
+          <a href="index.html#contact" class="px-6 py-3.5 rounded-full text-xs font-semibold text-purple-100 bg-white/10 hover:bg-white/20 border border-white/15 transition inline-flex items-center gap-2">
+            <span>Schedule Discovery Call</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       8. FOOTER
+       ========================================== -->
+  <footer class="dark-cosmic-bg text-gray-300 pt-16 pb-12 border-t border-purple-900/60 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-purple-900/60">
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-600/30 border border-brand-500/40 flex items-center justify-center shadow-md">
+              <span class="font-display font-extrabold text-lg text-white">YT</span>
+            </div>
+            <div class="leading-none">
+              <span class="block font-display font-extrabold text-lg text-white tracking-tight">Yankee Tech</span>
+              <span class="block text-[10px] font-medium text-purple-300 tracking-wider uppercase mt-0.5">Infinite Possibilities</span>
+            </div>
+          </a>
+          <p class="text-xs text-purple-200/70 leading-relaxed max-w-sm">
+            Elite Full-Stack engineering studio. We build sub-second WordPress platforms, custom SaaS architectures, GoHighLevel ecosystems, and autonomous AI agents for high-growth enterprises worldwide.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-white text-xs uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-purple-200/70">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+            <li><a href="index.html#use-cases" class="hover:text-white transition">Use Cases</a></li>
+            <li><a href="index.html#estimator" class="hover:text-white transition">Price Estimator</a></li>
+            <li><a href="index.html#contact" class="hover:text-white transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-white text-xs uppercase tracking-wider mb-4">Related Services</h4>
+          <ul class="space-y-2 text-purple-200/70">
+            <li><a href="service-wordpress.html" class="hover:text-white transition">Custom WordPress Dev</a></li>
+            <li><a href="service-laravel-react.html" class="hover:text-white transition">Laravel &amp; React Apps</a></li>
+            <li><a href="service-ghl-funnels.html" class="hover:text-white transition">GoHighLevel Funnels</a></li>
+            <li><a href="service-ai-chatbots.html" class="hover:text-white transition">AI Chatbots &amp; Agents</a></li>
+            <li><a href="service-ghl-wordpress-sync.html" class="hover:text-white transition">GHL + WordPress Sync</a></li>
+            <li><a href="service-speed-seo.html" class="hover:text-white transition">Core Web Vitals 95+</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-white text-xs uppercase tracking-wider mb-4">Newsletter</h4>
+          <p class="text-[11px] text-purple-200/70 mb-3">Quarterly engineering insights on web performance and AI.</p>
+          <form onsubmit="handleNewsletter(event)" class="space-y-2">
+            <input type="email" id="newsletterEmail" required placeholder="Business email" class="w-full px-3.5 py-2.5 rounded-xl bg-white/5 border border-purple-500/30 text-white placeholder-purple-300/40 text-xs focus:outline-none focus:border-brand-500 transition" />
+            <button type="submit" class="w-full btn-purple text-white text-xs font-semibold py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-sm">
+              <span id="newsletterBtnText">Subscribe →</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-purple-300/60">
+        <div>&copy; 2026 Yankee Tech. All rights reserved. Built for speed, scale &amp; autonomous intelligence.</div>
+        <div class="flex items-center gap-4">
+          <a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a>
+          <span>•</span>
+          <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Scroll back to top" class="fixed bottom-6 right-6 w-11 h-11 rounded-2xl bg-brand-600 text-white shadow-glow flex items-center justify-center transition hover:bg-brand-700 active:scale-95 z-40 border border-purple-400/40">
+    <i class="fa-solid fa-arrow-up text-xs"></i>
+  </button>
+</body>
+</html>

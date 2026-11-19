@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>High-Growth E-Commerce Brands — Yankee Tech Use Case</title>
+  <meta name="description" content="We help fast-scaling e-commerce brands break through technical bottlenecks. From sub-second WooCommerce product browsing to frictionless 1-page checkout flows, Stripe multi-currency processing, and automated GoHighLevel abandoned cart recovery." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="antialiased selection:bg-brand-600 selection:text-white bg-white text-gray-900">
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-purple-100/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
+      <a href="index.html" class="flex items-center gap-3 group shrink-0">
+        <div class="w-10 h-10 rounded-xl bg-[#120924] flex items-center justify-center shadow-md border border-purple-500/30 group-hover:border-purple-500 transition">
+          <span class="font-display font-extrabold text-lg tracking-tighter bg-gradient-to-tr from-purple-400 via-fuchsia-400 to-indigo-300 bg-clip-text text-transparent">YT</span>
+        </div>
+        <div class="leading-none">
+          <span class="block font-display font-extrabold text-lg text-gray-900 tracking-tight">Yankee Tech</span>
+          <span class="block text-[10px] font-medium text-gray-400 tracking-wider uppercase mt-0.5">Infinite Possibilities</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold text-gray-700">
+        <a href="index.html" class="hover:text-brand-600 transition py-2">Home</a>
+        <a href="about.html" class="hover:text-brand-600 transition py-2">About Us</a>
+        <a href="services.html" class="hover:text-brand-600 transition py-2">Services</a>
+        <a href="use-cases.html" class="text-brand-600 font-bold bg-purple-50 border border-purple-200/60 px-3 py-1.5 rounded-full transition shadow-xs">Use Cases</a>
+        <a href="index.html#contact" class="hover:text-brand-600 transition py-2">Contact Us</a>
+      </nav>
+
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <a href="index.html#contact" class="hidden sm:inline-flex btn-purple magnetic-btn text-white text-xs font-semibold px-4 sm:px-5 py-2.5 rounded-full items-center gap-2 shadow-sm">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+        <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="md:hidden w-10 h-10 rounded-xl border border-purple-200/90 flex items-center justify-center text-gray-700 hover:bg-purple-50 transition active:scale-95">
+          <i class="fa-solid fa-bars text-base"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white/98 backdrop-blur-2xl border-b border-purple-100 px-5 sm:px-6 py-5 space-y-3 text-sm font-medium text-gray-700 shadow-2xl max-h-[calc(100vh-5rem)] overflow-y-auto">
+      <a href="index.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Home</a>
+      <a href="about.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">About Us</a>
+      <a href="services.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Services</a>
+      <a href="use-cases.html" class="block py-1.5 text-brand-600 font-bold border-b border-purple-50">Use Cases</a>
+      <a href="index.html#contact" class="block py-1.5 hover:text-brand-600 transition">Contact Us</a>
+      <div class="pt-2">
+        <a href="index.html#contact" class="btn-purple text-white text-xs font-semibold py-3 px-5 rounded-full w-full flex items-center justify-center gap-2 shadow-sm">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-bg relative overflow-hidden pt-8 pb-16 lg:pt-12 lg:pb-24 border-b border-purple-100/70">
+      <div class="pointer-events-none absolute -top-24 right-1/4 w-[600px] h-[400px] bg-purple-400/20 rounded-full blur-3xl"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <!-- Breadcrumbs -->
+        <nav class="flex items-center gap-2 text-[11px] text-gray-500 font-medium mb-6">
+          <a href="index.html" class="hover:text-brand-600 transition">Home</a>
+          <span class="text-gray-300">/</span>
+          <a href="use-cases.html" class="hover:text-brand-600 transition">Use Cases</a>
+          <span class="text-gray-300">/</span>
+          <span class="text-brand-600 font-bold">High-Growth E-Commerce Brands</span>
+        </nav>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div class="lg:col-span-7 space-y-5">
+            <div data-anim="fade-up" class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100/80 border border-purple-300/60 shadow-xs">
+              <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+              <span class="text-[10px] font-extrabold uppercase tracking-[0.18em] text-brand-700">INDUSTRY 01 • RETAIL & DIRECT-TO-CONSUMER</span>
+            </div>
+
+            <h1 data-anim="fade-up" data-delay="1" class="font-display font-extrabold text-3xl sm:text-4xl lg:text-[44px] text-[#110c22] leading-[1.15] tracking-tight">
+              High-Converting E-Commerce Architectures That Eliminate Checkout Drop-Off
+            </h1>
+
+            <p data-anim="fade-up" data-delay="2" class="text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl">
+              We help fast-scaling e-commerce brands break through technical bottlenecks. From sub-second WooCommerce product browsing to frictionless 1-page checkout flows, Stripe multi-currency processing, and automated GoHighLevel abandoned cart recovery.
+            </p>
+
+            <div data-anim="fade-up" data-delay="3" class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+              
+    <div class="bg-white/85 backdrop-blur-md p-3.5 rounded-2xl border border-purple-100/90 shadow-sm">
+      <div class="font-display font-extrabold text-xl sm:text-2xl text-brand-700">-28%</div>
+      <div class="text-[11px] text-gray-500 font-medium mt-0.5">Cart Abandonment Drop</div>
+    </div>
+  
+    <div class="bg-white/85 backdrop-blur-md p-3.5 rounded-2xl border border-purple-100/90 shadow-sm">
+      <div class="font-display font-extrabold text-xl sm:text-2xl text-brand-700"><0.5s</div>
+      <div class="text-[11px] text-gray-500 font-medium mt-0.5">Product Page TTFB</div>
+    </div>
+  
+    <div class="bg-white/85 backdrop-blur-md p-3.5 rounded-2xl border border-purple-100/90 shadow-sm">
+      <div class="font-display font-extrabold text-xl sm:text-2xl text-brand-700">34%</div>
+      <div class="text-[11px] text-gray-500 font-medium mt-0.5">Average Order Value Lift</div>
+    </div>
+  
+    <div class="bg-white/85 backdrop-blur-md p-3.5 rounded-2xl border border-purple-100/90 shadow-sm">
+      <div class="font-display font-extrabold text-xl sm:text-2xl text-brand-700">99.9%</div>
+      <div class="text-[11px] text-gray-500 font-medium mt-0.5">Flash-Sale Uptime SLA</div>
+    </div>
+  
+            </div>
+
+            <div data-anim="fade-up" data-delay="4" class="flex flex-wrap items-center gap-4 pt-3">
+              <a href="index.html#estimator" onclick="selectEstimatorPreset('wordpress')" class="btn-purple magnetic-btn text-white text-xs font-semibold px-6 py-3.5 rounded-full inline-flex items-center gap-2 shadow-md">
+                <span>Configure Industry Estimate</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+              <a href="index.html#contact" class="px-5 py-3.5 rounded-full text-xs font-semibold text-gray-700 bg-white/90 hover:bg-white border border-purple-200/80 transition hover:border-brand-400 inline-flex items-center gap-2 shadow-xs">
+                <span>Book Discovery Call</span>
+                <i class="fa-solid fa-calendar-check text-[10px] text-brand-600"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Architecture Visualizer -->
+          <div class="lg:col-span-5" data-anim="scale-in" data-delay="2">
+            <div class="rounded-3xl bg-gradient-to-br from-[#120727] via-[#1a0938] to-[#280c54] p-6 text-white border border-purple-500/30 shadow-2xl relative overflow-hidden tilt-card">
+              <div class="flex items-center justify-between pb-3 border-b border-purple-500/20">
+                <span class="text-[10px] font-mono text-purple-300">use-case-ecommerce-pipeline.svg</span>
+                <span class="text-[9px] font-mono text-emerald-400 bg-emerald-500/20 px-2 py-0.5 rounded-full">LIVE BLUEPRINT</span>
+              </div>
+              <div class="py-5 space-y-3">
+                
+    <div class="p-3.5 rounded-xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="w-6 h-6 rounded-full bg-brand-500/30 text-purple-200 flex items-center justify-center text-[10px] font-mono font-bold">1</span>
+        <div>
+          <div class="text-xs font-bold text-white">Storefront Layer</div>
+          <div class="text-[10px] text-purple-200/70">Sub-second WooCommerce + Tailwind</div>
+        </div>
+      </div>
+      <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+    </div>
+  
+    <div class="p-3.5 rounded-xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="w-6 h-6 rounded-full bg-brand-500/30 text-purple-200 flex items-center justify-center text-[10px] font-mono font-bold">2</span>
+        <div>
+          <div class="text-xs font-bold text-white">Checkout Funnel</div>
+          <div class="text-[10px] text-purple-200/70">1-Step Apple/Google Pay Elements</div>
+        </div>
+      </div>
+      <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+    </div>
+  
+    <div class="p-3.5 rounded-xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="w-6 h-6 rounded-full bg-brand-500/30 text-purple-200 flex items-center justify-center text-[10px] font-mono font-bold">3</span>
+        <div>
+          <div class="text-xs font-bold text-white">CRM & Recovery</div>
+          <div class="text-[10px] text-purple-200/70">GHL Abandoned SMS Drip (&lt;15m)</div>
+        </div>
+      </div>
+      <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+    </div>
+  
+    <div class="p-3.5 rounded-xl bg-purple-950/60 border border-purple-500/30 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="w-6 h-6 rounded-full bg-brand-500/30 text-purple-200 flex items-center justify-center text-[10px] font-mono font-bold">4</span>
+        <div>
+          <div class="text-xs font-bold text-white">Order Fulfillment</div>
+          <div class="text-[10px] text-purple-200/70">Automated 2-Way Inventory Webhooks</div>
+        </div>
+      </div>
+      <i class="fa-solid fa-check text-emerald-400 text-xs"></i>
+    </div>
+  
+              </div>
+              <div class="pt-3 border-t border-purple-500/20 flex items-center justify-between text-[10px] text-purple-300 font-mono">
+                <span>Yankee Tech Production Standard</span>
+                <span>Verified 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before vs. After Challenges -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-14" data-anim="fade-up">
+          <span class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-brand-600 block mb-2">BEFORE VS AFTER</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900 tracking-tight">
+            How We Solve Core Industry Bottlenecks
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-500 mt-2">
+            Eliminating technical debt, dropped leads, and sluggish architectures.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+    <div data-anim="fade-up" data-delay="1" class="p-6 rounded-3xl bg-white border border-purple-100 shadow-sm space-y-4">
+      <div class="flex items-start gap-3">
+        <span class="w-6 h-6 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">✕</span>
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-wider text-rose-500">Traditional Fragile Setup</div>
+          <p class="text-xs text-gray-500 mt-1 leading-relaxed">Slow 4-second mobile catalog load times causing 60% bounce rate.</p>
+        </div>
+      </div>
+      <div class="pt-3 border-t border-purple-50 flex items-start gap-3">
+        <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">✓</span>
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-wider text-emerald-600">Yankee Tech Architecture</div>
+          <p class="text-xs text-gray-900 font-medium mt-1 leading-relaxed">Sub-second load times (<0.5s TTFB) powered by custom Redis object caching.</p>
+        </div>
+      </div>
+    </div>
+  
+    <div data-anim="fade-up" data-delay="2" class="p-6 rounded-3xl bg-white border border-purple-100 shadow-sm space-y-4">
+      <div class="flex items-start gap-3">
+        <span class="w-6 h-6 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">✕</span>
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-wider text-rose-500">Traditional Fragile Setup</div>
+          <p class="text-xs text-gray-500 mt-1 leading-relaxed">Clunky multi-page checkout demanding 12 manual form fields.</p>
+        </div>
+      </div>
+      <div class="pt-3 border-t border-purple-50 flex items-start gap-3">
+        <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">✓</span>
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-wider text-emerald-600">Yankee Tech Architecture</div>
+          <p class="text-xs text-gray-900 font-medium mt-1 leading-relaxed">Streamlined 1-page checkout with native Apple Pay & Google Pay 1-click buy.</p>
+        </div>
+      </div>
+    </div>
+  
+    <div data-anim="fade-up" data-delay="3" class="p-6 rounded-3xl bg-white border border-purple-100 shadow-sm space-y-4">
+      <div class="flex items-start gap-3">
+        <span class="w-6 h-6 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">✕</span>
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-wider text-rose-500">Traditional Fragile Setup</div>
+          <p class="text-xs text-gray-500 mt-1 leading-relaxed">Lost carts only receiving a generic email 24 hours later.</p>
+        </div>
+      </div>
+      <div class="pt-3 border-t border-purple-50 flex items-start gap-3">
+        <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">✓</span>
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-wider text-emerald-600">Yankee Tech Architecture</div>
+          <p class="text-xs text-gray-900 font-medium mt-1 leading-relaxed">Conversational SMS recovery triggered in 15 minutes via GoHighLevel integration.</p>
+        </div>
+      </div>
+    </div>
+  
+    <div data-anim="fade-up" data-delay="4" class="p-6 rounded-3xl bg-white border border-purple-100 shadow-sm space-y-4">
+      <div class="flex items-start gap-3">
+        <span class="w-6 h-6 rounded-lg bg-rose-100 text-rose-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">✕</span>
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-wider text-rose-500">Traditional Fragile Setup</div>
+          <p class="text-xs text-gray-500 mt-1 leading-relaxed">Store crashing during TikTok/Instagram viral flash sales.</p>
+        </div>
+      </div>
+      <div class="pt-3 border-t border-purple-50 flex items-start gap-3">
+        <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center text-xs font-bold shrink-0 mt-0.5">✓</span>
+        <div>
+          <div class="text-[10px] font-bold uppercase tracking-wider text-emerald-600">Yankee Tech Architecture</div>
+          <p class="text-xs text-gray-900 font-medium mt-1 leading-relaxed">High-concurrency database query tuning capable of 500+ checkouts/min.</p>
+        </div>
+      </div>
+    </div>
+  
+        </div>
+      </div>
+    </section>
+
+    <!-- Flagship Case Study Spotlight -->
+    <section class="py-20 bg-[#faf8ff] border-y border-purple-100/70">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="rounded-3xl bg-gradient-to-br from-[#120727] via-[#1a083a] to-[#2b0c57] text-white p-8 sm:p-12 border border-purple-500/30 shadow-2xl relative overflow-hidden" data-anim="fade-up">
+          <div class="absolute -top-16 -right-16 w-56 h-56 bg-brand-500/30 rounded-full blur-3xl pointer-events-none"></div>
+
+          <div class="relative z-10 space-y-6">
+            <div class="flex items-center justify-between pb-4 border-b border-purple-500/30">
+              <span class="text-[10px] font-extrabold uppercase tracking-widest text-purple-300">FLAGSHIP CASE STUDY SPOTLIGHT</span>
+              <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 text-[9px] font-mono">VERIFIED RESULTS</span>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              <div class="lg:col-span-7 space-y-4">
+                <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-white">
+                  Direct-to-Consumer Apparel Brand ($3.4M Annual GMV)
+                </h3>
+                <div class="space-y-3 text-xs sm:text-sm text-purple-200/80 leading-relaxed">
+                  <p><strong>The Challenge:</strong> The client was losing thousands of dollars every week due to high mobile checkout abandonment (74%) and slow WooCommerce product filtering.</p>
+                  <p><strong>The Solution:</strong> Yankee Tech stripped 32 redundant plugins, replaced them with a lightweight custom theme, engineered a 1-step checkout, and integrated 2-way GoHighLevel abandoned cart SMS triggers.</p>
+                </div>
+              </div>
+
+              <div class="lg:col-span-5 bg-white/5 border border-purple-400/20 rounded-2xl p-5 space-y-3">
+                <div class="text-xs font-bold text-white uppercase tracking-wider">Measurable Business Impact</div>
+                <ul class="space-y-2 pt-1">
+                  
+    <li class="flex items-start gap-2.5 text-xs text-purple-100">
+      <i class="fa-solid fa-circle-check text-emerald-400 text-xs mt-0.5 shrink-0"></i>
+      <span>Cart abandonment plummeted from 74% to 46% within 14 days.</span>
+    </li>
+  
+    <li class="flex items-start gap-2.5 text-xs text-purple-100">
+      <i class="fa-solid fa-circle-check text-emerald-400 text-xs mt-0.5 shrink-0"></i>
+      <span>Mobile PageSpeed score surged from 38/100 to 98/100.</span>
+    </li>
+  
+    <li class="flex items-start gap-2.5 text-xs text-purple-100">
+      <i class="fa-solid fa-circle-check text-emerald-400 text-xs mt-0.5 shrink-0"></i>
+      <span>Recovered an additional $42,000 in monthly abandoned cart revenue.</span>
+    </li>
+  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Specs Table -->
+    <section class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12" data-anim="fade-up">
+          <span class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-brand-600 block mb-2">INDUSTRY STANDARDS</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900 tracking-tight">
+            Technical Stack &amp; Deliverables
+          </h2>
+        </div>
+
+        <div class="bg-white rounded-3xl border border-purple-100 shadow-md overflow-hidden" data-anim="fade-up">
+          <table class="w-full text-left text-xs">
+            <thead>
+              <tr class="border-b border-purple-100 bg-purple-50/60">
+                <th class="py-4 px-5 font-bold text-gray-700 uppercase tracking-wider text-[10px]">Architecture Component</th>
+                <th class="py-4 px-5 font-bold text-brand-700 uppercase tracking-wider text-[10px]">Yankee Tech Production Standard</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-purple-50">
+              
+    <tr>
+      <td class="py-3.5 px-5 font-semibold text-gray-900">Core Engine</td>
+      <td class="py-3.5 px-5 font-mono font-bold text-brand-700 bg-purple-50/40">WooCommerce + Custom PHP 8.3 Theme</td>
+    </tr>
+  
+    <tr>
+      <td class="py-3.5 px-5 font-semibold text-gray-900">Payment Integrations</td>
+      <td class="py-3.5 px-5 font-mono font-bold text-brand-700 bg-purple-50/40">Stripe Elements, Apple Pay, Google Pay, PayPal</td>
+    </tr>
+  
+    <tr>
+      <td class="py-3.5 px-5 font-semibold text-gray-900">Abandoned Cart Pipeline</td>
+      <td class="py-3.5 px-5 font-mono font-bold text-brand-700 bg-purple-50/40">GoHighLevel 2-Way SMS & Email Automation</td>
+    </tr>
+  
+    <tr>
+      <td class="py-3.5 px-5 font-semibold text-gray-900">Speed Optimization</td>
+      <td class="py-3.5 px-5 font-mono font-bold text-brand-700 bg-purple-50/40">Redis Object Cache + WebP CDN Delivery</td>
+    </tr>
+  
+    <tr>
+      <td class="py-3.5 px-5 font-semibold text-gray-900">Technical Warranty</td>
+      <td class="py-3.5 px-5 font-mono font-bold text-brand-700 bg-purple-50/40">30-Day Post-Launch SLA on Conversion Metrics</td>
+    </tr>
+  
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industry FAQs -->
+    <section class="py-16 bg-[#faf8ff] border-t border-purple-100/70">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10" data-anim="fade-up">
+          <span class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-brand-600 block mb-2">INDUSTRY QUESTIONS</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900 tracking-tight">
+            Frequently Asked Questions
+          </h2>
+        </div>
+
+        <div class="space-y-3" data-anim="fade-up">
+          
+    <div class="p-4 rounded-2xl border border-purple-100 bg-purple-50/20">
+      <button type="button" onclick="toggleFaq(0)" class="w-full flex items-center justify-between text-left text-xs sm:text-sm font-bold text-gray-900">
+        <span>Can you migrate our store from Shopify to custom WooCommerce?</span>
+        <i id="faq-icon-0" class="fa-solid fa-plus text-xs text-gray-400 shrink-0 ml-2 transition-transform"></i>
+      </button>
+      <div id="faq-body-0" class=" pt-3 text-xs text-gray-600 leading-relaxed border-t border-purple-100/80 mt-2.5">
+        Yes! We migrate all customer records, order histories, product variations, and SEO redirect maps without losing search rankings or customer logins.
+      </div>
+    </div>
+  
+    <div class="p-4 rounded-2xl border border-purple-100 bg-purple-50/20">
+      <button type="button" onclick="toggleFaq(1)" class="w-full flex items-center justify-between text-left text-xs sm:text-sm font-bold text-gray-900">
+        <span>Will this work with our third-party warehouse or shipping 3PL?</span>
+        <i id="faq-icon-1" class="fa-solid fa-plus text-xs text-gray-400 shrink-0 ml-2 transition-transform"></i>
+      </button>
+      <div id="faq-body-1" class="hidden pt-3 text-xs text-gray-600 leading-relaxed border-t border-purple-100/80 mt-2.5">
+        Yes. We build custom REST API webhooks connecting WooCommerce orders directly to ShipStation, Deliverr, or custom warehouse ERPs.
+      </div>
+    </div>
+  
+    <div class="p-4 rounded-2xl border border-purple-100 bg-purple-50/20">
+      <button type="button" onclick="toggleFaq(2)" class="w-full flex items-center justify-between text-left text-xs sm:text-sm font-bold text-gray-900">
+        <span>How long does a full e-commerce speed and checkout overhaul take?</span>
+        <i id="faq-icon-2" class="fa-solid fa-plus text-xs text-gray-400 shrink-0 ml-2 transition-transform"></i>
+      </button>
+      <div id="faq-body-2" class="hidden pt-3 text-xs text-gray-600 leading-relaxed border-t border-purple-100/80 mt-2.5">
+        Typical speed surgeries take 4–7 days, while full custom storefront redesigns are delivered in 2–3 weeks.
+      </div>
+    </div>
+  
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 dark-cosmic-bg text-white relative overflow-hidden">
+      <div class="pointer-events-none absolute -bottom-20 right-1/4 w-96 h-96 bg-brand-600/30 rounded-full blur-3xl"></div>
+
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6" data-anim="fade-up">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 border border-brand-400/30 text-purple-200 text-[10px] font-extrabold uppercase tracking-widest">
+          LET'S ARCHITECT YOUR INDUSTRY SOLUTION
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight">
+          Ready to Modernize for High-Growth E-Commerce Brands?
+        </h2>
+        <p class="text-xs sm:text-sm text-purple-200/80 max-w-2xl mx-auto leading-relaxed">
+          Book a 30-minute discovery call or configure an instant estimate using our live price calculator.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+          <a href="index.html#estimator" onclick="selectEstimatorPreset('wordpress')" class="btn-purple magnetic-btn text-white text-xs font-semibold px-7 py-3.5 rounded-full inline-flex items-center gap-2 shadow-glow">
+            <span>Calculate Project Estimate</span>
+            <i class="fa-solid fa-calculator text-[10px] text-amber-300"></i>
+          </a>
+          <a href="index.html#contact" class="px-6 py-3.5 rounded-full text-xs font-semibold text-purple-100 bg-white/10 hover:bg-white/20 border border-white/15 transition inline-flex items-center gap-2">
+            <span>Schedule Discovery Call</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="dark-cosmic-bg text-gray-300 pt-16 pb-12 border-t border-purple-900/60 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-purple-900/60">
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-600/30 border border-brand-500/40 flex items-center justify-center shadow-md">
+              <span class="font-display font-extrabold text-lg text-white">YT</span>
+            </div>
+            <div class="leading-none">
+              <span class="block font-display font-extrabold text-lg text-white tracking-tight">Yankee Tech</span>
+              <span class="block text-[10px] font-medium text-purple-300 tracking-wider uppercase mt-0.5">Infinite Possibilities</span>
+            </div>
+          </a>
+          <p class="text-xs text-purple-200/70 leading-relaxed max-w-sm">
+            Elite Full-Stack engineering studio. We build sub-second WordPress platforms, custom SaaS architectures, GoHighLevel ecosystems, and autonomous AI agents for high-growth enterprises worldwide.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-white text-xs uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-purple-200/70">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+            <li><a href="use-cases.html" class="text-brand-400 font-bold hover:text-white transition">Use Cases</a></li>
+            <li><a href="index.html#estimator" class="hover:text-white transition">Price Estimator</a></li>
+            <li><a href="index.html#contact" class="hover:text-white transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-white text-xs uppercase tracking-wider mb-4">Industry Blueprints</h4>
+          <ul class="space-y-2 text-purple-200/70">
+            <li><a href="use-case-ecommerce.html" class="hover:text-white transition">E-Commerce Brands</a></li>
+            <li><a href="use-case-saas-b2b.html" class="hover:text-white transition">SaaS &amp; B2B Enterprises</a></li>
+            <li><a href="use-case-agencies.html" class="hover:text-white transition">Marketing Agencies</a></li>
+            <li><a href="use-case-coaches-creators.html" class="hover:text-white transition">Coaches &amp; Creators</a></li>
+            <li><a href="use-case-startups.html" class="hover:text-white transition">Startups &amp; MVPs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-white text-xs uppercase tracking-wider mb-4">Newsletter</h4>
+          <p class="text-[11px] text-purple-200/70 mb-3">Quarterly engineering insights on web performance and AI.</p>
+          <form onsubmit="handleNewsletter(event)" class="space-y-2">
+            <input type="email" id="newsletterEmail" required placeholder="Business email" class="w-full px-3.5 py-2.5 rounded-xl bg-white/5 border border-purple-500/30 text-white placeholder-purple-300/40 text-xs focus:outline-none focus:border-brand-500 transition" />
+            <button type="submit" class="w-full btn-purple text-white text-xs font-semibold py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-sm">
+              <span id="newsletterBtnText">Subscribe →</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-purple-300/60">
+        <div>&copy; 2026 Yankee Tech. All rights reserved. Built for speed, scale &amp; autonomous intelligence.</div>
+        <div class="flex items-center gap-4">
+          <a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a>
+          <span>•</span>
+          <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Scroll back to top" class="fixed bottom-6 right-6 w-11 h-11 rounded-2xl bg-brand-600 text-white shadow-glow flex items-center justify-center transition hover:bg-brand-700 active:scale-95 z-40 border border-purple-400/40">
+    <i class="fa-solid fa-arrow-up text-xs"></i>
+  </button>
+</body>
+</html>

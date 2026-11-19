@@ -1,0 +1,777 @@
+Yankee Tech Website: Developer Brief
+Purpose: improve the Yankee Tech website so it ranks on Google in the USA and converts
+visitors into leads. The site's main offer is custom web and software development
+(Laravel, React, Next.js, Node, APIs). WordPress, GoHighLevel (GHL) and AI automation
+are secondary "quick solutions" and a differentiator.
+Rules for the developer:
+Do not invent testimonials, client names, ratings, logos or metrics. Use placeholders
+marked [OWNER TO PROVIDE] until the owner supplies real content.
+Keep the staging site (yankeeetech.corevionsystems.com) blocked from search
+engines until launch. Launch on yankeeetech.com.
+Work in the priority order below. Send a short progress update after each priority.
+Priority 1: Fix before anything else (placeholders and broken
+items)
+1. Replace the generic https://calendly.com link with the owner's real booking link
+[OWNER TO PROVIDE].
+2. Create real Privacy Policy and Terms of Service pages and link them in the footer.
+They currently point to #home. Content to be supplied by the owner or generated and
+reviewed.
+3. Footer social icons currently link to #contact. Link them to real profiles [OWNER TO
+PROVIDE] or remove them.
+4. Blog "Read More" links currently go to #contact. Create real article pages (see Priority
+5) or hide the blog section until articles exist.
+5. Fix the typo "HubSpt" (should be HubSpot) in the integrations strip.
+6. Remove or update "Accepting Q1 2026 Projects" to the current quarter.
+7. Remove duplicate or empty links (many service cards link to #estimator instead of
+their own page).
+8. Check the dark "use cases" section: its heading appears missing or invisible (dark text
+on dark background, or an animation not triggering). Fix and test on desktop and
+mobile.
+9. Make the brand spelling consistent everywhere: Yankee Tech (name) and
+yankeeetech.com (domain). Check the logo, title tags and footer.
+Yankee Tech Website: Developer Brief
+Page 1 of 20
+
+-- 1 of 20 --
+
+Acceptance: no link on the site goes to #home, #contact or a placeholder unless it is an
+intended in-page anchor. No typos in visible text.
+Priority 2: Homepage restructure and copy
+Section order (top to bottom)
+1. Header (logo, menu, one button: Book a Free Call)
+2. Hero
+3. Proof strip (real client logos or review badges; if none exist yet, retitle the current
+strip "Our tech stack")
+4. Problem section (3 short pain points)
+5. Services (see below)
+6. Case studies (with screenshots)
+7. How it works (keep the current 4 steps, shorten text)
+8. Testimonials (real only)
+9. Pricing and the estimator (one instance only)
+10. FAQ
+11. Final call to action with short form
+12. Footer
+Hero copy
+H1: Custom Web & Software Development for Startups and Growing Businesses
+Subheading: Laravel, React and Next.js applications, API integrations and AI
+automation, built by a senior full-stack team. Milestone-based delivery with full code
+ownership.
+Primary button (one distinct color used for CTAs only): Book a Free Technical
+Consultation
+Secondary link: See Our Work
+Proof line: [OWNER TO PROVIDE: projects delivered, rating and platform, warranty]
+Hero visual: a real app screenshot, dashboard or architecture diagram. Remove the
+abstract tags (API_SYNC, GHL_CRM, AI_AGENT).
+Remove the estimator card from the hero. It competes with the main button.
+Yankee Tech Website: Developer Brief
+Page 2 of 20
+
+-- 2 of 20 --
+
+Services (merge the three overlapping service sections into one)
+Primary row (large cards, each linking to its own page):
+1. Custom Web Apps & SaaS Development
+2. API & Third-Party Integrations (including GoHighLevel API)
+3. Laravel, React & Next.js Development
+4. Dedicated Developers & White-Label Team
+Secondary row (smaller, titled "Quick solutions"):
+WordPress & WooCommerce
+GoHighLevel Setup & Automation
+AI Chatbots & Voice Receptionists
+UI/UX Design
+Other content changes
+Replace "Trusted by businesses worldwide" above tool logos. Either use real client
+logos or title it "Our tech stack."
+Write each case study as: client and industry, problem, what we built, tech stack,
+result, screenshot, link or permission note. Label concept projects as "Concept
+project." Content: [OWNER TO PROVIDE].
+Testimonials: real name, company, photo or logo, and a link to a profile (LinkedIn,
+Upwork, Clutch, Google). Remove all stock photos. Content: [OWNER TO PROVIDE].
+Remove the PKR and GBP currency switch from the public view. Default to USD.
+Add FAQs: Who owns the code and accounts? What time zones do you cover? How
+does payment work (milestones)? What happens after launch? Do you sign NDAs?
+Content provided by owner.
+Acceptance: one calculator on the page, one primary button style, no stock testimonial
+photos, services link to their own pages.
+Priority 3: Estimator rebuild (feature-based, custom
+development)
+The current estimator shows $450 to $650 in the hero and $1,090 to $1,310 below. This is
+inconsistent and not built for custom work. Rebuild as a single estimator placed in section
+9.
+Yankee Tech Website: Developer Brief
+Page 3 of 20
+
+-- 3 of 20 --
+
+Logic
+1. Step 1: choose project type (Custom web app, SaaS MVP, Client portal,
+API/integration, Quick solution).
+2. Step 2: toggle features (each adds a price and time).
+3. Step 3: result shows a range (plus or minus 10 percent), estimated timeline, and a
+"Book a scoping call" button.
+4. Under the total show: "Fixed price confirmed after a free call. Pay in milestones."
+5. Send the selections with the lead form submission so the owner sees them.
+6. Keep all prices in a single config file or settings object so the owner can edit them
+without code.
+Starting prices (owner to confirm before publishing)
+Project type 	Starting price
+Free 30-minute consultation 	$0
+Discovery and scoping (credited to the project) 	$100
+Small fixes and tweaks, 10-hour pack 	$250
+Starter MVP (one core workflow, login, admin
+panel)
+From $1000
+Business web app or client portal 	From $2500
+Custom platform or SaaS 	From $3000
+Dedicated developer, part-time (about 80 hours a
+month)
+From $1,500 per month
+Dedicated developer, full-time 	From $3,000 per month
+Feature add-on (suggested) 	Price
+User accounts and roles 	$250
+Admin dashboard 	$300
+Payments (Stripe) 	$150
+Third-party API integration (each) $200
+Yankee Tech Website: Developer Brief
+Page 4 of 20
+
+-- 4 of 20 --
+
+Quick solutions row (fixed prices, separate from the estimator logic)
+Keeping it affordable
+Show the "from" price first, then the range (about plus or minus 10 percent) once
+features are selected.
+Payment in milestones: 30% to start, 30% at the midpoint, 40% at launch.
+Offer phased delivery: any project can be split so the first phase fits a smaller budget.
+The $250 discovery fee is credited toward the project if the client continues.
+Add a "Not sure about budget?" option that books a free 30-minute call.
+Example for the result card: Starter MVP ($2,200) + user accounts ($250) + admin
+dashboard ($400) + Stripe payments ($250) = $3,100, shown as $2,800 to $3,400, about 4
+to 6 weeks, with the button "Book a scoping call."
+Acceptance: one estimator, prices editable from one place, result shows a range and
+timeline, selections are included in the lead submission.
+Feature add-on (suggested) 	Price
+Reporting and analytics 	$250
+AI feature (chatbot or automation) $250
+GoHighLevel integration 	$250
+UI/UX design 	$200
+Solution 	Price
+GoHighLevel Starter CRM 	$400
+WordPress Launch (up to 5 pages) $400
+AI Chatbot 	$300
+One-way WordPress to GHL sync 	$350
+Two-way WordPress and GHL sync $500
+Yankee Tech Website: Developer Brief
+Page 5 of 20
+
+-- 5 of 20 --
+
+Priority 4: New pages and URLs
+Use clean URLs without .html and 301-redirect old URLs to the new ones. Each page
+needs 800 to 1,200 words of unique content (the owner supplies or approves the text),
+one H1, an FAQ (4 to 6 items), a related case study and a call to action. Do not duplicate
+text between pages.
+URL 	Target keyword 	Title tag (max 60) 	Meta description
+(max 155)
+/ (home) 	custom web and
+software
+development
+Custom Web &
+Software
+Development
+Agency | Yankee
+Tech
+Yankee Tech builds
+custom web apps,
+SaaS platforms and
+API integrations with
+Laravel, React and
+Next.js. Milestone-
+based. Free
+consultation.
+/services/custom-web-
+app-development
+custom web
+application
+development
+services
+Custom Web
+Application
+Development |
+Yankee Tech
+Scalable custom
+web apps and client
+portals built by a
+senior full-stack
+team. Fixed-price
+milestones and full
+code ownership.
+/services/saas-mvp-
+development
+SaaS MVP
+development for
+startups
+SaaS MVP
+Development for
+Startups | Yankee
+Tech
+Launch your SaaS
+MVP fast with a
+team that builds in
+Laravel, React and
+Next.js. Scoping
+from $250, MVPs
+from $2,200.
+Yankee Tech Website: Developer Brief
+Page 6 of 20
+
+-- 6 of 20 --
+
+URL 	Target keyword 	Title tag (max 60) 	Meta description
+(max 155)
+/services/laravel-
+development
+Laravel
+development
+services
+Laravel
+Development
+Services | Yankee
+Tech
+Custom Laravel
+applications, APIs
+and integrations
+built for
+performance and
+growth. Free
+technical
+consultation.
+/services/api-integration custom API
+integration
+services
+Custom API
+Integration
+Services | Yankee
+Tech
+Connect your CRM,
+payments and tools
+with reliable custom
+API integrations,
+including
+GoHighLevel. Book a
+free call.
+/services/gohighlevel-
+api-development
+GoHighLevel
+custom API
+development
+GoHighLevel API
+Development &
+Integrations |
+Yankee Tech
+Custom
+GoHighLevel
+integrations,
+webhooks and
+automations that
+connect GHL to your
+website, app and
+tools.
+/services/white-label-
+development
+white-label web
+development for
+agencies
+White-Label Web
+Development for
+Agencies | Yankee
+Tech
+A reliable behind-
+the-scenes dev
+team for agencies.
+NDA-friendly, fixed-
+price milestones,
+fast turnaround.
+/services/wordpress-
+development
+WordPress
+developer for
+small business
+WordPress
+Development for
+Business | Yankee
+Tech
+Fast, mobile-ready
+WordPress and
+WooCommerce sites
+built to convert.
+Packages from $590.
+Yankee Tech Website: Developer Brief
+Page 7 of 20
+
+-- 7 of 20 --
+
+Acceptance: each page has a unique title and meta description, one H1, internal links to
+two related pages, and appears in the sitemap.
+Priority 5: Blog
+Build a blog template (article page, category page, author box with photo and bio, related
+posts, internal links to services). Publish the first articles supplied by the owner:
+1. How Much Does It Cost to Build a SaaS MVP?
+2. Laravel vs Node.js for Your Startup
+3. How to Connect GoHighLevel to Your Website or App via API
+4. How to Hire a Dedicated Developer from Pakistan: Risks and Checklist
+Use Article schema, a visible publish date, and descriptive image alt text. Self-host all
+images.
+Priority 6: Technical SEO
+1. Staging: keep a noindex meta tag and robots.txt block on the staging site. On launch
+day, remove noindex on the live domain only.
+2. Canonical tag on every page pointing to the final https://yankeeetech.com URL.
+3. Generate an XML sitemap and a robots.txt that references it. Submit the sitemap in
+Google Search Console and Bing Webmaster Tools (the owner verifies ownership, the
+developer provides the verification method).
+4. HTTPS everywhere, a single preferred version (with or without www), and 301
+redirects for old .html URLs and the staging domain.
+5. One H1 per page and a logical heading order (H1, H2, H3). Short, descriptive URLs.
+URL 	Target keyword 	Title tag (max 60) 	Meta description
+(max 155)
+/services/ai-automation 	AI chatbot for
+small business
+AI Chatbots &
+Automation
+Services | Yankee
+Tech
+Custom AI chatbots
+and voice
+receptionists that
+answer questions
+and book
+appointments 24/7.
+From $690.
+Yankee Tech Website: Developer Brief
+Page 8 of 20
+
+-- 8 of 20 --
+
+6. Open Graph and Twitter card tags with a branded share image.
+7. Descriptive alt text on every meaningful image. Replace hotlinked Unsplash images
+with self-hosted, compressed WebP files.
+8. Structured data (JSON-LD): Organization on every page, Service on service pages,
+FAQPage on pages with FAQs, Article on blog posts. Add Review markup only for real,
+visible reviews. Validate in Google's Rich Results Test.
+9. Breadcrumb navigation with BreadcrumbList schema, a custom 404 page and an
+HTML footer link to every service page.
+10. Make sure all important text is real HTML (not inside images, canvas or JS-only
+widgets) so Google can read it.
+Example Organization schema to use as a base:
+{
+"@context": "https://schema.org",
+"@type": "Organization",
+"name": "Yankee Tech",
+"url": "https://yankeeetech.com",
+"logo": "https://yankeeetech.com/logo.png",
+"sameAs": ["[LinkedIn]", "[Clutch]", "[Upwork]", "[GitHub]"],
+"contactPoint": {
+"@type": "ContactPoint",
+"email": "[OWNER TO PROVIDE]",
+"contactType": "sales"
+}
+}
+Priority 7: Performance targets
+Test the live site on mobile with PageSpeed Insights and Chrome Lighthouse.
+Performance score 90 or higher on mobile.
+Largest Contentful Paint under 2.5 seconds, Cumulative Layout Shift under 0.1,
+Interaction to Next Paint under 200 ms.
+Compress images (WebP or AVIF), set width and height, lazy-load images below the
+fold.
+Self-host fonts, use font-display swap, and limit font weights.
+Defer or remove non-critical JavaScript. Reduce heavy animations and the scrolling
+logo marquee.
+Yankee Tech Website: Developer Brief
+Page 9 of 20
+
+-- 9 of 20 --
+
+Enable caching, GZIP or Brotli compression and a CDN.
+The agency sells speed, so the site's own score must prove it.
+Priority 8: Design and UX
+1. One accent color used only for primary buttons and important links.
+2. Body text at least 16px with dark text on light backgrounds. Check color contrast to
+WCAG AA on all text, especially pale grey text and text on dark sections.
+3. Tighten large empty areas in two-column layouts (FAQ, services intro, contact) so key
+content and buttons show sooner.
+4. Add a sticky "Book a Call" bar on mobile.
+5. Test the estimator, the 4-step form and any sliders on real phones (iOS Safari and
+Android Chrome) at widths 360, 390 and 768 pixels.
+6. Add an About section or page with real team photos, bios and LinkedIn links [OWNER
+TO PROVIDE].
+7. Header button text: "Book a Free Call" instead of "Let's Talk."
+8. Add keyboard focus states and make sure every interactive element works with the
+keyboard.
+Priority 9: Forms and tracking
+1. Add a short form (name, email, one-line message) near the top and bottom of the
+home page. Keep the 4-step quote wizard as a second option.
+2. Show an email address, a WhatsApp link and the booking link next to the form.
+3. Add spam protection (honeypot or reCAPTCHA) and server-side validation.
+4. Send an instant confirmation email to the visitor and a notification email to the owner.
+Redirect to a thank-you page.
+5. Install GA4 and Google Search Console. Track these events as conversions: form
+submit, estimator completed, booking link click, WhatsApp click, phone or email click.
+6. Add cookie consent where needed and link the Privacy Policy.
+7. Optional: push new leads to GoHighLevel using a webhook.
+Priority 10: Final QA checklist (all must pass before launch)
+No placeholder or broken links; all footer, blog and social links work
+Yankee Tech Website: Developer Brief
+Page 10 of 20
+
+-- 10 of 20 --
+
+Deliverables and updates
+A staging link for owner review after each priority.
+A short written list of what changed and what is waiting on content from the owner.
+Source code or repository access, and documentation for editing prices and content.
+Content the owner must supply: booking link, social and directory profile links, real case
+studies and screenshots, real testimonials, team photos and bios, legal text, blog articles,
+and final price approval.
+Appendix A: Keyword map and on-page rules
+Each page owns one primary keyword, so your pages don't compete with each other.
+These are narrower, buyer-intent phrases that a new site can realistically rank for first.
+No stock testimonial photos or invented proof; all claims supplied by the owner
+Staging remains noindex; live site has noindex removed and canonical tags set
+Sitemap and robots.txt live and submitted
+Every page has a unique title, meta description and one H1
+Structured data validated with no errors
+Mobile PageSpeed 90 or higher, Core Web Vitals in the green range
+Estimator and forms tested on desktop and two real phones; submissions reach the
+owner
+GA4 conversion events firing
+Redirects tested (old URLs, .html URLs, staging to live)
+404 page, Privacy Policy and Terms pages live
+Final review with the owner on the staging site before switching the domain
+Page 	Primary keyword 	Supporting keywords
+Home 	custom web and software
+development
+web application development
+company, full-stack
+development agency, hire
+Laravel developers
+Yankee Tech Website: Developer Brief
+Page 11 of 20
+
+-- 11 of 20 --
+
+On-page rules for every page
+Put the primary keyword in the title tag, H1, first 100 words, URL, one H2 and the meta
+description. Use the supporting keywords naturally in the body.
+Write for the buyer first. Do not repeat a keyword unnaturally; Google reads variations
+and meaning.
+Page 	Primary keyword 	Supporting keywords
+/services/custom-web-app-
+development
+custom web application
+development services
+custom web app
+development company,
+bespoke web applications,
+web app development for
+startups
+/services/saas-mvp-
+development
+SaaS MVP development
+for startups
+build a SaaS MVP, MVP
+development company, MVP
+development cost
+/services/laravel-
+development
+Laravel development
+services
+Laravel development
+company, hire Laravel
+developer, Laravel API
+development
+/services/api-integration 	custom API integration
+services
+third-party API integration,
+REST API development, CRM
+integration services
+/services/gohighlevel-api-
+development
+GoHighLevel custom API
+development
+GoHighLevel API integration,
+GHL webhooks, custom
+GoHighLevel development
+/services/white-label-
+development
+white-label web
+development for agencies
+white label developer for
+agencies, outsource web
+development
+/services/wordpress-
+development
+WordPress developer for
+small business
+custom WordPress
+development, WooCommerce
+developer
+/services/ai-automation 	AI chatbot for small
+business
+custom AI chatbot
+development, AI receptionist
+Yankee Tech Website: Developer Brief
+Page 12 of 20
+
+-- 12 of 20 --
+
+Use US English and USD. Each page needs 800 to 1,200 words of unique text, at least
+one real example or screenshot, and 4 to 6 FAQs.
+Link every page to two related service pages and one blog article, and end with one
+clear call to action.
+Use descriptive, short image names and alt text, such as laravel-client-portal-
+dashboard.webp.
+Appendix B: Homepage copy (paste-ready)
+Replace anything in [square brackets] with real information. Prices match the estimator in
+Priority 3.
+Hero
+H1: Custom Web & Software Development for Startups and Growing Businesses
+Subheading: We design and build custom web applications, SaaS platforms and API
+integrations with Laravel, React and Next.js. Fixed-price milestones, full code ownership
+and a free consultation to start.
+Buttons: Book a Free Technical Consultation | See Our Work
+Proof line: [Projects delivered] projects | [Rating] on [platform] | 30-day post-launch
+support
+Problem section
+Heading: Is off-the-shelf software slowing your business down?
+Tools that don't fit your process: you adapt your workflow to the software instead of
+the other way around.
+Slow, fragile systems: pages that crash, data that won't sync and fixes that take
+weeks.
+Disconnected tools: your website, CRM, payments and reporting don't talk to each
+other.
+Bridge: We build software around how your business actually works, then connect it to
+the tools you already use.
+Yankee Tech Website: Developer Brief
+Page 13 of 20
+
+-- 13 of 20 --
+
+Services (four cards, each linking to its page)
+1. Custom Web Apps & SaaS Development: scalable web applications, client portals
+and SaaS products, from first prototype to production.
+2. API & Third-Party Integrations: connect your CRM, payments, GoHighLevel,
+accounting and internal tools with reliable, well-documented APIs.
+3. Laravel, React & Next.js Development: modern full-stack engineering with clean
+code, tests and documentation you own.
+4. Dedicated Developers & White-Label Team: extend your team or your agency with
+senior developers, billed monthly.
+Quick solutions (smaller row): WordPress & WooCommerce from $590 | GoHighLevel
+setup from $490 | AI chatbots from $690
+Why Yankee Tech
+Built around your goals: we start with a short scoping phase so you know the plan,
+timeline and price before development begins.
+Fixed-price milestones: pay in stages as you approve each one. No surprise invoices.
+You own everything: code, accounts and documentation are handed over at launch.
+Integration expertise: we connect your app to Stripe, CRMs, GoHighLevel, OpenAI
+and more.
+Clear communication: weekly demos and updates, with [US time-zone overlap hours]
+each day.
+How it works
+1. Free consultation (30 minutes): tell us your idea or problem and we outline an
+approach.
+2. Scoping ($250, credited to your project): requirements, wireframes, timeline and a
+fixed quote.
+3. Build in milestones: weekly demos, testing and your feedback at every stage.
+4. Launch and support: deployment, handover, training and 30 days of support included.
+Technology
+Laravel, PHP, React, Next.js, Node.js, PostgreSQL, MySQL, Redis, REST and GraphQL APIs,
+Stripe, AWS, OpenAI. (Show the logos with the heading "Our tech stack," not "Trusted by.")
+Yankee Tech Website: Developer Brief
+Page 14 of 20
+
+-- 14 of 20 --
+
+Who we work with
+Startup and SaaS founders, marketing and GoHighLevel agencies, e-commerce brands
+and service businesses that need software beyond what templates offer.
+Pricing teaser
+Heading: Clear pricing, so you can plan with confidence
+Text: Free 30-minute consultation. Starter MVPs from $2,200, business web apps and
+client portals from $3,800, custom platforms from $8,000. Every project is fixed-price and
+paid in milestones. Use the estimator to see your range.
+Button: Estimate My Project
+FAQ
+How much does a custom web application cost? A starter MVP typically starts from
+$2,200. Business web apps and client portals start from $3,800, and custom platforms
+from $8,000. The final fixed price depends on features and integrations, and we confirm it
+after a free consultation and a short scoping phase.
+How long does it take to build a custom web app? Starter MVPs typically take 4 to 6
+weeks. Larger applications take 8 to 16 weeks depending on scope. We share a milestone
+timeline before development starts.
+Who owns the code and the accounts? You do. We hand over the full source code,
+documentation and all accounts at launch, with no lock-in.
+What technologies do you use? We build with Laravel, React, Next.js and Node.js, using
+PostgreSQL or MySQL, Redis, REST and GraphQL APIs and cloud hosting such as AWS. We
+choose what fits your project, not what is trendy.
+Do you work with US clients and US time zones? Yes. We schedule calls in your time zone
+and overlap with [US hours] every working day. We reply to messages within [response
+time].
+Do you sign NDAs? Yes. We sign an NDA before you share your idea or documents, and
+we offer strict white-label arrangements for agencies.
+What happens after launch? Every project includes 30 days of support. After that you
+can choose a monthly maintenance plan or a pack of development hours.
+Yankee Tech Website: Developer Brief
+Page 15 of 20
+
+-- 15 of 20 --
+
+Final call to action
+Heading: Have an idea or a system that needs to work better?
+Text: Book a free 30-minute technical consultation. We'll tell you honestly what it will take
+and what it will cost.
+Buttons: Book a Free Consultation | Send Us Your Brief
+Appendix C: Service page copy (paste-ready starting drafts)
+These are the core of each page. Expand each to 800 to 1,200 words by adding a real
+project example, a screenshot and your own details. Do not publish claims you cannot
+prove.
+Page 1: Custom Web Application Development
+URL: /services/custom-web-app-development
+H1: Custom Web Application Development Services for Startups and Growing Businesses
+Intro: Off-the-shelf software rarely fits how your business works. Yankee Tech builds
+custom web applications, client portals and internal tools around your workflow, using
+Laravel, React and Next.js. You get clean code, clear milestones and full ownership of what
+we build.
+H2: What we build
+Client and customer portals with logins, roles and dashboards
+Internal tools and admin systems that replace spreadsheets
+Booking, ordering and subscription platforms
+Reporting dashboards connected to your data
+Web apps integrated with your CRM, payments and email
+H2: How we build it
+1. A free 30-minute consultation to understand your goals.
+2. A $250 scoping phase (credited to your project) with requirements, wireframes,
+timeline and a fixed quote.
+3. Development in milestones, with a working demo every week.
+4. Testing, deployment and handover, with 30 days of support included.
+H2: Technology we use
+Yankee Tech Website: Developer Brief
+Page 16 of 20
+
+-- 16 of 20 --
+
+Laravel and PHP for the back end, React and Next.js for fast interfaces, PostgreSQL or
+MySQL for data, Redis for speed, and Stripe, OpenAI and other APIs for integrations. We
+pick the stack that fits your project and your budget.
+H2: Pricing and timeline
+Starter MVPs from $2,200 (4 to 6 weeks). Business web apps and client portals from
+$3,800. Custom platforms from $8,000. Payments are split into milestones. [Link: Use the
+estimator]
+H2: Example project
+[OWNER TO PROVIDE: one real or clearly labeled concept project with the problem, what
+was built, the tech stack, a screenshot and the result.]
+FAQs
+How much does a custom web application cost? (Use the homepage answer.)
+Can you build on top of my existing system or fix an existing app?
+Who owns the source code?
+Do you provide hosting and maintenance after launch?
+Call to action: Book a free technical consultation | Estimate my project
+Page 2: SaaS MVP Development for Startups
+URL: /services/saas-mvp-development
+H1: SaaS MVP Development for Startups: Launch Your First Version Fast
+Intro: The goal of an MVP is to test your idea with real users without overspending. We
+help founders define the smallest version worth building, then build it with a scalable
+foundation you can grow on.
+H2: What a typical MVP includes
+User sign-up, login and roles
+One core workflow that proves your idea
+Admin panel to manage users and data
+Stripe subscriptions or one-time payments
+Transactional emails and basic analytics
+H2: How we keep the cost down
+Yankee Tech Website: Developer Brief
+Page 17 of 20
+
+-- 17 of 20 --
+
+We focus on one core feature first, reuse proven components, and plan features in phases
+so version two is funded by what you learn from version one.
+H2: Pricing and timeline
+MVPs start from $2,200 and typically take 4 to 6 weeks. We confirm a fixed price after the
+scoping phase.
+FAQs
+How much does it cost to build a SaaS MVP?
+Which features should go into an MVP and which should wait?
+Can you continue developing the product after launch?
+Call to action: Book a free consultation to scope your MVP
+Page 3: Custom API Integration Services
+URL: /services/api-integration
+H1: Custom API Integration Services: Connect Your Tools and Automate Your Workflow
+Intro: When your website, CRM, payment system and reporting tools don't share data,
+your team copies it by hand. We build reliable integrations that move data automatically
+and securely, so nothing is missed.
+H2: Integrations we build
+CRM and marketing: GoHighLevel, HubSpot and custom CRMs
+Payments and billing: Stripe and PayPal
+E-commerce and WordPress: WooCommerce, forms and memberships
+AI: OpenAI-powered assistants and automations
+Custom REST and GraphQL APIs for your own product
+H2: How it works
+1. We map the data flow and the systems involved.
+2. We build and test the integration with logging and error handling.
+3. We document it and hand it over, with monitoring if needed.
+H2: Pricing
+Simple integrations start from $250 each. Larger multi-system projects are quoted after a
+free consultation.
+Yankee Tech Website: Developer Brief
+Page 18 of 20
+
+-- 18 of 20 --
+
+FAQs
+Can you connect GoHighLevel to my website or app?
+How do you keep integrations reliable and secure?
+Can you fix an existing integration that keeps failing?
+Call to action: Book a free consultation | Describe your integration
+Appendix D: Internal linking and FAQ schema
+Internal links help Google understand which pages matter and pass authority from your
+strongest pages to the rest.
+Use natural link text such as "custom API integration services" rather than "click here."
+FAQPage schema example (add to every page that shows FAQs)
+The question and answer text in the schema must match the visible text on the page
+exactly.
+From 	Link to
+Home 	All four primary service pages, the estimator, two
+case studies, two blog articles
+Each service page Two related service pages, one matching blog
+article, the estimator, the contact section
+Each blog article 	The matching service page (using the target
+keyword as link text) and one related article
+Case studies 	The service page for the work shown
+Footer 	Every service page, About, Blog, Privacy Policy,
+Terms
+Yankee Tech Website: Developer Brief
+Page 19 of 20
+
+-- 19 of 20 --
+
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [{
+"@type": "Question",
+"name": "How much does a custom web application cost?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "A starter MVP typically starts from $2,200. Business web apps
+and client portals start from $3,800, and custom platforms from $8,000. The
+final fixed price is confirmed after a free consultation and a short scoping
+phase."
+}
+}]
+}
+Validate every page's structured data in Google's Rich Results Test before launch.
+Yankee Tech Website: Developer Brief
+Page 20 of 20
+
+-- 20 of 20 --
+

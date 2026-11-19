@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Use Cases & Client Transformations — Yankee Tech</title>
+  <meta name="description"
+    content="Discover how Yankee Tech engineers high-performance web systems, GoHighLevel CRM funnels, and autonomous AI agents for e-commerce brands, SaaS platforms, digital agencies, and startups." />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="antialiased selection:bg-brand-600 selection:text-white bg-white text-gray-900">
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- ==========================================
+       1. STICKY HEADER / NAVBAR
+       ========================================== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-purple-100/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
+      <a href="index.html" class="flex items-center gap-3 group shrink-0">
+        <div class="w-10 h-10 rounded-xl bg-[#120924] flex items-center justify-center shadow-md border border-purple-500/30 group-hover:border-purple-500 transition">
+          <span class="font-display font-extrabold text-lg tracking-tighter bg-gradient-to-tr from-purple-400 via-fuchsia-400 to-indigo-300 bg-clip-text text-transparent">YT</span>
+        </div>
+        <div class="leading-none">
+          <span class="block font-display font-extrabold text-lg text-gray-900 tracking-tight">Yankee Tech</span>
+          <span class="block text-[10px] font-medium text-gray-400 tracking-wider uppercase mt-0.5">Infinite Possibilities</span>
+        </div>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold text-gray-700">
+        <a href="index.html" class="hover:text-brand-600 transition py-2">Home</a>
+        <a href="about.html" class="hover:text-brand-600 transition py-2">About Us</a>
+        <a href="services.html" class="hover:text-brand-600 transition py-2">Services</a>
+        <a href="use-cases.html" class="text-brand-600 font-bold bg-purple-50 border border-purple-200/60 px-3 py-1.5 rounded-full transition shadow-xs">Use Cases</a>
+        <a href="index.html#contact" class="hover:text-brand-600 transition py-2">Contact Us</a>
+      </nav>
+
+      <!-- Right CTA -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <a href="index.html#contact" class="hidden sm:inline-flex btn-purple magnetic-btn text-white text-xs font-semibold px-4 sm:px-5 py-2.5 rounded-full items-center gap-2 shadow-sm">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+        <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="md:hidden w-10 h-10 rounded-xl border border-purple-200/90 flex items-center justify-center text-gray-700 hover:bg-purple-50 transition active:scale-95">
+          <i class="fa-solid fa-bars text-base"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white/98 backdrop-blur-2xl border-b border-purple-100 px-5 sm:px-6 py-5 space-y-3 text-sm font-medium text-gray-700 shadow-2xl max-h-[calc(100vh-5rem)] overflow-y-auto">
+      <a href="index.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Home</a>
+      <a href="about.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">About Us</a>
+      <a href="services.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Services</a>
+      <a href="use-cases.html" class="block py-1.5 text-brand-600 font-bold border-b border-purple-50">Use Cases</a>
+      <a href="index.html#contact" class="block py-1.5 hover:text-brand-600 transition">Contact Us</a>
+      <div class="pt-2">
+        <a href="index.html#contact" class="btn-purple text-white text-xs font-semibold py-3 px-5 rounded-full w-full flex items-center justify-center gap-2 shadow-sm">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         2. HERO SECTION
+         ========================================== -->
+    <section class="hero-bg relative overflow-hidden pt-12 pb-16 lg:pt-16 lg:pb-24 border-b border-purple-100/70">
+      <div class="pointer-events-none absolute -top-24 right-1/4 w-[600px] h-[400px] bg-purple-400/20 rounded-full blur-3xl"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div data-anim="fade-up" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100/80 border border-purple-300/60 shadow-xs mb-4">
+          <span class="w-2 h-2 rounded-full bg-brand-600 animate-pulse"></span>
+          <span class="text-[11px] font-extrabold uppercase tracking-[0.18em] text-brand-700">PROVEN TRANSFORMATION BLUEPRINTS</span>
+        </div>
+
+        <h1 data-anim="fade-up" data-delay="1" class="font-display font-extrabold text-3xl sm:text-4xl lg:text-[46px] text-[#110c22] leading-[1.15] tracking-tight max-w-4xl mx-auto">
+          Real-World Systems Engineering for <span class="bg-gradient-to-r from-purple-700 via-brand-600 to-indigo-600 bg-clip-text text-transparent">Every High-Growth Industry</span>
+        </h1>
+
+        <p data-anim="fade-up" data-delay="2" class="text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl mx-auto mt-4">
+          Explore how we deploy clean-code WordPress architectures, custom Laravel portals, GoHighLevel pipeline automations, and autonomous AI agents tailored to specific industry business models.
+        </p>
+
+        <!-- Stats Bar -->
+        <div data-anim="fade-up" data-delay="3" class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto pt-8">
+          <div class="bg-white/85 backdrop-blur-md p-4 rounded-2xl border border-purple-100/90 shadow-sm">
+            <div class="font-display font-extrabold text-2xl text-brand-700">45+</div>
+            <div class="text-[11px] text-gray-500 font-medium mt-0.5">Enterprise Deliveries</div>
+          </div>
+          <div class="bg-white/85 backdrop-blur-md p-4 rounded-2xl border border-purple-100/90 shadow-sm">
+            <div class="font-display font-extrabold text-2xl text-emerald-600">-28%</div>
+            <div class="text-[11px] text-gray-500 font-medium mt-0.5">Checkout Abandonment</div>
+          </div>
+          <div class="bg-white/85 backdrop-blur-md p-4 rounded-2xl border border-purple-100/90 shadow-sm">
+            <div class="font-display font-extrabold text-2xl text-indigo-600">94%</div>
+            <div class="text-[11px] text-gray-500 font-medium mt-0.5">Manual Tasks Automated</div>
+          </div>
+          <div class="bg-white/85 backdrop-blur-md p-4 rounded-2xl border border-purple-100/90 shadow-sm">
+            <div class="font-display font-extrabold text-2xl text-amber-600">&lt;60s</div>
+            <div class="text-[11px] text-gray-500 font-medium mt-0.5">Lead Response Latency</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         3. 5 INDUSTRY USE CASE DEEP-DIVE CARDS
+         ========================================== -->
+    <section class="py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-2xl mx-auto mb-16" data-anim="fade-up">
+          <span class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-brand-600 block mb-2">INDUSTRY BLUEPRINTS</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-gray-900 tracking-tight">
+            Tailored Engineering for Your Business Model
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-500 mt-2">
+            Select your industry to explore architecture blueprints, before/after transformations, and technical deliverables.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Card 1: E-Commerce -->
+          <div data-anim="fade-up" data-delay="1" class="rounded-3xl border border-purple-100 bg-[#faf8ff] p-6 lg:p-7 flex flex-col justify-between hover:shadow-xl hover:border-brand-300 transition group">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-brand-600 flex items-center justify-center text-xl group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-bold">95+ Speed</span>
+              </div>
+              <h3 class="font-display font-extrabold text-xl text-gray-900 group-hover:text-brand-600 transition">
+                High-Growth E-Commerce Brands
+              </h3>
+              <p class="text-xs text-gray-600 leading-relaxed">
+                Frictionless 1-step checkout funnels, sub-second WooCommerce catalog browsing, Stripe global payments, and automated abandoned cart nurture via GHL/Klaviyo.
+              </p>
+              <ul class="pt-2 space-y-2 text-[11px] text-gray-600">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> 1-Click Apple/Google Pay</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> -28% Cart Abandonment</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Redis Object Caching (&lt;0.5s TTFB)</li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-5 border-t border-purple-100">
+              <a href="use-case-ecommerce.html" class="w-full btn-purple text-white text-xs font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm">
+                <span>View E-Commerce Blueprint</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: SaaS & B2B -->
+          <div data-anim="fade-up" data-delay="2" class="rounded-3xl border border-purple-100 bg-[#faf8ff] p-6 lg:p-7 flex flex-col justify-between hover:shadow-xl hover:border-brand-300 transition group">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-brand-600 flex items-center justify-center text-xl group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+                  <i class="fa-solid fa-server"></i>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-purple-100 text-brand-700 border border-purple-200 text-[10px] font-bold">Enterprise SaaS</span>
+              </div>
+              <h3 class="font-display font-extrabold text-xl text-gray-900 group-hover:text-brand-600 transition">
+                SaaS Founders &amp; B2B Enterprises
+              </h3>
+              <p class="text-xs text-gray-600 leading-relaxed">
+                Custom full-stack portals built with Laravel and Next.js. Featuring multi-tenant databases, role-based access control, Stripe subscriptions, and high-concurrency APIs.
+              </p>
+              <ul class="pt-2 space-y-2 text-[11px] text-gray-600">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Multi-Tenant Data Isolation</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Granular RBAC Permissions</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Automated Tiered Billing &amp; Invoices</li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-5 border-t border-purple-100">
+              <a href="use-case-saas-b2b.html" class="w-full btn-purple text-white text-xs font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm">
+                <span>View SaaS &amp; B2B Blueprint</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Marketing Agencies -->
+          <div data-anim="fade-up" data-delay="3" class="rounded-3xl border border-purple-100 bg-[#faf8ff] p-6 lg:p-7 flex flex-col justify-between hover:shadow-xl hover:border-brand-300 transition group">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-brand-600 flex items-center justify-center text-xl group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+                  <i class="fa-solid fa-cubes-stacked"></i>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200 text-[10px] font-bold">100% White-Label</span>
+              </div>
+              <h3 class="font-display font-extrabold text-xl text-gray-900 group-hover:text-brand-600 transition">
+                Digital &amp; Creative Agencies
+              </h3>
+              <p class="text-xs text-gray-600 leading-relaxed">
+                Your silent engineering arm. We deliver sub-account GHL snapshot setups, custom WordPress sites, and automation pipelines under strict bilateral NDAs inside your tools.
+              </p>
+              <ul class="pt-2 space-y-2 text-[11px] text-gray-600">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Complete Invisible Delivery</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> 1-Click Agency Snapshots</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> 50–100% Client Markup Margins</li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-5 border-t border-purple-100">
+              <a href="use-case-agencies.html" class="w-full btn-purple text-white text-xs font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm">
+                <span>View Agency Blueprint</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 4: Coaches & Creators -->
+          <div data-anim="fade-up" data-delay="4" class="rounded-3xl border border-purple-100 bg-[#faf8ff] p-6 lg:p-7 flex flex-col justify-between hover:shadow-xl hover:border-brand-300 transition group">
+            <div class="space-y-4">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-2xl bg-purple-100 text-brand-600 flex items-center justify-center text-xl group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-fuchsia-50 text-fuchsia-700 border border-fuchsia-200 text-[10px] font-bold">24/7 AI Booking</span>
+              </div>
+              <h3 class="font-display font-extrabold text-xl text-gray-900 group-hover:text-brand-600 transition">
+                Coaches &amp; Service Businesses
+              </h3>
+              <p class="text-xs text-gray-600 leading-relaxed">
+                Autonomous AI voice receptionists and WhatsApp chatbots that qualify leads and schedule sales appointments into GHL calendars around the clock.
+              </p>
+              <ul class="pt-2 space-y-2 text-[11px] text-gray-600">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> 24/7 Autonomous Lead Qualifier</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> &lt;30s Speed-to-Lead Dialing</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Two-Way Course &amp; Member Sync</li>
+              </ul>
+            </div>
+
+            <div class="mt-8 pt-5 border-t border-purple-100">
+              <a href="use-case-coaches-creators.html" class="w-full btn-purple text-white text-xs font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm">
+                <span>View Coaches &amp; Services Blueprint</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 5: Startups & MVPs -->
+          <div data-anim="fade-up" data-delay="5" class="rounded-3xl border border-purple-100 bg-[#faf8ff] p-6 lg:p-7 flex flex-col justify-between hover:shadow-xl hover:border-brand-300 transition group md:col-span-2 lg:col-span-2">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div class="w-12 h-12 rounded-2xl bg-purple-100 text-brand-600 flex items-center justify-center text-xl group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+                    <i class="fa-solid fa-rocket"></i>
+                  </div>
+                  <span class="px-2.5 py-1 rounded-full bg-rose-50 text-rose-700 border border-rose-200 text-[10px] font-bold">2-4 Week Delivery</span>
+                </div>
+                <h3 class="font-display font-extrabold text-xl text-gray-900 group-hover:text-brand-600 transition">
+                  Fast-Moving Startups &amp; MVPs
+                </h3>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                  Turn your pitch deck into a production-grade software prototype in weeks, not months. Zero tech debt, pitch-ready Figma prototypes, and clean scalable code.
+                </p>
+                <ul class="pt-1 space-y-2 text-[11px] text-gray-600">
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> 2–4 Week Turnaround to Production</li>
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Complete Source Code Transfer</li>
+                  <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i> Pitch-Ready Interactive UI</li>
+                </ul>
+              </div>
+
+              <div class="flex flex-col justify-between h-full pt-4 lg:pt-0">
+                <div class="p-5 rounded-2xl bg-white border border-purple-100/90 shadow-sm space-y-2.5">
+                  <div class="text-xs font-bold text-gray-900">Startup Guarantee</div>
+                  <p class="text-[11px] text-gray-500 leading-relaxed">
+                    We architect MVPs with modular clean code so you don’t have to throw everything away after your seed round.
+                  </p>
+                </div>
+                <div class="mt-6">
+                  <a href="use-case-startups.html" class="w-full btn-purple text-white text-xs font-semibold py-3 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm">
+                    <span>View Startup MVP Blueprint</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         4. CALL TO ACTION (COSMIC DARK)
+         ========================================== -->
+    <section class="py-20 dark-cosmic-bg text-white relative overflow-hidden">
+      <div class="pointer-events-none absolute -bottom-20 right-1/4 w-96 h-96 bg-brand-600/30 rounded-full blur-3xl"></div>
+
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6" data-anim="fade-up">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 border border-brand-400/30 text-purple-200 text-[10px] font-extrabold uppercase tracking-widest">
+          NEED A CUSTOM SOLUTION FOR YOUR BUSINESS?
+        </span>
+        <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight">
+          Let's Engineer Your Competitive Advantage
+        </h2>
+        <p class="text-xs sm:text-sm text-purple-200/80 max-w-2xl mx-auto leading-relaxed">
+          Book a 30-minute discovery call with our senior technical leads. We will review your workflow challenges and deliver an actionable architecture roadmap.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
+          <a href="index.html#contact" class="btn-purple magnetic-btn text-white text-xs font-semibold px-7 py-3.5 rounded-full inline-flex items-center gap-2 shadow-glow">
+            <span>Schedule Discovery Call</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+          <a href="index.html#estimator" class="px-6 py-3.5 rounded-full text-xs font-semibold text-purple-100 bg-white/10 hover:bg-white/20 border border-white/15 transition inline-flex items-center gap-2">
+            <span>Launch Live Price Estimator</span>
+            <i class="fa-solid fa-calculator text-[10px] text-amber-300"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================
+       5. FOOTER
+       ========================================== -->
+  <footer class="dark-cosmic-bg text-gray-300 pt-16 pb-12 border-t border-purple-900/60 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-purple-900/60">
+        <div class="lg:col-span-2 space-y-4">
+          <a href="index.html" class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-brand-600/30 border border-brand-500/40 flex items-center justify-center shadow-md">
+              <span class="font-display font-extrabold text-lg text-white">YT</span>
+            </div>
+            <div class="leading-none">
+              <span class="block font-display font-extrabold text-lg text-white tracking-tight">Yankee Tech</span>
+              <span class="block text-[10px] font-medium text-purple-300 tracking-wider uppercase mt-0.5">Infinite Possibilities</span>
+            </div>
+          </a>
+          <p class="text-xs text-purple-200/70 leading-relaxed max-w-sm">
+            Elite Full-Stack engineering studio. We build sub-second WordPress platforms, custom SaaS architectures, GoHighLevel ecosystems, and autonomous AI agents for high-growth enterprises worldwide.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-white text-xs uppercase tracking-wider mb-4">Quick Links</h4>
+          <ul class="space-y-2 text-purple-200/70">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+            <li><a href="use-cases.html" class="text-brand-400 font-bold hover:text-white transition">Use Cases</a></li>
+            <li><a href="index.html#estimator" class="hover:text-white transition">Price Estimator</a></li>
+            <li><a href="index.html#contact" class="hover:text-white transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-white text-xs uppercase tracking-wider mb-4">Industry Blueprints</h4>
+          <ul class="space-y-2 text-purple-200/70">
+            <li><a href="use-case-ecommerce.html" class="hover:text-white transition">E-Commerce Brands</a></li>
+            <li><a href="use-case-saas-b2b.html" class="hover:text-white transition">SaaS &amp; B2B Enterprises</a></li>
+            <li><a href="use-case-agencies.html" class="hover:text-white transition">Marketing Agencies</a></li>
+            <li><a href="use-case-coaches-creators.html" class="hover:text-white transition">Coaches &amp; Creators</a></li>
+            <li><a href="use-case-startups.html" class="hover:text-white transition">Startups &amp; MVPs</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-display font-bold text-white text-xs uppercase tracking-wider mb-4">Newsletter</h4>
+          <p class="text-[11px] text-purple-200/70 mb-3">Quarterly engineering insights on web performance and AI.</p>
+          <form onsubmit="handleNewsletter(event)" class="space-y-2">
+            <input type="email" id="newsletterEmail" required placeholder="Business email" class="w-full px-3.5 py-2.5 rounded-xl bg-white/5 border border-purple-500/30 text-white placeholder-purple-300/40 text-xs focus:outline-none focus:border-brand-500 transition" />
+            <button type="submit" class="w-full btn-purple text-white text-xs font-semibold py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-sm">
+              <span id="newsletterBtnText">Subscribe →</span>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-purple-300/60">
+        <div>&copy; 2026 Yankee Tech. All rights reserved. Built for speed, scale &amp; autonomous intelligence.</div>
+        <div class="flex items-center gap-4">
+          <a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a>
+          <span>•</span>
+          <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Scroll back to top" class="fixed bottom-6 right-6 w-11 h-11 rounded-2xl bg-brand-600 text-white shadow-glow flex items-center justify-center transition hover:bg-brand-700 active:scale-95 z-40 border border-purple-400/40">
+    <i class="fa-solid fa-arrow-up text-xs"></i>
+  </button>
+</body>
+</html>

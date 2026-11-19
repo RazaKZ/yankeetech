@@ -1,0 +1,477 @@
+Yankee Tech: SEO Keyword Research &
+Website Copy
+Prepared for Khizar Ali, November 2026. English copy for US / UK / Gulf buyers. Items in
+[brackets] need your real details.
+1. Read this first
+Keyword data caveat. I can't pull exact search volume or CPC (that needs Semrush,
+Ahrefs or Google Keyword Planner). The keywords below come from how top-ranking
+pages and competitors actually describe these services right now, plus buyer intent.
+Have your SEO friend validate volume and difficulty before locking them. Keyword
+Planner is free inside a Google Ads account.
+What the search results showed. For GoHighLevel setup / expert, the results were
+mostly Fiverr gigs and small agency pages. Broad terms like 'GoHighLevel expert' are
+crowded with cheap gig-style listings, so don't rely on them alone. Aim at specific,
+higher-value combinations: GHL + WordPress integration, white-label delivery, AI
+voice agents, n8n / Make automation. That is also where your positioning is strongest.
+Only publish real proof. The current draft has numbers, case studies and testimonials
+that are placeholders. Replace them with real projects before launch. Fake proof
+hurts trust with buyers and can get ads disapproved.
+Domain. Publish on yankeeetech.com (root domain), not a subdomain.
+One keyword focus per page. Each page below targets its own primary keyword so
+pages don't compete with each other.
+2. Keyword map
+Page 	URL slug 	Primary keyword 	Secondary keywords
+Home 	/ 	GoHighLevel
+automation agency
+WordPress and AI
+automation agency, web
+development and
+automation company
+Services hub 	/services 	web development
+and automation
+services
+GoHighLevel,
+WordPress, AI services
+Yankee Tech: SEO Keyword Research & Website Copy
+Page 1 of 13
+
+-- 1 of 13 --
+
+Page 	URL slug 	Primary keyword 	Secondary keywords
+GHL setup &
+funnels
+/gohighlevel-setup 	GoHighLevel setup
+services
+GHL CRM setup,
+GoHighLevel workflow
+automation,
+GoHighLevel funnel
+builder, hire GoHighLevel
+developer
+GHL +
+WordPress
+sync
+/gohighlevel-
+wordpress-
+integration
+GoHighLevel
+WordPress
+integration
+WordPress to
+GoHighLevel sync,
+GoHighLevel
+WooCommerce
+integration, Elementor
+forms to GoHighLevel
+AI chatbots 	/ai-chatbot-
+development
+custom AI chatbot
+development
+GoHighLevel AI chatbot,
+AI chatbot for business,
+RAG chatbot
+AI voice
+agents
+/ai-voice-receptionist AI voice receptionist AI voice agent for
+appointment booking,
+GoHighLevel voice AI
+Workflow
+automation
+/workflow-automation n8n automation
+agency
+Make.com automation
+expert, AI workflow
+automation services
+WordPress &
+Woo
+/wordpress-
+woocommerce-
+development
+custom WordPress
+development
+services
+WooCommerce
+developer, WordPress
+speed optimization,
+Elementor developer
+Laravel &
+React
+/laravel-react-
+development
+Laravel development
+services
+custom web app
+development, Next.js
+development, client
+portal development
+White-label 	/white-label-
+development
+white label
+GoHighLevel
+services
+white label web
+development agency,
+white label AI
+automation
+Yankee Tech: SEO Keyword Research & Website Copy
+Page 2 of 13
+
+-- 2 of 13 --
+
+Priority order for your SEO friend: (1) GHL + WordPress integration, (2) White-label, (3)
+AI voice receptionist, (4) Workflow automation, then (5) GoHighLevel setup, which is the
+most competitive and will take longest.
+3. Page copy
+3.1 Home page
+Meta title: GoHighLevel, WordPress & AI Automation Agency | Yankee Tech Meta
+description: Yankee Tech builds GoHighLevel CRMs, WordPress sites and AI automations
+for agencies, coaches and founders. Fixed-scope projects. Book a free call.
+H1: GoHighLevel, WordPress & AI Automation for Growing Businesses
+Most businesses don't lose leads because of bad marketing. They lose them because the
+website, the CRM and the follow-up don't talk to each other. Yankee Tech is a remote
+development team that connects them: websites that convert, GoHighLevel systems that
+follow up automatically, and AI tools that handle bookings and questions around the clock.
+[Primary button: Book a Free Technical Call] [Secondary: See Pricing Estimator]
+H2: What we build
+GoHighLevel setup and automation: pipelines, funnels, calendars and follow-up
+sequences that run on their own.
+WordPress and WooCommerce: fast, conversion-focused sites with clean checkouts.
+AI chatbots and voice agents: answer questions, qualify leads and book
+appointments 24/7.
+Custom web apps: Laravel, React and Next.js platforms, portals and APIs.
+White-label delivery: we build, you keep the client relationship.
+H2: Why teams work with Yankee Tech
+Page 	URL slug 	Primary keyword 	Secondary keywords
+About 	/about 	Yankee Tech (brand) remote software agency
+Pakistan
+Contact 	/contact 	book a free technical
+call
+GoHighLevel
+consultation
+Yankee Tech: SEO Keyword Research & Website Copy
+Page 3 of 13
+
+-- 3 of 13 --
+
+One team for the website, the CRM and the automation, so nothing gets lost between
+vendors.
+Fixed-scope proposals with clear timelines. You know the price before we start.
+Weekly progress updates and a named point of contact. [Add: your real support
+terms.]
+H2: How a project works
+1. Discover: a free call to map your tools, goals and bottlenecks.
+2. Plan: a written scope, timeline and fixed price.
+3. Build: design and development with weekly demos.
+4. Launch and support: go-live, handover and ongoing support if you want it.
+H2: Who we work with Marketing agencies, coaches and consultants, e-commerce
+brands, and SaaS founders in [US, UK, Middle East].
+FAQ
+What does a GoHighLevel setup cost? Projects start from [your real starting price]
+depending on pipelines, funnels and automations. Use our estimator for an instant
+range.
+Can you work with my existing website or CRM? Yes. We audit and improve existing
+WordPress sites, GHL accounts and custom apps without disrupting live traffic.
+Do you work with agencies on a white-label basis? Yes, under NDA, under your brand.
+CTA: Tell us what you're building. We reply within [24 hours].
+3.2 Services hub
+Meta title: Web Development & Automation Services | Yankee Tech Meta description:
+WordPress, GoHighLevel, AI chatbots, n8n automation and custom web apps from one
+remote team. Explore services and get a fixed-price quote.
+H1: Web Development & Automation Services
+From a single landing page to a full CRM-and-AI system, we cover the technical side of
+your growth. Pick a service to see what's included, or book a call and we'll recommend the
+right starting point.
+For each service, show a short card (2 lines) linking to its page: GoHighLevel Setup,
+GoHighLevel + WordPress Integration, AI Chatbots, AI Voice Receptionist, Workflow
+Automation, WordPress & WooCommerce, Laravel & React Development, White-Label
+Yankee Tech: SEO Keyword Research & Website Copy
+Page 4 of 13
+
+-- 4 of 13 --
+
+Development.
+3.3 GoHighLevel setup
+Meta title: GoHighLevel Setup Services: CRM, Funnels & Automation Meta description:
+Professional GoHighLevel setup: pipelines, funnels, workflows, calendars and snapshots
+built to your process. Fixed price, fast delivery. Get a quote.
+H1: GoHighLevel Setup Services
+GoHighLevel can do almost everything, which is exactly why a messy setup costs you
+leads. We design and build your account around how your business actually sells, so leads
+are captured, followed up and tracked without manual work.
+H2: What's included
+CRM and pipeline structure
+Funnels, landing pages and forms
+Workflow automation: SMS, email, missed-call text-back, reminders
+Calendars and booking flows
+Snapshots for repeatable client deployment
+Integrations with your website and other tools
+H2: Who it's for Agencies onboarding new clients, coaches and consultants, and local
+service businesses that want follow-up to run automatically.
+H2: How we deliver Discovery call, written scope, build, testing with real leads, then a
+recorded walkthrough so your team can run it. Typical timeline: [5-10 business days for
+standard builds].
+H2: Already have GoHighLevel? We audit and fix broken workflows, clean up pipelines
+and rebuild automations that aren't converting.
+FAQ
+Do you set up A2P / SMS compliance? [Confirm what you offer before publishing.]
+Can you migrate us from another CRM? [Confirm: e.g. ClickFunnels, HubSpot.]
+CTA: Get a fixed-price GoHighLevel quote.
+Yankee Tech: SEO Keyword Research & Website Copy
+Page 5 of 13
+
+-- 5 of 13 --
+
+3.4 GoHighLevel + WordPress integration (priority page)
+Meta title: GoHighLevel WordPress Integration | Two-Way Sync Meta description:
+Connect WordPress and WooCommerce to GoHighLevel with real-time two-way sync:
+forms, users, orders and memberships. Custom-built by Yankee Tech.
+H1: GoHighLevel WordPress Integration, Built to Sync Both Ways
+Plugins can push a form submission into GoHighLevel. Real businesses usually need more:
+orders, memberships, tags, course progress and contact updates moving in both
+directions without duplicates or errors. We build that connection properly, using the GHL
+API, webhooks and tools like n8n and Make, and we test it against your real data.
+H2: What we can connect
+WordPress forms (Elementor, Gravity Forms, WPForms, Contact Form 7) to
+GoHighLevel contacts, tags and pipelines
+WooCommerce customers, orders and abandoned carts to GHL workflows
+Membership and LMS activity (e.g. course completion) to GHL tags and automations
+GHL contact changes back into WordPress user data
+GHL calendars, forms and chat widgets embedded on your site
+H2: Plugin or custom build? Standard plugins are fine for simple form-to-CRM needs. If
+you need two-way sync, custom fields, multiple sub-accounts or complex logic, a custom
+integration is more reliable. We'll tell you honestly which one you need.
+H2: What you get
+Field mapping document
+Tested sync with error logging
+Handover notes for your team
+FAQ
+Does this slow down my site? Done correctly, no. [Add your real speed-testing
+approach.]
+Can you fix an integration that stopped working? Yes, we debug and rebuild broken
+syncs.
+Does it work with WooCommerce? Yes. Orders and customer data can trigger GHL
+automations.
+CTA: Book a call to scope your integration.
+Yankee Tech: SEO Keyword Research & Website Copy
+Page 6 of 13
+
+-- 6 of 13 --
+
+3.5 AI chatbot development
+Meta title: Custom AI Chatbot Development for Business | Yankee Tech Meta
+description: AI chatbots trained on your own content that answer customers, qualify
+leads and book calls. Built with OpenAI / Claude and connected to your CRM.
+H1: Custom AI Chatbot Development for Your Business
+A good chatbot isn't a pop-up that says 'How can I help?' It answers real questions from
+your own documents, collects the right details, and hands qualified leads to your CRM or
+your team. We build chatbots for your website, WhatsApp or GoHighLevel that work the
+way your best support person would.
+H2: What it can do
+Answer questions from your FAQs, documents and website content (retrieval-
+augmented generation)
+Qualify leads and capture contact details
+Book appointments into your calendar
+Hand off to a human when needed
+Push every conversation into GoHighLevel or your CRM
+H2: How we build it We define what the bot should and shouldn't answer, connect your
+knowledge base, test it against real customer questions, and set guardrails so it stays
+accurate. After launch we review conversations and improve it.
+FAQ
+Will it make things up? We restrict answers to your approved content and add fallback
+rules, but we recommend reviewing early conversations.
+Which AI models do you use? [List the models you actually use.]
+CTA: Tell us what your chatbot should handle.
+3.6 AI voice receptionist
+Meta title: AI Voice Receptionist & Appointment Booking Agent Meta description: An AI
+voice agent that answers calls, qualifies callers and books appointments 24/7, connected
+to GoHighLevel and your calendar. See how it works.
+H1: AI Voice Receptionist That Answers Every Call
+Yankee Tech: SEO Keyword Research & Website Copy
+Page 7 of 13
+
+-- 7 of 13 --
+
+Missed calls are missed revenue, especially for clinics, home services and agencies that
+can't staff the phone all day. An AI voice receptionist picks up, answers common
+questions, collects details and books the appointment straight into your calendar.
+H2: How it works
+1. The caller speaks naturally to the agent.
+2. The agent answers from your approved information and asks qualifying questions.
+3. It books the slot, sends a confirmation and logs the call in your CRM.
+4. Anything unusual goes to a human.
+H2: Best for Clinics and practices, home-service businesses, real estate teams, agencies
+running client phone lines.
+H2: Setup includes Call flow design, voice and script tuning, calendar and CRM
+integration, testing with real call scenarios. [Add real timeline.]
+FAQ
+Can it transfer to a person? Yes, based on rules you set.
+Is call recording or consent required? This depends on your location. We build in
+disclosure options, and you should confirm local rules.
+CTA: Book a demo call.
+3.7 Workflow automation (n8n, Make, Zapier)
+Meta title: n8n & Make Automation Agency | Workflow Automation Meta description: We
+automate repetitive business work with n8n, Make and AI: lead routing, onboarding,
+reporting and CRM syncing. Fixed-scope builds.
+H1: Workflow Automation with n8n, Make & AI
+If your team copies data between tools, chases approvals or sends the same follow-up by
+hand, that's an automation waiting to happen. We map the process first, then build
+reliable workflows with n8n, Make, Zapier and custom APIs, with AI steps where they
+genuinely help.
+H2: Common automations
+Lead capture to CRM, Slack and email, with scoring and routing
+Client onboarding: contracts, invoices, project setup
+Automated reporting and data syncing between apps
+Yankee Tech: SEO Keyword Research & Website Copy
+Page 8 of 13
+
+-- 8 of 13 --
+
+AI steps: summarising, classifying and drafting replies
+H2: n8n, Make or Zapier? We recommend based on your volume, budget and need for
+self-hosting, not on habit.
+CTA: Send us one process that wastes your team's time.
+3.8 WordPress & WooCommerce development
+Meta title: Custom WordPress & WooCommerce Development Services Meta
+description: Fast, custom WordPress and WooCommerce websites built for conversions,
+speed and SEO. Elementor, custom themes and plugins. Get a fixed quote.
+H1: Custom WordPress & WooCommerce Development
+A website should load fast, look credible and make it easy to enquire or buy. We build
+custom WordPress themes, Elementor sites and WooCommerce stores with clean code,
+mobile-first design and technical SEO built in from the start.
+H2: What we build
+Business and service websites
+WooCommerce stores with streamlined checkout and Stripe / PayPal
+Custom themes and plugins
+Speed optimisation and Core Web Vitals fixes
+Website redesigns and migrations
+H2: Built to be found Proper heading structure, schema markup, fast loading and clean
+URLs, so your SEO team or ours starts from a solid base.
+FAQ
+Can you improve my existing site's speed? Yes. We audit, fix and report before and
+after results.
+Will I be able to edit it myself? Yes. We hand over with a short training video.
+CTA: Get a website quote.
+3.9 Laravel & React development
+Meta title: Laravel & React Development Services | Custom Web Apps Meta description:
+Custom web applications, SaaS products, client portals and APIs built with Laravel, React
+and Next.js. Agile delivery with weekly demos.
+Yankee Tech: SEO Keyword Research & Website Copy
+Page 9 of 13
+
+-- 9 of 13 --
+
+H1: Laravel, React & Next.js Development Services
+When off-the-shelf tools stop fitting your process, a custom application does. We design
+and build web apps, SaaS MVPs, client portals and APIs with Laravel, React and Next.js,
+delivered in short sprints so you see working software every week.
+H2: What we build
+SaaS MVPs and multi-tenant platforms
+Client and admin portals
+REST and GraphQL APIs and third-party integrations
+Dashboards, booking systems and internal tools
+H2: How we work Scoping workshop, clickable design in Figma, sprint-based
+development with weekly demos, testing, deployment and handover. [Add your real stack,
+hosting and testing practices.]
+CTA: Describe your idea and get a scoped estimate.
+3.10 White-label development
+Meta title: White Label GoHighLevel & Web Development Services Meta description:
+Agencies: outsource GoHighLevel, WordPress and AI builds to a reliable white-label team.
+Your brand, your client, our developers. NDA included.
+H1: White-Label GoHighLevel & Web Development for Agencies
+Your clients want results, and your clients shouldn't have to know who builds the tech
+behind them. We act as your back-end delivery team: GoHighLevel builds, WordPress
+sites, automations and AI tools, delivered under your brand, with an NDA in place.
+H2: What we handle for agencies
+GoHighLevel sub-account builds and snapshots
+Client website builds and redesigns
+Automation and AI integrations
+Ongoing support and maintenance retainers
+H2: How it works
+1. Intro call and NDA
+2. Small paid pilot project
+3. Agreed scope, price list and turnaround times
+Yankee Tech: SEO Keyword Research & Website Copy
+Page 10 of 13
+
+-- 10 of 13 --
+
+4. Ongoing capacity for your pipeline [or a monthly retainer]
+H2: Why agencies partner with us You add services without hiring, keep the client
+relationship, and get predictable pricing and delivery. [Add real turnaround and revision
+terms.]
+FAQ
+Do you contact our clients directly? No, all communication goes through you.
+Can you work inside our tools and Slack? Yes.
+CTA: Book a partnership call.
+3.11 About
+Meta title: About Yankee Tech | Remote Web & Automation Agency Meta description:
+Meet Yankee Tech, a remote team building websites, GoHighLevel systems and AI
+automations for agencies and founders worldwide.
+H1: About Yankee Tech
+Yankee Tech is a remote software agency founded by [Khizar Ali and co-founder name].
+We started by [real origin story, 2-3 lines], and we now build websites, GoHighLevel
+systems and AI automations for clients in [countries].
+H2: How we work Small, senior-led team. Clear scopes. Honest timelines. We'd rather tell
+you a project isn't a fit than overpromise.
+H2: The team [Photos, names, roles. Real people build trust. Avoid stock photos.]
+H2: Where we operate [Pakistan-registered, US LLC (once formed), serving clients in...]
+CTA: Meet us on a call.
+3.12 Contact
+Meta title: Contact Yankee Tech | Book a Free Technical Call Meta description: Tell us
+about your project. Book a free technical call or send a brief and get a response within [24
+hours].
+H1: Book a Free Technical Call
+Share a few details and we'll come back with next steps, usually within [24 hours]. Prefer
+to talk first? Book a time directly.
+Yankee Tech: SEO Keyword Research & Website Copy
+Page 11 of 13
+
+-- 11 of 13 --
+
+Show: booking calendar (use a real link, not a placeholder), short form (name, email,
+project type, budget range, message), email [business email], WhatsApp [number].
+4. On-page and technical checklist (for your SEO friend)
+One H1 per page, matching the primary keyword naturally. Title tags under 60
+characters, descriptions under 155.
+Internal links: Home links to every service page; each service page links to 2 related
+services and to Contact; blog posts link back to the matching service page.
+Schema markup: Organization on Home/About, Service on service pages, FAQPage
+where FAQs appear.
+Real Privacy Policy and Terms pages (the current links point to #home). Google Ads
+requires these.
+Submit sitemap to Google Search Console, set up GA4, and track form submits and
+call bookings as conversions.
+Fix placeholder links (blog posts, Calendly) and update the 'Accepting Q1 2026'
+banner.
+Compress images, use descriptive alt text, and aim for strong Core Web Vitals.
+Add a Portfolio page with 3-5 real case studies in this format: problem, what we built,
+result [real number].
+5. First 8 blog posts (each links to its service page)
+1. How to connect GoHighLevel to WordPress (plugin vs custom) → /gohighlevel-
+wordpress-integration
+2. WooCommerce + GoHighLevel: automating abandoned carts and order follow-ups
+3. How to white-label GoHighLevel for your agency, step by step
+4. When to outsource GoHighLevel builds: a guide for agency owners → /white-label-
+development
+5. How an AI voice receptionist works (and what it can't do) → /ai-voice-receptionist
+6. n8n vs Make vs Zapier: which one for your business? → /workflow-automation
+7. 7 GoHighLevel automations every service business should have → /gohighlevel-setup
+8. How much does a custom AI chatbot cost? → /ai-chatbot-development
+Yankee Tech: SEO Keyword Research & Website Copy
+Page 12 of 13
+
+-- 12 of 13 --
+
+Use AI for the first draft, then add your real projects, screenshots and lessons. Generic AI
+text rarely ranks.
+6. Tie-in for Google Ads
+Each page above can become its own Google Ads ad group, with the primary and
+secondary keywords as the starting keyword list and the page as the landing page. When
+you start your course, begin with the three Priority 1-3 pages (GHL + WordPress
+integration, white-label, AI voice receptionist), use phrase and exact match, and add
+negative keywords such as free, jobs, course, tutorial, salary and Fiverr from day one.
+Yankee Tech: SEO Keyword Research & Website Copy
+Page 13 of 13
+
+-- 13 of 13 --
+

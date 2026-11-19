@@ -1,0 +1,20 @@
+Jo blockers hain (inke baghair ads mat chalao)
+1. Fake content. Case studies, “100+ projects / 50+ clients” aur testimonials sab placeholder hain. Ads se jo visitor aayega wo paisa de kar aaya hai, aur agar usay site jhooti lage to wo wapas nahi aayega. Google bhi misleading claims par ads reject kar sakta hai.
+2. Domain. Site abhi corevionsystems.com ke subdomain par hai. yankeeetech.com par live honi chahiye.
+3. Privacy Policy aur Terms. Abhi dono #home par point karte hain. Asli pages chahiye, Google Ads inke baghair account ya ads suspend kar sakta hai.
+4. Conversion tracking. GA4 aur Google Ads tracking lagi honi chahiye (form submit, call booking). Iske baghair aapko pata hi nahi chalega ke kaun sa keyword lead laya, aur budget andhere mein jayega.
+5. Contact flow. Calendly ka link generic hai. Booking link asli ho, aur form ka notification test kar lo ke aapko email ya WhatsApp par aata hai.
+
+*Jo ads ke liye achha hona chahiye*
+* Landing pages: har service ka alag page, jo mere doc mein hain. Ads ko homepage par mat bhejna.
+* Speed: mobile par 3 second se kam mein load ho (PageSpeed Insights se check karo).
+* Asli proof: kam az kam 2-3 asli case studies ya screenshots, chahe chhote hon. Upwork ke reviews bhi use ho sakte hain (client ki permission ke saath).
+* Placeholder links: blog “Read More” links, “Q1 2026” banner, aur baqi #contact wale links theek karo.
+* Business email: Gmail ki jagah @yankeeetech.com.
+
+https://debtrecoveryhub.org/
+https://zerothrough.co.uk/
+https://neolav.com.au/ 
+https://globaro.shop/                                 
+https://mis-sold-car-finance.claimfirst.co.uk/home/
+https://lateliershu.ca/fr/

@@ -1,0 +1,2332 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yankee Tech — Full-Stack Web Development, AI Automation & GHL/WordPress Integrations</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Main JavaScript (Tailwind config, interactive logic & 2026 scroll animations) -->
+  <script src="script.js"></script>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="antialiased selection:bg-brand-600 selection:text-white">
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- ==========================================
+       1. STICKY HEADER / NAVBAR
+       ========================================== -->
+  <header
+    class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-purple-100/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
+      <!-- Brand Logo (YT Yankee Tech - Infinite Possibilities) -->
+      <a href="#home" class="flex items-center gap-3 group shrink-0">
+        <div
+          class="w-10 h-10 rounded-xl bg-[#120924] flex items-center justify-center shadow-md border border-purple-500/30 group-hover:border-purple-500 transition">
+          <span
+            class="font-display font-extrabold text-lg tracking-tighter bg-gradient-to-tr from-purple-400 via-fuchsia-400 to-indigo-300 bg-clip-text text-transparent">YT</span>
+        </div>
+        <div class="leading-none">
+          <span class="block font-display font-extrabold text-lg text-gray-900 tracking-tight">Yankee Tech</span>
+          <span class="block text-[10px] font-medium text-gray-400 tracking-wider uppercase mt-0.5">Infinite
+            Possibilities</span>
+        </div>
+      </a>
+
+      <!-- Center Nav Links: Home, About Us, Services (with 2026 Mega Menu), Contact Us -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold text-gray-700">
+        <!-- 1. Home -->
+        <a href="#home" class="text-brand-600 hover:text-brand-700 font-bold transition py-2">Home</a>
+
+        <!-- 2. About Us -->
+        <a href="about.html" class="hover:text-brand-600 transition py-2">About Us</a>
+
+        <!-- 3. Services with 2026 Trends Mega Menu -->
+        <div class="group/mega py-6">
+          <a href="services.html"
+            class="flex items-center gap-1.5 py-2 hover:text-brand-600 transition group-hover/mega:text-brand-600">
+            <span>Services</span>
+            <i
+              class="fa-solid fa-chevron-down text-[9px] text-gray-400 group-hover/mega:text-brand-600 group-hover/mega:rotate-180 transition-transform duration-300"></i>
+          </a>
+
+          <!-- 2026 Bento Mega Menu Dropdown -->
+          <div
+            class="absolute left-1/2 -translate-x-1/2 top-full w-full max-w-5xl px-4 sm:px-6 pointer-events-none opacity-0 invisible -translate-y-2 group-hover/mega:pointer-events-auto group-hover/mega:opacity-100 group-hover/mega:visible group-hover/mega:translate-y-0 transition-all duration-300 ease-out z-50">
+            <div
+              class="bg-white/95 backdrop-blur-2xl border border-purple-100/90 shadow-[0_25px_60px_-15px_rgba(91,12,212,0.18)] rounded-3xl p-6 lg:p-7 overflow-hidden ring-1 ring-purple-500/10">
+
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+
+                <!-- Column 1: Web & Platforms (5 cols) -->
+                <div class="lg:col-span-5 space-y-3">
+                  <div class="flex items-center justify-between pb-2 border-b border-purple-100">
+                    <span
+                      class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-600 flex items-center gap-1.5">
+                      <i class="fa-solid fa-code text-xs"></i>
+                      <span>WEB &amp; PLATFORM DEV</span>
+                    </span>
+                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest font-mono">CORE 01</span>
+                  </div>
+
+                  <div class="space-y-1">
+                    <!-- Item 1: WordPress & WooCommerce -->
+                    <a href="services.html#wordpress"
+                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
+                      <div
+                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
+                        <i class="fa-brands fa-wordpress"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between">
+                          <h4
+                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
+                            <span>WordPress &amp; WooCommerce</span>
+                            <span
+                              class="px-1.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[9px] font-bold">95+
+                              Speed</span>
+                          </h4>
+                          <i
+                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
+                          Custom themes, Elementor, high-converting WooCommerce checkouts &amp; speed SEO.
+                        </p>
+                      </div>
+                    </a>
+
+                    <!-- Item 2: Full-Stack Web Apps -->
+                    <a href="services.html#fullstack"
+                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
+                      <div
+                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
+                        <i class="fa-brands fa-laravel"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between">
+                          <h4
+                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
+                            <span>Full-Stack Web Apps</span>
+                            <span
+                              class="px-1.5 py-0.5 rounded-full bg-purple-100 text-brand-700 border border-purple-200 text-[9px] font-bold">Enterprise</span>
+                          </h4>
+                          <i
+                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
+                          Custom Laravel, React &amp; Next.js platforms, client portals, SaaS backends &amp; APIs.
+                        </p>
+                      </div>
+                    </a>
+
+                    <!-- Item 3: UI/UX Figma Design Systems -->
+                    <a href="services.html#design"
+                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
+                      <div
+                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between">
+                          <h4
+                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
+                            <span>UI/UX Figma Design Systems</span>
+                          </h4>
+                          <i
+                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
+                          Conversion-first Figma component systems, UX wireframes &amp; high-fidelity prototypes.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Column 2: AI & Operations Automation (4 cols) -->
+                <div class="lg:col-span-4 space-y-3">
+                  <div class="flex items-center justify-between pb-2 border-b border-purple-100">
+                    <span
+                      class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-600 flex items-center gap-1.5">
+                      <i class="fa-solid fa-robot text-xs"></i>
+                      <span>AI &amp; AUTOMATION</span>
+                    </span>
+                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest font-mono">SMART 02</span>
+                  </div>
+
+                  <div class="space-y-1">
+                    <!-- Item 4: GoHighLevel (GHL) Ecosystem -->
+                    <a href="services.html#ghl"
+                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
+                      <div
+                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
+                        <i class="fa-solid fa-filter-circle-dollar"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between">
+                          <h4
+                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
+                            <span>GoHighLevel (GHL) Setup</span>
+                            <span
+                              class="px-1.5 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200 text-[9px] font-bold">Hot</span>
+                          </h4>
+                          <i
+                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
+                          Pipelines, automated SMS/email sequences, calendar funnels &amp; snapshots.
+                        </p>
+                      </div>
+                    </a>
+
+                    <!-- Item 5: AI Chatbots & Agents -->
+                    <a href="services.html#ai"
+                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
+                      <div
+                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
+                        <i class="fa-solid fa-brain"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between">
+                          <h4
+                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
+                            <span>AI Agents &amp; Chatbots</span>
+                            <span
+                              class="px-1.5 py-0.5 rounded-full bg-fuchsia-50 text-fuchsia-700 border border-fuchsia-200 text-[9px] font-bold">2026
+                              AI</span>
+                          </h4>
+                          <i
+                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
+                          OpenAI &amp; Claude RAG support agents, automated 24/7 voice booking bots.
+                        </p>
+                      </div>
+                    </a>
+
+                    <!-- Item 6: 2-Way GHL + WordPress Sync -->
+                    <a href="services.html#sync"
+                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
+                      <div
+                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between">
+                          <h4
+                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
+                            <span>GHL + WordPress Sync</span>
+                          </h4>
+                          <i
+                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
+                          Real-time webhooks, n8n/Make automated flows, membership access &amp; sync.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Column 3: 2026 Spotlight Bento Card (3 cols) -->
+                <div
+                  class="lg:col-span-3 rounded-2xl bg-gradient-to-br from-[#120727] via-[#1a083a] to-[#2b0c57] text-white p-5 border border-purple-500/30 flex flex-col justify-between relative overflow-hidden shadow-xl group/card">
+                  <div
+                    class="absolute -top-12 -right-12 w-28 h-28 bg-brand-500/30 rounded-full blur-2xl pointer-events-none">
+                  </div>
+
+                  <div>
+                    <div class="flex items-center justify-between mb-3">
+                      <span
+                        class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-500/25 border border-brand-400/40 text-[9px] font-bold uppercase tracking-wider text-purple-200">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Live Tool
+                      </span>
+                      <span class="text-[10px] text-purple-300 font-mono">2026 V2</span>
+                    </div>
+                    <h4 class="font-display font-extrabold text-sm text-white leading-snug">Instant Price Estimator</h4>
+                    <p class="text-[11px] text-purple-200/75 mt-1.5 leading-relaxed">
+                      Select your pages, workflows &amp; AI add-ons for instant quotes in USD, PKR, or GBP.
+                    </p>
+                  </div>
+
+                  <div class="mt-4 pt-3 border-t border-white/10 space-y-2">
+                    <a href="#estimator"
+                      class="w-full btn-purple text-white text-[11px] font-bold py-2.5 px-3.5 rounded-xl flex items-center justify-center gap-2 group-hover/card:shadow-glow transition">
+                      <span>Launch Estimator</span>
+                      <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                    <div class="flex items-center justify-center gap-1 text-[10px] text-purple-300/80">
+                      <i class="fa-solid fa-bolt text-[9px] text-amber-400"></i>
+                      <span>Instant 30s calculation</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Bottom Mega Menu Bar -->
+              <div
+                class="mt-5 pt-3 border-t border-purple-100/90 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs bg-purple-50/60 -mx-6 -mb-6 lg:-mx-7 lg:-mb-7 px-6 lg:px-7 py-3 rounded-b-3xl">
+                <div class="flex items-center gap-2 text-gray-600">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                  <span class="font-semibold text-gray-900">Accepting Q1 2026 Projects</span>
+                  <span class="text-gray-400 hidden sm:inline">•</span>
+                  <span class="text-gray-500 hidden sm:inline">White-label agency &amp; custom enterprise
+                    agreements</span>
+                </div>
+                <a href="#contact"
+                  class="font-bold text-brand-600 hover:text-brand-700 inline-flex items-center gap-1.5 shrink-0 transition">
+                  <span>Book Free Technical Call</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Use Cases -->
+        <a href="use-cases.html" class="hover:text-brand-600 transition py-2">Use Cases</a>
+
+        <!-- 5. Contact Us -->
+        <a href="#contact" class="hover:text-brand-600 transition py-2">Contact Us</a>
+      </nav>
+
+      <!-- Right CTA Pill & Hamburger -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <a href="#contact"
+          class="hidden sm:inline-flex btn-purple magnetic-btn text-white text-xs font-semibold px-4 sm:px-5 py-2.5 rounded-full items-center gap-2 shadow-sm">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+        <!-- Mobile Menu Button with larger touch target -->
+        <button id="mobileMenuBtn" aria-label="Toggle navigation menu"
+          class="md:hidden w-10 h-10 rounded-xl border border-purple-200/90 flex items-center justify-center text-gray-700 hover:bg-purple-50 transition active:scale-95">
+          <i class="fa-solid fa-bars text-base"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer (Scrollable on small devices, auto-closes on tap) -->
+    <div id="mobileMenu"
+      class="hidden md:hidden bg-white/98 backdrop-blur-2xl border-b border-purple-100 px-5 sm:px-6 py-5 space-y-3 text-sm font-medium text-gray-700 shadow-2xl max-h-[calc(100vh-5rem)] overflow-y-auto">
+      <a href="#home" class="block py-1.5 text-brand-600 font-bold border-b border-purple-50">Home</a>
+      <a href="about.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">About Us</a>
+
+      <!-- Mobile Services Accordion -->
+      <div class="border-b border-purple-50 pb-1.5">
+        <button type="button"
+          onclick="document.getElementById('mobileServicesSub').classList.toggle('hidden'); document.getElementById('mobileServicesArrow').classList.toggle('rotate-180');"
+          class="w-full flex items-center justify-between py-1.5 hover:text-brand-600 transition text-left font-medium">
+          <span>Services</span>
+          <i id="mobileServicesArrow" class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform"></i>
+        </button>
+        <div id="mobileServicesSub"
+          class="hidden pl-3.5 pt-2 pb-1 space-y-2.5 border-l-2 border-purple-200 mt-1 text-xs text-gray-600">
+          <a href="services.html#wordpress" class="block py-1 hover:text-brand-600">WordPress &amp; WooCommerce</a>
+          <a href="services.html#fullstack" class="block py-1 hover:text-brand-600">Full-Stack Laravel &amp; React</a>
+          <a href="services.html#ghl" class="block py-1 hover:text-brand-600">GoHighLevel (GHL) Setup</a>
+          <a href="services.html#ai" class="block py-1 hover:text-brand-600">AI Agents &amp; Automation</a>
+          <a href="services.html#sync" class="block py-1 hover:text-brand-600">2-Way GHL + WP Sync</a>
+          <a href="services.html#design" class="block py-1 hover:text-brand-600">UI/UX Figma Design Systems</a>
+          <a href="#estimator" class="block py-1 text-brand-600 font-bold">⚡ Price Estimator</a>
+        </div>
+      </div>
+
+      <a href="use-cases.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Use
+        Cases</a>
+      <a href="#contact" class="block py-1.5 hover:text-brand-600 transition">Contact Us</a>
+
+      <div class="pt-3">
+        <a href="#contact"
+          class="btn-purple text-white text-xs font-semibold py-3.5 px-5 rounded-full w-full flex items-center justify-center gap-2 shadow-sm">
+          <span>Let's Talk</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       2. HERO SECTION (Exact Mockup Composition)
+       ========================================== -->
+  <section id="home"
+    class="hero-bg relative overflow-hidden pt-10 pb-14 lg:pt-14 lg:pb-20 border-b border-purple-100/60">
+    <!-- Decorative ambient purple glow behind right devices -->
+    <div
+      class="pointer-events-none absolute top-6 right-0 w-[550px] h-[480px] bg-gradient-to-bl from-purple-700/25 via-indigo-900/20 to-transparent rounded-full blur-3xl">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-center">
+
+        <!-- Left Column: Copy, CTAs & Stats -->
+        <div class="lg:col-span-6 space-y-5">
+          <!-- Eyebrow Tag -->
+          <div data-anim="fade-up"
+            class="inline-flex flex-wrap items-center gap-1.5 sm:gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.14em] sm:tracking-[0.16em] uppercase text-brand-600">
+            <span>WEB DEVELOPMENT</span>
+            <span class="text-purple-300">|</span>
+            <span>FULL-STACK</span>
+            <span class="text-purple-300">|</span>
+            <span>AI AUTOMATION</span>
+            <span class="text-purple-300">|</span>
+            <span>GHL &amp; WORDPRESS</span>
+          </div>
+
+          <!-- Main Headline -->
+          <h1 data-anim="fade-up" data-delay="1"
+            class="font-display font-extrabold text-2xl sm:text-4xl lg:text-[46px] text-[#110c22] leading-[1.15] sm:leading-[1.12] tracking-tight">
+            Digital Solutions<br />
+            That Move Your Business<br />
+            Forward
+          </h1>
+
+          <!-- Subtitle -->
+          <p data-anim="fade-up" data-delay="2" class="text-gray-600 text-xs sm:text-base leading-relaxed max-w-xl">
+            Full-Stack Web Development, AI Workflow Automation, and Seamless GoHighLevel (GHL) &amp; WordPress
+            Integrations — All Under One Roof.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div data-anim="fade-up" data-delay="3"
+            class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
+            <a href="#contact"
+              class="w-full sm:w-auto btn-purple magnetic-btn text-white text-xs sm:text-sm font-semibold px-6 py-3.5 rounded-full inline-flex items-center justify-center gap-2.5 shadow-glow">
+              <span>Get a Free Consultation</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <a href="#estimator"
+              class="w-full sm:w-auto bg-white hover:bg-purple-50/80 text-gray-800 border border-purple-200 text-xs sm:text-sm font-semibold px-5 py-3.5 rounded-full inline-flex items-center justify-center gap-2.5 transition shadow-sm">
+              <span>Estimate Project Cost</span>
+              <span class="w-5 h-5 rounded-full bg-brand-600 text-white flex items-center justify-center text-[9px]">
+                <i class="fa-solid fa-calculator"></i>
+              </span>
+            </a>
+          </div>
+
+          <!-- 4 Stats Row (2x2 on mobile, 4 columns on sm+) -->
+          <div data-anim="fade-up" data-delay="4"
+            class="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-6 max-w-lg border-t border-purple-200/60">
+            <div>
+              <div class="font-display font-extrabold text-lg sm:text-xl text-gray-900"><span class="counter-num"
+                  data-count="100" data-suffix="+">100+</span></div>
+              <div class="text-[11px] text-gray-500">Projects Completed</div>
+            </div>
+            <div>
+              <div class="font-display font-extrabold text-lg sm:text-xl text-gray-900"><span class="counter-num"
+                  data-count="50" data-suffix="+">50+</span></div>
+              <div class="text-[11px] text-gray-500">Happy Clients</div>
+            </div>
+            <div>
+              <div class="font-display font-extrabold text-lg sm:text-xl text-gray-900"><span class="counter-num"
+                  data-count="5" data-suffix="+">5+</span></div>
+              <div class="text-[11px] text-gray-500">Years of Experience</div>
+            </div>
+            <div>
+              <div class="font-display font-extrabold text-lg sm:text-xl text-gray-900">24/7</div>
+              <div class="text-[11px] text-gray-500">Agency Support</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Studio Desk Laptop + Smartphone Mockup Recreation -->
+        <div data-anim="fade-left" data-delay="2" class="lg:col-span-6 relative">
+          <div class="relative mx-auto max-w-xl lg:max-w-none">
+            <!-- Studio backdrop mood container -->
+            <div
+              class="relative rounded-3xl p-4 sm:p-6 bg-gradient-to-br from-[#2b1055] via-[#16072e] to-[#0b0318] shadow-2xl border border-purple-500/30 overflow-hidden">
+              <!-- Ambient purple neon backlights -->
+              <div class="absolute -top-20 -right-20 w-64 h-64 bg-purple-600/40 rounded-full blur-3xl"></div>
+              <div class="absolute bottom-4 left-10 w-52 h-52 bg-fuchsia-600/25 rounded-full blur-2xl"></div>
+
+              <!-- Subtle desk surface at bottom -->
+              <div
+                class="absolute bottom-0 inset-x-0 h-12 bg-gradient-to-t from-[#090212] via-[#1b0c38]/80 to-transparent">
+              </div>
+
+              <div class="relative z-10 flex items-end justify-between gap-2 pt-2 pb-4">
+
+                <!-- LAPTOP DEVICE -->
+                <div class="w-[78%] relative">
+                  <!-- Laptop Screen Bezel -->
+                  <div class="rounded-t-2xl bg-[#0a0612] p-2 sm:p-2.5 border-2 border-gray-700/80 shadow-2xl">
+                    <!-- Screen Interior -->
+                    <div
+                      class="rounded-lg bg-gradient-to-br from-[#160830] via-[#0e0520] to-[#1e0a42] p-4 sm:p-5 relative overflow-hidden min-h-[210px] sm:min-h-[250px] flex flex-col justify-between border border-purple-500/20">
+                      <!-- Mini top bar inside laptop -->
+                      <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-1.5">
+                          <span
+                            class="w-4 h-4 rounded bg-brand-600 text-[8px] font-bold text-white flex items-center justify-center">YT</span>
+                          <span class="text-[9px] font-semibold text-purple-200">Yankee Tech Studio</span>
+                        </div>
+                        <div class="flex items-center gap-1.5">
+                          <span
+                            class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[8px] font-semibold border border-emerald-500/30">GHL
+                            + WP Synced</span>
+                          <span
+                            class="px-2 py-0.5 rounded-full bg-purple-500/20 text-purple-200 text-[8px] font-semibold">AI
+                            Active</span>
+                        </div>
+                      </div>
+
+                      <!-- Center Laptop Split Content -->
+                      <div class="grid grid-cols-12 gap-3 my-auto py-3 items-center">
+                        <div class="col-span-7 space-y-2">
+                          <div class="text-[9px] uppercase tracking-widest text-purple-300 font-semibold">Full-Stack
+                            &amp; AI Engine</div>
+                          <div class="font-display font-extrabold text-white text-base sm:text-xl leading-tight">
+                            Ideas<br />
+                            Build<br />
+                            Better<br />
+                            Businesses
+                          </div>
+                          <div class="pt-1">
+                            <span
+                              class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-gradient-to-r from-brand-500 to-purple-500 text-white text-[8px] font-semibold shadow">
+                              Let's Scale <i class="fa-solid fa-arrow-right text-[7px]"></i>
+                            </span>
+                          </div>
+                        </div>
+                        <!-- Mini UI card inside laptop screen -->
+                        <div
+                          class="col-span-5 bg-white/10 backdrop-blur-md rounded-xl p-2.5 border border-white/15 space-y-2">
+                          <div class="flex items-center justify-between text-[8px] text-purple-200">
+                            <span>API Webhooks</span>
+                            <span class="text-emerald-400 font-bold">99.9%</span>
+                          </div>
+                          <div class="w-full bg-purple-950 h-1.5 rounded-full overflow-hidden">
+                            <div class="bg-gradient-to-r from-purple-400 to-fuchsia-400 h-full w-[92%]"></div>
+                          </div>
+                          <div class="space-y-1 pt-1">
+                            <div class="flex items-center gap-1.5 text-[8px] text-gray-200">
+                              <i class="fa-brands fa-wordpress text-sky-400"></i>
+                              <span>WP Custom Stack</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 text-[8px] text-gray-200">
+                              <i class="fa-solid fa-bolt text-amber-400"></i>
+                              <span>GHL CRM Pipeline</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 text-[8px] text-gray-200">
+                              <i class="fa-solid fa-robot text-purple-300"></i>
+                              <span>AI Lead Agent</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Bottom stats bar inside laptop -->
+                      <div
+                        class="flex items-center justify-between text-[8px] text-purple-300/80 border-t border-white/10 pt-2">
+                        <span>Laravel • React • Node • Next.js</span>
+                        <span>n8n • Make • OpenAI API</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Laptop Metallic Base -->
+                  <div
+                    class="h-3 bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400 rounded-b-xl mx-auto w-[104%] -ml-[2%] shadow-lg flex items-center justify-center">
+                    <div class="w-12 h-1 bg-gray-500 rounded-full"></div>
+                  </div>
+                </div>
+
+                <!-- SMARTPHONE DEVICE (Right Foreground matching screenshot) -->
+                <div class="w-[26%] -ml-6 z-20 animate-float">
+                  <div class="rounded-[24px] bg-[#090512] p-1.5 border-2 border-purple-400/50 shadow-2xl">
+                    <div
+                      class="rounded-[19px] bg-gradient-to-b from-[#1e0a45] via-[#120629] to-[#290d5e] p-3 min-h-[185px] sm:min-h-[215px] flex flex-col justify-between border border-purple-400/20 relative overflow-hidden">
+                      <!-- Notch -->
+                      <div class="w-10 h-1 bg-purple-900/80 rounded-full mx-auto"></div>
+                      <div class="flex items-center justify-between text-[8px] text-purple-300 mt-1">
+                        <span class="font-bold">YT</span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                      </div>
+                      <div class="my-auto space-y-1 py-2">
+                        <div class="font-display font-extrabold text-white text-xs sm:text-sm leading-snug">
+                          Grow<br />
+                          Automate<br />
+                          Integrate
+                        </div>
+                        <p class="text-[7px] text-purple-200/80 leading-tight">
+                          2-Way GHL, WP &amp; AI Agent Workflows
+                        </p>
+                      </div>
+                      <div class="space-y-1.5">
+                        <div
+                          class="bg-purple-500/20 border border-purple-400/30 rounded-lg p-1.5 text-[7px] text-purple-100 flex items-center justify-between">
+                          <span>AI Auto-Booked</span>
+                          <span class="font-bold text-emerald-300">+42 Leads</span>
+                        </div>
+                        <div
+                          class="w-full py-1 rounded-full bg-gradient-to-r from-brand-500 to-purple-500 text-center text-[7px] font-bold text-white">
+                          Live Sync →
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. TRUSTED TECH STACK & PLATFORMS BAR
+       ========================================== -->
+  <section class="py-8 bg-white border-b border-gray-100 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p data-anim="fade-up" class="text-center text-[10px] font-bold tracking-[0.2em] uppercase text-gray-500 mb-6">
+        TRUSTED BY BUSINESSES WORLDWIDE • OUR CORE TECH &amp; AUTOMATION STACK
+      </p>
+      <div class="marquee-wrap">
+        <div class="marquee-track">
+          <!-- Set 1 -->
+          <div class="flex items-center gap-2 text-gray-800 font-display font-bold text-sm sm:text-base shrink-0">
+            <i class="fa-brands fa-wordpress text-xl text-[#21759b]"></i>
+            <span>WordPress</span>
+          </div>
+          <div class="flex items-center gap-1.5 font-display font-extrabold text-sm sm:text-base shrink-0">
+            <span class="px-2 py-0.5 rounded bg-[#7f54b3] text-white text-xs">WOO</span>
+            <span class="text-gray-800 tracking-tight">COMMERCE</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
+            <span class="flex items-end gap-0.5">
+              <span class="w-1 h-3 bg-amber-500 rounded-sm"></span>
+              <span class="w-1 h-4 bg-emerald-500 rounded-sm"></span>
+              <span class="w-1 h-5 bg-blue-600 rounded-sm"></span>
+            </span>
+            <span>HighLevel</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-[#ff2d20] shrink-0">
+            <i class="fa-brands fa-laravel text-xl"></i>
+            <span>Laravel</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
+            <i class="fa-brands fa-react text-xl text-sky-500"></i>
+            <span>React &amp; Next.js</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
+            <i class="fa-solid fa-microchip text-lg text-brand-600"></i>
+            <span>OpenAI &amp; n8n</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
+            <i class="fa-brands fa-figma text-lg text-pink-500"></i>
+            <span>Figma</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-[#92003B] shrink-0">
+            <i class="fa-brands fa-elementor text-lg"></i>
+            <span>elementor</span>
+          </div>
+          <!-- Set 2 (seamless duplicate) -->
+          <div class="flex items-center gap-2 text-gray-800 font-display font-bold text-sm sm:text-base shrink-0">
+            <i class="fa-brands fa-wordpress text-xl text-[#21759b]"></i>
+            <span>WordPress</span>
+          </div>
+          <div class="flex items-center gap-1.5 font-display font-extrabold text-sm sm:text-base shrink-0">
+            <span class="px-2 py-0.5 rounded bg-[#7f54b3] text-white text-xs">WOO</span>
+            <span class="text-gray-800 tracking-tight">COMMERCE</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
+            <span class="flex items-end gap-0.5">
+              <span class="w-1 h-3 bg-amber-500 rounded-sm"></span>
+              <span class="w-1 h-4 bg-emerald-500 rounded-sm"></span>
+              <span class="w-1 h-5 bg-blue-600 rounded-sm"></span>
+            </span>
+            <span>HighLevel</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-[#ff2d20] shrink-0">
+            <i class="fa-brands fa-laravel text-xl"></i>
+            <span>Laravel</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
+            <i class="fa-brands fa-react text-xl text-sky-500"></i>
+            <span>React &amp; Next.js</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
+            <i class="fa-solid fa-microchip text-lg text-brand-600"></i>
+            <span>OpenAI &amp; n8n</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
+            <i class="fa-brands fa-figma text-lg text-pink-500"></i>
+            <span>Figma</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-[#92003B] shrink-0">
+            <i class="fa-brands fa-elementor text-lg"></i>
+            <span>elementor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       4. OUR SERVICES ("Everything You Need to Grow Online")
+       ========================================== -->
+  <section id="services" class="py-16 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header Row matching screenshot -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div data-anim="fade-up">
+          <span class="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-600 block mb-1.5">OUR
+            SERVICES</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900 tracking-tight">
+            Everything You Need to Grow Online
+          </h2>
+        </div>
+        <div data-anim="fade-up" data-delay="1" class="flex items-center justify-between md:justify-end gap-6">
+          <p class="text-xs text-gray-500 max-w-sm leading-relaxed">
+            From high-converting WordPress &amp; Full-Stack web apps to intelligent AI automation and GoHighLevel
+            integrations, we turn complex workflows into real revenue.
+          </p>
+          <div class="hidden sm:flex items-center gap-2">
+            <button onclick="scrollServices(-1)"
+              class="w-8 h-8 rounded-full border border-gray-200 hover:border-brand-500 hover:text-brand-600 flex items-center justify-center text-gray-500 text-xs transition"
+              aria-label="Previous Service">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button onclick="scrollServices(1)"
+              class="w-8 h-8 rounded-full border border-gray-200 hover:border-brand-500 hover:text-brand-600 flex items-center justify-center text-gray-500 text-xs transition"
+              aria-label="Next Service">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Service Cards Grid -->
+      <div id="servicesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <!-- Card 1: WordPress & Elementor Development -->
+        <div data-anim="fade-up" data-delay="1"
+          class="service-card-bg tilt-card rounded-2xl p-6 flex flex-col justify-between relative group">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div
+                class="w-12 h-12 rounded-2xl bg-sky-50 border border-sky-100 flex items-center justify-center text-[#21759b] text-2xl shadow-sm">
+                <i class="fa-brands fa-wordpress"></i>
+              </div>
+              <a href="#estimator" onclick="selectEstimatorPreset('wordpress')"
+                class="w-7 h-7 rounded-full bg-white border border-purple-100 flex items-center justify-center text-gray-400 group-hover:text-brand-600 group-hover:border-brand-300 transition text-xs">
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+            <h3 class="font-display font-bold text-base text-gray-900 mb-2 leading-snug">
+              WordPress &amp; WooCommerce
+            </h3>
+            <p class="text-xs text-gray-500 leading-relaxed mb-6">
+              Custom WordPress themes, Elementor Pro builds, high-converting WooCommerce stores &amp; speed
+              optimization.
+            </p>
+          </div>
+          <a href="#estimator" onclick="selectEstimatorPreset('wordpress')"
+            class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 group-hover:gap-2.5 transition-all">
+            <span>Estimate Cost</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Card 2: Full-Stack Web Development -->
+        <div data-anim="fade-up" data-delay="2"
+          class="service-card-bg tilt-card rounded-2xl p-6 flex flex-col justify-between relative group">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div
+                class="w-12 h-12 rounded-2xl bg-purple-50 border border-purple-100 flex items-center justify-center text-brand-600 text-xl shadow-sm">
+                <i class="fa-solid fa-laptop-code"></i>
+              </div>
+              <a href="#estimator" onclick="selectEstimatorPreset('fullstack')"
+                class="w-7 h-7 rounded-full bg-white border border-purple-100 flex items-center justify-center text-gray-400 group-hover:text-brand-600 group-hover:border-brand-300 transition text-xs">
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+            <h3 class="font-display font-bold text-base text-gray-900 mb-2 leading-snug">
+              Full-Stack Development
+            </h3>
+            <p class="text-xs text-gray-500 leading-relaxed mb-6">
+              Scalable custom web apps, SaaS platforms, client portals &amp; REST APIs engineered with Laravel, React,
+              Next.js &amp; Node.
+            </p>
+          </div>
+          <a href="#estimator" onclick="selectEstimatorPreset('fullstack')"
+            class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 group-hover:gap-2.5 transition-all">
+            <span>Estimate Cost</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Card 3: GoHighLevel (GHL) Automation -->
+        <div data-anim="fade-up" data-delay="3"
+          class="service-card-bg tilt-card rounded-2xl p-6 flex flex-col justify-between relative group">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div
+                class="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-600 text-xl shadow-sm">
+                <i class="fa-solid fa-chart-line"></i>
+              </div>
+              <a href="#estimator" onclick="selectEstimatorPreset('ghl')"
+                class="w-7 h-7 rounded-full bg-white border border-purple-100 flex items-center justify-center text-gray-400 group-hover:text-brand-600 group-hover:border-brand-300 transition text-xs">
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+            <h3 class="font-display font-bold text-base text-gray-900 mb-2 leading-snug">
+              GoHighLevel (GHL) Setup
+            </h3>
+            <p class="text-xs text-gray-500 leading-relaxed mb-6">
+              Complete GHL CRM architecture, automated sales pipelines, custom funnels, calendars, snapshots &amp; SaaS
+              configuration.
+            </p>
+          </div>
+          <a href="#estimator" onclick="selectEstimatorPreset('ghl')"
+            class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 group-hover:gap-2.5 transition-all">
+            <span>Estimate Cost</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+        <!-- Card 4: AI Automation & GHL/WP Integrations -->
+        <div data-anim="fade-up" data-delay="4"
+          class="service-card-bg tilt-card rounded-2xl p-6 flex flex-col justify-between relative group">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div
+                class="w-12 h-12 rounded-2xl bg-fuchsia-50 border border-fuchsia-100 flex items-center justify-center text-fuchsia-600 text-xl shadow-sm">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <a href="#estimator" onclick="selectEstimatorPreset('ai')"
+                class="w-7 h-7 rounded-full bg-white border border-purple-100 flex items-center justify-center text-gray-400 group-hover:text-brand-600 group-hover:border-brand-300 transition text-xs">
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+            <h3 class="font-display font-bold text-base text-gray-900 mb-2 leading-snug">
+              AI Automation &amp; Integrations
+            </h3>
+            <p class="text-xs text-gray-500 leading-relaxed mb-6">
+              Custom AI chatbots, voice agents, n8n/Make workflows, and real-time 2-way sync between WordPress, GHL
+              &amp; third-party CRMs.
+            </p>
+          </div>
+          <a href="#estimator" onclick="selectEstimatorPreset('ai')"
+            class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 group-hover:gap-2.5 transition-all">
+            <span>Estimate Cost</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- ==========================================
+           5. ABOUT US & AGILE SUCCESS PROCESS
+           ========================================== -->
+      <div id="about" class="mt-20 scroll-mt-28">
+        <div class="mb-10" data-anim="fade-up">
+          <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-600 block mb-1.5">ABOUT YANKEE
+            TECH</span>
+          <h2 class="font-display font-extrabold text-xl sm:text-2xl text-gray-900">About Us &amp; Our Agile Engineering
+            Process</h2>
+          <p class="text-xs text-gray-500 mt-1 max-w-xl">
+            A transparent, sprint-based engineering model designed to deliver custom full-stack builds, AI agent
+            automations, and frictionless GHL &amp; WordPress ecosystems.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+          <!-- Step 01 -->
+          <div data-anim="fade-up" data-delay="1"
+            class="relative flex flex-col justify-between p-4 rounded-2xl hover:bg-purple-50/40 transition">
+            <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm mb-4">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
+            </div>
+            <div class="flex items-baseline gap-2.5 mb-1.5">
+              <span class="font-display font-extrabold text-xl text-gray-900">01</span>
+              <h3 class="font-display font-bold text-sm text-gray-900">Discover &amp; Architect</h3>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed pl-7">
+              We audit your tech stack, map out GHL/WordPress workflows, and design a clear technical blueprint.
+            </p>
+            <div class="hidden lg:flex absolute top-1/2 -right-3 text-gray-400 text-xs">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <!-- Step 02 -->
+          <div data-anim="fade-up" data-delay="2"
+            class="relative flex flex-col justify-between p-4 rounded-2xl hover:bg-purple-50/40 transition">
+            <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm mb-4">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="flex items-baseline gap-2.5 mb-1.5">
+              <span class="font-display font-extrabold text-xl text-gray-900">02</span>
+              <h3 class="font-display font-bold text-sm text-gray-900">Design &amp; Full-Stack Build</h3>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed pl-7">
+              We bring your vision to life with modern Figma UI/UX, clean full-stack or WordPress code, and custom APIs.
+            </p>
+            <div class="hidden lg:flex absolute top-1/2 -right-3 text-gray-400 text-xs">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <!-- Step 03 -->
+          <div data-anim="fade-up" data-delay="3"
+            class="relative flex flex-col justify-between p-4 rounded-2xl hover:bg-purple-50/40 transition">
+            <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm mb-4">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <div class="flex items-baseline gap-2.5 mb-1.5">
+              <span class="font-display font-extrabold text-xl text-gray-900">03</span>
+              <h3 class="font-display font-bold text-sm text-gray-900">Integrate AI &amp; Automate</h3>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed pl-7">
+              We connect GoHighLevel pipelines, AI agents, webhooks, and speed-optimize every page for 95+ Core Web
+              Vitals.
+            </p>
+            <div class="hidden lg:flex absolute top-1/2 -right-3 text-gray-400 text-xs">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <!-- Step 04 -->
+          <div data-anim="fade-up" data-delay="4"
+            class="relative flex flex-col justify-between p-4 rounded-2xl hover:bg-purple-50/40 transition">
+            <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm mb-4">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <div class="flex items-baseline gap-2.5 mb-1.5">
+              <span class="font-display font-extrabold text-xl text-gray-900">04</span>
+              <h3 class="font-display font-bold text-sm text-gray-900">Launch &amp; 24/7 Support</h3>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed pl-7">
+              We deploy with zero downtime and stay with you for ongoing scaling, workflow monitoring, and support.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. CURVED DARK SECTION — USE CASES & INDUSTRIES
+       ========================================== -->
+  <section id="use-cases" class="relative dark-cosmic-bg text-white pt-20 pb-24 overflow-hidden scroll-mt-16">
+    <a id="industries" class="sr-only">Industries and Use Cases</a>
+    <!-- Top Left Curved Cutout SVG matching screenshot -->
+    <div class="absolute top-0 left-0 w-full overflow-hidden leading-none pointer-events-none">
+      <svg viewBox="0 0 1440 54" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-8 sm:h-12 preserve-3d"
+        preserveAspectRatio="none">
+        <path d="M0 0H1440V12H140C70 12 30 35 0 54V0Z" fill="#ffffff" />
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Header -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+        <div data-anim="fade-up">
+          <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-purple-400 block mb-1.5">USE CASES &amp;
+            INDUSTRIES WE SERVE</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
+            Solutions &amp; Use Cases for Every Vision
+          </h2>
+          <p class="text-xs text-purple-200/70 mt-1">
+            We partner with startups, e-commerce brands, SaaS founders, and marketing agencies worldwide.
+          </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="use-cases.html"
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-brand-600 text-purple-200 hover:text-white border border-purple-400/30 text-xs font-semibold transition">
+            <span>Explore All Use Cases</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 4 Dark Industry Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <!-- Industry Card 1: Businesses & Startups -->
+        <a href="use-case-startups.html" data-anim="fade-up" data-delay="1"
+          class="industry-card group relative rounded-2xl overflow-hidden bg-[#180a33] border border-purple-500/20 h-[310px] flex flex-col justify-between p-5 transition block">
+          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=700&q=80"
+            alt="Businesses and Startups"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-55 group-hover:scale-105 transition duration-500"
+            onerror="this.src='https://placehold.co/600x800/1a0936/c4a6ff?text=Startups'" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#0f0521]/95 via-[#130629]/55 to-[#0b0318]/90"></div>
+          <div class="relative z-10 flex items-start justify-between gap-2">
+            <div>
+              <h3 class="font-display font-bold text-base text-white leading-snug">Businesses<br />&amp; Startups</h3>
+              <p class="text-[11px] text-purple-200/80 mt-1.5">Custom Full-Stack MVPs &amp; WordPress sites for growing
+                brands.</p>
+            </div>
+            <span
+              class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white text-xs group-hover:bg-brand-500 transition">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </div>
+          <div class="relative z-10">
+            <span
+              class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-950/80 border border-purple-400/30 text-[10px] text-purple-200 font-medium">
+              <i class="fa-solid fa-layer-group text-purple-400"></i> Full-Stack &amp; WP
+            </span>
+          </div>
+        </a>
+
+        <!-- Industry Card 2: Ecommerce Stores -->
+        <a href="use-case-ecommerce.html" data-anim="fade-up" data-delay="2"
+          class="industry-card group relative rounded-2xl overflow-hidden bg-[#180a33] border border-purple-500/20 h-[310px] flex flex-col justify-between p-5 transition block">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=700&q=80"
+            alt="Ecommerce Stores"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-55 group-hover:scale-105 transition duration-500"
+            onerror="this.src='https://placehold.co/600x800/1a0936/c4a6ff?text=Ecommerce'" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#0f0521]/95 via-[#130629]/55 to-[#0b0318]/90"></div>
+          <div class="relative z-10 flex items-start justify-between gap-2">
+            <div>
+              <h3 class="font-display font-bold text-base text-white leading-snug">Ecommerce<br />Stores</h3>
+              <p class="text-[11px] text-purple-200/80 mt-1.5">Scalable WooCommerce &amp; custom stores with automated
+                cart recovery.</p>
+            </div>
+            <span
+              class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white text-xs group-hover:bg-brand-500 transition">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </div>
+          <div class="relative z-10">
+            <span
+              class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-950/80 border border-purple-400/30 text-[10px] text-purple-200 font-medium">
+              <i class="fa-solid fa-cart-shopping text-purple-400"></i> WooCommerce + Stripe
+            </span>
+          </div>
+        </a>
+
+        <!-- Industry Card 3: SaaS & B2B Enterprises -->
+        <a href="use-case-saas-b2b.html" data-anim="fade-up" data-delay="3"
+          class="industry-card group relative rounded-2xl overflow-hidden bg-[#180a33] border border-purple-500/20 h-[310px] flex flex-col justify-between p-5 transition block">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80"
+            alt="SaaS & B2B Platforms"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-55 group-hover:scale-105 transition duration-500"
+            onerror="this.src='https://placehold.co/600x800/1a0936/c4a6ff?text=SaaS+Platforms'" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#0f0521]/95 via-[#130629]/55 to-[#0b0318]/90"></div>
+          <div class="relative z-10 flex items-start justify-between gap-2">
+            <div>
+              <h3 class="font-display font-bold text-base text-white leading-snug">SaaS &amp; B2B<br />Enterprises</h3>
+              <p class="text-[11px] text-purple-200/80 mt-1.5">Custom web portals, AI agents &amp; deep multi-system API
+                integrations.</p>
+            </div>
+            <span
+              class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white text-xs group-hover:bg-brand-500 transition">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </div>
+          <div class="relative z-10">
+            <span
+              class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-950/80 border border-purple-400/30 text-[10px] text-purple-200 font-medium">
+              <i class="fa-solid fa-microchip text-purple-400"></i> AI &amp; Custom APIs
+            </span>
+          </div>
+        </a>
+
+        <!-- Industry Card 4: Coaches & Agencies -->
+        <a href="use-case-agencies.html" data-anim="fade-up" data-delay="4"
+          class="industry-card group relative rounded-2xl overflow-hidden bg-[#180a33] border border-purple-500/20 h-[310px] flex flex-col justify-between p-5 transition block">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80"
+            alt="Coaches and Agencies"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-55 group-hover:scale-105 transition duration-500"
+            onerror="this.src='https://placehold.co/600x800/1a0936/c4a6ff?text=Agencies'" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#0f0521]/95 via-[#130629]/55 to-[#0b0318]/90"></div>
+          <div class="relative z-10 flex items-start justify-between gap-2">
+            <div>
+              <h3 class="font-display font-bold text-base text-white leading-snug">Coaches &amp;<br />Agencies</h3>
+              <p class="text-[11px] text-purple-200/80 mt-1.5">GoHighLevel sub-account automation, funnels &amp;
+                WordPress sites to scale.</p>
+            </div>
+            <span
+              class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white text-xs group-hover:bg-brand-500 transition">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </div>
+          <div class="relative z-10">
+            <span
+              class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-950/80 border border-purple-400/30 text-[10px] text-purple-200 font-medium">
+              <i class="fa-solid fa-bolt text-purple-400"></i> GoHighLevel Pro
+            </span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Bottom Right Curved Cutout SVG matching screenshot -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none">
+      <svg viewBox="0 0 1440 54" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-8 sm:h-12"
+        preserveAspectRatio="none">
+        <path d="M0 42H1300C1370 42 1410 19 1440 0V54H0V42Z" fill="#ffffff" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       7. INTERACTIVE PROJECT PRICE ESTIMATOR
+          (Replaces "Proven Results" Section as requested)
+       ========================================== -->
+  <section id="estimator" class="py-16 lg:py-20 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Heading matching Yankee Tech style -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-[10px] font-bold uppercase tracking-widest mb-2">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <span>INSTANT TRANSPARENT PRICING</span>
+          </div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900 tracking-tight">
+            Interactive Project Price Estimator
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-500 mt-1">
+            Configure your Web Development, Full-Stack, GoHighLevel, or AI Automation scope for a real-time investment
+            &amp; timeline breakdown.
+          </p>
+        </div>
+
+        <!-- Currency Switcher -->
+        <div
+          class="inline-flex items-center bg-purple-50 p-1 rounded-xl border border-purple-100 w-full sm:w-auto justify-between sm:justify-start">
+          <button type="button" onclick="setCurrency('USD')" id="curr-USD"
+            class="flex-1 sm:flex-initial px-3 sm:px-3.5 py-1.5 rounded-lg text-xs font-bold transition bg-brand-600 text-white shadow-sm text-center">
+            USD ($)
+          </button>
+          <button type="button" onclick="setCurrency('PKR')" id="curr-PKR"
+            class="flex-1 sm:flex-initial px-3 sm:px-3.5 py-1.5 rounded-lg text-xs font-bold transition text-gray-600 hover:text-brand-600 text-center">
+            PKR (Rs)
+          </button>
+          <button type="button" onclick="setCurrency('GBP')" id="curr-GBP"
+            class="flex-1 sm:flex-initial px-3 sm:px-3.5 py-1.5 rounded-lg text-xs font-bold transition text-gray-600 hover:text-brand-600 text-center">
+            GBP (£)
+          </button>
+        </div>
+      </div>
+
+      <!-- Estimator Main Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+        <!-- Left 7 Columns: Interactive Controls -->
+        <div data-anim="fade-right"
+          class="lg:col-span-7 bg-[#faf8ff] border border-purple-100 rounded-3xl p-6 sm:p-8 space-y-8 shadow-card">
+
+          <!-- STEP 1: Select Core Solution -->
+          <div>
+            <div class="flex items-center justify-between mb-3.5">
+              <label class="font-display font-bold text-sm text-gray-900 flex items-center gap-2">
+                <span
+                  class="w-6 h-6 rounded-full bg-brand-600 text-white text-xs flex items-center justify-center font-bold">1</span>
+                <span>Select Primary Service Track</span>
+              </label>
+              <span class="text-[11px] text-brand-600 font-semibold">Click to switch base architecture</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="serviceTrackButtons">
+              <!-- Track 1: WordPress & Elementor -->
+              <button type="button" onclick="selectTrack('wordpress')" data-track="wordpress"
+                class="track-btn text-left p-4 rounded-2xl border-2 border-brand-600 bg-white shadow-sm transition flex items-start gap-3.5">
+                <div
+                  class="w-10 h-10 rounded-xl bg-sky-50 text-[#21759b] flex items-center justify-center text-lg shrink-0 mt-0.5">
+                  <i class="fa-brands fa-wordpress"></i>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-display font-bold text-xs sm:text-sm text-gray-900">WordPress &amp; Woo</span>
+                    <span class="text-[11px] font-bold text-brand-600" data-base-label="450">$450+</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 mt-0.5">Custom Elementor Pro, Theme Dev or E-Commerce Store</p>
+                </div>
+              </button>
+
+              <!-- Track 2: Full-Stack Web App -->
+              <button type="button" onclick="selectTrack('fullstack')" data-track="fullstack"
+                class="track-btn text-left p-4 rounded-2xl border-2 border-purple-100 bg-white/70 hover:bg-white transition flex items-start gap-3.5">
+                <div
+                  class="w-10 h-10 rounded-xl bg-purple-50 text-brand-600 flex items-center justify-center text-lg shrink-0 mt-0.5">
+                  <i class="fa-solid fa-code"></i>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-display font-bold text-xs sm:text-sm text-gray-900">Full-Stack Web App</span>
+                    <span class="text-[11px] font-bold text-brand-600" data-base-label="1100">$1,100+</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 mt-0.5">Laravel, React, Next.js, Node.js, SaaS &amp; Portals</p>
+                </div>
+              </button>
+
+              <!-- Track 3: GoHighLevel (GHL) CRM & Funnels -->
+              <button type="button" onclick="selectTrack('ghl')" data-track="ghl"
+                class="track-btn text-left p-4 rounded-2xl border-2 border-purple-100 bg-white/70 hover:bg-white transition flex items-start gap-3.5">
+                <div
+                  class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg shrink-0 mt-0.5">
+                  <i class="fa-solid fa-sitemap"></i>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-display font-bold text-xs sm:text-sm text-gray-900">GoHighLevel (GHL)</span>
+                    <span class="text-[11px] font-bold text-brand-600" data-base-label="550">$550+</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 mt-0.5">Funnels, Pipelines, Automations, Calendars &amp; Snapshots
+                  </p>
+                </div>
+              </button>
+
+              <!-- Track 4: AI Automation & Custom Integrations -->
+              <button type="button" onclick="selectTrack('ai')" data-track="ai"
+                class="track-btn text-left p-4 rounded-2xl border-2 border-purple-100 bg-white/70 hover:bg-white transition flex items-start gap-3.5">
+                <div
+                  class="w-10 h-10 rounded-xl bg-fuchsia-50 text-fuchsia-600 flex items-center justify-center text-lg shrink-0 mt-0.5">
+                  <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-display font-bold text-xs sm:text-sm text-gray-900">AI &amp; API
+                      Integrations</span>
+                    <span class="text-[11px] font-bold text-brand-600" data-base-label="650">$650+</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 mt-0.5">AI Agents, n8n/Make Workflows &amp; GHL + WP Sync</p>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- STEP 2: Project Scale & Complexity Sliders -->
+          <div class="space-y-6 pt-2 border-t border-purple-200/60">
+            <label class="font-display font-bold text-sm text-gray-900 flex items-center gap-2">
+              <span
+                class="w-6 h-6 rounded-full bg-brand-600 text-white text-xs flex items-center justify-center font-bold">2</span>
+              <span>Define Scope &amp; Workflow Volume</span>
+            </label>
+
+            <!-- Slider A: Pages / Screens / Funnel Steps -->
+            <div class="bg-white p-4 rounded-2xl border border-purple-100">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-gray-800">Pages, Screens, or Funnel Steps</span>
+                <span id="pagesCountLabel"
+                  class="px-2.5 py-0.5 rounded-full bg-brand-100 text-brand-700 font-display font-bold text-xs">6 Pages
+                  / Steps</span>
+              </div>
+              <input id="pagesSlider" type="range" min="1" max="25" value="6" oninput="updateEstimate()"
+                class="w-full" />
+              <div class="flex justify-between text-[10px] text-gray-400 mt-1">
+                <span>1 Landing Page</span>
+                <span>10 Pages</span>
+                <span>25+ Enterprise</span>
+              </div>
+            </div>
+
+            <!-- Slider B: Automation Workflows & API Integrations -->
+            <div class="bg-white p-4 rounded-2xl border border-purple-100">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-xs font-bold text-gray-800">AI Workflows / GHL Automations / API Webhooks</span>
+                <span id="workflowsCountLabel"
+                  class="px-2.5 py-0.5 rounded-full bg-brand-100 text-brand-700 font-display font-bold text-xs">3
+                  Workflows</span>
+              </div>
+              <input id="workflowsSlider" type="range" min="0" max="15" value="3" oninput="updateEstimate()"
+                class="w-full" />
+              <div class="flex justify-between text-[10px] text-gray-400 mt-1">
+                <span>0 (None)</span>
+                <span>5 Workflows</span>
+                <span>15+ Complex Triggers</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: Power-Up Integrations & Add-Ons -->
+          <div class="space-y-3 pt-2 border-t border-purple-200/60">
+            <label class="font-display font-bold text-sm text-gray-900 flex items-center gap-2">
+              <span
+                class="w-6 h-6 rounded-full bg-brand-600 text-white text-xs flex items-center justify-center font-bold">3</span>
+              <span>Select GHL, WordPress &amp; AI Power-Ups</span>
+            </label>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <!-- Addon 1 -->
+              <label
+                class="flex items-center justify-between p-3 rounded-xl bg-white border border-purple-100 hover:border-brand-400 cursor-pointer transition">
+                <span class="flex items-center gap-2.5">
+                  <input type="checkbox" class="addon-check accent-brand-600 w-4 h-4 rounded"
+                    data-name="2-Way GHL + WordPress Lead Sync" data-cost="250" onchange="updateEstimate()" checked />
+                  <span class="text-xs font-semibold text-gray-800">2-Way GHL + WP Sync</span>
+                </span>
+                <span class="text-[11px] font-bold text-brand-600 addon-price" data-usd="250">+$250</span>
+              </label>
+
+              <!-- Addon 2 -->
+              <label
+                class="flex items-center justify-between p-3 rounded-xl bg-white border border-purple-100 hover:border-brand-400 cursor-pointer transition">
+                <span class="flex items-center gap-2.5">
+                  <input type="checkbox" class="addon-check accent-brand-600 w-4 h-4 rounded"
+                    data-name="Custom OpenAI Chatbot / Lead Agent" data-cost="400" onchange="updateEstimate()" />
+                  <span class="text-xs font-semibold text-gray-800">Custom AI Chatbot Agent</span>
+                </span>
+                <span class="text-[11px] font-bold text-brand-600 addon-price" data-usd="400">+$400</span>
+              </label>
+
+              <!-- Addon 3 -->
+              <label
+                class="flex items-center justify-between p-3 rounded-xl bg-white border border-purple-100 hover:border-brand-400 cursor-pointer transition">
+                <span class="flex items-center gap-2.5">
+                  <input type="checkbox" class="addon-check accent-brand-600 w-4 h-4 rounded"
+                    data-name="AI Voice Receptionist (GHL Inbound/Outbound)" data-cost="550"
+                    onchange="updateEstimate()" />
+                  <span class="text-xs font-semibold text-gray-800">AI Voice Call Agent (GHL)</span>
+                </span>
+                <span class="text-[11px] font-bold text-brand-600 addon-price" data-usd="550">+$550</span>
+              </label>
+
+              <!-- Addon 4 -->
+              <label
+                class="flex items-center justify-between p-3 rounded-xl bg-white border border-purple-100 hover:border-brand-400 cursor-pointer transition">
+                <span class="flex items-center gap-2.5">
+                  <input type="checkbox" class="addon-check accent-brand-600 w-4 h-4 rounded"
+                    data-name="WooCommerce / Stripe Subscriptions Setup" data-cost="220" onchange="updateEstimate()" />
+                  <span class="text-xs font-semibold text-gray-800">Stripe / Woo Checkout</span>
+                </span>
+                <span class="text-[11px] font-bold text-brand-600 addon-price" data-usd="220">+$220</span>
+              </label>
+
+              <!-- Addon 5 -->
+              <label
+                class="flex items-center justify-between p-3 rounded-xl bg-white border border-purple-100 hover:border-brand-400 cursor-pointer transition">
+                <span class="flex items-center gap-2.5">
+                  <input type="checkbox" class="addon-check accent-brand-600 w-4 h-4 rounded"
+                    data-name="Custom Figma UI/UX Design System" data-cost="300" onchange="updateEstimate()" />
+                  <span class="text-xs font-semibold text-gray-800">Custom Figma UI/UX</span>
+                </span>
+                <span class="text-[11px] font-bold text-brand-600 addon-price" data-usd="300">+$300</span>
+              </label>
+
+              <!-- Addon 6 -->
+              <label
+                class="flex items-center justify-between p-3 rounded-xl bg-white border border-purple-100 hover:border-brand-400 cursor-pointer transition">
+                <span class="flex items-center gap-2.5">
+                  <input type="checkbox" class="addon-check accent-brand-600 w-4 h-4 rounded"
+                    data-name="95+ PageSpeed & Technical SEO Pack" data-cost="200" onchange="updateEstimate()" />
+                  <span class="text-xs font-semibold text-gray-800">95+ Speed &amp; Tech SEO</span>
+                </span>
+                <span class="text-[11px] font-bold text-brand-600 addon-price" data-usd="200">+$200</span>
+              </label>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right 5 Columns: Live Estimate Summary Card -->
+        <div data-anim="fade-left" class="lg:col-span-5">
+          <div
+            class="rotating-border rounded-3xl dark-cosmic-bg text-white p-6 sm:p-8 shadow-2xl border border-purple-500/30 relative overflow-hidden">
+            <!-- Decorative glow -->
+            <div class="absolute -top-16 -right-16 w-48 h-48 bg-brand-500/30 rounded-full blur-3xl pointer-events-none">
+            </div>
+
+            <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-5">
+              <div>
+                <span class="text-[10px] font-bold uppercase tracking-widest text-purple-300 block">LIVE PROJECT
+                  ESTIMATE</span>
+                <h3 id="summaryTrackTitle" class="font-display font-bold text-lg text-white mt-0.5">WordPress &amp;
+                  WooCommerce Build</h3>
+              </div>
+              <span
+                class="px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-[11px] font-semibold">
+                <i class="fa-solid fa-clock mr-1"></i> <span id="summaryTimeline">2 - 3 Weeks</span>
+              </span>
+            </div>
+
+            <!-- Estimated Price Display -->
+            <div class="bg-white/5 border border-white/10 rounded-2xl p-5 mb-5 text-center">
+              <span class="text-[11px] text-purple-200 uppercase tracking-wider font-semibold">Estimated Investment
+                Range</span>
+              <div id="summaryTotalDisplay"
+                class="font-display font-extrabold text-2xl sm:text-4xl text-white mt-1 tracking-tight break-words sm:break-normal">
+                $1,090 – $1,310
+              </div>
+              <p class="text-[11px] text-purple-300/80 mt-1">
+                Includes full QA testing, deployment &amp; 30-day post-launch support
+              </p>
+            </div>
+
+            <!-- Itemized Breakdown List -->
+            <div class="space-y-2.5 text-xs mb-6">
+              <div class="text-[10px] font-bold uppercase tracking-wider text-purple-300 mb-1">INCLUDED IN YOUR SCOPE:
+              </div>
+              <div class="flex items-center justify-between text-purple-100 py-1 border-b border-white/5">
+                <span id="breakdownBaseName">Base Platform Architecture</span>
+                <span id="breakdownBaseCost" class="font-semibold text-white">$450</span>
+              </div>
+              <div class="flex items-center justify-between text-purple-100 py-1 border-b border-white/5">
+                <span id="breakdownPagesName">6 Pages / Screens Development</span>
+                <span id="breakdownPagesCost" class="font-semibold text-white">$240</span>
+              </div>
+              <div class="flex items-center justify-between text-purple-100 py-1 border-b border-white/5">
+                <span id="breakdownWorkflowsName">3 Automation / API Workflows</span>
+                <span id="breakdownWorkflowsCost" class="font-semibold text-white">$150</span>
+              </div>
+              <!-- Dynamic Addons Container -->
+              <div id="breakdownAddonsList" class="space-y-1.5 pt-1"></div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="space-y-3">
+              <button type="button" onclick="applyEstimateToContact()"
+                class="w-full btn-purple magnetic-btn text-white font-display font-bold text-xs sm:text-sm py-4 px-6 rounded-full shadow-glow flex items-center justify-center gap-2">
+                <span>Lock In Estimate &amp; Book Free Call</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <button type="button" onclick="resetEstimator()"
+                class="w-full py-2.5 rounded-full bg-white/5 hover:bg-white/10 text-purple-200 text-xs font-medium transition">
+                Reset Configuration
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       8. FULL-STACK, AI & INTEGRATION ECOSYSTEM GRID
+          (Replaces "Ebook Services: From Idea to Global Audience"
+           while keeping the exact 12-pill + monolith layout)
+       ========================================== -->
+  <section id="ecosystem" class="py-14 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Top Header Row matching screenshot -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div data-anim="fade-up">
+          <span class="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-600 block mb-1.5">FULL-STACK, AI
+            &amp; INTEGRATION SERVICES</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900 tracking-tight">
+            From Idea to Scalable Digital Ecosystem
+          </h2>
+        </div>
+        <p data-anim="fade-up" data-delay="1" class="text-xs text-gray-500 max-w-md leading-relaxed">
+          We help businesses, agencies, and SaaS founders build custom web platforms, automate repetitive operations
+          with AI, and synchronize GoHighLevel &amp; WordPress seamlessly.
+        </p>
+      </div>
+
+      <!-- 12 Capability Pills Grid (4 rows x 3 columns + Wide Bottom Pill + Right Monolith Showcase) -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+
+        <!-- Row 1 (4 pills across matching the top 2 rows of screenshot) -->
+        <a href="service-wordpress.html" data-anim="scale-in" data-delay="1"
+          class="cap-pill rounded-2xl p-4 flex items-center justify-between gap-3 group">
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div
+              class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+              <i class="fa-brands fa-wordpress"></i>
+            </div>
+            <div class="min-w-0">
+              <h3 class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition truncate">
+                Custom WordPress Dev</h3>
+              <p class="text-[11px] text-gray-500 truncate">Bespoke themes &amp; plugins</p>
+            </div>
+          </div>
+          <i
+            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover:text-brand-600 group-hover:translate-x-1 transition-all shrink-0"></i>
+        </a>
+
+        <a href="service-laravel-react.html" data-anim="scale-in" data-delay="2"
+          class="cap-pill rounded-2xl p-4 flex items-center justify-between gap-3 group">
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div
+              class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+              <i class="fa-brands fa-laravel"></i>
+            </div>
+            <div class="min-w-0">
+              <h3 class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition truncate">
+                Laravel &amp; React Apps</h3>
+              <p class="text-[11px] text-gray-500 truncate">Scalable full-stack builds</p>
+            </div>
+          </div>
+          <i
+            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover:text-brand-600 group-hover:translate-x-1 transition-all shrink-0"></i>
+        </a>
+
+        <a href="service-ghl-funnels.html" data-anim="scale-in" data-delay="3"
+          class="cap-pill rounded-2xl p-4 flex items-center justify-between gap-3 group">
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div
+              class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+              <i class="fa-solid fa-filter-circle-dollar"></i>
+            </div>
+            <div class="min-w-0">
+              <h3 class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition truncate">
+                GoHighLevel Funnels</h3>
+              <p class="text-[11px] text-gray-500 truncate">Pipelines &amp; CRM snapshots</p>
+            </div>
+          </div>
+          <i
+            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover:text-brand-600 group-hover:translate-x-1 transition-all shrink-0"></i>
+        </a>
+
+        <a href="service-ai-chatbots.html" data-anim="scale-in" data-delay="4"
+          class="cap-pill rounded-2xl p-4 flex items-center justify-between gap-3 group">
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div
+              class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <div class="min-w-0">
+              <h3 class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition truncate">AI
+                Chatbots &amp; Agents</h3>
+              <p class="text-[11px] text-gray-500 truncate">OpenAI &amp; custom RAG bots</p>
+            </div>
+          </div>
+          <i
+            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover:text-brand-600 group-hover:translate-x-1 transition-all shrink-0"></i>
+        </a>
+
+        <!-- Row 2 (4 pills across) -->
+        <a href="service-ghl-wordpress-sync.html" data-anim="scale-in" data-delay="5"
+          class="cap-pill rounded-2xl p-4 flex items-center justify-between gap-3 group">
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div
+              class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+              <i class="fa-solid fa-arrows-rotate"></i>
+            </div>
+            <div class="min-w-0">
+              <h3 class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition truncate">
+                GHL + WordPress Sync</h3>
+              <p class="text-[11px] text-gray-500 truncate">2-way webhooks &amp; SSO</p>
+            </div>
+          </div>
+          <i
+            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover:text-brand-600 group-hover:translate-x-1 transition-all shrink-0"></i>
+        </a>
+
+        <a href="service-workflow-automation.html" data-anim="scale-in" data-delay="6"
+          class="cap-pill rounded-2xl p-4 flex items-center justify-between gap-3 group">
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div
+              class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+              <i class="fa-solid fa-diagram-project"></i>
+            </div>
+            <div class="min-w-0">
+              <h3 class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition truncate">
+                n8n, Make &amp; Zapier</h3>
+              <p class="text-[11px] text-gray-500 truncate">Multi-step AI workflows</p>
+            </div>
+          </div>
+          <i
+            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover:text-brand-600 group-hover:translate-x-1 transition-all shrink-0"></i>
+        </a>
+
+        <a href="service-woocommerce-stripe.html" data-anim="scale-in" data-delay="7"
+          class="cap-pill rounded-2xl p-4 flex items-center justify-between gap-3 group">
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div
+              class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="min-w-0">
+              <h3 class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition truncate">
+                WooCommerce &amp; Stripe</h3>
+              <p class="text-[11px] text-gray-500 truncate">High-converting checkouts</p>
+            </div>
+          </div>
+          <i
+            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover:text-brand-600 group-hover:translate-x-1 transition-all shrink-0"></i>
+        </a>
+
+        <a href="service-ai-voice-receptionist.html" data-anim="scale-in" data-delay="8"
+          class="cap-pill rounded-2xl p-4 flex items-center justify-between gap-3 group">
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div
+              class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <div class="min-w-0">
+              <h3 class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition truncate">AI
+                Voice Receptionists</h3>
+              <p class="text-[11px] text-gray-500 truncate">24/7 automated call booking</p>
+            </div>
+          </div>
+          <i
+            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover:text-brand-600 group-hover:translate-x-1 transition-all shrink-0"></i>
+        </a>
+
+        <!-- Row 3 & 4 Left 3 Columns + Right Visual Showcase Column -->
+        <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-3.5">
+          <a href="service-api-engineering.html" data-anim="scale-in" data-delay="9"
+            class="cap-pill rounded-2xl p-4 flex items-center justify-between gap-3 group">
+            <div class="flex items-center gap-3.5 min-w-0">
+              <div
+                class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+                <i class="fa-solid fa-plug-circle-bolt"></i>
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition truncate">
+                  Custom REST &amp; GraphQL</h3>
+                <p class="text-[11px] text-gray-500 truncate">3rd-party API engineering</p>
+              </div>
+            </div>
+            <i
+              class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover:text-brand-600 group-hover:translate-x-1 transition-all shrink-0"></i>
+          </a>
+
+          <a href="service-speed-seo.html" data-anim="scale-in" data-delay="10"
+            class="cap-pill rounded-2xl p-4 flex items-center justify-between gap-3 group">
+            <div class="flex items-center gap-3.5 min-w-0">
+              <div
+                class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+                <i class="fa-solid fa-gauge-high"></i>
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition truncate">
+                  Core Web Vitals 95+</h3>
+                <p class="text-[11px] text-gray-500 truncate">Speed &amp; Technical SEO</p>
+              </div>
+            </div>
+            <i
+              class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover:text-brand-600 group-hover:translate-x-1 transition-all shrink-0"></i>
+          </a>
+
+          <a href="service-ui-ux-figma.html"
+            class="cap-pill rounded-2xl p-4 flex items-center justify-between gap-3 group">
+            <div class="flex items-center gap-3.5 min-w-0">
+              <div
+                class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+                <i class="fa-solid fa-pen-ruler"></i>
+              </div>
+              <div class="min-w-0">
+                <h3 class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition truncate">
+                  UI/UX Figma Systems</h3>
+                <p class="text-[11px] text-gray-500 truncate">Conversion-first interfaces</p>
+              </div>
+            </div>
+            <i
+              class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover:text-brand-600 group-hover:translate-x-1 transition-all shrink-0"></i>
+          </a>
+
+          <!-- Wide Bottom Banner Pill -->
+          <a href="service-white-label-agency.html"
+            class="sm:col-span-3 cap-pill rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3.5 group">
+            <div class="flex items-center gap-3.5">
+              <div
+                class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover:scale-105 group-hover:bg-brand-600 group-hover:text-white transition">
+                <i class="fa-solid fa-cubes-stacked"></i>
+              </div>
+              <div>
+                <h3 class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition">
+                  White-Label Agency &amp; Enterprise Dedicated Engineering</h3>
+                <p class="text-[11px] text-gray-500 mt-0.5">End-to-end architecture, GHL sub-account management &amp;
+                  full-stack scaling for global brands</p>
+              </div>
+            </div>
+            <div
+              class="w-8 h-8 rounded-full bg-white border border-purple-200 flex items-center justify-center text-gray-500 group-hover:text-brand-600 group-hover:border-brand-300 text-xs shrink-0 self-end sm:self-auto transition">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </a>
+        </div>
+
+        <!-- Right Visual Monolith Card (replaces "TURN IDEAS INTO IMPACT" book with Dark Tech Monolith) -->
+        <div class="lg:col-span-1 flex items-center justify-center">
+          <div
+            class="w-full h-full min-h-[165px] rounded-2xl bg-gradient-to-br from-[#170930] via-[#0d041c] to-[#230b4a] p-5 flex items-center justify-between border border-purple-500/20 shadow-xl relative overflow-hidden">
+            <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-purple-500/20 rounded-full blur-2xl"></div>
+            <!-- Left stacked tech plates -->
+            <div class="space-y-1.5 w-1/3 pr-2">
+              <div
+                class="h-3 rounded bg-purple-900/70 border border-purple-400/30 text-[7px] text-purple-200 flex items-center px-1.5 font-mono">
+                API_SYNC</div>
+              <div
+                class="h-3 rounded bg-indigo-900/70 border border-indigo-400/30 text-[7px] text-indigo-200 flex items-center px-1.5 font-mono">
+                GHL_CRM</div>
+              <div
+                class="h-3 rounded bg-fuchsia-900/70 border border-fuchsia-400/30 text-[7px] text-fuchsia-200 flex items-center px-1.5 font-mono">
+                AI_AGENT</div>
+              <div
+                class="h-3 rounded bg-purple-950 border border-purple-500/30 text-[7px] text-purple-300 flex items-center px-1.5 font-mono">
+                WP_CORE</div>
+            </div>
+            <!-- Right Monolith Plaque matching "TURN IDEAS INTO IMPACT" typography -->
+            <div class="w-2/3 bg-[#090410] border border-purple-400/40 rounded-xl p-3.5 text-center shadow-2xl">
+              <div
+                class="font-display font-extrabold text-white text-xs sm:text-sm tracking-wider leading-tight uppercase">
+                TURN<br />
+                WORKFLOWS<br />
+                INTO<br />
+                <span class="text-purple-400">IMPACT</span>
+              </div>
+              <div class="text-[7px] text-gray-400 tracking-widest uppercase mt-2 border-t border-white/10 pt-1">
+                CODE • AUTOMATE • SCALE
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       9. CLIENT TESTIMONIALS ("What Our Clients Say")
+       ========================================== -->
+  <section class="py-14 lg:py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header -->
+      <div class="flex items-end justify-between mb-10">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-600 block mb-1">CLIENT
+            TESTIMONIALS</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900">What Our Clients Say</h2>
+        </div>
+        <div class="flex items-center gap-2">
+          <button
+            class="w-8 h-8 rounded-full border border-gray-200 hover:border-brand-500 flex items-center justify-center text-gray-500 text-xs transition"
+            aria-label="Previous Testimonial">
+            <i class="fa-solid fa-arrow-left"></i>
+          </button>
+          <button
+            class="w-8 h-8 rounded-full border border-gray-200 hover:border-brand-500 flex items-center justify-center text-gray-500 text-xs transition"
+            aria-label="Next Testimonial">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- 3 Testimonial Cards matching screenshot -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Review 1 -->
+        <div data-anim="fade-up" data-delay="1"
+          class="rounded-2xl bg-[#faf8ff] border border-purple-100/90 p-6 flex flex-col justify-between shadow-card">
+          <div>
+            <span class="text-2xl font-serif text-purple-300 leading-none block mb-2">“</span>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6">
+              Yankee Tech engineered a blazing-fast custom WordPress &amp; WooCommerce platform for our brand.
+              Professional, fast, and seamless communication throughout!
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-purple-100">
+            <div class="flex items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80"
+                alt="Sarah M." class="w-10 h-10 rounded-full object-cover border border-purple-200"
+                onerror="this.src='https://placehold.co/80x80/6e18f5/ffffff?text=SM'" />
+              <div>
+                <div class="font-display font-bold text-xs text-gray-900">Sarah M.</div>
+                <div class="text-[10px] text-gray-400">E-Commerce Founder</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-0.5 text-amber-400 text-xs">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div data-anim="fade-up" data-delay="2"
+          class="rounded-2xl bg-[#faf8ff] border border-purple-100/90 p-6 flex flex-col justify-between shadow-card">
+          <div>
+            <span class="text-2xl font-serif text-purple-300 leading-none block mb-2">“</span>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6">
+              The GoHighLevel CRM automation and 2-way WordPress webhook integration saved our sales team 25+ hours
+              every single week. Highly recommended!
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-purple-100">
+            <div class="flex items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80"
+                alt="James T." class="w-10 h-10 rounded-full object-cover border border-purple-200"
+                onerror="this.src='https://placehold.co/80x80/6e18f5/ffffff?text=JT'" />
+              <div>
+                <div class="font-display font-bold text-xs text-gray-900">James T.</div>
+                <div class="text-[10px] text-gray-400">Marketing Agency CEO</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-0.5 text-amber-400 text-xs">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div data-anim="fade-up" data-delay="3"
+          class="rounded-2xl bg-[#faf8ff] border border-purple-100/90 p-6 flex flex-col justify-between shadow-card">
+          <div>
+            <span class="text-2xl font-serif text-purple-300 leading-none block mb-2">“</span>
+            <p class="text-xs sm:text-sm text-gray-600 leading-relaxed mb-6">
+              They built our full-stack Laravel &amp; React client portal and connected an OpenAI support agent directly
+              into our workflows. Truly impressive engineering!
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-purple-100">
+            <div class="flex items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80"
+                alt="Emily R." class="w-10 h-10 rounded-full object-cover border border-purple-200"
+                onerror="this.src='https://placehold.co/80x80/6e18f5/ffffff?text=ER'" />
+              <div>
+                <div class="font-display font-bold text-xs text-gray-900">Emily R.</div>
+                <div class="text-[10px] text-gray-400">SaaS Operations Director</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-0.5 text-amber-400 text-xs">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ==========================================
+           10. SOME OF THE PLATFORMS WE WORK WITH
+           ========================================== -->
+      <div class="mt-16 pt-8 border-t border-gray-100">
+        <p class="text-center text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-6">
+          SOME OF THE PLATFORMS &amp; APIS WE INTEGRATE WITH
+        </p>
+        <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+          <!-- Google -->
+          <span class="font-display font-bold text-lg tracking-tight">
+            <span class="text-blue-500">G</span><span class="text-red-500">o</span><span
+              class="text-amber-500">o</span><span class="text-blue-500">g</span><span
+              class="text-emerald-500">l</span><span class="text-red-500">e</span>
+          </span>
+          <!-- AWS / Amazon -->
+          <span class="font-display font-extrabold text-lg text-gray-800 flex items-center gap-1">
+            <span>aws</span>
+            <i class="fa-brands fa-aws text-amber-500 text-base"></i>
+          </span>
+          <!-- Meta -->
+          <span class="font-display font-bold text-lg text-gray-800 flex items-center gap-1.5">
+            <i class="fa-brands fa-meta text-blue-600"></i>
+            <span>Meta</span>
+          </span>
+          <!-- HubSpot -->
+          <span class="font-display font-extrabold text-lg text-gray-800 flex items-center gap-1">
+            <span>HubSp</span><i class="fa-brands fa-hubspot text-[#ff7a59]"></i><span>t</span>
+          </span>
+          <!-- Stripe -->
+          <span class="font-display font-extrabold text-xl text-[#635bff] tracking-tight">stripe</span>
+          <!-- PayPal -->
+          <span class="font-display font-extrabold text-lg text-[#003087] flex items-center gap-1">
+            <i class="fa-brands fa-paypal text-[#0079C1]"></i>
+            <span>PayPal</span>
+          </span>
+          <!-- Zapier / n8n -->
+          <span class="font-display font-extrabold text-lg text-gray-800 flex items-center gap-1.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#ff4a00]"></span>
+            <span>Zapier &amp; n8n</span>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       11. CURVED DARK CONTACT SECTION
+           ("Bring Your Ideas to Life With Yankee Tech")
+       ========================================== -->
+  <section id="contact" class="relative contact-cosmic-bg text-white pt-20 pb-24 overflow-hidden">
+    <!-- Top Left Curved Divider -->
+    <div class="absolute top-0 left-0 w-full overflow-hidden leading-none pointer-events-none">
+      <svg viewBox="0 0 1440 54" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-8 sm:h-12"
+        preserveAspectRatio="none">
+        <path d="M0 0H1440V12H140C70 12 30 35 0 54V0Z" fill="#ffffff" />
+      </svg>
+    </div>
+
+    <!-- Decorative purple wave lines SVG in background -->
+    <svg class="pointer-events-none absolute inset-0 w-full h-full opacity-20" viewBox="0 0 1440 600" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M-100 450 C 300 200, 650 580, 1540 180" stroke="url(#gradWave)" stroke-width="2" fill="none" />
+      <path d="M-100 500 C 340 240, 700 610, 1540 230" stroke="url(#gradWave)" stroke-width="1.5" fill="none" />
+      <path d="M-100 550 C 380 280, 750 640, 1540 280" stroke="url(#gradWave)" stroke-width="1" fill="none" />
+      <defs>
+        <linearGradient id="gradWave" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#a472ff" />
+          <stop offset="50%" stop-color="#6e18f5" />
+          <stop offset="100%" stop-color="#c4a6ff" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+        <!-- Left 5 Columns: Copy & Checkmarks -->
+        <div data-anim="fade-right" class="lg:col-span-5 space-y-5">
+          <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-purple-300 block">LET'S WORK
+            TOGETHER</span>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white leading-tight">
+            Bring Your Ideas to Life<br />
+            With Yankee Tech
+          </h2>
+          <p class="text-xs sm:text-sm text-purple-200/80 leading-relaxed max-w-md">
+            Whether you need a custom Full-Stack application, a high-speed WordPress website, or GoHighLevel &amp; AI
+            workflow automation, our engineering team is ready to help you scale.
+          </p>
+
+          <ul class="space-y-3 pt-2 text-xs sm:text-sm text-purple-100">
+            <li class="flex items-center gap-3">
+              <span class="w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center text-[10px]">
+                <i class="fa-solid fa-check"></i>
+              </span>
+              <span>Free Architecture &amp; Automation Consultation</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center text-[10px]">
+                <i class="fa-solid fa-check"></i>
+              </span>
+              <span>On-Time Agile Milestone Delivery</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center text-[10px]">
+                <i class="fa-solid fa-check"></i>
+              </span>
+              <span>24/7 Ongoing DevOps &amp; Workflow Support</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right 7 Columns: Floating White "Send Us a Message" Card -->
+        <div data-anim="fade-left" class="lg:col-span-7">
+          <div
+            class="bg-white text-gray-900 rounded-3xl p-6 sm:p-8 shadow-2xl border border-purple-100 max-w-xl lg:ml-auto">
+            <h3 class="font-display font-bold text-lg text-gray-900">Send Us a Message</h3>
+            <p class="text-xs text-gray-500 mt-0.5 mb-6">Tell us about your project and our technical architects will
+              get back to you within 24 hours.</p>
+
+            <!-- Auto-populated Estimate Banner (Hidden until user clicks button in Estimator) -->
+            <div id="estimateAttachedBanner"
+              class="hidden mb-4 p-3 rounded-xl bg-brand-50 border border-brand-200 text-brand-800 text-xs flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-brand-600"></i>
+                <span class="font-semibold">Your custom project estimate has been attached below!</span>
+              </div>
+              <button type="button" onclick="clearAttachedEstimate()"
+                class="text-[10px] text-gray-500 hover:text-gray-800 underline">Clear</button>
+            </div>
+
+            <form id="contactForm" onsubmit="handleContactSubmit(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-[11px] font-semibold text-gray-700 mb-1">Your Name *</label>
+                  <input type="text" required placeholder="John Carter"
+                    class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-xs text-gray-900 focus:outline-none focus:border-brand-500 focus:bg-white transition" />
+                </div>
+                <div>
+                  <label class="block text-[11px] font-semibold text-gray-700 mb-1">Your Email *</label>
+                  <input type="email" required placeholder="john@company.com"
+                    class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-xs text-gray-900 focus:outline-none focus:border-brand-500 focus:bg-white transition" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-semibold text-gray-700 mb-1">Project Type *</label>
+                <select id="contactProjectType" required
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-xs text-gray-700 focus:outline-none focus:border-brand-500 focus:bg-white transition">
+                  <option value="">Select a Service</option>
+                  <option value="WordPress & WooCommerce Development">WordPress &amp; WooCommerce Development</option>
+                  <option value="Full-Stack Web App (Laravel / React / Next.js)">Full-Stack Web App (Laravel / React /
+                    Next.js)</option>
+                  <option value="GoHighLevel (GHL) Setup & Automation">GoHighLevel (GHL) Setup &amp; Automation</option>
+                  <option value="AI Automation, Agents & API Integrations">AI Automation, Agents &amp; API Integrations
+                  </option>
+                  <option value="2-Way GHL + WordPress Integration">2-Way GHL + WordPress Integration</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-semibold text-gray-700 mb-1">Your Message &amp; Scope Details
+                  *</label>
+                <textarea id="contactMessage" rows="4" required
+                  placeholder="Tell us about your website, full-stack app, or GHL/AI automation goals..."
+                  class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-xs text-gray-900 focus:outline-none focus:border-brand-500 focus:bg-white transition"></textarea>
+              </div>
+
+              <div class="pt-1 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <button type="submit"
+                  class="w-full sm:w-auto btn-purple magnetic-btn text-white text-xs font-semibold px-6 py-3.5 rounded-full inline-flex items-center justify-center gap-2 shadow-md">
+                  <span>Send Message</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </button>
+                <span id="formSuccessToast"
+                  class="hidden text-xs font-semibold text-emerald-600 flex items-center gap-1.5 justify-center sm:justify-start">
+                  <i class="fa-solid fa-circle-check"></i> Message sent! We'll reply within 24h.
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Right Curved Cutout SVG matching screenshot -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none">
+      <svg viewBox="0 0 1440 54" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-8 sm:h-12"
+        preserveAspectRatio="none">
+        <path d="M0 42H1300C1370 42 1410 19 1440 0V54H0V42Z" fill="#ffffff" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       12. FREQUENTLY ASKED QUESTIONS ("Common Questions")
+       ========================================== -->
+  <section id="faq" class="py-16 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+
+        <!-- Left 5 Columns: Heading + Bottom Purple Button -->
+        <div data-anim="fade-right" class="lg:col-span-5 flex flex-col justify-between h-full space-y-6">
+          <div>
+            <span class="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-600 block mb-1.5">FREQUENTLY ASKED
+              QUESTIONS</span>
+            <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900">Common Questions</h2>
+            <p class="text-xs text-gray-500 mt-2 max-w-sm leading-relaxed">
+              Everything you need to know about our WordPress, Full-Stack, GoHighLevel, and AI Automation engineering
+              services.
+            </p>
+          </div>
+          <div class="pt-4">
+            <a href="#contact"
+              class="btn-purple magnetic-btn text-white text-xs font-semibold px-5 py-3 rounded-full inline-flex items-center gap-2">
+              <span>Ask a Custom Question</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 7 Columns: Expandable FAQ Accordion -->
+        <div data-anim="fade-left" class="lg:col-span-7 divide-y divide-gray-200 border-t border-b border-gray-200"
+          id="faqContainer">
+
+          <!-- FAQ 1 -->
+          <div class="py-4">
+            <button type="button" onclick="toggleFaq(0)"
+              class="w-full flex items-center justify-between text-left font-display font-semibold text-xs sm:text-sm text-gray-800 hover:text-brand-600 transition">
+              <span>How much do your web development &amp; automation services cost?</span>
+              <i id="faq-icon-0" class="fa-solid fa-plus text-xs text-gray-500 transition-transform"></i>
+            </button>
+            <div id="faq-body-0" class="hidden pt-2.5 text-xs text-gray-500 leading-relaxed">
+              Our WordPress &amp; GoHighLevel setups typically start around $450–$650, while custom Full-Stack
+              applications and multi-agent AI ecosystems scale based on scope. You can use our interactive
+              <strong>Project Price Estimator</strong> above to calculate an instant, transparent quote.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="py-4">
+            <button type="button" onclick="toggleFaq(1)"
+              class="w-full flex items-center justify-between text-left font-display font-semibold text-xs sm:text-sm text-gray-800 hover:text-brand-600 transition">
+              <span>Can you integrate GoHighLevel (GHL) directly with my WordPress or WooCommerce site?</span>
+              <i id="faq-icon-1" class="fa-solid fa-plus text-xs text-gray-500 transition-transform"></i>
+            </button>
+            <div id="faq-body-1" class="hidden pt-2.5 text-xs text-gray-500 leading-relaxed">
+              Yes! That is one of our core specialties. We build real-time 2-way integrations connecting WordPress
+              forms, WooCommerce orders, user memberships, and custom webhooks directly into your GoHighLevel pipelines,
+              tags, and automated follow-up sequences.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="py-4">
+            <button type="button" onclick="toggleFaq(2)"
+              class="w-full flex items-center justify-between text-left font-display font-semibold text-xs sm:text-sm text-gray-800 hover:text-brand-600 transition">
+              <span>Can you work with and upgrade our existing website or CRM setup?</span>
+              <i id="faq-icon-2" class="fa-solid fa-plus text-xs text-gray-500 transition-transform"></i>
+            </button>
+            <div id="faq-body-2" class="hidden pt-2.5 text-xs text-gray-500 leading-relaxed">
+              Absolutely. We frequently audit, speed-optimize, and refactor existing WordPress sites, Laravel/React web
+              apps, and messy GoHighLevel sub-accounts without disrupting your live traffic or active leads.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="py-4">
+            <button type="button" onclick="toggleFaq(3)"
+              class="w-full flex items-center justify-between text-left font-display font-semibold text-xs sm:text-sm text-gray-800 hover:text-brand-600 transition">
+              <span>How long does a typical web or AI automation project take?</span>
+              <i id="faq-icon-3" class="fa-solid fa-plus text-xs text-gray-500 transition-transform"></i>
+            </button>
+            <div id="faq-body-3" class="hidden pt-2.5 text-xs text-gray-500 leading-relaxed">
+              High-converting landing pages and GHL automation workflows take 5–10 business days. Full
+              WordPress/WooCommerce builds take 2–3 weeks, and custom Full-Stack SaaS applications typically take 3–6
+              weeks with weekly agile demos.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="py-4">
+            <button type="button" onclick="toggleFaq(4)"
+              class="w-full flex items-center justify-between text-left font-display font-semibold text-xs sm:text-sm text-gray-800 hover:text-brand-600 transition">
+              <span>Do you work with international clients &amp; agencies on a white-label basis?</span>
+              <i id="faq-icon-4" class="fa-solid fa-plus text-xs text-gray-500 transition-transform"></i>
+            </button>
+            <div id="faq-body-4" class="hidden pt-2.5 text-xs text-gray-500 leading-relaxed">
+              Yes, we work with clients across the US, UK, Europe, the Middle East, and APAC. We also offer strict NDA
+              white-label fulfillment for digital marketing and GHL agencies.
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="py-4">
+            <button type="button" onclick="toggleFaq(5)"
+              class="w-full flex items-center justify-between text-left font-display font-semibold text-xs sm:text-sm text-gray-800 hover:text-brand-600 transition">
+              <span>What information do you need to get started?</span>
+              <i id="faq-icon-5" class="fa-solid fa-plus text-xs text-gray-500 transition-transform"></i>
+            </button>
+            <div id="faq-body-5" class="hidden pt-2.5 text-xs text-gray-500 leading-relaxed">
+              Simply configure your desired scope in our Price Estimator above or fill out the contact form with your
+              goals. We will schedule a free discovery call and provide a clear roadmap and fixed-price proposal.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       13. BLOG & INSIGHTS ("Latest Articles & Insights")
+       ========================================== -->
+  <section id="blog" class="py-14 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header -->
+      <div class="flex items-end justify-between mb-10">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-[0.18em] text-brand-600 block mb-1">BLOG &amp;
+            INSIGHTS</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900">Latest Articles &amp; Insights</h2>
+        </div>
+        <a href="#contact"
+          class="px-4 py-2 rounded-full border border-gray-300 hover:border-brand-600 text-xs font-semibold text-gray-700 hover:text-brand-600 inline-flex items-center gap-1.5 transition">
+          <span>View All Posts</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+
+      <!-- 3 Agency Blog Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Blog 1: WordPress -->
+        <article data-anim="fade-up" data-delay="1"
+          class="blog-card rounded-2xl bg-[#faf8ff] border border-purple-100 overflow-hidden shadow-card flex flex-col justify-between group">
+          <div>
+            <div class="h-44 overflow-hidden bg-gray-900">
+              <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=700&q=80"
+                alt="WordPress Speed Optimization"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.src='https://placehold.co/600x400/1a0936/ffffff?text=WordPress+Speed'" />
+            </div>
+            <div class="p-5">
+              <span class="text-[9px] font-bold uppercase tracking-widest text-brand-600 block mb-1.5">WORDPRESS &amp;
+                PERFORMANCE</span>
+              <h3 class="font-display font-bold text-sm sm:text-base text-gray-900 leading-snug mb-3">
+                10 Tips to Speed Up Your WordPress &amp; WooCommerce Website
+              </h3>
+            </div>
+          </div>
+          <div class="px-5 pb-5">
+            <a href="#contact"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 group-hover:gap-2.5 transition-all">
+              <span>Read More</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog 2: GHL + WordPress Integration (Replaces Amazon eBook article) -->
+        <article data-anim="fade-up" data-delay="2"
+          class="blog-card rounded-2xl bg-[#faf8ff] border border-purple-100 overflow-hidden shadow-card flex flex-col justify-between group">
+          <div>
+            <div class="h-44 overflow-hidden bg-gray-900">
+              <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=700&q=80"
+                alt="GHL and WordPress Integration"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.src='https://placehold.co/600x400/1a0936/ffffff?text=GHL+Integration'" />
+            </div>
+            <div class="p-5">
+              <span class="text-[9px] font-bold uppercase tracking-widest text-brand-600 block mb-1.5">GHL &amp;
+                INTEGRATIONS</span>
+              <h3 class="font-display font-bold text-sm sm:text-base text-gray-900 leading-snug mb-3">
+                How to Seamlessly Connect GoHighLevel CRM With WordPress &amp; Custom APIs
+              </h3>
+            </div>
+          </div>
+          <div class="px-5 pb-5">
+            <a href="#contact"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 group-hover:gap-2.5 transition-all">
+              <span>Read More</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog 3: AI Automation -->
+        <article data-anim="fade-up" data-delay="3"
+          class="blog-card rounded-2xl bg-[#faf8ff] border border-purple-100 overflow-hidden shadow-card flex flex-col justify-between group">
+          <div>
+            <div class="h-44 overflow-hidden bg-gray-900">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=700&q=80"
+                alt="AI Automation Tools 2026"
+                class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                onerror="this.src='https://placehold.co/600x400/1a0936/ffffff?text=AI+Automation+2026'" />
+            </div>
+            <div class="p-5">
+              <span class="text-[9px] font-bold uppercase tracking-widest text-brand-600 block mb-1.5">AI &amp;
+                GROWTH</span>
+              <h3 class="font-display font-bold text-sm sm:text-base text-gray-900 leading-snug mb-3">
+                AI Agents &amp; Automation Workflows to Scale Your Business in 2026
+              </h3>
+            </div>
+          </div>
+          <div class="px-5 pb-5">
+            <a href="#contact"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 group-hover:gap-2.5 transition-all">
+              <span>Read More</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       14. DARK COSMIC FOOTER (Exact Mockup Match)
+       ========================================== -->
+  <footer class="dark-cosmic-bg text-white pt-16 pb-10 rounded-t-[36px] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+
+        <!-- Col 1: Brand Info (4 cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-white/10 border border-purple-400/30 flex items-center justify-center">
+              <span
+                class="font-display font-extrabold text-lg bg-gradient-to-tr from-purple-400 to-fuchsia-300 bg-clip-text text-transparent">YT</span>
+            </div>
+            <div class="leading-none">
+              <span class="block font-display font-extrabold text-lg text-white">Yankee Tech</span>
+              <span class="block text-[10px] text-purple-300/70 uppercase tracking-wider mt-0.5">Infinite
+                Possibilities</span>
+            </div>
+          </div>
+          <p class="text-xs text-purple-200/70 leading-relaxed max-w-xs">
+            Building high-performing full-stack websites, automating business operations with AI, and integrating
+            GoHighLevel &amp; WordPress ecosystems worldwide.
+          </p>
+          <div class="flex items-center gap-2.5 pt-1">
+            <a href="#contact"
+              class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-600 flex items-center justify-center text-xs transition"
+              aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#contact"
+              class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-600 flex items-center justify-center text-xs transition"
+              aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#contact"
+              class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-600 flex items-center justify-center text-xs transition"
+              aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#contact"
+              class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-600 flex items-center justify-center text-xs transition"
+              aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links (2 cols) -->
+        <div class="lg:col-span-2 space-y-2.5">
+          <h4 class="font-display font-bold text-xs uppercase tracking-wider text-white mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-xs text-purple-200/75">
+            <li><a href="#home" class="hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+            <li><a href="use-cases.html" class="hover:text-white transition">Use Cases</a></li>
+            <li><a href="#estimator" class="hover:text-white transition">Price Estimator</a></li>
+            <li><a href="#contact" class="hover:text-white transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Our Services (3 cols) -->
+        <div class="lg:col-span-3 space-y-2.5">
+          <h4 class="font-display font-bold text-xs uppercase tracking-wider text-white mb-3">Our Services</h4>
+          <ul class="space-y-2 text-xs text-purple-200/75">
+            <li><a href="services.html#wordpress" class="hover:text-white transition">WordPress &amp; WooCommerce</a>
+            </li>
+            <li><a href="services.html#fullstack" class="hover:text-white transition">Full-Stack Laravel &amp; React</a>
+            </li>
+            <li><a href="services.html#ghl" class="hover:text-white transition">GoHighLevel (GHL) Setup</a></li>
+            <li><a href="services.html#ai" class="hover:text-white transition">AI Agents &amp; Chatbots</a></li>
+            <li><a href="services.html#sync" class="hover:text-white transition">2-Way GHL + WP Sync</a></li>
+            <li><a href="services.html#design" class="hover:text-white transition">UI/UX Figma Design Systems</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter (3 cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-xs uppercase tracking-wider text-white">Newsletter</h4>
+          <p class="text-xs text-purple-200/75">Get the latest web engineering, GHL &amp; AI automation insights.</p>
+          <form onsubmit="handleNewsletter(event)" class="space-y-2.5 pt-1">
+            <input id="newsletterEmail" type="email" required placeholder="Your Email"
+              class="w-full px-4 py-2.5 rounded-xl bg-white text-gray-900 text-xs focus:outline-none" />
+            <button type="submit"
+              class="w-full btn-purple text-white text-xs font-semibold py-2.5 px-5 rounded-xl inline-flex items-center justify-center gap-2">
+              <span id="newsletterBtnText">Subscribe →</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-purple-300/60 gap-4">
+        <p>© 2026 Yankee Tech. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#home" class="hover:text-white transition">Privacy Policy</a>
+          <span>|</span>
+          <a href="#home" class="hover:text-white transition">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll to top button matching bottom-right circle in screenshot -->
+    <a href="#home" id="scrollTopBtn"
+      class="fixed bottom-5 right-5 z-40 w-10 h-10 rounded-full bg-[#1e0a42] hover:bg-brand-600 text-white border border-purple-400/40 shadow-lg flex items-center justify-center text-xs transition"
+      aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>

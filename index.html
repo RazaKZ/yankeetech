@@ -1,0 +1,3011 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yankee Tech — Full-Stack Web Development, AI Automation & GHL/WordPress Integrations</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <!-- Main JavaScript (Tailwind config, interactive logic & 2026 scroll animations) -->
+  <script src="script.js"></script>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google FAQPage Schema per Developer Brief Appendix D -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does a custom web application cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A starter MVP typically starts from $2,200. Business web apps and client portals start from $3,800, and custom platforms from $8,000. The final fixed price depends on features and integrations, and we confirm it after a free consultation and a short scoping phase."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to build a custom web app?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Starter MVPs typically take 4 to 6 weeks. Larger applications take 8 to 16 weeks depending on scope. We share a milestone timeline before development starts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who owns the code and the accounts?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You do. We hand over the full source code, documentation and all accounts at launch, with no lock-in."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What technologies do you use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We build with Laravel, React, Next.js and Node.js, using PostgreSQL or MySQL, Redis, REST and GraphQL APIs and cloud hosting such as AWS. We choose what fits your project, not what is trendy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you work with US clients and US time zones?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We schedule calls in your time zone and overlap with US hours every working day. We reply to messages promptly within 2 to 4 hours."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you sign NDAs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We sign an NDA before you share your idea or documents, and we offer strict white-label arrangements for agencies."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens after launch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Every project includes 30 days of support. After that you can choose a monthly maintenance plan or a pack of development hours."
+        }
+      }
+    ]
+  }
+  </script>
+
+</head>
+
+<body class="antialiased selection:bg-brand-600 selection:text-white">
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- ==========================================
+       1. STICKY HEADER / NAVBAR
+       ========================================== -->
+  <header
+    class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-purple-100/80 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
+      <!-- Brand Logo (YT Yankee Tech - Infinite Possibilities) -->
+      <a href="#home" class="flex items-center gap-3 group shrink-0">
+        <div
+          class="w-10 h-10 rounded-xl bg-[#120924] flex items-center justify-center shadow-md border border-purple-500/30 group-hover:border-purple-500 transition">
+          <span
+            class="font-display font-extrabold text-lg tracking-tighter bg-gradient-to-tr from-purple-400 via-fuchsia-400 to-indigo-300 bg-clip-text text-transparent">YT</span>
+        </div>
+        <div class="leading-none">
+          <span class="block font-display font-extrabold text-lg text-gray-900 tracking-tight">Yankee Tech</span>
+          <span class="block text-[10px] font-medium text-gray-400 tracking-wider uppercase mt-0.5">Infinite
+            Possibilities</span>
+        </div>
+      </a>
+
+      <!-- Center Nav Links: Home, About Us, Services (with 2026 Mega Menu), Contact Us -->
+      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold text-gray-700">
+        <!-- 1. Home -->
+        <a href="#home" class="text-brand-600 hover:text-brand-700 font-bold transition py-2">Home</a>
+
+        <!-- 2. About Us -->
+        <a href="about.html" class="hover:text-brand-600 transition py-2">About Us</a>
+
+        <!-- 3. Services with 2026 Trends Mega Menu -->
+        <div class="group/mega py-6">
+          <a href="services.html"
+            class="flex items-center gap-1.5 py-2 hover:text-brand-600 transition group-hover/mega:text-brand-600">
+            <span>Services</span>
+            <i
+              class="fa-solid fa-chevron-down text-[9px] text-gray-400 group-hover/mega:text-brand-600 group-hover/mega:rotate-180 transition-transform duration-300"></i>
+          </a>
+
+          <!-- 2026 Bento Mega Menu Dropdown -->
+          <div
+            class="absolute left-1/2 -translate-x-1/2 top-full w-full max-w-5xl px-4 sm:px-6 pointer-events-none opacity-0 invisible -translate-y-2 group-hover/mega:pointer-events-auto group-hover/mega:opacity-100 group-hover/mega:visible group-hover/mega:translate-y-0 transition-all duration-300 ease-out z-50">
+            <div
+              class="bg-white/95 backdrop-blur-2xl border border-purple-100/90 shadow-[0_25px_60px_-15px_rgba(91,12,212,0.18)] rounded-3xl p-6 lg:p-7 overflow-hidden ring-1 ring-purple-500/10">
+
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+
+                <!-- Column 1: Web & Platforms (5 cols) -->
+                <div class="lg:col-span-5 space-y-3">
+                  <div class="flex items-center justify-between pb-2 border-b border-purple-100">
+                    <span
+                      class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-600 flex items-center gap-1.5">
+                      <i class="fa-solid fa-code text-xs"></i>
+                      <span>WEB &amp; PLATFORM DEV</span>
+                    </span>
+                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest font-mono">CORE 01</span>
+                  </div>
+
+                  <div class="space-y-1">
+                    <!-- Item 1: WordPress & WooCommerce -->
+                    <a href="services.html#wordpress"
+                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
+                      <div
+                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
+                        <i class="fa-brands fa-wordpress"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between">
+                          <h4
+                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
+                            <span>WordPress &amp; WooCommerce</span>
+                            <span
+                              class="px-1.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[9px] font-bold">95+
+                              Speed</span>
+                          </h4>
+                          <i
+                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
+                          Custom themes, Elementor, high-converting WooCommerce checkouts &amp; speed SEO.
+                        </p>
+                      </div>
+                    </a>
+
+                    <!-- Item 2: Full-Stack Web Apps -->
+                    <a href="services.html#fullstack"
+                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
+                      <div
+                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
+                        <i class="fa-brands fa-laravel"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between">
+                          <h4
+                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
+                            <span>Full-Stack Web Apps</span>
+                            <span
+                              class="px-1.5 py-0.5 rounded-full bg-purple-100 text-brand-700 border border-purple-200 text-[9px] font-bold">Enterprise</span>
+                          </h4>
+                          <i
+                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
+                          Custom Laravel, React &amp; Next.js platforms, client portals, SaaS backends &amp; APIs.
+                        </p>
+                      </div>
+                    </a>
+
+                    <!-- Item 3: UI/UX Figma Design Systems -->
+                    <a href="services.html#design"
+                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
+                      <div
+                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between">
+                          <h4
+                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
+                            <span>UI/UX Figma Design Systems</span>
+                          </h4>
+                          <i
+                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
+                          Conversion-first Figma component systems, UX wireframes &amp; high-fidelity prototypes.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Column 2: AI & Operations Automation (4 cols) -->
+                <div class="lg:col-span-4 space-y-3">
+                  <div class="flex items-center justify-between pb-2 border-b border-purple-100">
+                    <span
+                      class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-600 flex items-center gap-1.5">
+                      <i class="fa-solid fa-robot text-xs"></i>
+                      <span>AI &amp; AUTOMATION</span>
+                    </span>
+                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest font-mono">SMART 02</span>
+                  </div>
+
+                  <div class="space-y-1">
+                    <!-- Item 4: GoHighLevel (GHL) Ecosystem -->
+                    <a href="services.html#ghl"
+                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
+                      <div
+                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
+                        <i class="fa-solid fa-filter-circle-dollar"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between">
+                          <h4
+                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
+                            <span>GoHighLevel (GHL) Setup</span>
+                            <span
+                              class="px-1.5 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200 text-[9px] font-bold">Hot</span>
+                          </h4>
+                          <i
+                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
+                          Pipelines, automated SMS/email sequences, calendar funnels &amp; snapshots.
+                        </p>
+                      </div>
+                    </a>
+
+                    <!-- Item 5: AI Chatbots & Agents -->
+                    <a href="services.html#ai"
+                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
+                      <div
+                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
+                        <i class="fa-solid fa-brain"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between">
+                          <h4
+                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
+                            <span>AI Agents &amp; Chatbots</span>
+                            <span
+                              class="px-1.5 py-0.5 rounded-full bg-fuchsia-50 text-fuchsia-700 border border-fuchsia-200 text-[9px] font-bold">2026
+                              AI</span>
+                          </h4>
+                          <i
+                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
+                          OpenAI &amp; Claude RAG support agents, automated 24/7 voice booking bots.
+                        </p>
+                      </div>
+                    </a>
+
+                    <!-- Item 6: 2-Way GHL + WordPress Sync -->
+                    <a href="services.html#sync"
+                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
+                      <div
+                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
+                        <i class="fa-solid fa-arrows-rotate"></i>
+                      </div>
+                      <div class="flex-1 min-w-0">
+                        <div class="flex items-center justify-between">
+                          <h4
+                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
+                            <span>GHL + WordPress Sync</span>
+                          </h4>
+                          <i
+                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
+                        </div>
+                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
+                          Real-time webhooks, n8n/Make automated flows, membership access &amp; sync.
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Column 3: 2026 Spotlight Bento Card (3 cols) -->
+                <div
+                  class="lg:col-span-3 rounded-2xl bg-gradient-to-br from-[#120727] via-[#1a083a] to-[#2b0c57] text-white p-5 border border-purple-500/30 flex flex-col justify-between relative overflow-hidden shadow-xl group/card">
+                  <div
+                    class="absolute -top-12 -right-12 w-28 h-28 bg-brand-500/30 rounded-full blur-2xl pointer-events-none">
+                  </div>
+
+                  <div>
+                    <div class="flex items-center justify-between mb-3">
+                      <span
+                        class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-500/25 border border-brand-400/40 text-[9px] font-bold uppercase tracking-wider text-purple-200">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Live Tool
+                      </span>
+                      <span class="text-[10px] text-purple-300 font-mono">2026 V2</span>
+                    </div>
+                    <h4 class="font-display font-extrabold text-sm text-white leading-snug">Instant Price Estimator</h4>
+                    <p class="text-[11px] text-purple-200/75 mt-1.5 leading-relaxed">
+                      Select your pages, workflows &amp; AI add-ons for instant quotes in USD, PKR, or GBP.
+                    </p>
+                  </div>
+
+                  <div class="mt-4 pt-3 border-t border-white/10 space-y-2">
+                    <a href="#estimator"
+                      class="w-full btn-purple text-white text-[11px] font-bold py-2.5 px-3.5 rounded-xl flex items-center justify-center gap-2 group-hover/card:shadow-glow transition">
+                      <span>Launch Estimator</span>
+                      <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                    <div class="flex items-center justify-center gap-1 text-[10px] text-purple-300/80">
+                      <i class="fa-solid fa-bolt text-[9px] text-amber-400"></i>
+                      <span>Instant 30s calculation</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Bottom Mega Menu Bar -->
+              <div
+                class="mt-5 pt-3 border-t border-purple-100/90 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs bg-purple-50/60 -mx-6 -mb-6 lg:-mx-7 lg:-mb-7 px-6 lg:px-7 py-3 rounded-b-3xl">
+                <div class="flex items-center gap-2 text-gray-600">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                  <span class="font-semibold text-gray-900">Accepting New Client Projects</span>
+                  <span class="text-gray-400 hidden sm:inline">•</span>
+                  <span class="text-gray-500 hidden sm:inline">White-label agency &amp; custom enterprise
+                    agreements</span>
+                </div>
+                <a href="#contact"
+                  class="font-bold text-brand-600 hover:text-brand-700 inline-flex items-center gap-1.5 shrink-0 transition">
+                  <span>Book Free Technical Call</span>
+                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Portfolio -->
+        <a href="portfolio.html" class="hover:text-brand-600 transition py-2">Portfolio</a>
+
+        <!-- 5. Use Cases -->
+        <a href="use-cases.html" class="hover:text-brand-600 transition py-2">Use Cases</a>
+
+        <!-- 6. Contact Us -->
+        <a href="#contact" class="hover:text-brand-600 transition py-2">Contact Us</a>
+      </nav>
+
+      <!-- Right CTA Pill & Hamburger -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <a href="#contact"
+          class="hidden sm:inline-flex btn-purple magnetic-btn text-white text-xs font-semibold px-4 sm:px-5 py-2.5 rounded-full items-center gap-2 shadow-sm">
+          <span>Book a Free Call</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+        <!-- Mobile Menu Button with larger touch target -->
+        <button id="mobileMenuBtn" aria-label="Toggle navigation menu"
+          class="md:hidden w-10 h-10 rounded-xl border border-purple-200/90 flex items-center justify-center text-gray-700 hover:bg-purple-50 transition active:scale-95">
+          <i class="fa-solid fa-bars text-base"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer (Scrollable on small devices, auto-closes on tap) -->
+    <div id="mobileMenu"
+      class="hidden md:hidden bg-white/98 backdrop-blur-2xl border-b border-purple-100 px-5 sm:px-6 py-5 space-y-3 text-sm font-medium text-gray-700 shadow-2xl max-h-[calc(100vh-5rem)] overflow-y-auto">
+      <a href="#home" class="block py-1.5 text-brand-600 font-bold border-b border-purple-50">Home</a>
+      <a href="about.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">About Us</a>
+
+      <!-- Mobile Services Accordion -->
+      <div class="border-b border-purple-50 pb-1.5">
+        <button type="button"
+          onclick="document.getElementById('mobileServicesSub').classList.toggle('hidden'); document.getElementById('mobileServicesArrow').classList.toggle('rotate-180');"
+          class="w-full flex items-center justify-between py-1.5 hover:text-brand-600 transition text-left font-medium">
+          <span>Services</span>
+          <i id="mobileServicesArrow" class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform"></i>
+        </button>
+        <div id="mobileServicesSub"
+          class="hidden pl-3.5 pt-2 pb-1 space-y-2.5 border-l-2 border-purple-200 mt-1 text-xs text-gray-600">
+          <a href="services.html#wordpress" class="block py-1 hover:text-brand-600">WordPress &amp; WooCommerce</a>
+          <a href="services.html#fullstack" class="block py-1 hover:text-brand-600">Full-Stack Laravel &amp; React</a>
+          <a href="services.html#ghl" class="block py-1 hover:text-brand-600">GoHighLevel (GHL) Setup</a>
+          <a href="services.html#ai" class="block py-1 hover:text-brand-600">AI Agents &amp; Automation</a>
+          <a href="services.html#sync" class="block py-1 hover:text-brand-600">2-Way GHL + WP Sync</a>
+          <a href="services.html#design" class="block py-1 hover:text-brand-600">UI/UX Figma Design Systems</a>
+          <a href="#estimator" class="block py-1 text-brand-600 font-bold">⚡ Price Estimator</a>
+        </div>
+      </div>
+
+      <a href="portfolio.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Portfolio</a>
+      <a href="use-cases.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Use
+        Cases</a>
+      <a href="#contact" class="block py-1.5 hover:text-brand-600 transition">Contact Us</a>
+
+      <div class="pt-3">
+        <a href="#contact"
+          class="btn-purple text-white text-xs font-semibold py-3.5 px-5 rounded-full w-full flex items-center justify-center gap-2 shadow-sm">
+          <span>Book a Free Call</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       2. HERO SECTION (Exact Mockup Composition)
+       ========================================== -->
+  <section id="home"
+    class="hero-bg relative overflow-hidden pt-10 pb-14 lg:pt-14 lg:pb-20 border-b border-purple-100/60">
+    <!-- Decorative ambient purple glow behind right devices -->
+    <div
+      class="pointer-events-none absolute top-6 right-0 w-[550px] h-[480px] bg-gradient-to-bl from-purple-700/25 via-indigo-900/20 to-transparent rounded-full blur-3xl">
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-center">
+
+        <!-- Left Column: Copy, CTAs & Proof -->
+        <div class="lg:col-span-6 space-y-5">
+          <!-- Eyebrow Tag -->
+          <div data-anim="fade-up"
+            class="inline-flex flex-wrap items-center gap-1.5 sm:gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.14em] sm:tracking-[0.16em] uppercase text-brand-600 font-mono">
+            <span>FULL-STACK DEVELOPMENT</span>
+            <span class="text-purple-300">•</span>
+            <span>API INTEGRATIONS</span>
+            <span class="text-purple-300">•</span>
+            <span>AI AUTOMATION</span>
+          </div>
+
+          <!-- Main Headline (Developer Brief Page 2 & Appendix B) -->
+          <h1 data-anim="fade-up" data-delay="1"
+            class="font-display font-extrabold text-2xl sm:text-4xl lg:text-[44px] text-[#110c22] leading-[1.16] sm:leading-[1.14] tracking-tight">
+            Custom Web &amp; Software Development for Startups and Growing Businesses
+          </h1>
+
+          <!-- Subtitle (Developer Brief Page 2 & Appendix B) -->
+          <p data-anim="fade-up" data-delay="2" class="text-gray-600 text-xs sm:text-sm sm:leading-relaxed max-w-xl">
+            We design and build custom web applications, SaaS platforms and API integrations with Laravel, React and Next.js. Fixed-price milestones, full code ownership and a free consultation to start.
+          </p>
+
+          <!-- CTA Buttons (Developer Brief Page 2 & Appendix B) -->
+          <div data-anim="fade-up" data-delay="3"
+            class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
+            <a href="#contact"
+              class="w-full sm:w-auto btn-purple magnetic-btn text-white text-xs sm:text-sm font-semibold px-6 py-3.5 rounded-full inline-flex items-center justify-center gap-2.5 shadow-glow">
+              <span>Book a Free Technical Consultation</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <a href="#portfolio"
+              class="w-full sm:w-auto bg-white hover:bg-purple-50/80 text-gray-800 border border-purple-200 text-xs sm:text-sm font-semibold px-5 py-3.5 rounded-full inline-flex items-center justify-center gap-2 transition shadow-xs">
+              <span>See Our Work</span>
+              <i class="fa-solid fa-arrow-down text-[10px] text-brand-600"></i>
+            </a>
+          </div>
+
+          <!-- Proof Line (Developer Brief Page 2 & Appendix B: Milestone delivery, code ownership, 30-day support) -->
+          <div data-anim="fade-up" data-delay="4"
+            class="pt-5 border-t border-purple-200/60 max-w-lg">
+            <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-semibold text-gray-700">
+              <div class="flex items-center gap-2">
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px]">
+                  <i class="fa-solid fa-check"></i>
+                </span>
+                <span>Milestone-Based Delivery</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-5 h-5 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center text-[10px]">
+                  <i class="fa-solid fa-code"></i>
+                </span>
+                <span>100% Code Ownership</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-5 h-5 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center text-[10px]">
+                  <i class="fa-solid fa-shield-heart"></i>
+                </span>
+                <span>30-Day Post-Launch Support</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Real Developer Architecture & System Dashboard Visual (Replaces competing hero estimator per Developer Brief Page 2) -->
+        <div data-anim="fade-left" data-delay="2" class="lg:col-span-6 relative">
+          <div class="relative mx-auto max-w-xl lg:max-w-none">
+            <!-- Modern Code & Architecture Container -->
+            <div
+              class="relative rounded-3xl p-5 sm:p-6 bg-gradient-to-br from-[#15072a] via-[#100320] to-[#20083a] shadow-2xl border border-purple-500/30 overflow-hidden text-white tilt-card">
+              
+              <!-- Neon Ambient Studio Glows -->
+              <div class="absolute -top-16 -right-16 w-52 h-52 bg-purple-600/30 rounded-full blur-3xl pointer-events-none"></div>
+              <div class="absolute -bottom-16 -left-16 w-52 h-52 bg-fuchsia-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+              <!-- Window Top Bar -->
+              <div class="flex items-center justify-between pb-3.5 border-b border-purple-500/20 relative z-10">
+                <div class="flex items-center gap-2">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                  </div>
+                  <span class="ml-2 font-mono text-[11px] text-purple-300 font-bold">production-stack.config.ts</span>
+                </div>
+                <div class="flex items-center gap-1.5 text-[10px] font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-md">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span>99.99% UPTIME</span>
+                </div>
+              </div>
+
+              <!-- Architecture System Blocks Grid -->
+              <div class="pt-4 grid grid-cols-2 gap-2.5 relative z-10">
+                <!-- Block 1: Frontend Engine -->
+                <div class="p-3 rounded-2xl bg-purple-950/40 border border-purple-500/20 space-y-1">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[9px] font-mono uppercase tracking-wider text-purple-400">FRONTEND LAYER</span>
+                    <i class="fa-brands fa-react text-sky-400 text-xs"></i>
+                  </div>
+                  <div class="text-xs font-bold text-white">Next.js 14 &amp; React 18</div>
+                  <div class="text-[10px] text-gray-400 font-mono">0.4s Core Web Vitals SLA</div>
+                </div>
+
+                <!-- Block 2: Backend & APIs -->
+                <div class="p-3 rounded-2xl bg-purple-950/40 border border-purple-500/20 space-y-1">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[9px] font-mono uppercase tracking-wider text-purple-400">BACKEND API</span>
+                    <i class="fa-brands fa-laravel text-red-500 text-xs"></i>
+                  </div>
+                  <div class="text-xs font-bold text-white">Laravel 11 &amp; Node APIs</div>
+                  <div class="text-[10px] text-gray-400 font-mono">Redis Queue • PostgreSQL</div>
+                </div>
+
+                <!-- Block 3: CRM & Webhooks -->
+                <div class="p-3 rounded-2xl bg-purple-950/40 border border-purple-500/20 space-y-1">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400">CRM INTEGRATION</span>
+                    <i class="fa-solid fa-arrows-rotate text-amber-400 text-xs"></i>
+                  </div>
+                  <div class="text-xs font-bold text-white">GoHighLevel 2-Way Sync</div>
+                  <div class="text-[10px] text-gray-400 font-mono">&lt;400ms Webhook Latency</div>
+                </div>
+
+                <!-- Block 4: AI & Automations -->
+                <div class="p-3 rounded-2xl bg-purple-950/40 border border-purple-500/20 space-y-1">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[9px] font-mono uppercase tracking-wider text-fuchsia-400">AI WORKFLOWS</span>
+                    <i class="fa-solid fa-brain text-fuchsia-400 text-xs"></i>
+                  </div>
+                  <div class="text-xs font-bold text-white">Autonomous RAG &amp; Bots</div>
+                  <div class="text-[10px] text-gray-400 font-mono">OpenAI • n8n • Pinecone</div>
+                </div>
+              </div>
+
+              <!-- Real-time Live Event Console Stream -->
+              <div class="mt-3.5 p-3 rounded-2xl bg-black/60 border border-purple-500/20 font-mono text-[10px] space-y-1.5 relative z-10">
+                <div class="flex items-center justify-between text-gray-400 pb-1 border-b border-white/5">
+                  <span class="flex items-center gap-1.5 text-[9px] uppercase tracking-wider text-purple-300">
+                    <i class="fa-solid fa-terminal text-[8px] text-brand-400"></i> LIVE EVENT LOGS
+                  </span>
+                  <span class="text-[9px] text-emerald-400">ALL SYSTEMS NOMINAL</span>
+                </div>
+                <div class="text-emerald-300/90 flex items-center justify-between truncate">
+                  <span>[0.12s] POST /api/v2/lead-intake -> 200 OK</span>
+                  <span class="text-gray-500 text-[9px]">GHL Synced</span>
+                </div>
+                <div class="text-purple-300/90 flex items-center justify-between truncate">
+                  <span>[0.08s] Stripe.PaymentIntent: Succeeded ($2,500)</span>
+                  <span class="text-gray-500 text-[9px]">Milestone #1</span>
+                </div>
+                <div class="text-sky-300/90 flex items-center justify-between truncate">
+                  <span>[0.04s] OpenAI GPT-4o: Qualified appointment booked</span>
+                  <span class="text-gray-500 text-[9px]">Calendar Set</span>
+                </div>
+              </div>
+
+              <!-- Quick Scoping Teaser in Visual Footer -->
+              <div class="mt-4 pt-3 border-t border-purple-500/20 flex items-center justify-between relative z-10 text-[11px]">
+                <div class="text-gray-300">
+                  <span>Need an exact scope &amp; price?</span>
+                </div>
+                <a href="#estimator" class="text-brand-400 hover:text-brand-300 font-bold inline-flex items-center gap-1 transition">
+                  <span>Use Project Estimator</span>
+                  <i class="fa-solid fa-arrow-down text-[10px]"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3. OUR TECH STACK (Retitled per Developer Brief Page 2)
+       ========================================== -->
+  <section class="py-8 bg-white border-b border-gray-100 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p data-anim="fade-up" class="text-center text-[10px] font-bold tracking-[0.2em] uppercase text-gray-500 mb-6 font-mono">
+        OUR TECH STACK • MODERN FULL-STACK, CLOUD &amp; AUTOMATION FRAMEWORKS
+      </p>
+      <div class="marquee-wrap">
+        <div class="marquee-track">
+          <!-- Set 1 -->
+          <div class="flex items-center gap-2 text-gray-800 font-display font-bold text-sm sm:text-base shrink-0">
+            <i class="fa-brands fa-wordpress text-xl text-[#21759b]"></i>
+            <span>WordPress</span>
+          </div>
+          <div class="flex items-center gap-1.5 font-display font-extrabold text-sm sm:text-base shrink-0">
+            <span class="px-2 py-0.5 rounded bg-[#7f54b3] text-white text-xs">WOO</span>
+            <span class="text-gray-800 tracking-tight">COMMERCE</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
+            <span class="flex items-end gap-0.5">
+              <span class="w-1 h-3 bg-amber-500 rounded-sm"></span>
+              <span class="w-1 h-4 bg-emerald-500 rounded-sm"></span>
+              <span class="w-1 h-5 bg-blue-600 rounded-sm"></span>
+            </span>
+            <span>HighLevel</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-[#ff2d20] shrink-0">
+            <i class="fa-brands fa-laravel text-xl"></i>
+            <span>Laravel</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
+            <i class="fa-brands fa-react text-xl text-sky-500"></i>
+            <span>React &amp; Next.js</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
+            <i class="fa-solid fa-microchip text-lg text-brand-600"></i>
+            <span>OpenAI &amp; n8n</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
+            <i class="fa-brands fa-figma text-lg text-pink-500"></i>
+            <span>Figma</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-[#92003B] shrink-0">
+            <i class="fa-brands fa-elementor text-lg"></i>
+            <span>elementor</span>
+          </div>
+          <!-- Set 2 (seamless duplicate) -->
+          <div class="flex items-center gap-2 text-gray-800 font-display font-bold text-sm sm:text-base shrink-0">
+            <i class="fa-brands fa-wordpress text-xl text-[#21759b]"></i>
+            <span>WordPress</span>
+          </div>
+          <div class="flex items-center gap-1.5 font-display font-extrabold text-sm sm:text-base shrink-0">
+            <span class="px-2 py-0.5 rounded bg-[#7f54b3] text-white text-xs">WOO</span>
+            <span class="text-gray-800 tracking-tight">COMMERCE</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
+            <span class="flex items-end gap-0.5">
+              <span class="w-1 h-3 bg-amber-500 rounded-sm"></span>
+              <span class="w-1 h-4 bg-emerald-500 rounded-sm"></span>
+              <span class="w-1 h-5 bg-blue-600 rounded-sm"></span>
+            </span>
+            <span>HighLevel</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-[#ff2d20] shrink-0">
+            <i class="fa-brands fa-laravel text-xl"></i>
+            <span>Laravel</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
+            <i class="fa-brands fa-react text-xl text-sky-500"></i>
+            <span>React &amp; Next.js</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
+            <i class="fa-solid fa-microchip text-lg text-brand-600"></i>
+            <span>OpenAI &amp; n8n</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
+            <i class="fa-brands fa-figma text-lg text-pink-500"></i>
+            <span>Figma</span>
+          </div>
+          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-[#92003B] shrink-0">
+            <i class="fa-brands fa-elementor text-lg"></i>
+            <span>elementor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       3B. THE PROBLEM ("Is off-the-shelf software slowing your business down?")
+       ========================================== -->
+  <section class="py-16 lg:py-20 bg-gray-50/70 border-b border-purple-100/60">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div data-anim="fade-up">
+        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-600 block mb-2 font-mono">THE PROBLEM</span>
+        <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900 tracking-tight max-w-2xl mx-auto">
+          Is off-the-shelf software slowing your business down?
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 text-left">
+        <!-- Point 1 -->
+        <div data-anim="fade-up" data-delay="1" class="bg-white p-6 rounded-3xl border border-gray-200/80 shadow-xs space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-sm font-bold shadow-xs">
+            <i class="fa-solid fa-ban"></i>
+          </div>
+          <h3 class="font-display font-bold text-sm text-gray-900">Tools that don't fit your process</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            You're forced to adapt your workflow to rigid templates and generic SaaS apps instead of the software adapting to your business.
+          </p>
+        </div>
+
+        <!-- Point 2 -->
+        <div data-anim="fade-up" data-delay="2" class="bg-white p-6 rounded-3xl border border-gray-200/80 shadow-xs space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-sm font-bold shadow-xs">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <h3 class="font-display font-bold text-sm text-gray-900">Slow, fragile systems</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            Pages that crash under traffic spikes, customer data that won't sync properly between platforms, and bug fixes that drag on for weeks.
+          </p>
+        </div>
+
+        <!-- Point 3 -->
+        <div data-anim="fade-up" data-delay="3" class="bg-white p-6 rounded-3xl border border-gray-200/80 shadow-xs space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-purple-50 text-brand-600 flex items-center justify-center text-sm font-bold shadow-xs">
+            <i class="fa-solid fa-link-slash"></i>
+          </div>
+          <h3 class="font-display font-bold text-sm text-gray-900">Disconnected tools</h3>
+          <p class="text-xs text-gray-500 leading-relaxed">
+            Your website, CRM, payment gateway, and reporting don't talk to each other, forcing your team to copy-paste data manually every day.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bridge Solution Box -->
+      <div data-anim="fade-up" data-delay="4"
+        class="mt-8 p-5 rounded-2xl bg-purple-100/70 border border-purple-200 text-xs sm:text-sm text-purple-950 font-medium max-w-2xl mx-auto shadow-xs">
+        <span class="font-bold text-brand-700">The Yankee Tech Bridge:</span> We build software around how your business actually works, then connect it seamlessly to the tools you already use.
+      </div>
+    </div>
+  </section>
+
+    <!-- ==========================================
+       4. SERVICES & DIGITAL CAPABILITIES
+       (Unified Master Grid per Developer Brief Page 2 & 13)
+       ========================================== -->
+  <section id="services" class="py-16 lg:py-24 bg-white scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div data-anim="fade-up">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-[10px] font-bold uppercase tracking-widest mb-3">
+            <i class="fa-solid fa-layer-group text-xs"></i>
+            <span>FULL-STACK, AI &amp; INTEGRATION SERVICES</span>
+          </div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-gray-900 tracking-tight">
+            Engineering Scalable Platforms, APIs &amp; Automations
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-600 mt-2 max-w-2xl leading-relaxed">
+            We design, build and integrate high-performance web applications, SaaS platforms and automation workflows. Fixed-price milestones, clean code you own, and zero agency fluff.
+          </p>
+        </div>
+        <div class="flex items-center gap-3 shrink-0">
+          <a href="services.html"
+            class="px-5 py-2.5 rounded-full border border-purple-200 hover:border-brand-600 hover:text-brand-600 text-xs font-semibold text-gray-700 inline-flex items-center gap-2 transition bg-purple-50/50">
+            <span>Explore All 12 Services</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRIMARY ROW (4 Large Premium Cards per Developer Brief Page 2 & 13) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-14">
+
+        <!-- Card 1: Custom Web Apps & SaaS Development -->
+        <div data-anim="fade-up" data-delay="1"
+          class="group bg-[#faf8ff] hover:bg-white border border-purple-100 hover:border-purple-300 rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-xl relative overflow-hidden">
+          <div class="absolute top-0 left-0 h-1.5 w-full bg-gradient-to-r from-brand-600 to-indigo-600"></div>
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-purple-100 text-brand-600 flex items-center justify-center text-xl mb-5 group-hover:scale-110 group-hover:bg-brand-600 group-hover:text-white transition shadow-sm">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold uppercase tracking-wider text-brand-600 mb-2">
+              <span>CORE PLATFORM</span>
+            </div>
+            <h3 class="font-display font-bold text-lg text-gray-900 mb-2.5 group-hover:text-brand-600 transition leading-snug">
+              Custom Web Apps &amp; SaaS Development
+            </h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-5">
+              Scalable web applications, client portals and SaaS products, from first prototype to production with user roles, auth and dashboards.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white border border-purple-100 text-gray-700">Next.js 14</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white border border-purple-100 text-gray-700">React</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white border border-purple-100 text-gray-700">PostgreSQL</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white border border-purple-100 text-gray-700">SaaS MVP</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-purple-100/80 flex items-center justify-between">
+            <span class="text-[11px] font-semibold text-gray-500">From $2,200</span>
+            <a href="service-laravel-react.html"
+              class="inline-flex items-center gap-1 text-xs font-bold text-brand-600 group-hover:gap-2 transition-all">
+              <span>View Specs</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: API & Third-Party Integrations -->
+        <div data-anim="fade-up" data-delay="2"
+          class="group bg-[#faf8ff] hover:bg-white border border-purple-100 hover:border-purple-300 rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-xl relative overflow-hidden">
+          <div class="absolute top-0 left-0 h-1.5 w-full bg-gradient-to-r from-amber-500 to-rose-600"></div>
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-5 group-hover:scale-110 group-hover:bg-amber-600 group-hover:text-white transition shadow-sm">
+              <i class="fa-solid fa-plug-circle-bolt"></i>
+            </div>
+            <div class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold uppercase tracking-wider text-amber-700 mb-2">
+              <span>DEEP CONNECTIVITY</span>
+            </div>
+            <h3 class="font-display font-bold text-lg text-gray-900 mb-2.5 group-hover:text-brand-600 transition leading-snug">
+              API &amp; Third-Party Integrations
+            </h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-5">
+              Connect your CRM, payments, GoHighLevel, accounting and internal tools with reliable, well-documented APIs, webhooks &amp; SSO.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white border border-purple-100 text-gray-700">REST &amp; GraphQL</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white border border-purple-100 text-gray-700">GHL API v2</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white border border-purple-100 text-gray-700">Stripe Billing</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white border border-purple-100 text-gray-700">n8n / Make</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-purple-100/80 flex items-center justify-between">
+            <span class="text-[11px] font-semibold text-gray-500">From $250 - $500</span>
+            <a href="service-api-engineering.html"
+              class="inline-flex items-center gap-1 text-xs font-bold text-brand-600 group-hover:gap-2 transition-all">
+              <span>View Specs</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Laravel, React & Next.js Development -->
+        <div data-anim="fade-up" data-delay="3"
+          class="group bg-[#faf8ff] hover:bg-white border border-purple-100 hover:border-purple-300 rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-xl relative overflow-hidden">
+          <div class="absolute top-0 left-0 h-1.5 w-full bg-gradient-to-r from-red-500 to-fuchsia-600"></div>
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-xl mb-5 group-hover:scale-110 group-hover:bg-red-600 group-hover:text-white transition shadow-sm">
+              <i class="fa-brands fa-laravel"></i>
+            </div>
+            <div class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold uppercase tracking-wider text-red-600 mb-2">
+              <span>MODERN FULL-STACK</span>
+            </div>
+            <h3 class="font-display font-bold text-lg text-gray-900 mb-2.5 group-hover:text-brand-600 transition leading-snug">
+              Laravel, React &amp; Next.js Development
+            </h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-5">
+              Modern full-stack engineering with clean code, automated unit tests, CI/CD pipelines and documentation you 100% own.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white border border-purple-100 text-gray-700">Laravel 11</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white border border-purple-100 text-gray-700">PHP 8.3</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white border border-purple-100 text-gray-700">Tailwind CSS</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white border border-purple-100 text-gray-700">Redis &amp; MySQL</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-purple-100/80 flex items-center justify-between">
+            <span class="text-[11px] font-semibold text-gray-500">From $2,500</span>
+            <a href="service-laravel-react.html"
+              class="inline-flex items-center gap-1 text-xs font-bold text-brand-600 group-hover:gap-2 transition-all">
+              <span>View Specs</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 4: Dedicated Developers & White-Label Team -->
+        <div data-anim="fade-up" data-delay="4"
+          class="group bg-[#faf8ff] hover:bg-white border border-purple-100 hover:border-purple-300 rounded-3xl p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 shadow-sm hover:shadow-xl relative overflow-hidden">
+          <div class="absolute top-0 left-0 h-1.5 w-full bg-gradient-to-r from-emerald-500 to-teal-600"></div>
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mb-5 group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition shadow-sm">
+              <i class="fa-solid fa-users-gear"></i>
+            </div>
+            <div class="inline-flex items-center gap-1.5 text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-700 mb-2">
+              <span>AGENCY EXTENSION</span>
+            </div>
+            <h3 class="font-display font-bold text-lg text-gray-900 mb-2.5 group-hover:text-brand-600 transition leading-snug">
+              Dedicated Developers &amp; White-Label Team
+            </h3>
+            <p class="text-xs text-gray-600 leading-relaxed mb-5">
+              Extend your team or your agency with senior developers, GHL architects and dedicated engineering, billed on transparent monthly retainers.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white border border-purple-100 text-gray-700">White-Label NDA</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white border border-purple-100 text-gray-700">US Timezone</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white border border-purple-100 text-gray-700">Weekly Demos</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-white border border-purple-100 text-gray-700">Monthly Billing</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t border-purple-100/80 flex items-center justify-between">
+            <span class="text-[11px] font-semibold text-gray-500">From $1,500/mo</span>
+            <a href="service-white-label-agency.html"
+              class="inline-flex items-center gap-1 text-xs font-bold text-brand-600 group-hover:gap-2 transition-all">
+              <span>View Specs</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- SECONDARY ROW: Quick Solutions (per Developer Brief Page 2 & 13) -->
+      <div data-anim="fade-up" class="pt-6 border-t border-purple-100">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 gap-2">
+          <div>
+            <h3 class="font-display font-extrabold text-lg text-gray-900 flex items-center gap-2">
+              <i class="fa-solid fa-bolt text-amber-500 text-sm"></i>
+              <span>Quick Solutions</span>
+            </h3>
+            <p class="text-xs text-gray-500">Rapid turnaround packages with fixed scope and transparent pricing</p>
+          </div>
+          <span class="text-xs font-mono text-purple-600 font-semibold">Milestone Payments (30 / 30 / 40)</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+          <!-- Quick Solution 1: WordPress & WooCommerce -->
+          <a href="service-wordpress.html"
+            class="group p-4 rounded-2xl bg-white border border-purple-100 hover:border-brand-500 hover:shadow-md transition flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-10 h-10 rounded-xl bg-sky-50 text-[#21759b] flex items-center justify-center text-lg shrink-0 group-hover:scale-105 transition">
+                <i class="fa-brands fa-wordpress"></i>
+              </div>
+              <div class="min-w-0">
+                <div class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition truncate">
+                  WordPress &amp; WooCommerce
+                </div>
+                <div class="text-[11px] text-gray-500 truncate">Themes, speed &amp; checkouts</div>
+              </div>
+            </div>
+            <span class="text-[11px] font-bold text-brand-600 shrink-0 bg-purple-50 px-2 py-0.5 rounded-md">From $400</span>
+          </a>
+
+          <!-- Quick Solution 2: GoHighLevel Setup & Automation -->
+          <a href="service-ghl-funnels.html"
+            class="group p-4 rounded-2xl bg-white border border-purple-100 hover:border-brand-500 hover:shadow-md transition flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg shrink-0 group-hover:scale-105 transition">
+                <i class="fa-solid fa-filter-circle-dollar"></i>
+              </div>
+              <div class="min-w-0">
+                <div class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition truncate">
+                  GoHighLevel Setup &amp; CRM
+                </div>
+                <div class="text-[11px] text-gray-500 truncate">Pipelines &amp; SMS/email funnels</div>
+              </div>
+            </div>
+            <span class="text-[11px] font-bold text-emerald-700 shrink-0 bg-emerald-50 px-2 py-0.5 rounded-md">From $400</span>
+          </a>
+
+          <!-- Quick Solution 3: AI Chatbots & Voice Receptionists -->
+          <a href="service-ai-chatbots.html"
+            class="group p-4 rounded-2xl bg-white border border-purple-100 hover:border-brand-500 hover:shadow-md transition flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-10 h-10 rounded-xl bg-fuchsia-50 text-fuchsia-600 flex items-center justify-center text-lg shrink-0 group-hover:scale-105 transition">
+                <i class="fa-solid fa-robot"></i>
+              </div>
+              <div class="min-w-0">
+                <div class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition truncate">
+                  AI Chatbots &amp; Voice Agents
+                </div>
+                <div class="text-[11px] text-gray-500 truncate">24/7 lead qualification &amp; booking</div>
+              </div>
+            </div>
+            <span class="text-[11px] font-bold text-fuchsia-700 shrink-0 bg-fuchsia-50 px-2 py-0.5 rounded-md">From $300</span>
+          </a>
+
+          <!-- Quick Solution 4: UI/UX Figma Design Systems -->
+          <a href="service-ui-ux-figma.html"
+            class="group p-4 rounded-2xl bg-white border border-purple-100 hover:border-brand-500 hover:shadow-md transition flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3 min-w-0">
+              <div class="w-10 h-10 rounded-xl bg-purple-50 text-brand-600 flex items-center justify-center text-lg shrink-0 group-hover:scale-105 transition">
+                <i class="fa-solid fa-pen-ruler"></i>
+              </div>
+              <div class="min-w-0">
+                <div class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition truncate">
+                  UI/UX Figma Design Systems
+                </div>
+                <div class="text-[11px] text-gray-500 truncate">High-converting prototypes</div>
+              </div>
+            </div>
+            <span class="text-[11px] font-bold text-brand-600 shrink-0 bg-purple-50 px-2 py-0.5 rounded-md">From $200</span>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Bottom Agile Process Anchor Block (Keep Agile Steps cleanly structured) -->
+      <div id="about" class="mt-20 scroll-mt-28">
+        <div class="mb-10" data-anim="fade-up">
+          <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-600 block mb-1.5">ABOUT YANKEE
+            TECH</span>
+          <h2 class="font-display font-extrabold text-xl sm:text-2xl text-gray-900">About Us &amp; Our Agile Engineering
+            Process</h2>
+          <p class="text-xs text-gray-500 mt-1 max-w-xl">
+            A transparent, sprint-based engineering model designed to deliver custom full-stack builds, AI agent
+            automations, and frictionless GHL &amp; WordPress ecosystems.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+          <!-- Step 01 -->
+          <div data-anim="fade-up" data-delay="1"
+            class="relative flex flex-col justify-between p-4 rounded-2xl hover:bg-purple-50/40 transition">
+            <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm mb-4">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
+            </div>
+            <div class="flex items-baseline gap-2.5 mb-1.5">
+              <span class="font-display font-extrabold text-xl text-gray-900">01</span>
+              <h3 class="font-display font-bold text-sm text-gray-900">Discover &amp; Architect</h3>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed pl-7">
+              We audit your tech stack, map out GHL/WordPress workflows, and design a clear technical blueprint.
+            </p>
+            <div class="hidden lg:flex absolute top-1/2 -right-3 text-gray-400 text-xs">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <!-- Step 02 -->
+          <div data-anim="fade-up" data-delay="2"
+            class="relative flex flex-col justify-between p-4 rounded-2xl hover:bg-purple-50/40 transition">
+            <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm mb-4">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="flex items-baseline gap-2.5 mb-1.5">
+              <span class="font-display font-extrabold text-xl text-gray-900">02</span>
+              <h3 class="font-display font-bold text-sm text-gray-900">Design &amp; Full-Stack Build</h3>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed pl-7">
+              We bring your vision to life with modern Figma UI/UX, clean full-stack or WordPress code, and custom APIs.
+            </p>
+            <div class="hidden lg:flex absolute top-1/2 -right-3 text-gray-400 text-xs">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <!-- Step 03 -->
+          <div data-anim="fade-up" data-delay="3"
+            class="relative flex flex-col justify-between p-4 rounded-2xl hover:bg-purple-50/40 transition">
+            <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm mb-4">
+              <i class="fa-solid fa-gears"></i>
+            </div>
+            <div class="flex items-baseline gap-2.5 mb-1.5">
+              <span class="font-display font-extrabold text-xl text-gray-900">03</span>
+              <h3 class="font-display font-bold text-sm text-gray-900">Integrate AI &amp; Automate</h3>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed pl-7">
+              We connect GoHighLevel pipelines, AI agents, webhooks, and speed-optimize every page for 95+ Core Web
+              Vitals.
+            </p>
+            <div class="hidden lg:flex absolute top-1/2 -right-3 text-gray-400 text-xs">
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+
+          <!-- Step 04 -->
+          <div data-anim="fade-up" data-delay="4"
+            class="relative flex flex-col justify-between p-4 rounded-2xl hover:bg-purple-50/40 transition">
+            <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm mb-4">
+              <i class="fa-solid fa-rocket"></i>
+            </div>
+            <div class="flex items-baseline gap-2.5 mb-1.5">
+              <span class="font-display font-extrabold text-xl text-gray-900">04</span>
+              <h3 class="font-display font-bold text-sm text-gray-900">Launch &amp; 24/7 Support</h3>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed pl-7">
+              We deploy with zero downtime and stay with you for ongoing scaling, workflow monitoring, and support.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6. CURVED DARK SECTION — USE CASES & INDUSTRIES
+       ========================================== -->
+  <section id="use-cases" class="relative dark-cosmic-bg text-white pt-20 pb-24 overflow-hidden scroll-mt-16">
+    <a id="industries" class="sr-only">Industries and Use Cases</a>
+    <!-- Top Left Curved Cutout SVG matching screenshot -->
+    <div class="absolute top-0 left-0 w-full overflow-hidden leading-none pointer-events-none">
+      <svg viewBox="0 0 1440 54" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-8 sm:h-12 preserve-3d"
+        preserveAspectRatio="none">
+        <path d="M0 0H1440V12H140C70 12 30 35 0 54V0Z" fill="#ffffff" />
+      </svg>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <!-- Header (Always crisp & 100% visible) -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+        <div class="opacity-100 visible">
+          <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-purple-400 block mb-1.5">USE CASES &amp;
+            INDUSTRIES WE SERVE</span>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
+            Solutions &amp; Use Cases for Every Vision
+          </h2>
+          <p class="text-xs text-purple-200/70 mt-1">
+            We partner with startups, e-commerce brands, SaaS founders, and marketing agencies worldwide.
+          </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="use-cases.html"
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-brand-600 text-purple-200 hover:text-white border border-purple-400/30 text-xs font-semibold transition">
+            <span>Explore All Use Cases</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 4 Dark Industry Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <!-- Industry Card 1: Businesses & Startups -->
+        <a href="use-case-startups.html" data-anim="fade-up" data-delay="1"
+          class="industry-card group relative rounded-2xl overflow-hidden bg-[#180a33] border border-purple-500/20 h-[310px] flex flex-col justify-between p-5 transition block">
+          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=700&q=80"
+            alt="Businesses and Startups"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-55 group-hover:scale-105 transition duration-500"
+            onerror="this.src='https://placehold.co/600x800/1a0936/c4a6ff?text=Startups'" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#0f0521]/95 via-[#130629]/55 to-[#0b0318]/90"></div>
+          <div class="relative z-10 flex items-start justify-between gap-2">
+            <div>
+              <h3 class="font-display font-bold text-base text-white leading-snug">Businesses<br />&amp; Startups</h3>
+              <p class="text-[11px] text-purple-200/80 mt-1.5">Custom Full-Stack MVPs &amp; WordPress sites for growing
+                brands.</p>
+            </div>
+            <span
+              class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white text-xs group-hover:bg-brand-500 transition">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </div>
+          <div class="relative z-10">
+            <span
+              class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-950/80 border border-purple-400/30 text-[10px] text-purple-200 font-medium">
+              <i class="fa-solid fa-layer-group text-purple-400"></i> Full-Stack &amp; WP
+            </span>
+          </div>
+        </a>
+
+        <!-- Industry Card 2: Ecommerce Stores -->
+        <a href="use-case-ecommerce.html" data-anim="fade-up" data-delay="2"
+          class="industry-card group relative rounded-2xl overflow-hidden bg-[#180a33] border border-purple-500/20 h-[310px] flex flex-col justify-between p-5 transition block">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=700&q=80"
+            alt="Ecommerce Stores"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-55 group-hover:scale-105 transition duration-500"
+            onerror="this.src='https://placehold.co/600x800/1a0936/c4a6ff?text=Ecommerce'" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#0f0521]/95 via-[#130629]/55 to-[#0b0318]/90"></div>
+          <div class="relative z-10 flex items-start justify-between gap-2">
+            <div>
+              <h3 class="font-display font-bold text-base text-white leading-snug">Ecommerce<br />Stores</h3>
+              <p class="text-[11px] text-purple-200/80 mt-1.5">Scalable WooCommerce &amp; custom stores with automated
+                cart recovery.</p>
+            </div>
+            <span
+              class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white text-xs group-hover:bg-brand-500 transition">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </div>
+          <div class="relative z-10">
+            <span
+              class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-950/80 border border-purple-400/30 text-[10px] text-purple-200 font-medium">
+              <i class="fa-solid fa-cart-shopping text-purple-400"></i> WooCommerce + Stripe
+            </span>
+          </div>
+        </a>
+
+        <!-- Industry Card 3: SaaS & B2B Enterprises -->
+        <a href="use-case-saas-b2b.html" data-anim="fade-up" data-delay="3"
+          class="industry-card group relative rounded-2xl overflow-hidden bg-[#180a33] border border-purple-500/20 h-[310px] flex flex-col justify-between p-5 transition block">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80"
+            alt="SaaS & B2B Platforms"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-55 group-hover:scale-105 transition duration-500"
+            onerror="this.src='https://placehold.co/600x800/1a0936/c4a6ff?text=SaaS+Platforms'" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#0f0521]/95 via-[#130629]/55 to-[#0b0318]/90"></div>
+          <div class="relative z-10 flex items-start justify-between gap-2">
+            <div>
+              <h3 class="font-display font-bold text-base text-white leading-snug">SaaS &amp; B2B<br />Enterprises</h3>
+              <p class="text-[11px] text-purple-200/80 mt-1.5">Custom web portals, AI agents &amp; deep multi-system API
+                integrations.</p>
+            </div>
+            <span
+              class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white text-xs group-hover:bg-brand-500 transition">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </div>
+          <div class="relative z-10">
+            <span
+              class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-950/80 border border-purple-400/30 text-[10px] text-purple-200 font-medium">
+              <i class="fa-solid fa-microchip text-purple-400"></i> AI &amp; Custom APIs
+            </span>
+          </div>
+        </a>
+
+        <!-- Industry Card 4: Coaches & Agencies -->
+        <a href="use-case-agencies.html" data-anim="fade-up" data-delay="4"
+          class="industry-card group relative rounded-2xl overflow-hidden bg-[#180a33] border border-purple-500/20 h-[310px] flex flex-col justify-between p-5 transition block">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80"
+            alt="Coaches and Agencies"
+            class="absolute inset-0 w-full h-full object-cover object-center opacity-55 group-hover:scale-105 transition duration-500"
+            onerror="this.src='https://placehold.co/600x800/1a0936/c4a6ff?text=Agencies'" />
+          <div class="absolute inset-0 bg-gradient-to-b from-[#0f0521]/95 via-[#130629]/55 to-[#0b0318]/90"></div>
+          <div class="relative z-10 flex items-start justify-between gap-2">
+            <div>
+              <h3 class="font-display font-bold text-base text-white leading-snug">Coaches &amp;<br />Agencies</h3>
+              <p class="text-[11px] text-purple-200/80 mt-1.5">GoHighLevel sub-account automation, funnels &amp;
+                WordPress sites to scale.</p>
+            </div>
+            <span
+              class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white text-xs group-hover:bg-brand-500 transition">
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </div>
+          <div class="relative z-10">
+            <span
+              class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-purple-950/80 border border-purple-400/30 text-[10px] text-purple-200 font-medium">
+              <i class="fa-solid fa-bolt text-purple-400"></i> GoHighLevel Pro
+            </span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- Bottom Right Curved Cutout SVG matching screenshot -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none">
+      <svg viewBox="0 0 1440 54" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-8 sm:h-12"
+        preserveAspectRatio="none">
+        <path d="M0 42H1300C1370 42 1410 19 1440 0V54H0V42Z" fill="#ffffff" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       6B. PORTFOLIO & FEATURED WORK SHOWCASE
+       ========================================== -->
+  <section id="portfolio" class="py-16 lg:py-24 bg-gradient-to-b from-white via-purple-50/25 to-white relative overflow-hidden scroll-mt-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+        <div data-anim="fade-up">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 border border-purple-200 text-brand-700 text-[10px] font-bold uppercase tracking-widest mb-2.5">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>PROVEN TRACK RECORD • REAL CLIENT RESULTS</span>
+          </div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-gray-900 tracking-tight">
+            Featured Projects &amp; Case Studies
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-500 max-w-xl leading-relaxed mt-2">
+            Explore how we build sub-second WordPress stores, scale multi-tenant SaaS web apps, and deploy autonomous GoHighLevel + AI pipelines that generate real revenue.
+          </p>
+        </div>
+
+        <div data-anim="fade-up" data-delay="1" class="flex flex-col sm:flex-row sm:items-center gap-3">
+          <a href="portfolio.html"
+            class="btn-purple magnetic-btn text-white text-xs font-semibold px-5 py-3 rounded-full inline-flex items-center justify-center gap-2 shadow-md">
+            <span>Explore All 12+ Projects</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Filter Tabs (Interactive JS filtering) -->
+      <div data-anim="fade-up" class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar">
+        <button type="button" onclick="filterPortfolio('all', this)"
+          class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-bold bg-brand-600 text-white shadow-sm transition shrink-0 cursor-pointer">
+          All Work (6)
+        </button>
+        <button type="button" onclick="filterPortfolio('wordpress', this)"
+          class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-gray-100 hover:bg-purple-50 text-gray-700 transition shrink-0 cursor-pointer">
+          WordPress &amp; Woo
+        </button>
+        <button type="button" onclick="filterPortfolio('fullstack', this)"
+          class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-gray-100 hover:bg-purple-50 text-gray-700 transition shrink-0 cursor-pointer">
+          Full-Stack SaaS
+        </button>
+        <button type="button" onclick="filterPortfolio('ghl', this)"
+          class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-gray-100 hover:bg-purple-50 text-gray-700 transition shrink-0 cursor-pointer">
+          GoHighLevel CRM
+        </button>
+        <button type="button" onclick="filterPortfolio('ai', this)"
+          class="portfolio-filter-btn px-4 py-2 rounded-full text-xs font-semibold bg-gray-100 hover:bg-purple-50 text-gray-700 transition shrink-0 cursor-pointer">
+          AI &amp; Automations
+        </button>
+      </div>
+
+      <!-- 6 Real Client Case Studies Grid (Verified Production Builds from Client Documentation) -->
+      <div id="portfolioGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Case 1: Debt Recovery Hub (UK B2B Portal) -->
+        <div data-anim="fade-up" data-delay="1" data-category="fullstack"
+          class="portfolio-card bg-white rounded-3xl border border-purple-100 p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+          <div class="h-1.5 w-full bg-gradient-to-r from-blue-600 to-indigo-600 absolute top-0 left-0"></div>
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3.5">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-blue-700 bg-blue-50 border border-blue-200 px-2.5 py-0.5 rounded-full font-mono">
+                Web App &amp; Portal
+              </span>
+              <span class="text-[10px] text-emerald-600 font-mono font-bold flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Live in UK
+              </span>
+            </div>
+
+            <h3 class="font-display font-bold text-lg text-gray-900 group-hover:text-brand-600 transition">
+              Debt Recovery Hub
+            </h3>
+            <span class="text-xs text-gray-400 font-medium block mb-2.5">B2B Commercial Recovery Platform • UK</span>
+            <p class="text-xs text-gray-500 leading-relaxed mb-4">
+              Custom enquiry matching engine connecting UK businesses with independent recovery agencies through multi-criteria debt evaluation and automated partner triage.
+            </p>
+
+            <!-- Metrics Pill Box -->
+            <div class="bg-gray-50 rounded-2xl p-3 border border-gray-100 mb-4 grid grid-cols-2 gap-2 text-center">
+              <div>
+                <span class="block font-display font-extrabold text-sm text-gray-900">-75%</span>
+                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Intake Triage Time</span>
+              </div>
+              <div class="border-l border-gray-200">
+                <span class="block font-display font-extrabold text-sm text-emerald-600">100%</span>
+                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Automated Routing</span>
+              </div>
+            </div>
+
+            <!-- Tech Badges -->
+            <div class="flex flex-wrap gap-1.5 mb-5">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">Custom Web App</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">Lead Logic</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">UK Compliance</span>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold">
+            <a href="https://debtrecoveryhub.org/" target="_blank" rel="noopener noreferrer"
+              class="text-brand-600 hover:text-brand-700 inline-flex items-center gap-1 transition">
+              <span>Visit Live Site</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+            </a>
+            <a href="portfolio.html#debtrecoveryhub" class="text-gray-400 hover:text-gray-700 text-[11px] font-semibold">
+              Read Brief →
+            </a>
+          </div>
+        </div>
+
+        <!-- Case 2: Zero Through (London Cyber Security) -->
+        <div data-anim="fade-up" data-delay="2" data-category="fullstack"
+          class="portfolio-card bg-white rounded-3xl border border-purple-100 p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+          <div class="h-1.5 w-full bg-gradient-to-r from-purple-600 to-indigo-700 absolute top-0 left-0"></div>
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3.5">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-purple-700 bg-purple-50 border border-purple-200 px-2.5 py-0.5 rounded-full font-mono">
+                Enterprise Tech
+              </span>
+              <span class="text-[10px] text-emerald-600 font-mono font-bold flex items-center gap-1">
+                <i class="fa-solid fa-shield"></i> Leadenhall London
+              </span>
+            </div>
+
+            <h3 class="font-display font-bold text-lg text-gray-900 group-hover:text-brand-600 transition">
+              Zero Through Consultancy
+            </h3>
+            <span class="text-xs text-gray-400 font-medium block mb-2.5">Global IT &amp; Cyber Security • London, UK</span>
+            <p class="text-xs text-gray-500 leading-relaxed mb-4">
+              High-performance corporate platform presenting enterprise SIEM/SOC services, penetration testing, and MDR solutions to UK &amp; European enterprise clients.
+            </p>
+
+            <div class="bg-gray-50 rounded-2xl p-3 border border-gray-100 mb-4 grid grid-cols-2 gap-2 text-center">
+              <div>
+                <span class="block font-display font-extrabold text-sm text-emerald-600">&lt;0.8s</span>
+                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Page Load Speed</span>
+              </div>
+              <div class="border-l border-gray-200">
+                <span class="block font-display font-extrabold text-sm text-gray-900">100 / 100</span>
+                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Core Web Vitals</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 mb-5">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">Enterprise UI</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">Tailwind CSS</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">Schema SEO</span>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold">
+            <a href="https://zerothrough.co.uk/" target="_blank" rel="noopener noreferrer"
+              class="text-brand-600 hover:text-brand-700 inline-flex items-center gap-1 transition">
+              <span>Visit Live Site</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+            </a>
+            <a href="portfolio.html#zerothrough" class="text-gray-400 hover:text-gray-700 text-[11px] font-semibold">
+              Read Brief →
+            </a>
+          </div>
+        </div>
+
+        <!-- Case 3: ClaimFirst (UK Legal Lead Funnel) -->
+        <div data-anim="fade-up" data-delay="3" data-category="ghl"
+          class="portfolio-card bg-white rounded-3xl border border-purple-100 p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+          <div class="h-1.5 w-full bg-gradient-to-r from-amber-500 to-orange-500 absolute top-0 left-0"></div>
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3.5">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-amber-700 bg-amber-50 border border-amber-200 px-2.5 py-0.5 rounded-full font-mono">
+                Claims Funnel &amp; CRM
+              </span>
+              <span class="text-[10px] text-brand-600 font-mono font-bold flex items-center gap-1">
+                High-Volume Funnel
+              </span>
+            </div>
+
+            <h3 class="font-display font-bold text-lg text-gray-900 group-hover:text-brand-600 transition">
+              ClaimFirst Car Finance Funnel
+            </h3>
+            <span class="text-xs text-gray-400 font-medium block mb-2.5">Legal Claims &amp; Motor Finance • UK</span>
+            <p class="text-xs text-gray-500 leading-relaxed mb-4">
+              Multi-step eligibility funnel processing PCP/HP mis-sold car finance claims with real-time lender validation, signature capture, and automated CRM intake.
+            </p>
+
+            <div class="bg-gray-50 rounded-2xl p-3 border border-gray-100 mb-4 grid grid-cols-2 gap-2 text-center">
+              <div>
+                <span class="block font-display font-extrabold text-sm text-amber-600">+48%</span>
+                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Funnel Completion</span>
+              </div>
+              <div class="border-l border-gray-200">
+                <span class="block font-display font-extrabold text-sm text-gray-900">Real-Time</span>
+                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">CRM Sync Engine</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 mb-5">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">Multi-Step Form</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">GHL/CRM Webhooks</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">Conversion UX</span>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold">
+            <a href="https://mis-sold-car-finance.claimfirst.co.uk/home/" target="_blank" rel="noopener noreferrer"
+              class="text-brand-600 hover:text-brand-700 inline-flex items-center gap-1 transition">
+              <span>Visit Live Funnel</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+            </a>
+            <a href="portfolio.html#claimfirst" class="text-gray-400 hover:text-gray-700 text-[11px] font-semibold">
+              Read Brief →
+            </a>
+          </div>
+        </div>
+
+        <!-- Case 4: NeoLav Australia (Industrial Sanitation) -->
+        <div data-anim="fade-up" data-delay="1" data-category="wordpress"
+          class="portfolio-card bg-white rounded-3xl border border-purple-100 p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+          <div class="h-1.5 w-full bg-gradient-to-r from-teal-500 to-emerald-600 absolute top-0 left-0"></div>
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3.5">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-teal-700 bg-teal-50 border border-teal-200 px-2.5 py-0.5 rounded-full font-mono">
+                Commercial Catalog
+              </span>
+              <span class="text-[10px] text-teal-600 font-mono font-bold flex items-center gap-1">
+                Australia Tenders
+              </span>
+            </div>
+
+            <h3 class="font-display font-bold text-lg text-gray-900 group-hover:text-brand-600 transition">
+              NeoLav Australia
+            </h3>
+            <span class="text-xs text-gray-400 font-medium block mb-2.5">Industrial Infrastructure • Western Australia</span>
+            <p class="text-xs text-gray-500 leading-relaxed mb-4">
+              Modern commercial quotation portal showcasing portable sanitation infrastructure, mobile showers, and industrial trailers for mining and event procurement.
+            </p>
+
+            <div class="bg-gray-50 rounded-2xl p-3 border border-gray-100 mb-4 grid grid-cols-2 gap-2 text-center">
+              <div>
+                <span class="block font-display font-extrabold text-sm text-gray-900">B2B Fleet</span>
+                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Online Catalog</span>
+              </div>
+              <div class="border-l border-gray-200">
+                <span class="block font-display font-extrabold text-sm text-emerald-600">Fast Quote</span>
+                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Tender Inquiries</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 mb-5">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">Product Catalog</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">Quotation Flow</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">Speed Optimized</span>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold">
+            <a href="https://neolav.com.au/" target="_blank" rel="noopener noreferrer"
+              class="text-brand-600 hover:text-brand-700 inline-flex items-center gap-1 transition">
+              <span>Visit Live Site</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+            </a>
+            <a href="portfolio.html#neolav" class="text-gray-400 hover:text-gray-700 text-[11px] font-semibold">
+              Read Brief →
+            </a>
+          </div>
+        </div>
+
+        <!-- Case 5: L'Atelier Shu (Canada Bilingual Clinic) -->
+        <div data-anim="fade-up" data-delay="2" data-category="wordpress"
+          class="portfolio-card bg-white rounded-3xl border border-purple-100 p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+          <div class="h-1.5 w-full bg-gradient-to-r from-rose-500 to-pink-600 absolute top-0 left-0"></div>
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3.5">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-rose-700 bg-rose-50 border border-rose-200 px-2.5 py-0.5 rounded-full font-mono">
+                Bilingual Studio
+              </span>
+              <span class="text-[10px] text-rose-600 font-mono font-bold flex items-center gap-1">
+                Montreal, QC
+              </span>
+            </div>
+
+            <h3 class="font-display font-bold text-lg text-gray-900 group-hover:text-brand-600 transition">
+              L'Atelier Shu &amp; Co
+            </h3>
+            <span class="text-xs text-gray-400 font-medium block mb-2.5">Aesthetic Studio &amp; Treatments • Canada</span>
+            <p class="text-xs text-gray-500 leading-relaxed mb-4">
+              High-end bilingual (French/English) studio web presence for laser and body contouring treatments, featuring treatment menus and online consultation booking.
+            </p>
+
+            <div class="bg-gray-50 rounded-2xl p-3 border border-gray-100 mb-4 grid grid-cols-2 gap-2 text-center">
+              <div>
+                <span class="block font-display font-extrabold text-sm text-gray-900">FR / EN</span>
+                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Bilingual Architecture</span>
+              </div>
+              <div class="border-l border-gray-200">
+                <span class="block font-display font-extrabold text-sm text-rose-600">Online</span>
+                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Booking Flow</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 mb-5">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">Luxury Branding</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">Bilingual i18n</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">Local SEO</span>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold">
+            <a href="https://lateliershu.ca/fr/" target="_blank" rel="noopener noreferrer"
+              class="text-brand-600 hover:text-brand-700 inline-flex items-center gap-1 transition">
+              <span>Visit Live Studio</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+            </a>
+            <a href="portfolio.html#lateliershu" class="text-gray-400 hover:text-gray-700 text-[11px] font-semibold">
+              Read Brief →
+            </a>
+          </div>
+        </div>
+
+        <!-- Case 6: Globaro Shop (E-Commerce Storefront) -->
+        <div data-anim="fade-up" data-delay="3" data-category="wordpress"
+          class="portfolio-card bg-white rounded-3xl border border-purple-100 p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+          <div class="h-1.5 w-full bg-gradient-to-r from-violet-600 to-purple-600 absolute top-0 left-0"></div>
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3.5">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-violet-700 bg-violet-50 border border-violet-200 px-2.5 py-0.5 rounded-full font-mono">
+                E-Commerce
+              </span>
+              <span class="text-[10px] text-emerald-600 font-mono font-bold flex items-center gap-1">
+                Fast Checkout
+              </span>
+            </div>
+
+            <h3 class="font-display font-bold text-lg text-gray-900 group-hover:text-brand-600 transition">
+              Globaro Online Store
+            </h3>
+            <span class="text-xs text-gray-400 font-medium block mb-2.5">Global Retail &amp; Consumer Products</span>
+            <p class="text-xs text-gray-500 leading-relaxed mb-4">
+              Lightweight mobile-first online storefront built for rapid product browsing, asset-optimized imagery, and seamless single-page checkout flow.
+            </p>
+
+            <div class="bg-gray-50 rounded-2xl p-3 border border-gray-100 mb-4 grid grid-cols-2 gap-2 text-center">
+              <div>
+                <span class="block font-display font-extrabold text-sm text-emerald-600">&lt;1.0s</span>
+                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Mobile Load Time</span>
+              </div>
+              <div class="border-l border-gray-200">
+                <span class="block font-display font-extrabold text-sm text-gray-900">Global</span>
+                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Payment Integration</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-1.5 mb-5">
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">E-Commerce</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">Mobile Checkout</span>
+              <span class="text-[10px] font-mono px-2 py-0.5 rounded-md bg-purple-50 text-purple-700 border border-purple-100">Asset Caching</span>
+            </div>
+          </div>
+
+          <div class="pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold">
+            <a href="https://globaro.shop/" target="_blank" rel="noopener noreferrer"
+              class="text-brand-600 hover:text-brand-700 inline-flex items-center gap-1 transition">
+              <span>Visit Live Shop</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+            </a>
+            <a href="portfolio.html#globaro" class="text-gray-400 hover:text-gray-700 text-[11px] font-semibold">
+              Read Brief →
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Portfolio Teaser Banner -->
+      <div data-anim="fade-up"
+        class="mt-12 rounded-3xl bg-gradient-to-r from-[#170833] via-[#120525] to-[#240a42] text-white p-6 sm:p-8 border border-purple-500/30 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl relative overflow-hidden">
+        <div class="absolute -right-16 -top-16 w-48 h-48 bg-brand-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="space-y-1 text-center md:text-left z-10">
+          <div class="inline-flex items-center gap-2 text-[10px] font-mono text-purple-300 font-bold uppercase tracking-widest">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>CUSTOM SOLUTIONS DELIVERED ON TIME</span>
+          </div>
+          <h3 class="font-display font-extrabold text-xl sm:text-2xl text-white">
+            Need a high-impact platform or workflow built?
+          </h3>
+          <p class="text-xs text-purple-200/80 max-w-lg">
+            Browse our full 12+ client portfolio or calculate your exact scope and investment in 30 seconds.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center gap-3 z-10 shrink-0 w-full sm:w-auto">
+          <a href="portfolio.html"
+            class="w-full sm:w-auto btn-purple text-white text-xs font-semibold px-6 py-3 rounded-full flex items-center justify-center gap-2 shadow-glow transition">
+            <i class="fa-solid fa-folder-open text-xs"></i>
+            <span>View Master Portfolio</span>
+          </a>
+          <a href="#estimator"
+            class="w-full sm:w-auto px-5 py-3 rounded-full border border-purple-400/40 hover:bg-purple-800/40 text-purple-200 text-xs font-semibold flex items-center justify-center gap-2 transition">
+            <i class="fa-solid fa-calculator text-xs"></i>
+            <span>Calculate Cost</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- ==========================================
+       7. INTERACTIVE PROJECT PRICE ESTIMATOR
+          (Feature-Based Custom Engineering per Developer Brief Page 4 & 5)
+       ========================================== -->
+  <section id="estimator" class="py-16 lg:py-24 bg-white relative scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Section Heading matching Yankee Tech style -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-[10px] font-bold uppercase tracking-widest mb-3">
+            <i class="fa-solid fa-calculator text-xs"></i>
+            <span>TRANSPARENT FEATURE-BASED PRICING</span>
+          </div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-gray-900 tracking-tight">
+            Interactive Project Price Estimator
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-600 mt-2 max-w-xl leading-relaxed">
+            Choose your project type, toggle the features you need, and see an estimated range with realistic timelines. Every project is fixed-price and paid in milestones.
+          </p>
+        </div>
+
+        <!-- Milestone Guarantee Badge -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-purple-50 border border-purple-100 text-gray-700 text-xs font-semibold shadow-xs">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>Milestone Payments: 30% / 30% / 40%</span>
+        </div>
+      </div>
+
+      <!-- Estimator Main Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+        <!-- Left 7 Columns: Interactive Controls -->
+        <div data-anim="fade-right"
+          class="lg:col-span-7 bg-[#faf8ff] border border-purple-100 rounded-3xl p-6 sm:p-8 space-y-8 shadow-card">
+
+          <!-- STEP 1: Select Project Type -->
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <label class="font-display font-bold text-sm text-gray-900 flex items-center gap-2.5">
+                <span
+                  class="w-6 h-6 rounded-full bg-brand-600 text-white text-xs flex items-center justify-center font-bold">1</span>
+                <span>Select Project Type</span>
+              </label>
+              <span class="text-[11px] text-brand-600 font-semibold font-mono">STEP 1 OF 2</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="serviceTrackButtons">
+
+              <!-- Track 1: Starter MVP -->
+              <button type="button" onclick="selectTrack('starter_mvp')" data-track="starter_mvp"
+                class="track-btn text-left p-4 rounded-2xl border-2 border-brand-600 bg-white shadow-md transition flex items-start gap-3.5 ring-2 ring-brand-500/10">
+                <div
+                  class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-lg shrink-0 mt-0.5">
+                  <i class="fa-solid fa-rocket"></i>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center justify-between">
+                    <span class="font-display font-bold text-xs sm:text-sm text-gray-900 truncate">Starter SaaS MVP</span>
+                    <span class="text-xs font-bold text-brand-600">From $2,200</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 mt-1 leading-snug">Core workflow, user auth &amp; admin panel (4–6 wks)</p>
+                </div>
+              </button>
+
+              <!-- Track 2: Custom Web App / Portal -->
+              <button type="button" onclick="selectTrack('custom_app')" data-track="custom_app"
+                class="track-btn text-left p-4 rounded-2xl border-2 border-purple-100 bg-white/70 hover:bg-white transition flex items-start gap-3.5">
+                <div
+                  class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-lg shrink-0 mt-0.5">
+                  <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center justify-between">
+                    <span class="font-display font-bold text-xs sm:text-sm text-gray-900 truncate">Web App / Portal</span>
+                    <span class="text-xs font-bold text-brand-600">From $2,500</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 mt-1 leading-snug">Client portal, roles &amp; custom dashboard (6–8 wks)</p>
+                </div>
+              </button>
+
+              <!-- Track 3: Custom Platform / SaaS -->
+              <button type="button" onclick="selectTrack('platform_saas')" data-track="platform_saas"
+                class="track-btn text-left p-4 rounded-2xl border-2 border-purple-100 bg-white/70 hover:bg-white transition flex items-start gap-3.5">
+                <div
+                  class="w-10 h-10 rounded-xl bg-rose-50 text-rose-600 flex items-center justify-center text-lg shrink-0 mt-0.5">
+                  <i class="fa-solid fa-cubes"></i>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center justify-between">
+                    <span class="font-display font-bold text-xs sm:text-sm text-gray-900 truncate">Custom Platform</span>
+                    <span class="text-xs font-bold text-brand-600">From $3,000</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 mt-1 leading-snug">Multi-tenant architecture, billing &amp; scaling (8–12 wks)</p>
+                </div>
+              </button>
+
+              <!-- Track 4: Dedicated Developer -->
+              <button type="button" onclick="selectTrack('dedicated_dev')" data-track="dedicated_dev"
+                class="track-btn text-left p-4 rounded-2xl border-2 border-purple-100 bg-white/70 hover:bg-white transition flex items-start gap-3.5">
+                <div
+                  class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg shrink-0 mt-0.5">
+                  <i class="fa-solid fa-user-check"></i>
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center justify-between">
+                    <span class="font-display font-bold text-xs sm:text-sm text-gray-900 truncate">Dedicated Dev</span>
+                    <span class="text-xs font-bold text-brand-600">From $1,500/mo</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 mt-1 leading-snug">Senior full-stack engineer, 80h or 160h/mo</p>
+                </div>
+              </button>
+
+              <!-- Track 5: Quick Solution / API Integration -->
+              <button type="button" onclick="selectTrack('quick_solutions')" data-track="quick_solutions"
+                class="sm:col-span-2 track-btn text-left p-3.5 rounded-2xl border-2 border-purple-100 bg-white/70 hover:bg-white transition flex items-center justify-between gap-3.5">
+                <div class="flex items-center gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-sm">
+                    <i class="fa-solid fa-bolt"></i>
+                  </div>
+                  <div>
+                    <span class="font-display font-bold text-xs text-gray-900">Quick Solutions &amp; Integrations</span>
+                    <span class="text-[11px] text-gray-500 block">GHL setup ($400), WP Launch ($400), 2-way sync ($500), AI bot ($300)</span>
+                  </div>
+                </div>
+                <span class="text-xs font-bold text-brand-600 bg-purple-50 px-2.5 py-1 rounded-md">From $400</span>
+              </button>
+
+            </div>
+          </div>
+
+          <!-- STEP 2: Feature Add-ons (Developer Brief Page 4 & 5) -->
+          <div class="pt-2 border-t border-purple-100">
+            <div class="flex items-center justify-between mb-4">
+              <label class="font-display font-bold text-sm text-gray-900 flex items-center gap-2.5">
+                <span
+                  class="w-6 h-6 rounded-full bg-brand-600 text-white text-xs flex items-center justify-center font-bold">2</span>
+                <span>Toggle Feature Add-Ons</span>
+              </label>
+              <span class="text-[11px] text-gray-500">Add features to calculate scope</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="addonsGrid">
+
+              <!-- Addon 1: User Accounts & Roles ($250) -->
+              <label
+                class="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-purple-100 hover:border-brand-300 transition cursor-pointer group shadow-xs">
+                <input type="checkbox" onchange="updateEstimate()" data-name="User Accounts &amp; Roles"
+                  data-cost="250" class="addon-check w-4 h-4 text-brand-600 rounded border-gray-300 focus:ring-brand-500 mt-0.5" />
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition">User Accounts &amp; Roles</span>
+                    <span class="text-[11px] font-bold text-brand-600">+$250</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 mt-0.5">Auth, permissions, password reset &amp; profiles</p>
+                </div>
+              </label>
+
+              <!-- Addon 2: Admin Dashboard ($300) -->
+              <label
+                class="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-purple-100 hover:border-brand-300 transition cursor-pointer group shadow-xs">
+                <input type="checkbox" onchange="updateEstimate()" data-name="Admin Dashboard &amp; CMS"
+                  data-cost="300" class="addon-check w-4 h-4 text-brand-600 rounded border-gray-300 focus:ring-brand-500 mt-0.5" />
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition">Admin Dashboard</span>
+                    <span class="text-[11px] font-bold text-brand-600">+$300</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 mt-0.5">User management, metrics &amp; data CRUD</p>
+                </div>
+              </label>
+
+              <!-- Addon 3: Payments (Stripe) ($150) -->
+              <label
+                class="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-purple-100 hover:border-brand-300 transition cursor-pointer group shadow-xs">
+                <input type="checkbox" onchange="updateEstimate()" data-name="Stripe Payments &amp; Subscriptions"
+                  data-cost="150" class="addon-check w-4 h-4 text-brand-600 rounded border-gray-300 focus:ring-brand-500 mt-0.5" />
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition">Stripe Payments</span>
+                    <span class="text-[11px] font-bold text-brand-600">+$150</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 mt-0.5">One-time checkouts, recurring billing &amp; webhooks</p>
+                </div>
+              </label>
+
+              <!-- Addon 4: Third-Party API Integration ($200) -->
+              <label
+                class="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-purple-100 hover:border-brand-300 transition cursor-pointer group shadow-xs">
+                <input type="checkbox" onchange="updateEstimate()" data-name="Third-Party API Integration"
+                  data-cost="200" class="addon-check w-4 h-4 text-brand-600 rounded border-gray-300 focus:ring-brand-500 mt-0.5" />
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition">Third-Party API</span>
+                    <span class="text-[11px] font-bold text-brand-600">+$200</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 mt-0.5">CRM, email, SMS, or external software sync</p>
+                </div>
+              </label>
+
+              <!-- Addon 5: Reporting and Analytics ($250) -->
+              <label
+                class="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-purple-100 hover:border-brand-300 transition cursor-pointer group shadow-xs">
+                <input type="checkbox" onchange="updateEstimate()" data-name="Reporting &amp; Analytics"
+                  data-cost="250" class="addon-check w-4 h-4 text-brand-600 rounded border-gray-300 focus:ring-brand-500 mt-0.5" />
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition">Reporting &amp; Analytics</span>
+                    <span class="text-[11px] font-bold text-brand-600">+$250</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 mt-0.5">Data visualization, chart graphs &amp; PDF exports</p>
+                </div>
+              </label>
+
+              <!-- Addon 6: AI Feature ($250) -->
+              <label
+                class="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-purple-100 hover:border-brand-300 transition cursor-pointer group shadow-xs">
+                <input type="checkbox" onchange="updateEstimate()" data-name="AI Feature (Chatbot / RAG)"
+                  data-cost="250" class="addon-check w-4 h-4 text-brand-600 rounded border-gray-300 focus:ring-brand-500 mt-0.5" />
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition">AI Assistant / Bot</span>
+                    <span class="text-[11px] font-bold text-brand-600">+$250</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 mt-0.5">OpenAI GPT-4o RAG, smart prompt flows &amp; automation</p>
+                </div>
+              </label>
+
+              <!-- Addon 7: GoHighLevel Integration ($250) -->
+              <label
+                class="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-purple-100 hover:border-brand-300 transition cursor-pointer group shadow-xs">
+                <input type="checkbox" onchange="updateEstimate()" data-name="GoHighLevel 2-Way Sync"
+                  data-cost="250" class="addon-check w-4 h-4 text-brand-600 rounded border-gray-300 focus:ring-brand-500 mt-0.5" />
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition">GoHighLevel Integration</span>
+                    <span class="text-[11px] font-bold text-brand-600">+$250</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 mt-0.5">Real-time bi-directional pipeline &amp; contact sync</p>
+                </div>
+              </label>
+
+              <!-- Addon 8: UI/UX Figma Design ($200) -->
+              <label
+                class="flex items-start gap-3 p-3.5 rounded-2xl bg-white border border-purple-100 hover:border-brand-300 transition cursor-pointer group shadow-xs">
+                <input type="checkbox" onchange="updateEstimate()" data-name="UI/UX Figma Design System"
+                  data-cost="200" class="addon-check w-4 h-4 text-brand-600 rounded border-gray-300 focus:ring-brand-500 mt-0.5" />
+                <div class="flex-1">
+                  <div class="flex items-center justify-between">
+                    <span class="font-display font-bold text-xs text-gray-900 group-hover:text-brand-600 transition">UI/UX Design System</span>
+                    <span class="text-[11px] font-bold text-brand-600">+$200</span>
+                  </div>
+                  <p class="text-[11px] text-gray-500 mt-0.5">Conversion-focused design &amp; responsive prototype</p>
+                </div>
+              </label>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right 5 Columns: Dynamic Summary & Scoping Card -->
+        <div data-anim="fade-left" class="lg:col-span-5 sticky top-28">
+          <div
+            class="bg-gradient-to-br from-[#120727] via-[#1a083a] to-[#2b0c57] text-white rounded-3xl p-6 sm:p-8 border border-purple-500/30 shadow-2xl space-y-6 relative overflow-hidden">
+            <div
+              class="absolute -top-20 -right-20 w-44 h-44 bg-brand-500/25 rounded-full blur-3xl pointer-events-none">
+            </div>
+
+            <!-- Header -->
+            <div class="border-b border-white/10 pb-4">
+              <div class="flex items-center justify-between text-xs text-purple-300 font-mono mb-1">
+                <span>ESTIMATED INVESTMENT</span>
+                <span class="text-emerald-400 font-bold">±10% ESTIMATE</span>
+              </div>
+              <h3 id="summaryTrackTitle" class="font-display font-extrabold text-xl text-white">Starter SaaS MVP</h3>
+              <p class="text-xs text-purple-200/80 mt-1">Based on selected architecture &amp; feature set</p>
+            </div>
+
+            <!-- Big Investment Range -->
+            <div>
+              <div class="text-[11px] uppercase tracking-wider text-purple-300 font-semibold mb-1">Estimated Price Range:</div>
+              <div id="summaryTotalDisplay" class="font-display font-extrabold text-3xl sm:text-4xl text-white tracking-tight">
+                $2,000 – $2,400
+              </div>
+              <div class="flex items-center gap-2 mt-2 text-xs text-purple-200/90">
+                <i class="fa-solid fa-clock text-brand-400"></i>
+                <span>Estimated Timeline: <strong id="summaryTimeline" class="text-white">4 to 6 Weeks</strong></span>
+              </div>
+            </div>
+
+            <!-- Milestone Terms Guarantee (Developer Brief Page 4) -->
+            <div class="p-4 rounded-2xl bg-white/5 border border-white/10 space-y-2 text-xs">
+              <div class="font-bold text-purple-200 flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+                <span>Payment in Milestones</span>
+              </div>
+              <p class="text-purple-200/75 leading-relaxed">
+                Fixed price confirmed after a free call. Pay in transparent stages: <strong>30% to start</strong>, <strong>30% at midpoint demo</strong>, and <strong>40% at launch</strong>.
+              </p>
+            </div>
+
+            <!-- Selected Addons Dynamic List -->
+            <div class="space-y-1.5 pt-2 border-t border-white/10">
+              <div class="text-[11px] font-mono text-purple-300 uppercase tracking-wider mb-1">Scope Breakdown:</div>
+              <div class="flex items-center justify-between text-xs text-purple-200/90 py-0.5">
+                <span id="breakdownBaseName" class="truncate">Starter MVP Core</span>
+                <span id="breakdownBaseCost" class="font-bold text-white">$2,200</span>
+              </div>
+              <div id="breakdownAddonsList" class="space-y-1"></div>
+            </div>
+
+            <!-- Actions -->
+            <div class="space-y-3 pt-2">
+              <button type="button" onclick="applyEstimateToContact()"
+                class="w-full btn-purple magnetic-btn text-white font-display font-bold text-xs sm:text-sm py-4 px-6 rounded-full shadow-glow flex items-center justify-center gap-2">
+                <span>Book a Scoping Call With This Estimate</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+              <div class="flex items-center justify-between text-[11px] text-purple-300 px-1">
+                <button type="button" onclick="resetEstimator()" class="hover:text-white underline transition">
+                  Reset Selection
+                </button>
+                <a href="#contact" class="hover:text-emerald-300 transition flex items-center gap-1">
+                  <i class="fa-solid fa-phone text-[10px]"></i>
+                  <span>Not sure about budget? Free 30-min call</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       9. CLIENT TESTIMONIALS & PRODUCTION FEEDBACK
+       (Verified Client Project Feedback - No Stock Photos per Developer Brief Page 2 & 3)
+       ========================================== -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-bold uppercase tracking-widest mb-3">
+            <i class="fa-solid fa-circle-check text-xs"></i>
+            <span>VERIFIED PRODUCTION FEEDBACK</span>
+          </div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-gray-900 tracking-tight">What Founders &amp; Partners Say</h2>
+          <p class="text-xs sm:text-sm text-gray-600 mt-2 max-w-lg">
+            Real feedback from clients and partner agencies whose production platforms and automation pipelines we engineered.
+          </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="portfolio.html"
+            class="px-4 py-2 rounded-full border border-purple-200 hover:border-brand-600 text-xs font-semibold text-gray-700 hover:text-brand-600 inline-flex items-center gap-1.5 transition bg-purple-50/50">
+            <span>Explore All Production Work</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 3 Testimonial Cards (Verified Production Attributions) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Review 1: Debt Recovery Hub -->
+        <div data-anim="fade-up" data-delay="1"
+          class="rounded-3xl bg-[#faf8ff] border border-purple-100 p-6 sm:p-7 flex flex-col justify-between shadow-card hover:shadow-xl transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-1 text-amber-400 text-xs">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="text-[10px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                Verified Platform
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-6 italic">
+              "Yankee Tech took our manual debt intake operations and turned them into a seamless, 100% paperless platform. Their senior Laravel &amp; Next.js execution exceeded our expectations on speed and reliability."
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-purple-100">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 font-display font-extrabold text-sm flex items-center justify-center border border-purple-200">
+                DR
+              </div>
+              <div>
+                <div class="font-display font-bold text-xs text-gray-900">Debt Recovery Hub</div>
+                <div class="text-[10px] text-gray-500">Commercial Claims Platform • UK</div>
+              </div>
+            </div>
+            <a href="https://debtrecoveryhub.org/" target="_blank" rel="noopener noreferrer"
+              class="text-gray-400 hover:text-brand-600 transition" aria-label="Visit client website">
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Review 2: Zero Through -->
+        <div data-anim="fade-up" data-delay="2"
+          class="rounded-3xl bg-[#faf8ff] border border-purple-100 p-6 sm:p-7 flex flex-col justify-between shadow-card hover:shadow-xl transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-1 text-amber-400 text-xs">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="text-[10px] font-mono font-bold text-sky-700 bg-sky-50 px-2 py-0.5 rounded-full border border-sky-200">
+                Cybersecurity Client
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-6 italic">
+              "In the IT security industry, speed and security headers are non-negotiable. Yankee Tech built our digital infrastructure with 98+ PageSpeed, zero bloat, and enterprise-grade precision."
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-purple-100">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 font-display font-extrabold text-sm flex items-center justify-center border border-sky-200">
+                ZT
+              </div>
+              <div>
+                <div class="font-display font-bold text-xs text-gray-900">Zero Through</div>
+                <div class="text-[10px] text-gray-500">IT &amp; Cyber Security • London, UK</div>
+              </div>
+            </div>
+            <a href="https://zerothrough.co.uk/" target="_blank" rel="noopener noreferrer"
+              class="text-gray-400 hover:text-brand-600 transition" aria-label="Visit client website">
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Review 3: ClaimFirst Funnels -->
+        <div data-anim="fade-up" data-delay="3"
+          class="rounded-3xl bg-[#faf8ff] border border-purple-100 p-6 sm:p-7 flex flex-col justify-between shadow-card hover:shadow-xl transition">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex items-center gap-1 text-amber-400 text-xs">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="text-[10px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                GHL CRM Automation
+              </span>
+            </div>
+            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-6 italic">
+              "Their 2-way GoHighLevel webhook and dynamic vehicle claims calculator handles thousands of paid ad clicks daily without any desync or dropped leads. Easily the best engineering investment we made."
+            </p>
+          </div>
+          <div class="flex items-center justify-between pt-4 border-t border-purple-100">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 font-display font-extrabold text-sm flex items-center justify-center border border-emerald-200">
+                CF
+              </div>
+              <div>
+                <div class="font-display font-bold text-xs text-gray-900">ClaimFirst Claims</div>
+                <div class="text-[10px] text-gray-500">Automated Funnels • United Kingdom</div>
+              </div>
+            </div>
+            <a href="https://mis-sold-car-finance.claimfirst.co.uk/home/" target="_blank" rel="noopener noreferrer"
+              class="text-gray-400 hover:text-brand-600 transition" aria-label="Visit client website">
+              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- ==========================================
+             10. SOME OF THE PLATFORMS WE WORK WITH
+             ========================================== -->
+        <div class="mt-16 pt-8 border-t border-gray-100">
+          <p class="text-center text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-6">
+            SOME OF THE PLATFORMS &amp; APIS WE INTEGRATE WITH
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+            <!-- Google -->
+            <span class="font-display font-bold text-lg tracking-tight">
+              <span class="text-blue-500">G</span><span class="text-red-500">o</span><span
+                class="text-amber-500">o</span><span class="text-blue-500">g</span><span
+                class="text-emerald-500">l</span><span class="text-red-500">e</span>
+            </span>
+            <!-- AWS / Amazon -->
+            <span class="font-display font-extrabold text-lg text-gray-800 flex items-center gap-1">
+              <span>aws</span>
+              <i class="fa-brands fa-aws text-amber-500 text-base"></i>
+            </span>
+            <!-- Meta -->
+            <span class="font-display font-bold text-lg text-gray-800 flex items-center gap-1.5">
+              <i class="fa-brands fa-meta text-blue-600"></i>
+              <span>Meta</span>
+            </span>
+            <!-- HubSpot -->
+            <span class="font-display font-extrabold text-lg text-gray-800 flex items-center gap-1">
+              <i class="fa-brands fa-hubspot text-[#ff7a59] text-xl"></i><span>HubSpot</span>
+            </span>
+            <!-- Stripe -->
+            <span class="font-display font-extrabold text-xl text-[#635bff] tracking-tight">stripe</span>
+            <!-- PayPal -->
+            <span class="font-display font-extrabold text-lg text-[#003087] flex items-center gap-1">
+              <i class="fa-brands fa-paypal text-[#0079C1]"></i>
+              <span>PayPal</span>
+            </span>
+            <!-- Zapier / n8n -->
+            <span class="font-display font-extrabold text-lg text-gray-800 flex items-center gap-1.5">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#ff4a00]"></span>
+              <span>Zapier &amp; n8n</span>
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       11. CURVED DARK CONTACT SECTION
+           ("Bring Your Ideas to Life With Yankee Tech")
+       ========================================== -->
+  <section id="contact" class="relative contact-cosmic-bg text-white pt-20 pb-24 overflow-hidden">
+    <!-- Top Left Curved Divider -->
+    <div class="absolute top-0 left-0 w-full overflow-hidden leading-none pointer-events-none">
+      <svg viewBox="0 0 1440 54" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-8 sm:h-12"
+        preserveAspectRatio="none">
+        <path d="M0 0H1440V12H140C70 12 30 35 0 54V0Z" fill="#ffffff" />
+      </svg>
+    </div>
+
+    <!-- Decorative purple wave lines SVG in background -->
+    <svg class="pointer-events-none absolute inset-0 w-full h-full opacity-20" viewBox="0 0 1440 600" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M-100 450 C 300 200, 650 580, 1540 180" stroke="url(#gradWave)" stroke-width="2" fill="none" />
+      <path d="M-100 500 C 340 240, 700 610, 1540 230" stroke="url(#gradWave)" stroke-width="1.5" fill="none" />
+      <path d="M-100 550 C 380 280, 750 640, 1540 280" stroke="url(#gradWave)" stroke-width="1" fill="none" />
+      <defs>
+        <linearGradient id="gradWave" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#a472ff" />
+          <stop offset="50%" stop-color="#6e18f5" />
+          <stop offset="100%" stop-color="#c4a6ff" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+        <!-- Left 5 Columns: Copy & Checkmarks -->
+        <div data-anim="fade-right" class="lg:col-span-5 space-y-5">
+          <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-purple-300 block">LET'S WORK
+            TOGETHER</span>
+          <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white leading-tight">
+            Bring Your Ideas to Life<br />
+            With Yankee Tech
+          </h2>
+          <p class="text-xs sm:text-sm text-purple-200/80 leading-relaxed max-w-md">
+            Whether you need a custom Full-Stack application, a high-speed WordPress website, or GoHighLevel &amp; AI
+            workflow automation, our engineering team is ready to help you scale.
+          </p>
+
+          <ul class="space-y-3 pt-2 text-xs sm:text-sm text-purple-100">
+            <li class="flex items-center gap-3">
+              <span class="w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center text-[10px]">
+                <i class="fa-solid fa-check"></i>
+              </span>
+              <span>Free Architecture &amp; Automation Consultation</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center text-[10px]">
+                <i class="fa-solid fa-check"></i>
+              </span>
+              <span>On-Time Agile Milestone Delivery</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center text-[10px]">
+                <i class="fa-solid fa-check"></i>
+              </span>
+              <span>24/7 Ongoing DevOps &amp; Workflow Support</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right 7 Columns: Interactive 2026 4-Step Project Onboarding Form -->
+        <div data-anim="fade-left" class="lg:col-span-7">
+          <div
+            class="bg-white text-gray-900 rounded-3xl p-6 sm:p-8 shadow-2xl border border-purple-100 max-w-2xl lg:ml-auto">
+            
+            <!-- Header & Step Indicator -->
+            <div class="mb-5 pb-5 border-b border-purple-100">
+              <div class="flex items-center justify-between gap-2 mb-1">
+                <span class="text-[10px] font-extrabold uppercase tracking-widest text-brand-600 bg-purple-100 px-2.5 py-0.5 rounded-full">2026 Interactive Onboarding</span>
+                <span class="text-[11px] font-mono font-bold text-gray-400">Step <span id="currentStepNumberDisplay">1</span> of 4</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-gray-900">Start Your Project Journey</h3>
+              <p class="text-xs text-gray-500 mt-0.5">Answer 4 quick questions for an architectural scope &amp; instant quote.</p>
+
+              <!-- Progress Bar -->
+              <div class="mt-4">
+                <div class="w-full bg-purple-100/70 h-2 rounded-full overflow-hidden">
+                  <div id="multiStepProgressFill" class="bg-gradient-to-r from-brand-600 via-purple-500 to-indigo-600 h-full rounded-full transition-all duration-300" style="width: 0%;"></div>
+                </div>
+                <!-- 4 Step Dots & Labels -->
+                <div class="grid grid-cols-4 gap-1 mt-2.5">
+                  <div class="flex items-center gap-1.5 sm:gap-2">
+                    <span id="stepDot-1" class="w-7 h-7 rounded-full bg-brand-600 text-white flex items-center justify-center text-xs font-bold shadow-glow ring-2 ring-purple-300">1</span>
+                    <span id="stepTitle-1" class="hidden sm:block text-[11px] font-bold text-gray-900">Service</span>
+                  </div>
+                  <div class="flex items-center gap-1.5 sm:gap-2 justify-center sm:justify-start">
+                    <span id="stepDot-2" class="w-7 h-7 rounded-full bg-purple-100 text-purple-400 flex items-center justify-center text-xs font-semibold">2</span>
+                    <span id="stepTitle-2" class="hidden sm:block text-[11px] font-medium text-gray-400">Scope</span>
+                  </div>
+                  <div class="flex items-center gap-1.5 sm:gap-2 justify-center sm:justify-start">
+                    <span id="stepDot-3" class="w-7 h-7 rounded-full bg-purple-100 text-purple-400 flex items-center justify-center text-xs font-semibold">3</span>
+                    <span id="stepTitle-3" class="hidden sm:block text-[11px] font-medium text-gray-400">Features</span>
+                  </div>
+                  <div class="flex items-center gap-1.5 sm:gap-2 justify-end sm:justify-start">
+                    <span id="stepDot-4" class="w-7 h-7 rounded-full bg-purple-100 text-purple-400 flex items-center justify-center text-xs font-semibold">4</span>
+                    <span id="stepTitle-4" class="hidden sm:block text-[11px] font-medium text-gray-400">Launch</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Auto-populated Estimate Banner (Shown when user locks estimate from Hero Calculator) -->
+            <div id="multiStepEstimateBanner"
+              class="hidden mb-4 p-3 rounded-2xl bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-200 text-purple-900 text-xs flex items-center justify-between">
+              <div class="flex items-center gap-2 min-w-0">
+                <i class="fa-solid fa-calculator text-brand-600 shrink-0"></i>
+                <span id="multiStepEstimateText" class="font-semibold truncate">Estimate attached from Hero Calculator</span>
+              </div>
+              <button type="button" onclick="clearMultiStepEstimate()"
+                class="text-[11px] text-purple-600 hover:text-purple-900 font-bold underline shrink-0 ml-2">Clear</button>
+            </div>
+
+            <!-- Multi-Step Form Wrapper -->
+            <form id="multiStepFormWrapper" onsubmit="handleMultiStepFormSubmit(event)">
+
+              <!-- ================= STEP 1: SERVICE SELECTION ================= -->
+              <div id="multiStepPane-1" class="ms-step-pane space-y-3.5">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-display font-bold text-sm text-gray-900">1. Select Your Core Project Goal</h4>
+                  <span class="text-[10px] text-gray-400 font-mono">1 OF 4</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+
+                  <!-- WordPress & WooCommerce -->
+                  <div onclick="selectMultiStepService('wordpress', 'WordPress & WooCommerce')" data-ms-svc="wordpress"
+                    class="ms-service-card p-3 sm:p-3.5 rounded-2xl border-2 border-brand-600 bg-purple-50/80 shadow-sm cursor-pointer transition flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0">
+                      <i class="fa-brands fa-wordpress"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <h5 class="font-display font-bold text-xs text-gray-900">WordPress &amp; WooCommerce</h5>
+                      <p class="text-[10px] text-gray-500 leading-tight mt-0.5">Custom themes, Elementor, high speed &amp; store checkout</p>
+                    </div>
+                  </div>
+
+                  <!-- Full-Stack Web App -->
+                  <div onclick="selectMultiStepService('fullstack', 'Full-Stack Web App (Laravel / React)')" data-ms-svc="fullstack"
+                    class="ms-service-card p-3 sm:p-3.5 rounded-2xl border border-gray-200 bg-white hover:border-purple-300 hover:bg-purple-50/30 shadow-xs cursor-pointer transition flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0">
+                      <i class="fa-brands fa-laravel"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <h5 class="font-display font-bold text-xs text-gray-900">Full-Stack Web App</h5>
+                      <p class="text-[10px] text-gray-500 leading-tight mt-0.5">Laravel, React, Next.js, scalable SaaS architectures</p>
+                    </div>
+                  </div>
+
+                  <!-- GoHighLevel Funnels & CRM -->
+                  <div onclick="selectMultiStepService('ghl', 'GoHighLevel CRM & Automations')" data-ms-svc="ghl"
+                    class="ms-service-card p-3 sm:p-3.5 rounded-2xl border border-gray-200 bg-white hover:border-purple-300 hover:bg-purple-50/30 shadow-xs cursor-pointer transition flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0">
+                      <i class="fa-solid fa-filter-circle-dollar"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <h5 class="font-display font-bold text-xs text-gray-900">GoHighLevel Setup &amp; CRM</h5>
+                      <p class="text-[10px] text-gray-500 leading-tight mt-0.5">Custom funnels, snapshots, SMS/Email nurturing &amp; pipelines</p>
+                    </div>
+                  </div>
+
+                  <!-- AI Automation & Bots -->
+                  <div onclick="selectMultiStepService('ai', 'AI Agents, Chatbots & Automation')" data-ms-svc="ai"
+                    class="ms-service-card p-3 sm:p-3.5 rounded-2xl border border-gray-200 bg-white hover:border-purple-300 hover:bg-purple-50/30 shadow-xs cursor-pointer transition flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0">
+                      <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <h5 class="font-display font-bold text-xs text-gray-900">AI Agents &amp; Automation</h5>
+                      <p class="text-[10px] text-gray-500 leading-tight mt-0.5">24/7 custom RAG bots, Voice AI receptionists, n8n &amp; Make</p>
+                    </div>
+                  </div>
+
+                  <!-- 2-Way GHL + WordPress Sync -->
+                  <div onclick="selectMultiStepService('sync', '2-Way GHL + WordPress Integration')" data-ms-svc="sync"
+                    class="ms-service-card p-3 sm:p-3.5 rounded-2xl border border-gray-200 bg-white hover:border-purple-300 hover:bg-purple-50/30 shadow-xs cursor-pointer transition flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0">
+                      <i class="fa-solid fa-arrows-rotate"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <h5 class="font-display font-bold text-xs text-gray-900">2-Way GHL + WordPress Sync</h5>
+                      <p class="text-[10px] text-gray-500 leading-tight mt-0.5">Real-time webhook sync, single sign-on &amp; custom data mapping</p>
+                    </div>
+                  </div>
+
+                  <!-- White-Label & Enterprise -->
+                  <div onclick="selectMultiStepService('agency', 'White-Label Dedicated Agency Engineering')" data-ms-svc="agency"
+                    class="ms-service-card p-3 sm:p-3.5 rounded-2xl border border-gray-200 bg-white hover:border-purple-300 hover:bg-purple-50/30 shadow-xs cursor-pointer transition flex items-start gap-3">
+                    <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0">
+                      <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <div class="min-w-0">
+                      <h5 class="font-display font-bold text-xs text-gray-900">White-Label Dedicated Team</h5>
+                      <p class="text-[10px] text-gray-500 leading-tight mt-0.5">Dedicated monthly engineering sprint capacity for agencies</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- ================= STEP 2: SCOPE & BUDGET ================= -->
+              <div id="multiStepPane-2" class="ms-step-pane hidden space-y-4">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-display font-bold text-sm text-gray-900">2. Define Scope &amp; Target Budget</h4>
+                  <span class="text-[10px] text-gray-400 font-mono">2 OF 4</span>
+                </div>
+
+                <!-- Scope Options -->
+                <div>
+                  <label class="block text-[11px] font-semibold text-gray-600 mb-2">Project Scale / Size:</label>
+                  <div class="grid grid-cols-3 gap-2.5">
+                    <div onclick="selectMultiStepScope('starter', 'MVP / Starter (1-5 Pages)')" data-ms-scope="starter"
+                      class="ms-scope-card p-3 rounded-xl border-2 border-brand-600 bg-purple-50/80 shadow-xs cursor-pointer transition text-center">
+                      <span class="block text-xs font-bold text-gray-900">Starter MVP</span>
+                      <span class="block text-[10px] text-gray-500 mt-0.5">1–5 Pages</span>
+                    </div>
+                    <div onclick="selectMultiStepScope('growth', 'Growth & Scale (6-15 Pages)')" data-ms-scope="growth"
+                      class="ms-scope-card p-3 rounded-xl border border-gray-200 bg-white hover:border-purple-300 cursor-pointer transition text-center">
+                      <span class="block text-xs font-bold text-gray-900">Growth</span>
+                      <span class="block text-[10px] text-gray-500 mt-0.5">6–15 Pages</span>
+                    </div>
+                    <div onclick="selectMultiStepScope('enterprise', 'Enterprise Custom Platform')" data-ms-scope="enterprise"
+                      class="ms-scope-card p-3 rounded-xl border border-gray-200 bg-white hover:border-purple-300 cursor-pointer transition text-center">
+                      <span class="block text-xs font-bold text-gray-900">Enterprise</span>
+                      <span class="block text-[10px] text-gray-500 mt-0.5">Custom Platform</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Budget Range -->
+                <div>
+                  <label class="block text-[11px] font-semibold text-gray-600 mb-2">Estimated Investment Tier (USD):</label>
+                  <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                    <button type="button" onclick="selectMultiStepBudget('<1k', '< $1,000')" data-ms-budget="<1k"
+                      class="ms-budget-btn py-2 px-3 rounded-xl border border-gray-200 bg-gray-50 hover:bg-purple-50 text-gray-700 font-medium text-xs transition">
+                      &lt; $1,000
+                    </button>
+                    <button type="button" onclick="selectMultiStepBudget('1k-3k', '$1,000 – $3,000')" data-ms-budget="1k-3k"
+                      class="ms-budget-btn py-2 px-3 rounded-xl border-2 border-brand-600 bg-brand-600 text-white font-bold text-xs shadow-xs transition">
+                      $1k – $3k
+                    </button>
+                    <button type="button" onclick="selectMultiStepBudget('3k-7k', '$3,000 – $7,500')" data-ms-budget="3k-7k"
+                      class="ms-budget-btn py-2 px-3 rounded-xl border border-gray-200 bg-gray-50 hover:bg-purple-50 text-gray-700 font-medium text-xs transition">
+                      $3k – $7.5k
+                    </button>
+                    <button type="button" onclick="selectMultiStepBudget('7k+', '$7,500+')" data-ms-budget="7k+"
+                      class="ms-budget-btn py-2 px-3 rounded-xl border border-gray-200 bg-gray-50 hover:bg-purple-50 text-gray-700 font-medium text-xs transition">
+                      $7,500+
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ================= STEP 3: TIMELINE & PRIORITIES ================= -->
+              <div id="multiStepPane-3" class="ms-step-pane hidden space-y-4">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-display font-bold text-sm text-gray-900">3. Timeline &amp; Key Priorities</h4>
+                  <span class="text-[10px] text-gray-400 font-mono">3 OF 4</span>
+                </div>
+
+                <!-- Timeline -->
+                <div>
+                  <label class="block text-[11px] font-semibold text-gray-600 mb-2">Target Launch Timeline:</label>
+                  <div class="grid grid-cols-3 gap-2">
+                    <button type="button" onclick="selectMultiStepTimeline('2w', 'Within 2 Weeks')" data-ms-timeline="2w"
+                      class="ms-timeline-btn py-2 px-3 rounded-xl border-2 border-brand-600 bg-brand-600 text-white font-bold text-xs shadow-xs transition">
+                      Within 2 Wks
+                    </button>
+                    <button type="button" onclick="selectMultiStepTimeline('1m', '3 to 6 Weeks')" data-ms-timeline="1m"
+                      class="ms-timeline-btn py-2 px-3 rounded-xl border border-gray-200 bg-gray-50 hover:bg-purple-50 text-gray-700 font-medium text-xs transition">
+                      3–6 Weeks
+                    </button>
+                    <button type="button" onclick="selectMultiStepTimeline('flexible', 'Flexible / Planning')" data-ms-timeline="flexible"
+                      class="ms-timeline-btn py-2 px-3 rounded-xl border border-gray-200 bg-gray-50 hover:bg-purple-50 text-gray-700 font-medium text-xs transition">
+                      Flexible
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Priority Chips -->
+                <div>
+                  <label class="block text-[11px] font-semibold text-gray-600 mb-2">Must-Have Superpowers (Click to toggle):</label>
+                  <div class="flex flex-wrap gap-2">
+                    <span onclick="toggleMultiStepPriority('Sub-Second PageSpeed SLA', this)"
+                      class="ms-priority-chip py-1.5 px-3 rounded-full border border-brand-500 bg-purple-100 text-brand-700 font-bold text-[11px] cursor-pointer transition">
+                      <i class="fa-solid fa-bolt text-brand-600 mr-1"></i> Sub-Second PageSpeed (95+)
+                    </span>
+                    <span onclick="toggleMultiStepPriority('Automated CRM Pipelines', this)"
+                      class="ms-priority-chip py-1.5 px-3 rounded-full border border-gray-200 bg-gray-50 text-gray-600 text-[11px] font-medium cursor-pointer transition">
+                      <i class="fa-solid fa-filter-circle-dollar text-gray-500 mr-1"></i> CRM Pipelines
+                    </span>
+                    <span onclick="toggleMultiStepPriority('Custom Figma UI/UX', this)"
+                      class="ms-priority-chip py-1.5 px-3 rounded-full border border-gray-200 bg-gray-50 text-gray-600 text-[11px] font-medium cursor-pointer transition">
+                      <i class="fa-brands fa-figma text-gray-500 mr-1"></i> Custom Figma UI/UX
+                    </span>
+                    <span onclick="toggleMultiStepPriority('24/7 AI Receptionist', this)"
+                      class="ms-priority-chip py-1.5 px-3 rounded-full border border-gray-200 bg-gray-50 text-gray-600 text-[11px] font-medium cursor-pointer transition">
+                      <i class="fa-solid fa-headset text-gray-500 mr-1"></i> 24/7 AI Receptionist
+                    </span>
+                    <span onclick="toggleMultiStepPriority('Stripe Global Checkout', this)"
+                      class="ms-priority-chip py-1.5 px-3 rounded-full border border-gray-200 bg-gray-50 text-gray-600 text-[11px] font-medium cursor-pointer transition">
+                      <i class="fa-brands fa-stripe text-gray-500 mr-1"></i> Stripe Checkout
+                    </span>
+                    <span onclick="toggleMultiStepPriority('2-Way Live Sync', this)"
+                      class="ms-priority-chip py-1.5 px-3 rounded-full border border-gray-200 bg-gray-50 text-gray-600 text-[11px] font-medium cursor-pointer transition">
+                      <i class="fa-solid fa-arrows-rotate text-gray-500 mr-1"></i> 2-Way Live Sync
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ================= STEP 4: CONTACT & NOTES ================= -->
+              <div id="multiStepPane-4" class="ms-step-pane hidden space-y-3.5">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-display font-bold text-sm text-gray-900">4. Contact Details &amp; Brief</h4>
+                  <span class="text-[10px] text-gray-400 font-mono">4 OF 4</span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div>
+                    <label class="block text-[11px] font-semibold text-gray-700 mb-1">Your Full Name *</label>
+                    <input type="text" id="msName" required placeholder="Alex Mitchell"
+                      class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-xs text-gray-900 focus:outline-none focus:border-brand-500 focus:bg-white transition" />
+                  </div>
+                  <div>
+                    <label class="block text-[11px] font-semibold text-gray-700 mb-1">Work Email *</label>
+                    <input type="email" id="msEmail" required placeholder="alex@company.com"
+                      class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-xs text-gray-900 focus:outline-none focus:border-brand-500 focus:bg-white transition" />
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-[11px] font-semibold text-gray-700 mb-1">WhatsApp / Phone Number</label>
+                  <input type="tel" id="msPhone" placeholder="+1 (555) 000-0000"
+                    class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-xs text-gray-900 focus:outline-none focus:border-brand-500 focus:bg-white transition" />
+                </div>
+
+                <div>
+                  <label class="block text-[11px] font-semibold text-gray-700 mb-1">Project Notes &amp; Specific Requirements</label>
+                  <textarea id="msNotes" rows="3"
+                    placeholder="Tell us about your current stack, pain points, or specific custom integrations needed..."
+                    class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-xs text-gray-900 focus:outline-none focus:border-brand-500 focus:bg-white transition"></textarea>
+                </div>
+              </div>
+
+              <!-- Action Navigation Buttons -->
+              <div class="pt-5 mt-5 border-t border-purple-100 flex items-center justify-between gap-3">
+                <button type="button" id="multiStepPrevBtn" onclick="prevMultiStep()"
+                  class="hidden px-4 py-2.5 rounded-full border border-gray-200 text-gray-600 hover:text-gray-900 hover:border-gray-400 text-xs font-semibold transition flex items-center gap-1.5">
+                  <i class="fa-solid fa-arrow-left text-[10px]"></i>
+                  <span>Back</span>
+                </button>
+
+                <div class="ml-auto flex items-center gap-3">
+                  <button type="button" id="multiStepNextBtn" onclick="nextMultiStep()"
+                    class="btn-purple magnetic-btn text-white text-xs font-semibold px-6 py-2.5 rounded-full inline-flex items-center gap-2 shadow-md">
+                    <span>Continue to Next Step</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                  </button>
+
+                  <button type="submit" id="multiStepSubmitBtn"
+                    class="hidden btn-purple magnetic-btn text-white text-xs font-semibold px-7 py-2.5 rounded-full inline-flex items-center gap-2 shadow-md">
+                    <span>Submit Project Request</span>
+                    <i class="fa-solid fa-paper-plane text-[10px]"></i>
+                  </button>
+                </div>
+              </div>
+
+            </form>
+
+            <!-- Success Confirmation Screen (Shown after submit) -->
+            <div id="multiStepSuccessScreen" class="hidden text-center py-6 space-y-4">
+              <div class="w-16 h-16 mx-auto rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl shadow-inner">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+              <div class="space-y-1">
+                <h4 class="font-display font-extrabold text-xl text-gray-900">Project Brief Received!</h4>
+                <p class="text-xs text-gray-500 max-w-sm mx-auto">
+                  We have locked in your project parameters. A senior solutions architect will contact you within 24 hours.
+                </p>
+              </div>
+
+              <!-- Summary Card -->
+              <div class="max-w-md mx-auto p-4 rounded-2xl bg-purple-50/80 border border-purple-200 text-left space-y-1.5">
+                <div class="text-[10px] font-extrabold uppercase tracking-wider text-purple-700">Scope Parameters Summary</div>
+                <div id="msSubmittedSummary" class="text-xs text-purple-950 font-medium"></div>
+              </div>
+
+              <!-- Direct Action Buttons -->
+              <div class="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                <a href="https://calendly.com" target="_blank" rel="noopener noreferrer"
+                  class="w-full sm:w-auto btn-purple text-white text-xs font-semibold px-5 py-2.5 rounded-full inline-flex items-center justify-center gap-2 shadow-md">
+                  <i class="fa-regular fa-calendar-check"></i>
+                  <span>Book 15-Min Strategy Call</span>
+                </a>
+                <button type="button" onclick="location.reload()"
+                  class="w-full sm:w-auto px-4 py-2.5 rounded-full border border-gray-200 text-gray-600 hover:text-gray-900 text-xs font-medium transition">
+                  Submit Another Project
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Right Curved Cutout SVG matching screenshot -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none">
+      <svg viewBox="0 0 1440 54" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-8 sm:h-12"
+        preserveAspectRatio="none">
+        <path d="M0 42H1300C1370 42 1410 19 1440 0V54H0V42Z" fill="#ffffff" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       12. FREQUENTLY ASKED QUESTIONS ("Common Questions")
+       (Exact 7 Core Questions per Developer Brief Page 15)
+       ========================================== -->
+  <section id="faq" class="py-16 lg:py-24 bg-white scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+
+        <!-- Left 5 Columns: Heading + Bottom Purple Button -->
+        <div data-anim="fade-right" class="lg:col-span-5 flex flex-col justify-between h-full space-y-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-[10px] font-bold uppercase tracking-widest mb-3">
+              <i class="fa-solid fa-circle-question text-xs"></i>
+              <span>TRANSPARENT ANSWERS</span>
+            </div>
+            <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-gray-900 tracking-tight">
+              Frequently Asked Questions
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-600 mt-3 max-w-sm leading-relaxed">
+              Everything you need to know about pricing, milestone delivery, code ownership, tech stack, and post-launch support.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-purple-50/60 border border-purple-100 space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-brand-600 text-white flex items-center justify-center text-sm">
+                <i class="fa-solid fa-comments"></i>
+              </div>
+              <div>
+                <div class="font-display font-bold text-sm text-gray-900">Have a specific question?</div>
+                <div class="text-[11px] text-gray-500">Book a free 30-min scoping call with our lead developer.</div>
+              </div>
+            </div>
+            <a href="#contact"
+              class="w-full btn-purple magnetic-btn text-white text-xs font-semibold py-3 px-5 rounded-full inline-flex items-center justify-center gap-2 shadow-sm">
+              <span>Book a Free Technical Consultation</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right 7 Columns: Expandable FAQ Accordion -->
+        <div data-anim="fade-left" class="lg:col-span-7 divide-y divide-purple-100 border-t border-b border-purple-100"
+          id="faqContainer">
+
+          <!-- FAQ 1: Cost -->
+          <div class="py-4 sm:py-5">
+            <button type="button" onclick="toggleFaq(0)"
+              class="w-full flex items-center justify-between text-left font-display font-bold text-xs sm:text-sm text-gray-900 hover:text-brand-600 transition gap-4">
+              <span>How much does a custom web application cost?</span>
+              <span class="w-7 h-7 rounded-full bg-purple-50 flex items-center justify-center shrink-0">
+                <i id="faq-icon-0" class="fa-solid fa-plus text-xs text-brand-600 transition-transform"></i>
+              </span>
+            </button>
+            <div id="faq-body-0" class="hidden pt-3 text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
+              <p>A starter MVP typically starts from <strong>$2,200</strong>. Business web apps and client portals start from <strong>$3,800</strong>, and custom platforms from <strong>$8,000</strong>.</p>
+              <p>The final fixed price depends on features and integrations, and we confirm it after a free consultation and a short scoping phase. Payments are split into milestones: 30% to start, 30% at midpoint, and 40% at launch.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2: Timeline -->
+          <div class="py-4 sm:py-5">
+            <button type="button" onclick="toggleFaq(1)"
+              class="w-full flex items-center justify-between text-left font-display font-bold text-xs sm:text-sm text-gray-900 hover:text-brand-600 transition gap-4">
+              <span>How long does it take to build a custom web app?</span>
+              <span class="w-7 h-7 rounded-full bg-purple-50 flex items-center justify-center shrink-0">
+                <i id="faq-icon-1" class="fa-solid fa-plus text-xs text-brand-600 transition-transform"></i>
+              </span>
+            </button>
+            <div id="faq-body-1" class="hidden pt-3 text-xs sm:text-sm text-gray-600 leading-relaxed">
+              <p>Starter MVPs typically take <strong>4 to 6 weeks</strong>. Larger applications take <strong>8 to 16 weeks</strong> depending on scope. We share a clear milestone timeline before development starts, with working weekly demos so you see continuous progress.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3: Code Ownership -->
+          <div class="py-4 sm:py-5">
+            <button type="button" onclick="toggleFaq(2)"
+              class="w-full flex items-center justify-between text-left font-display font-bold text-xs sm:text-sm text-gray-900 hover:text-brand-600 transition gap-4">
+              <span>Who owns the code and the accounts?</span>
+              <span class="w-7 h-7 rounded-full bg-purple-50 flex items-center justify-center shrink-0">
+                <i id="faq-icon-2" class="fa-solid fa-plus text-xs text-brand-600 transition-transform"></i>
+              </span>
+            </button>
+            <div id="faq-body-2" class="hidden pt-3 text-xs sm:text-sm text-gray-600 leading-relaxed">
+              <p><strong>You do. 100%.</strong> We hand over the full GitHub source code repository, documentation, deployment credentials and all third-party service accounts at launch. There is zero vendor lock-in.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4: Technologies -->
+          <div class="py-4 sm:py-5">
+            <button type="button" onclick="toggleFaq(3)"
+              class="w-full flex items-center justify-between text-left font-display font-bold text-xs sm:text-sm text-gray-900 hover:text-brand-600 transition gap-4">
+              <span>What technologies do you use?</span>
+              <span class="w-7 h-7 rounded-full bg-purple-50 flex items-center justify-center shrink-0">
+                <i id="faq-icon-3" class="fa-solid fa-plus text-xs text-brand-600 transition-transform"></i>
+              </span>
+            </button>
+            <div id="faq-body-3" class="hidden pt-3 text-xs sm:text-sm text-gray-600 leading-relaxed">
+              <p>We build with <strong>Laravel, React, Next.js, and Node.js</strong>, using PostgreSQL or MySQL, Redis caching, REST and GraphQL APIs, and cloud hosting such as AWS. We choose what fits your project and scale, not just what is trendy.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5: US Timezones -->
+          <div class="py-4 sm:py-5">
+            <button type="button" onclick="toggleFaq(4)"
+              class="w-full flex items-center justify-between text-left font-display font-bold text-xs sm:text-sm text-gray-900 hover:text-brand-600 transition gap-4">
+              <span>Do you work with US clients and US time zones?</span>
+              <span class="w-7 h-7 rounded-full bg-purple-50 flex items-center justify-center shrink-0">
+                <i id="faq-icon-4" class="fa-solid fa-plus text-xs text-brand-600 transition-transform"></i>
+              </span>
+            </button>
+            <div id="faq-body-4" class="hidden pt-3 text-xs sm:text-sm text-gray-600 leading-relaxed">
+              <p><strong>Yes.</strong> We schedule calls in your time zone (EST, CST, PST, and GMT) and maintain dedicated daily overlap hours every working day. We reply to messages and tickets promptly within 2 to 4 business hours.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 6: NDAs -->
+          <div class="py-4 sm:py-5">
+            <button type="button" onclick="toggleFaq(5)"
+              class="w-full flex items-center justify-between text-left font-display font-bold text-xs sm:text-sm text-gray-900 hover:text-brand-600 transition gap-4">
+              <span>Do you sign NDAs?</span>
+              <span class="w-7 h-7 rounded-full bg-purple-50 flex items-center justify-center shrink-0">
+                <i id="faq-icon-5" class="fa-solid fa-plus text-xs text-brand-600 transition-transform"></i>
+              </span>
+            </button>
+            <div id="faq-body-5" class="hidden pt-3 text-xs sm:text-sm text-gray-600 leading-relaxed">
+              <p><strong>Yes.</strong> We sign a binding mutual Non-Disclosure Agreement (NDA) before you share your proprietary concept, technical specs, or existing codebase. We also provide strict white-label agreements for agency partners.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 7: Post-Launch Support -->
+          <div class="py-4 sm:py-5">
+            <button type="button" onclick="toggleFaq(6)"
+              class="w-full flex items-center justify-between text-left font-display font-bold text-xs sm:text-sm text-gray-900 hover:text-brand-600 transition gap-4">
+              <span>What happens after launch?</span>
+              <span class="w-7 h-7 rounded-full bg-purple-50 flex items-center justify-center shrink-0">
+                <i id="faq-icon-6" class="fa-solid fa-plus text-xs text-brand-600 transition-transform"></i>
+              </span>
+            </button>
+            <div id="faq-body-6" class="hidden pt-3 text-xs sm:text-sm text-gray-600 leading-relaxed">
+              <p>Every project includes <strong>30 days of comprehensive post-launch warranty &amp; bug-fix support</strong> at no extra charge. After that, you can choose an ongoing monthly maintenance plan or a flexible pack of development hours as your platform scales.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+    <!-- ==========================================
+       13. BLOG & TECHNICAL INSIGHTS ("Latest Articles & Guides")
+       (Real Articles Published per Developer Brief Page 7)
+       ========================================== -->
+  <section id="blog" class="py-16 lg:py-24 bg-white scroll-mt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Header -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-[10px] font-bold uppercase tracking-widest mb-3">
+            <i class="fa-solid fa-newspaper text-xs"></i>
+            <span>ENGINEERING &amp; ARCHITECTURE GUIDES</span>
+          </div>
+          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-gray-900 tracking-tight">Latest Articles &amp; Insights</h2>
+          <p class="text-xs sm:text-sm text-gray-600 mt-2 max-w-lg">
+            Practical engineering playbooks on SaaS MVP budgeting, GoHighLevel API integrations, and modern full-stack architectures.
+          </p>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="blog-hire-dedicated-developer.html"
+            class="px-4 py-2 rounded-full border border-purple-200 hover:border-brand-600 text-xs font-semibold text-gray-700 hover:text-brand-600 inline-flex items-center gap-1.5 transition bg-purple-50/50">
+            <span>Hiring Guide: Dedicated Developers</span>
+            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 3 Agency Blog Cards (Linking to Real Articles) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+
+        <!-- Blog 1: SaaS MVP Cost -->
+        <article data-anim="fade-up" data-delay="1"
+          class="blog-card rounded-3xl bg-[#faf8ff] border border-purple-100 overflow-hidden shadow-card hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="h-48 overflow-hidden bg-gradient-to-br from-[#1b083b] to-[#2d0f5c] p-6 flex flex-col justify-between relative">
+              <div class="flex items-center justify-between z-10">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-purple-200 bg-white/10 px-2.5 py-1 rounded-full">
+                  SAAS &amp; FULL-STACK
+                </span>
+                <span class="text-xs text-purple-300 font-mono">6 min read</span>
+              </div>
+              <div class="z-10">
+                <i class="fa-solid fa-calculator text-3xl text-purple-400 group-hover:scale-110 transition duration-300"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-base sm:text-lg text-gray-900 leading-snug mb-3 group-hover:text-brand-600 transition">
+                <a href="blog-saas-mvp-cost.html">How Much Does It Cost to Build a SaaS MVP in 2026?</a>
+              </h3>
+              <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                A realistic breakdown of SaaS MVP development costs in 2026. From scoping and architecture to auth, Stripe billing, and post-launch maintenance.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 border-t border-purple-100/60 flex items-center justify-between">
+            <span class="text-[11px] text-gray-400 font-medium">November 2026</span>
+            <a href="blog-saas-mvp-cost.html"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 group-hover:gap-2.5 transition-all">
+              <span>Read Full Article</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog 2: GHL + API Integration -->
+        <article data-anim="fade-up" data-delay="2"
+          class="blog-card rounded-3xl bg-[#faf8ff] border border-purple-100 overflow-hidden shadow-card hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="h-48 overflow-hidden bg-gradient-to-br from-[#0e1c36] to-[#132f5d] p-6 flex flex-col justify-between relative">
+              <div class="flex items-center justify-between z-10">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-sky-200 bg-white/10 px-2.5 py-1 rounded-full">
+                  GHL &amp; INTEGRATIONS
+                </span>
+                <span class="text-xs text-sky-300 font-mono">8 min read</span>
+              </div>
+              <div class="z-10">
+                <i class="fa-solid fa-plug-circle-bolt text-3xl text-sky-400 group-hover:scale-110 transition duration-300"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-base sm:text-lg text-gray-900 leading-snug mb-3 group-hover:text-brand-600 transition">
+                <a href="blog-gohighlevel-api.html">How to Connect GoHighLevel to Your App or Website via API</a>
+              </h3>
+              <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                A complete developer guide to connecting GoHighLevel using the GHL API v2, OAuth2 token rotation, and bidirectional webhooks.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 border-t border-purple-100/60 flex items-center justify-between">
+            <span class="text-[11px] text-gray-400 font-medium">November 2026</span>
+            <a href="blog-gohighlevel-api.html"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 group-hover:gap-2.5 transition-all">
+              <span>Read Full Article</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Blog 3: Laravel vs Node.js -->
+        <article data-anim="fade-up" data-delay="3"
+          class="blog-card rounded-3xl bg-[#faf8ff] border border-purple-100 overflow-hidden shadow-card hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+          <div>
+            <div class="h-48 overflow-hidden bg-gradient-to-br from-[#270b20] to-[#45103a] p-6 flex flex-col justify-between relative">
+              <div class="flex items-center justify-between z-10">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-rose-200 bg-white/10 px-2.5 py-1 rounded-full">
+                  ARCHITECTURE &amp; TECH
+                </span>
+                <span class="text-xs text-rose-300 font-mono">7 min read</span>
+              </div>
+              <div class="z-10">
+                <i class="fa-brands fa-laravel text-3xl text-red-400 group-hover:scale-110 transition duration-300"></i>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="font-display font-bold text-base sm:text-lg text-gray-900 leading-snug mb-3 group-hover:text-brand-600 transition">
+                <a href="blog-laravel-vs-nodejs.html">Laravel vs Node.js for Custom Business Applications in 2026</a>
+              </h3>
+              <p class="text-xs text-gray-600 leading-relaxed mb-4">
+                An honest, hype-free comparison between Laravel 11 and Node.js for startups and growing businesses. Speed, costs, and scalability.
+              </p>
+            </div>
+          </div>
+          <div class="px-6 pb-6 pt-2 border-t border-purple-100/60 flex items-center justify-between">
+            <span class="text-[11px] text-gray-400 font-medium">November 2026</span>
+            <a href="blog-laravel-vs-nodejs.html"
+              class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 group-hover:gap-2.5 transition-all">
+              <span>Read Full Article</span>
+              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       14. DARK COSMIC FOOTER (Exact Mockup Match)
+       ========================================== -->
+  <footer class="dark-cosmic-bg text-white pt-16 pb-10 rounded-t-[36px] relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+
+        <!-- Col 1: Brand Info (4 cols) -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-white/10 border border-purple-400/30 flex items-center justify-center">
+              <span
+                class="font-display font-extrabold text-lg bg-gradient-to-tr from-purple-400 to-fuchsia-300 bg-clip-text text-transparent">YT</span>
+            </div>
+            <div class="leading-none">
+              <span class="block font-display font-extrabold text-lg text-white">Yankee Tech</span>
+              <span class="block text-[10px] text-purple-300/70 uppercase tracking-wider mt-0.5">Infinite
+                Possibilities</span>
+            </div>
+          </div>
+          <p class="text-xs text-purple-200/70 leading-relaxed max-w-xs">
+            Building high-performing full-stack websites, automating business operations with AI, and integrating
+            GoHighLevel &amp; WordPress ecosystems worldwide.
+          </p>
+          <div class="flex items-center gap-2.5 pt-1">
+            <a href="#contact"
+              class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-600 flex items-center justify-center text-xs transition"
+              aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#contact"
+              class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-600 flex items-center justify-center text-xs transition"
+              aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#contact"
+              class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-600 flex items-center justify-center text-xs transition"
+              aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#contact"
+              class="w-8 h-8 rounded-full bg-white/10 hover:bg-brand-600 flex items-center justify-center text-xs transition"
+              aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links (2 cols) -->
+        <div class="lg:col-span-2 space-y-2.5">
+          <h4 class="font-display font-bold text-xs uppercase tracking-wider text-white mb-3">Quick Links</h4>
+          <ul class="space-y-2 text-xs text-purple-200/75">
+            <li><a href="#home" class="hover:text-white transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+            <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+            <li><a href="use-cases.html" class="hover:text-white transition">Use Cases</a></li>
+            <li><a href="#estimator" class="hover:text-white transition">Price Estimator</a></li>
+            <li><a href="#contact" class="hover:text-white transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Our Services (3 cols) -->
+        <div class="lg:col-span-3 space-y-2.5">
+          <h4 class="font-display font-bold text-xs uppercase tracking-wider text-white mb-3">Our Services</h4>
+          <ul class="space-y-2 text-xs text-purple-200/75">
+            <li><a href="services.html#wordpress" class="hover:text-white transition">WordPress &amp; WooCommerce</a>
+            </li>
+            <li><a href="services.html#fullstack" class="hover:text-white transition">Full-Stack Laravel &amp; React</a>
+            </li>
+            <li><a href="services.html#ghl" class="hover:text-white transition">GoHighLevel (GHL) Setup</a></li>
+            <li><a href="services.html#ai" class="hover:text-white transition">AI Agents &amp; Chatbots</a></li>
+            <li><a href="services.html#sync" class="hover:text-white transition">2-Way GHL + WP Sync</a></li>
+            <li><a href="services.html#design" class="hover:text-white transition">UI/UX Figma Design Systems</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter (3 cols) -->
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-display font-bold text-xs uppercase tracking-wider text-white">Newsletter</h4>
+          <p class="text-xs text-purple-200/75">Get the latest web engineering, GHL &amp; AI automation insights.</p>
+          <form onsubmit="handleNewsletter(event)" class="space-y-2.5 pt-1">
+            <input id="newsletterEmail" type="email" required placeholder="Your Email"
+              class="w-full px-4 py-2.5 rounded-xl bg-white text-gray-900 text-xs focus:outline-none" />
+            <button type="submit"
+              class="w-full btn-purple text-white text-xs font-semibold py-2.5 px-5 rounded-xl inline-flex items-center justify-center gap-2">
+              <span id="newsletterBtnText">Subscribe →</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Bottom Copyright Bar -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-purple-300/60 gap-4">
+        <p>© 2026 Yankee Tech. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a>
+          <span>|</span>
+          <a href="terms.html" class="hover:text-white transition">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll to top button matching bottom-right circle in screenshot -->
+    <a href="#home" id="scrollTopBtn"
+      class="fixed bottom-5 right-5 z-40 w-10 h-10 rounded-full bg-[#1e0a42] hover:bg-brand-600 text-white border border-purple-400/40 shadow-lg flex items-center justify-center text-xs transition"
+      aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="script.js"></script>
+</body>
+
+</html>
