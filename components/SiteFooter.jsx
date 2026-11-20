@@ -1,6 +1,6 @@
 export default function SiteFooter() {
   return (
-<footer className="dark-cosmic-bg text-white pt-16 pb-10 rounded-t-[36px] relative overflow-hidden">
+<footer suppressHydrationWarning className="dark-cosmic-bg text-white pt-16 pb-10 rounded-t-[36px] relative overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
         <div className="lg:col-span-4 space-y-4">

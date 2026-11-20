@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "next dev --webpack",
     "build": "next build --webpack",
+    "export": "next build --webpack && node scripts/prepare-export.js",
     "start": "next start"
   },
   "devDependencies": {

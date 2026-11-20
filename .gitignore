@@ -11,3 +11,5 @@ build/
 
 .next/
 out/
+deploy_public_html.zip
+

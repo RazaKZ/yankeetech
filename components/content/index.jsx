@@ -344,7 +344,7 @@ export default function PageContent() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           <a href="/use-case-startups.html" data-anim="fade-up" data-delay={1} className="industry-card group relative rounded-2xl overflow-hidden bg-[#180a33] border border-purple-500/20 h-[310px] flex flex-col justify-between p-5 transition block">
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=700&q=80" alt="Businesses and Startups" className="absolute inset-0 w-full h-full object-cover object-center opacity-55 group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x800/1a0936/c4a6ff?text=Startups'" />
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=700&q=80" alt="Businesses and Startups" className="absolute inset-0 w-full h-full object-cover object-center opacity-55 group-hover:scale-105 transition duration-500" onError={(e) => { e.currentTarget.src = 'https://placehold.co/600x800/1a0936/c4a6ff?text=Startups'; }} />
             <div className="absolute inset-0 bg-gradient-to-b from-[#0f0521]/95 via-[#130629]/55 to-[#0b0318]/90" />
             <div className="relative z-10 flex items-start justify-between gap-2">
               <div>
@@ -362,7 +362,7 @@ export default function PageContent() {
             </div>
           </a>
           <a href="/use-case-ecommerce.html" data-anim="fade-up" data-delay={2} className="industry-card group relative rounded-2xl overflow-hidden bg-[#180a33] border border-purple-500/20 h-[310px] flex flex-col justify-between p-5 transition block">
-            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=700&q=80" alt="Ecommerce Stores" className="absolute inset-0 w-full h-full object-cover object-center opacity-55 group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x800/1a0936/c4a6ff?text=Ecommerce'" />
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=700&q=80" alt="Ecommerce Stores" className="absolute inset-0 w-full h-full object-cover object-center opacity-55 group-hover:scale-105 transition duration-500" onError={(e) => { e.currentTarget.src = 'https://placehold.co/600x800/1a0936/c4a6ff?text=Ecommerce'; }} />
             <div className="absolute inset-0 bg-gradient-to-b from-[#0f0521]/95 via-[#130629]/55 to-[#0b0318]/90" />
             <div className="relative z-10 flex items-start justify-between gap-2">
               <div>
@@ -380,7 +380,7 @@ export default function PageContent() {
             </div>
           </a>
           <a href="/use-case-saas-b2b.html" data-anim="fade-up" data-delay={3} className="industry-card group relative rounded-2xl overflow-hidden bg-[#180a33] border border-purple-500/20 h-[310px] flex flex-col justify-between p-5 transition block">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="SaaS & B2B Platforms" className="absolute inset-0 w-full h-full object-cover object-center opacity-55 group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x800/1a0936/c4a6ff?text=SaaS+Platforms'" />
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="SaaS & B2B Platforms" className="absolute inset-0 w-full h-full object-cover object-center opacity-55 group-hover:scale-105 transition duration-500" onError={(e) => { e.currentTarget.src = 'https://placehold.co/600x800/1a0936/c4a6ff?text=SaaS+Platforms'; }} />
             <div className="absolute inset-0 bg-gradient-to-b from-[#0f0521]/95 via-[#130629]/55 to-[#0b0318]/90" />
             <div className="relative z-10 flex items-start justify-between gap-2">
               <div>
@@ -398,7 +398,7 @@ export default function PageContent() {
             </div>
           </a>
           <a href="/use-case-agencies.html" data-anim="fade-up" data-delay={4} className="industry-card group relative rounded-2xl overflow-hidden bg-[#180a33] border border-purple-500/20 h-[310px] flex flex-col justify-between p-5 transition block">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80" alt="Coaches and Agencies" className="absolute inset-0 w-full h-full object-cover object-center opacity-55 group-hover:scale-105 transition duration-500" onerror="this.src='https://placehold.co/600x800/1a0936/c4a6ff?text=Agencies'" />
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=700&q=80" alt="Coaches and Agencies" className="absolute inset-0 w-full h-full object-cover object-center opacity-55 group-hover:scale-105 transition duration-500" onError={(e) => { e.currentTarget.src = 'https://placehold.co/600x800/1a0936/c4a6ff?text=Agencies'; }} />
             <div className="absolute inset-0 bg-gradient-to-b from-[#0f0521]/95 via-[#130629]/55 to-[#0b0318]/90" />
             <div className="relative z-10 flex items-start justify-between gap-2">
               <div>

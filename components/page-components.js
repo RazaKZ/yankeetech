@@ -1,33 +1,61 @@
-import dynamic from 'next/dynamic';
+import Content404 from './content/404';
+import ContentAbout from './content/about';
+import ContentBlogGohighlevelApi from './content/blog-gohighlevel-api';
+import ContentBlogHireDedicatedDeveloper from './content/blog-hire-dedicated-developer';
+import ContentBlogLaravelVsNodejs from './content/blog-laravel-vs-nodejs';
+import ContentBlogSaasMvpCost from './content/blog-saas-mvp-cost';
+import ContentIndex from './content/index';
+import ContentPortfolio from './content/portfolio';
+import ContentPrivacyPolicy from './content/privacy-policy';
+import ContentServiceAiChatbots from './content/service-ai-chatbots';
+import ContentServiceAiVoiceReceptionist from './content/service-ai-voice-receptionist';
+import ContentServiceApiEngineering from './content/service-api-engineering';
+import ContentServiceGhlFunnels from './content/service-ghl-funnels';
+import ContentServiceGhlWordpressSync from './content/service-ghl-wordpress-sync';
+import ContentServiceLaravelReact from './content/service-laravel-react';
+import ContentServiceSpeedSeo from './content/service-speed-seo';
+import ContentServiceUiUxFigma from './content/service-ui-ux-figma';
+import ContentServiceWhiteLabelAgency from './content/service-white-label-agency';
+import ContentServiceWoocommerceStripe from './content/service-woocommerce-stripe';
+import ContentServiceWordpress from './content/service-wordpress';
+import ContentServiceWorkflowAutomation from './content/service-workflow-automation';
+import ContentServices from './content/services';
+import ContentTerms from './content/terms';
+import ContentUseCaseAgencies from './content/use-case-agencies';
+import ContentUseCaseCoachesCreators from './content/use-case-coaches-creators';
+import ContentUseCaseEcommerce from './content/use-case-ecommerce';
+import ContentUseCaseSaasB2b from './content/use-case-saas-b2b';
+import ContentUseCaseStartups from './content/use-case-startups';
+import ContentUseCases from './content/use-cases';
 
 export const pageComponents = {
-  '404.html': dynamic(() => import('./content/404')),
-  'about.html': dynamic(() => import('./content/about')),
-  'blog-gohighlevel-api.html': dynamic(() => import('./content/blog-gohighlevel-api')),
-  'blog-hire-dedicated-developer.html': dynamic(() => import('./content/blog-hire-dedicated-developer')),
-  'blog-laravel-vs-nodejs.html': dynamic(() => import('./content/blog-laravel-vs-nodejs')),
-  'blog-saas-mvp-cost.html': dynamic(() => import('./content/blog-saas-mvp-cost')),
-  'index.html': dynamic(() => import('./content/index')),
-  'portfolio.html': dynamic(() => import('./content/portfolio')),
-  'privacy-policy.html': dynamic(() => import('./content/privacy-policy')),
-  'service-ai-chatbots.html': dynamic(() => import('./content/service-ai-chatbots')),
-  'service-ai-voice-receptionist.html': dynamic(() => import('./content/service-ai-voice-receptionist')),
-  'service-api-engineering.html': dynamic(() => import('./content/service-api-engineering')),
-  'service-ghl-funnels.html': dynamic(() => import('./content/service-ghl-funnels')),
-  'service-ghl-wordpress-sync.html': dynamic(() => import('./content/service-ghl-wordpress-sync')),
-  'service-laravel-react.html': dynamic(() => import('./content/service-laravel-react')),
-  'service-speed-seo.html': dynamic(() => import('./content/service-speed-seo')),
-  'service-ui-ux-figma.html': dynamic(() => import('./content/service-ui-ux-figma')),
-  'service-white-label-agency.html': dynamic(() => import('./content/service-white-label-agency')),
-  'service-woocommerce-stripe.html': dynamic(() => import('./content/service-woocommerce-stripe')),
-  'service-wordpress.html': dynamic(() => import('./content/service-wordpress')),
-  'service-workflow-automation.html': dynamic(() => import('./content/service-workflow-automation')),
-  'services.html': dynamic(() => import('./content/services')),
-  'terms.html': dynamic(() => import('./content/terms')),
-  'use-case-agencies.html': dynamic(() => import('./content/use-case-agencies')),
-  'use-case-coaches-creators.html': dynamic(() => import('./content/use-case-coaches-creators')),
-  'use-case-ecommerce.html': dynamic(() => import('./content/use-case-ecommerce')),
-  'use-case-saas-b2b.html': dynamic(() => import('./content/use-case-saas-b2b')),
-  'use-case-startups.html': dynamic(() => import('./content/use-case-startups')),
-  'use-cases.html': dynamic(() => import('./content/use-cases')),
+  '404.html': Content404,
+  'about.html': ContentAbout,
+  'blog-gohighlevel-api.html': ContentBlogGohighlevelApi,
+  'blog-hire-dedicated-developer.html': ContentBlogHireDedicatedDeveloper,
+  'blog-laravel-vs-nodejs.html': ContentBlogLaravelVsNodejs,
+  'blog-saas-mvp-cost.html': ContentBlogSaasMvpCost,
+  'index.html': ContentIndex,
+  'portfolio.html': ContentPortfolio,
+  'privacy-policy.html': ContentPrivacyPolicy,
+  'service-ai-chatbots.html': ContentServiceAiChatbots,
+  'service-ai-voice-receptionist.html': ContentServiceAiVoiceReceptionist,
+  'service-api-engineering.html': ContentServiceApiEngineering,
+  'service-ghl-funnels.html': ContentServiceGhlFunnels,
+  'service-ghl-wordpress-sync.html': ContentServiceGhlWordpressSync,
+  'service-laravel-react.html': ContentServiceLaravelReact,
+  'service-speed-seo.html': ContentServiceSpeedSeo,
+  'service-ui-ux-figma.html': ContentServiceUiUxFigma,
+  'service-white-label-agency.html': ContentServiceWhiteLabelAgency,
+  'service-woocommerce-stripe.html': ContentServiceWoocommerceStripe,
+  'service-wordpress.html': ContentServiceWordpress,
+  'service-workflow-automation.html': ContentServiceWorkflowAutomation,
+  'services.html': ContentServices,
+  'terms.html': ContentTerms,
+  'use-case-agencies.html': ContentUseCaseAgencies,
+  'use-case-coaches-creators.html': ContentUseCaseCoachesCreators,
+  'use-case-ecommerce.html': ContentUseCaseEcommerce,
+  'use-case-saas-b2b.html': ContentUseCaseSaasB2b,
+  'use-case-startups.html': ContentUseCaseStartups,
+  'use-cases.html': ContentUseCases,
 };
