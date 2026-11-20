@@ -1,0 +1,244 @@
+{
+  "404.html": {
+    "title": "404 - Page Not Found | Yankee Tech",
+    "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "404.html"
+  },
+  "about.html": {
+    "title": "About Us — Yankee Tech | Full-Stack Web Development, AI Automation & GHL Engineering",
+    "description": "",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "about.html"
+  },
+  "blog-gohighlevel-api.html": {
+    "title": "Planning a GoHighLevel Integration | Yankee Tech",
+    "description": "Map your data, plan for failures and scope a connection between your website and CRM.",
+    "canonical": "https://yankeeetech.com/blog-gohighlevel-api.html",
+    "schema": [
+      "\n  {\n    \"@context\": \"https://schema.org\",\n    \"@type\": \"Article\",\n    \"headline\": \"Planning a GoHighLevel Integration\",\n    \"description\": \"Map your data, plan for failures and scope a connection between your website and CRM.\",\n    \"author\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Yankee Tech\",\n      \"url\": \"https://yankeeetech.com\"\n    },\n    \"publisher\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Yankee Tech\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://yankeeetech.com/favicon.ico\"\n      }\n    },\n    \"datePublished\": \"2026-11-01\",\n    \"dateModified\": \"2026-11-10\"\n  }\n  "
+    ],
+    "cinematic": false,
+    "key": "blog-gohighlevel-api.html"
+  },
+  "blog-hire-dedicated-developer.html": {
+    "title": "Hiring a Dedicated Developer | Yankee Tech",
+    "description": "Set expectations for the backlog, communication, code review and long-term ownership.",
+    "canonical": "https://yankeeetech.com/blog-hire-dedicated-developer.html",
+    "schema": [
+      "\n  {\n    \"@context\": \"https://schema.org\",\n    \"@type\": \"Article\",\n    \"headline\": \"Hiring a Dedicated Developer\",\n    \"description\": \"Set expectations for the backlog, communication, code review and long-term ownership.\",\n    \"author\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Yankee Tech\",\n      \"url\": \"https://yankeeetech.com\"\n    },\n    \"publisher\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Yankee Tech\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://yankeeetech.com/favicon.ico\"\n      }\n    },\n    \"datePublished\": \"2026-11-01\",\n    \"dateModified\": \"2026-11-10\"\n  }\n  "
+    ],
+    "cinematic": false,
+    "key": "blog-hire-dedicated-developer.html"
+  },
+  "blog-laravel-vs-nodejs.html": {
+    "title": "Laravel or Node.js for Your Business Application? | Yankee Tech",
+    "description": "Consider your workflows, existing stack and maintenance needs before choosing a backend.",
+    "canonical": "https://yankeeetech.com/blog-laravel-vs-nodejs.html",
+    "schema": [
+      "\n  {\n    \"@context\": \"https://schema.org\",\n    \"@type\": \"Article\",\n    \"headline\": \"Laravel or Node.js for Your Business Application?\",\n    \"description\": \"Consider your workflows, existing stack and maintenance needs before choosing a backend.\",\n    \"author\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Yankee Tech\",\n      \"url\": \"https://yankeeetech.com\"\n    },\n    \"publisher\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Yankee Tech\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://yankeeetech.com/favicon.ico\"\n      }\n    },\n    \"datePublished\": \"2026-11-01\",\n    \"dateModified\": \"2026-11-10\"\n  }\n  "
+    ],
+    "cinematic": false,
+    "key": "blog-laravel-vs-nodejs.html"
+  },
+  "blog-saas-mvp-cost.html": {
+    "title": "Planning Your SaaS MVP Budget | Yankee Tech",
+    "description": "Define your first release, understand the starting budget and plan the handover.",
+    "canonical": "https://yankeeetech.com/blog-saas-mvp-cost.html",
+    "schema": [
+      "\n  {\n    \"@context\": \"https://schema.org\",\n    \"@type\": \"Article\",\n    \"headline\": \"Planning Your SaaS MVP Budget\",\n    \"description\": \"Define your first release, understand the starting budget and plan the handover.\",\n    \"author\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Yankee Tech\",\n      \"url\": \"https://yankeeetech.com\"\n    },\n    \"publisher\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Yankee Tech\",\n      \"logo\": {\n        \"@type\": \"ImageObject\",\n        \"url\": \"https://yankeeetech.com/favicon.ico\"\n      }\n    },\n    \"datePublished\": \"2026-11-01\",\n    \"dateModified\": \"2026-11-10\"\n  }\n  "
+    ],
+    "cinematic": false,
+    "key": "blog-saas-mvp-cost.html"
+  },
+  "index.html": {
+    "title": "Yankee Tech — Full-Stack Web Development, AI Automation & GHL/WordPress Integrations",
+    "description": "Yankee Tech builds custom websites, web applications and automations. Explore our services, view selected projects and estimate your next build.",
+    "canonical": "https://yankeeetech.com/",
+    "schema": [
+      "\n  {\n    \"@context\": \"https://schema.org\",\n    \"@type\": \"FAQPage\",\n    \"mainEntity\": [\n      {\n        \"@type\": \"Question\",\n        \"name\": \"How much does a custom web application cost?\",\n        \"acceptedAnswer\": {\n          \"@type\": \"Answer\",\n          \"text\": \"A starter MVP typically starts from $2,200. Business web apps and client portals start from $3,800, and custom platforms from $8,000. The final fixed price depends on features and integrations, and we confirm it after a free consultation and a short scoping phase.\"\n        }\n      },\n      {\n        \"@type\": \"Question\",\n        \"name\": \"How long does it take to build a custom web app?\",\n        \"acceptedAnswer\": {\n          \"@type\": \"Answer\",\n          \"text\": \"Starter MVPs typically take 4 to 6 weeks. Larger applications take 8 to 16 weeks depending on scope. We share a milestone timeline before development starts.\"\n        }\n      },\n      {\n        \"@type\": \"Question\",\n        \"name\": \"Who owns the code and the accounts?\",\n        \"acceptedAnswer\": {\n          \"@type\": \"Answer\",\n          \"text\": \"You do. We hand over the full source code, documentation and all accounts at launch, with no lock-in.\"\n        }\n      },\n      {\n        \"@type\": \"Question\",\n        \"name\": \"What technologies do you use?\",\n        \"acceptedAnswer\": {\n          \"@type\": \"Answer\",\n          \"text\": \"We build with Laravel, React, Next.js and Node.js, using PostgreSQL or MySQL, Redis, REST and GraphQL APIs and cloud hosting such as AWS. We choose what fits your project, not what is trendy.\"\n        }\n      },\n      {\n        \"@type\": \"Question\",\n        \"name\": \"Do you work with US clients and US time zones?\",\n        \"acceptedAnswer\": {\n          \"@type\": \"Answer\",\n          \"text\": \"Yes. We schedule calls in your time zone and overlap with US hours every working day. We reply to messages promptly within 2 to 4 hours.\"\n        }\n      },\n      {\n        \"@type\": \"Question\",\n        \"name\": \"Do you sign NDAs?\",\n        \"acceptedAnswer\": {\n          \"@type\": \"Answer\",\n          \"text\": \"Yes. We sign an NDA before you share your idea or documents, and we offer strict white-label arrangements for agencies.\"\n        }\n      },\n      {\n        \"@type\": \"Question\",\n        \"name\": \"What happens after launch?\",\n        \"acceptedAnswer\": {\n          \"@type\": \"Answer\",\n          \"text\": \"Every project includes 30 days of support. After that you can choose a monthly maintenance plan or a pack of development hours.\"\n        }\n      }\n    ]\n  }\n  "
+    ],
+    "cinematic": true,
+    "key": "index.html"
+  },
+  "portfolio.html": {
+    "title": "Portfolio & Case Studies — Yankee Tech | Proven Engineering & Digital ROI",
+    "description": "",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "portfolio.html"
+  },
+  "privacy-policy.html": {
+    "title": "Privacy Policy — Yankee Tech | Custom Web & Software Development",
+    "description": "",
+    "canonical": "https://yankeeetech.com/privacy-policy.html",
+    "schema": [],
+    "cinematic": false,
+    "key": "privacy-policy.html"
+  },
+  "service-ai-chatbots.html": {
+    "title": "Autonomous AI Chatbots & Custom RAG Agents — Yankee Tech",
+    "description": "Build an AI assistant around your approved content, with useful answers, lead capture and a clear handoff when a person needs to step in.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "service-ai-chatbots.html"
+  },
+  "service-ai-voice-receptionist.html": {
+    "title": "Autonomous AI Voice Receptionists & Call Booking — Yankee Tech",
+    "description": "Create a voice assistant for common questions, appointment requests and call routing. We define the conversation and escalation flow with your team.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "service-ai-voice-receptionist.html"
+  },
+  "service-api-engineering.html": {
+    "title": "Custom REST & GraphQL 3rd-Party API Engineering — Yankee Tech",
+    "description": "Bring your CRM, payments and business systems together with documented APIs and workflows designed for everyday operations.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "service-api-engineering.html"
+  },
+  "service-ghl-funnels.html": {
+    "title": "GoHighLevel (GHL) Funnels, Pipelines & Snapshots — Yankee Tech",
+    "description": "Set up GoHighLevel funnels, pipelines and follow-up workflows around how your team captures leads and manages customer relationships.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "service-ghl-funnels.html"
+  },
+  "service-ghl-wordpress-sync.html": {
+    "title": "2-Way Real-Time GoHighLevel & WordPress Synchronization — Yankee Tech",
+    "description": "Connect website enquiries and customer activity with your CRM. Define which data moves, when it updates and how your team handles exceptions.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "service-ghl-wordpress-sync.html"
+  },
+  "service-laravel-react.html": {
+    "title": "Laravel & React / Next.js Full-Stack Web Applications — Yankee Tech",
+    "description": "Build a web application, customer portal or SaaS product around your users. We help define the scope, design the experience and deliver in clear milestones.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "service-laravel-react.html"
+  },
+  "service-speed-seo.html": {
+    "title": "Core Web Vitals 95+ Speed & Technical SEO Hardening — Yankee Tech",
+    "description": "Review loading performance, page structure and technical search requirements. Prioritize fixes that improve the experience for visitors and help search engines understand your content.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "service-speed-seo.html"
+  },
+  "service-ui-ux-figma.html": {
+    "title": "UI/UX Figma Design Systems & Conversion Prototyping — Yankee Tech",
+    "description": "Turn requirements into clear user journeys, responsive screens and a Figma design system your development team can build from.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "service-ui-ux-figma.html"
+  },
+  "service-white-label-agency.html": {
+    "title": "White-Label Agency & Dedicated Enterprise Engineering — Yankee Tech",
+    "description": "Extend your delivery capacity with dedicated development support. Agree the scope, communication rhythm and review process before the first sprint.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "service-white-label-agency.html"
+  },
+  "service-woocommerce-stripe.html": {
+    "title": "WooCommerce & Stripe High-Converting E-Commerce — Yankee Tech",
+    "description": "Build a WooCommerce storefront with thoughtful product pages, a clear checkout and the payment and order integrations your business needs.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "service-woocommerce-stripe.html"
+  },
+  "service-wordpress.html": {
+    "title": "Custom WordPress & WooCommerce Development — Yankee Tech",
+    "description": "Create a responsive website your team can manage, with custom layouts, clear navigation and integrations that fit your workflow.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "service-wordpress.html"
+  },
+  "service-workflow-automation.html": {
+    "title": "n8n, Make & Zapier Multi-Step AI Workflows — Yankee Tech",
+    "description": "Connect your tools with n8n, Make or Zapier to handle repetitive tasks, move data and keep everyday workflows on track.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "service-workflow-automation.html"
+  },
+  "services.html": {
+    "title": "Services & Capabilities — Yankee Tech | Full-Stack Web Development, AI Automation & GHL Engineering",
+    "description": "",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "services.html"
+  },
+  "terms.html": {
+    "title": "Terms of Service — Yankee Tech | Development Standards & Agreement",
+    "description": "",
+    "canonical": "https://yankeeetech.com/terms.html",
+    "schema": [],
+    "cinematic": false,
+    "key": "terms.html"
+  },
+  "use-case-agencies.html": {
+    "title": "Marketing & Creative Agencies (White-Label) — Yankee Tech Use Case",
+    "description": "Scale your marketing or creative agency without the overhead, payroll risk, or headache of managing in-house developers. Yankee Tech acts as your private, white-label engineering arm — committing to your GitHub, communicating in your Slack, and delivering under strict NDAs.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "use-case-agencies.html"
+  },
+  "use-case-coaches-creators.html": {
+    "title": "High-Ticket Coaches, Creators & Service Businesses — Yankee Tech Use Case",
+    "description": "Never drop a high-ticket prospect again. We engineer automated sales ecosystems for coaches, consultants, and service businesses — featuring 24/7 AI conversational voice and WhatsApp booking agents, custom GoHighLevel funnels, and real-time membership access synchronization.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "use-case-coaches-creators.html"
+  },
+  "use-case-ecommerce.html": {
+    "title": "High-Growth E-Commerce Brands — Yankee Tech Use Case",
+    "description": "We help fast-scaling e-commerce brands break through technical bottlenecks. From sub-second WooCommerce product browsing to frictionless 1-page checkout flows, Stripe multi-currency processing, and automated GoHighLevel abandoned cart recovery.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "use-case-ecommerce.html"
+  },
+  "use-case-saas-b2b.html": {
+    "title": "SaaS Founders & B2B Enterprises — Yankee Tech Use Case",
+    "description": "We partner with B2B founders and software enterprises to build robust, multi-tenant customer portals, internal billing dashboards, and high-concurrency SaaS applications using Laravel 11, React 18, and Next.js.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "use-case-saas-b2b.html"
+  },
+  "use-case-startups.html": {
+    "title": "Fast-Moving Startups & High-Growth MVPs — Yankee Tech Use Case",
+    "description": "Speed to market is everything for an early-stage startup. We build production-ready Minimum Viable Products (MVPs) engineered with clean architecture from day one — giving founders pitch-ready Figma prototypes, robust databases, and zero technical debt.",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "use-case-startups.html"
+  },
+  "use-cases.html": {
+    "title": "Use Cases & Client Transformations — Yankee Tech",
+    "description": "",
+    "canonical": "",
+    "schema": [],
+    "cinematic": false,
+    "key": "use-cases.html"
+  }
+}

@@ -8,3 +8,6 @@ Thumbs.db
 dist/
 build/
 .cache/
+
+.next/
+out/
