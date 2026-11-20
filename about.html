@@ -7,7 +7,7 @@
   <title>About Us — Yankee Tech | Full-Stack Web Development, AI Automation & GHL Engineering</title>
   <meta name="description"
     content="Learn about Yankee Tech — an elite digital engineering studio specializing in high-performance WordPress, custom Full-Stack platforms, GoHighLevel CRM ecosystems, and autonomous AI agents." />
-  
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts: Plus Jakarta Sans & Inter -->
@@ -19,7 +19,7 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <!-- Main JavaScript -->
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -32,270 +32,34 @@
   <!-- ==========================================
        1. STICKY HEADER / NAVBAR
        ========================================== -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-purple-100/80 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
-      <!-- Brand Logo -->
-      <a href="index.html" class="flex items-center gap-3 group shrink-0">
-        <div
-          class="w-10 h-10 rounded-xl bg-[#120924] flex items-center justify-center shadow-md border border-purple-500/30 group-hover:border-purple-500 transition">
-          <span
-            class="font-display font-extrabold text-lg tracking-tighter bg-gradient-to-tr from-purple-400 via-fuchsia-400 to-indigo-300 bg-clip-text text-transparent">YT</span>
-        </div>
-        <div class="leading-none">
-          <span class="block font-display font-extrabold text-lg text-gray-900 tracking-tight">Yankee Tech</span>
-          <span class="block text-[10px] font-medium text-gray-400 tracking-wider uppercase mt-0.5">Infinite Possibilities</span>
-        </div>
-      </a>
-
-      <!-- Center Nav Links: Home, About Us (Active), Services (Mega Menu), Use Cases, Contact Us -->
-      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold text-gray-700">
-        <!-- 1. Home -->
-        <a href="index.html" class="hover:text-brand-600 transition py-2">Home</a>
-
-        <!-- 2. About Us (Active) -->
-        <a href="about.html" class="text-brand-600 font-bold bg-purple-50 border border-purple-200/60 px-3 py-1.5 rounded-full transition shadow-xs">About Us</a>
-
-        <!-- 3. Services with 2026 Trends Mega Menu -->
-        <div class="group/mega py-6">
-          <a href="services.html" class="flex items-center gap-1.5 py-2 hover:text-brand-600 transition group-hover/mega:text-brand-600">
-            <span>Services</span>
-            <i class="fa-solid fa-chevron-down text-[9px] text-gray-400 group-hover/mega:text-brand-600 group-hover/mega:rotate-180 transition-transform duration-300"></i>
-          </a>
-
-          <!-- 2026 Bento Mega Menu Dropdown -->
-          <div class="absolute left-1/2 -translate-x-1/2 top-full w-full max-w-5xl px-4 sm:px-6 pointer-events-none opacity-0 invisible -translate-y-2 group-hover/mega:pointer-events-auto group-hover/mega:opacity-100 group-hover/mega:visible group-hover/mega:translate-y-0 transition-all duration-300 ease-out z-50">
-            <div class="bg-white/95 backdrop-blur-2xl border border-purple-100/90 shadow-[0_25px_60px_-15px_rgba(91,12,212,0.18)] rounded-3xl p-6 lg:p-7 overflow-hidden ring-1 ring-purple-500/10">
-              
-              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-                <!-- Column 1: Web & Platforms (5 cols) -->
-                <div class="lg:col-span-5 space-y-3">
-                  <div class="flex items-center justify-between pb-2 border-b border-purple-100">
-                    <span class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-600 flex items-center gap-1.5">
-                      <i class="fa-solid fa-code text-xs"></i>
-                      <span>WEB &amp; PLATFORM DEV</span>
-                    </span>
-                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest font-mono">CORE 01</span>
-                  </div>
-
-                  <div class="space-y-1">
-                    <a href="services.html#wordpress" class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
-                        <i class="fa-brands fa-wordpress"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <div class="flex items-center justify-between">
-                          <h4 class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
-                            <span>WordPress &amp; WooCommerce</span>
-                            <span class="px-1.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[9px] font-bold">95+ Speed</span>
-                          </h4>
-                          <i class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
-                        </div>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
-                          Custom themes, Elementor, high-converting WooCommerce checkouts &amp; speed SEO.
-                        </p>
-                      </div>
-                    </a>
-
-                    <a href="services.html#fullstack" class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
-                        <i class="fa-brands fa-laravel"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <div class="flex items-center justify-between">
-                          <h4 class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
-                            <span>Full-Stack Web Apps</span>
-                            <span class="px-1.5 py-0.5 rounded-full bg-purple-100 text-brand-700 border border-purple-200 text-[9px] font-bold">Enterprise</span>
-                          </h4>
-                          <i class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
-                        </div>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
-                          Custom Laravel, React &amp; Next.js platforms, client portals, SaaS backends &amp; APIs.
-                        </p>
-                      </div>
-                    </a>
-
-                    <a href="services.html#design" class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
-                        <i class="fa-solid fa-pen-ruler"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <div class="flex items-center justify-between">
-                          <h4 class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
-                            <span>UI/UX Figma Design Systems</span>
-                          </h4>
-                          <i class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
-                        </div>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
-                          Conversion-first Figma component systems, UX wireframes &amp; high-fidelity prototypes.
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <!-- Column 2: AI & Operations Automation (4 cols) -->
-                <div class="lg:col-span-4 space-y-3">
-                  <div class="flex items-center justify-between pb-2 border-b border-purple-100">
-                    <span class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-600 flex items-center gap-1.5">
-                      <i class="fa-solid fa-robot text-xs"></i>
-                      <span>AI &amp; AUTOMATION</span>
-                    </span>
-                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest font-mono">SMART 02</span>
-                  </div>
-
-                  <div class="space-y-1">
-                    <a href="services.html#ghl" class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
-                        <i class="fa-solid fa-filter-circle-dollar"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <div class="flex items-center justify-between">
-                          <h4 class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
-                            <span>GoHighLevel (GHL) Setup</span>
-                            <span class="px-1.5 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200 text-[9px] font-bold">Hot</span>
-                          </h4>
-                          <i class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
-                        </div>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
-                          Pipelines, automated SMS/email sequences, calendar funnels &amp; snapshots.
-                        </p>
-                      </div>
-                    </a>
-
-                    <a href="services.html#ai" class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
-                        <i class="fa-solid fa-brain"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <div class="flex items-center justify-between">
-                          <h4 class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
-                            <span>AI Agents &amp; Chatbots</span>
-                            <span class="px-1.5 py-0.5 rounded-full bg-fuchsia-50 text-fuchsia-700 border border-fuchsia-200 text-[9px] font-bold">2026 AI</span>
-                          </h4>
-                          <i class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
-                        </div>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
-                          OpenAI &amp; Claude RAG support agents, automated 24/7 voice booking bots.
-                        </p>
-                      </div>
-                    </a>
-
-                    <a href="services.html#sync" class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
-                        <i class="fa-solid fa-arrows-rotate"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <div class="flex items-center justify-between">
-                          <h4 class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
-                            <span>GHL + WordPress Sync</span>
-                          </h4>
-                          <i class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
-                        </div>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
-                          Real-time webhooks, n8n/Make automated flows, membership access &amp; sync.
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <!-- Column 3: 2026 Spotlight Bento Card (3 cols) -->
-                <div class="lg:col-span-3 rounded-2xl bg-gradient-to-br from-[#120727] via-[#1a083a] to-[#2b0c57] text-white p-5 border border-purple-500/30 flex flex-col justify-between relative overflow-hidden shadow-xl group/card">
-                  <div class="absolute -top-12 -right-12 w-28 h-28 bg-brand-500/30 rounded-full blur-2xl pointer-events-none"></div>
-
-                  <div>
-                    <div class="flex items-center justify-between mb-3">
-                      <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-500/25 border border-brand-400/40 text-[9px] font-bold uppercase tracking-wider text-purple-200">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Live Tool
-                      </span>
-                      <span class="text-[10px] text-purple-300 font-mono">2026 V2</span>
-                    </div>
-                    <h4 class="font-display font-extrabold text-sm text-white leading-snug">Instant Price Estimator</h4>
-                    <p class="text-[11px] text-purple-200/75 mt-1.5 leading-relaxed">
-                      Select your pages, workflows &amp; AI add-ons for instant quotes in USD, PKR, or GBP.
-                    </p>
-                  </div>
-
-                  <div class="mt-4 pt-3 border-t border-white/10 space-y-2">
-                    <a href="index.html#estimator" class="w-full btn-purple text-white text-[11px] font-bold py-2.5 px-3.5 rounded-xl flex items-center justify-center gap-2 group-hover/card:shadow-glow transition">
-                      <span>Launch Estimator</span>
-                      <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Bottom Mega Menu Bar -->
-              <div class="mt-5 pt-3 border-t border-purple-100/90 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs bg-purple-50/60 -mx-6 -mb-6 lg:-mx-7 lg:-mb-7 px-6 lg:px-7 py-3 rounded-b-3xl">
-                <div class="flex items-center gap-2 text-gray-600">
-                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                  <span class="font-semibold text-gray-900">Accepting New Client Projects</span>
-                  <span class="text-gray-400 hidden sm:inline">•</span>
-                  <span class="text-gray-500 hidden sm:inline">White-label agency &amp; custom enterprise agreements</span>
-                </div>
-                <a href="index.html#contact" class="font-bold text-brand-600 hover:text-brand-700 inline-flex items-center gap-1.5 shrink-0 transition">
-                  <span>Book Free Technical Call</span>
-                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. Use Cases -->
-        <a href="portfolio.html" class="hover:text-brand-600 transition py-2">Portfolio</a>
-        <a href="use-cases.html" class="hover:text-brand-600 transition py-2">Use Cases</a>
-
-        <!-- 5. Contact Us -->
-        <a href="index.html#contact" class="hover:text-brand-600 transition py-2">Contact Us</a>
-      </nav>
-
-      <!-- Right CTA Pill & Hamburger -->
-      <div class="flex items-center gap-2.5 sm:gap-3">
-        <a href="index.html#contact"
-          class="hidden sm:inline-flex btn-purple magnetic-btn text-white text-xs font-semibold px-4 sm:px-5 py-2.5 rounded-full items-center gap-2 shadow-sm">
-          <span>Let's Talk</span>
-          <i class="fa-solid fa-arrow-right text-[10px]"></i>
-        </a>
-        <button id="mobileMenuBtn" aria-label="Toggle navigation menu"
-          class="md:hidden w-10 h-10 rounded-xl border border-purple-200/90 flex items-center justify-center text-gray-700 hover:bg-purple-50 transition active:scale-95">
-          <i class="fa-solid fa-bars text-base"></i>
-        </button>
-      </div>
+  <header class="studio-header">
+<div class="studio-container studio-nav">
+    <a class="studio-brand" href="index.html" aria-label="Yankee Tech home">
+    <span class="studio-logo">yt<span>.</span>
+    </span>
+    <span>Yankee Tech</span>
+    </a>
+    <nav class="studio-desktop-nav" aria-label="Main navigation">
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Our work</a>
+    <a href="about.html">About us</a>
+    <a href="index.html#blog">Insights</a>
+    </nav>
+    <a href="index.html#contact" class="studio-nav-cta">Let's talk</a>
+    <button id="mobileMenuBtn" class="studio-menu-button" type="button" aria-label="Toggle navigation" aria-controls="mobileMenu" aria-expanded="false">
+    <i class="fa-solid fa-bars" aria-hidden="true">
+    </i>
+    </button>
     </div>
-
-    <!-- Mobile Nav Drawer -->
-    <div id="mobileMenu"
-      class="hidden md:hidden bg-white/98 backdrop-blur-2xl border-b border-purple-100 px-5 sm:px-6 py-5 space-y-3 text-sm font-medium text-gray-700 shadow-2xl max-h-[calc(100vh-5rem)] overflow-y-auto">
-      <a href="index.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Home</a>
-      <a href="about.html" class="block py-1.5 text-brand-600 font-bold border-b border-purple-50">About Us</a>
-
-      <div class="border-b border-purple-50 pb-1.5">
-        <button type="button" onclick="document.getElementById('mobileServicesSub').classList.toggle('hidden'); document.getElementById('mobileServicesArrow').classList.toggle('rotate-180');" class="w-full flex items-center justify-between py-1.5 hover:text-brand-600 transition text-left font-medium">
-          <span>Services</span>
-          <i id="mobileServicesArrow" class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform"></i>
-        </button>
-        <div id="mobileServicesSub" class="hidden pl-3.5 pt-2 pb-1 space-y-2.5 border-l-2 border-purple-200 mt-1 text-xs text-gray-600">
-          <a href="services.html#wordpress" class="block py-1 hover:text-brand-600">WordPress &amp; WooCommerce</a>
-          <a href="services.html#fullstack" class="block py-1 hover:text-brand-600">Full-Stack Laravel &amp; React</a>
-          <a href="services.html#ghl" class="block py-1 hover:text-brand-600">GoHighLevel (GHL) Setup</a>
-          <a href="services.html#ai" class="block py-1 hover:text-brand-600">AI Agents &amp; Automation</a>
-          <a href="index.html#estimator" class="block py-1 text-brand-600 font-bold">⚡ Price Estimator</a>
-        </div>
-      </div>
-
-      <a href="portfolio.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Portfolio</a>
-      <a href="use-cases.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Use Cases</a>
-      <a href="index.html#contact" class="block py-1.5 hover:text-brand-600 transition">Contact Us</a>
-
-      <div class="pt-3">
-        <a href="index.html#contact" class="btn-purple text-white text-xs font-semibold py-3.5 px-5 rounded-full w-full flex items-center justify-center gap-2 shadow-sm">
-          <span>Let's Talk</span>
-          <i class="fa-solid fa-arrow-right text-[10px]"></i>
-        </a>
-      </div>
-    </div>
-  </header>
+<nav id="mobileMenu" class="hidden studio-mobile-nav" aria-label="Mobile navigation">
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Our work</a>
+    <a href="about.html">About us</a>
+    <a href="use-cases.html">Use cases</a>
+    <a href="index.html#blog">Insights</a>
+    <a href="index.html#contact">Let's talk</a>
+    </nav>
+    </header>
 
   <main>
     <!-- ==========================================
@@ -308,7 +72,7 @@
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           <!-- Left Column: Copy & Stats -->
           <div class="lg:col-span-7 space-y-6">
             <div data-anim="fade-up" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-100/80 border border-purple-300/60 shadow-xs">
@@ -320,7 +84,7 @@
               Engineering High-Performance <span class="bg-gradient-to-r from-purple-700 via-brand-600 to-indigo-600 bg-clip-text text-transparent">Digital Architecture</span> &amp; Autonomous AI
             </h1>
 
-            <p data-anim="fade-up" data-delay="2" class="text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl">
+            <p data-anim="fade-up" data-delay="2" class="text-base sm:text-base text-gray-600 leading-relaxed max-w-2xl">
               We bridge the gap between high-converting front-end web platforms and intelligent backend CRM automations. From custom sub-second WordPress builds to enterprise Laravel SaaS portals and autonomous AI booking agents, Yankee Tech engineers software that turns traffic into continuous enterprise revenue.
             </p>
 
@@ -358,7 +122,7 @@
             <div data-anim="fade-up" data-delay="4" class="flex flex-wrap items-center gap-4 pt-2">
               <a href="index.html#contact" class="btn-purple magnetic-btn text-white text-xs font-semibold px-6 py-3.5 rounded-full inline-flex items-center gap-2 shadow-md">
                 <span>Start a Project Consultation</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
               </a>
               <a href="services.html" class="px-5 py-3 rounded-full text-xs font-semibold text-gray-700 bg-white/90 hover:bg-white border border-purple-200/80 transition hover:border-brand-400 inline-flex items-center gap-2 shadow-xs">
                 <span>Explore Technical Services</span>
@@ -370,7 +134,7 @@
           <!-- Right Column: Interactive Vector Architecture Illustration -->
           <div class="lg:col-span-5 relative" data-anim="scale-in" data-delay="2">
             <div class="relative w-full rounded-3xl bg-gradient-to-br from-[#120727] via-[#1a0938] to-[#280c54] p-6 lg:p-7 text-white border border-purple-500/30 shadow-2xl overflow-hidden tilt-card">
-              
+
               <!-- Ambient inner glow -->
               <div class="absolute -top-16 -right-16 w-44 h-44 bg-brand-500/25 rounded-full blur-3xl pointer-events-none"></div>
               <div class="absolute -bottom-16 -left-16 w-44 h-44 bg-indigo-500/25 rounded-full blur-3xl pointer-events-none"></div>
@@ -507,20 +271,20 @@
          ========================================== -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-2xl mx-auto mb-14" data-anim="fade-up">
           <span class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-brand-600 block mb-2">OUR CORE PHILOSOPHY</span>
           <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-gray-900 tracking-tight">
             The Engineering Standards Behind Every Yankee Tech Build
           </h2>
-          <p class="text-xs sm:text-sm text-gray-500 mt-2">
+          <p class="text-base text-base text-gray-500 mt-2">
             Most agencies deploy bloated themes, paste fragile third-party plugins, and disappear after delivery. We build scalable software assets engineered for years of reliable operation.
           </p>
         </div>
 
         <!-- 3 Bento Columns -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          
+
           <!-- Pillar 1: Zero Bloat -->
           <div data-anim="fade-up" data-delay="1" class="rounded-3xl p-7 service-card-bg border border-purple-100 flex flex-col justify-between">
             <div class="space-y-4">
@@ -528,7 +292,7 @@
                 <i class="fa-solid fa-bolt-lightning"></i>
               </div>
               <h3 class="font-display font-extrabold text-lg text-gray-900">Zero-Bloat Architecture</h3>
-              <p class="text-xs text-gray-600 leading-relaxed">
+              <p class="text-base text-gray-600 leading-relaxed">
                 We eliminate redundant scripts, junk CSS, and memory-leaking plugins. Every WordPress theme and web application is custom-compiled with Tailwind CSS and modular PHP/React components for sub-second page loads.
               </p>
             </div>
@@ -552,7 +316,7 @@
                 <i class="fa-solid fa-arrows-split-up-and-left"></i>
               </div>
               <h3 class="font-display font-extrabold text-lg text-gray-900">Autonomous Operations First</h3>
-              <p class="text-xs text-gray-600 leading-relaxed">
+              <p class="text-base text-gray-600 leading-relaxed">
                 A website is incomplete if your staff spends hours manually copy-pasting leads. We establish automatic two-way data pipelines connecting forms, WooCommerce purchases, and GoHighLevel CRM funnels instantly.
               </p>
             </div>
@@ -576,7 +340,7 @@
                 <i class="fa-solid fa-chart-line"></i>
               </div>
               <h3 class="font-display font-extrabold text-lg text-gray-900">Commercial Velocity</h3>
-              <p class="text-xs text-gray-600 leading-relaxed">
+              <p class="text-base text-gray-600 leading-relaxed">
                 We engineer code with clear business goals: decreasing bounce rates, maximizing conversion funnels, and empowering non-technical clients to update copy without breaking layouts.
               </p>
             </div>
@@ -602,19 +366,19 @@
          ========================================== -->
     <section class="py-20 bg-[#faf8ff] border-y border-purple-100/70">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-2xl mx-auto mb-16" data-anim="fade-up">
           <span class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-brand-600 block mb-2">OUR ENGINEERING LIFECYCLE</span>
           <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-gray-900 tracking-tight">
             How We Execute Projects With Zero Surprises
           </h2>
-          <p class="text-xs sm:text-sm text-gray-500 mt-2">
+          <p class="text-base text-base text-gray-500 mt-2">
             A battle-tested 4-step framework guaranteeing fixed timelines, transparent deliverables, and rock-solid software stability.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-          
+
           <!-- Step 1 -->
           <div data-anim="fade-up" data-delay="1" class="bg-white rounded-3xl p-6 border border-purple-100 shadow-sm relative group hover:border-brand-300 transition">
             <div class="flex items-center justify-between mb-4">
@@ -625,7 +389,7 @@
               <i class="fa-solid fa-compass-drafting"></i>
             </div>
             <h4 class="font-display font-extrabold text-base text-gray-900">Blueprint &amp; Discovery</h4>
-            <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+            <p class="text-base text-gray-500 mt-2 leading-relaxed">
               We dissect your existing tech stack, map customer journeys, define database schemas, and align on exact conversion milestones.
             </p>
             <ul class="mt-4 pt-3 border-t border-purple-50 space-y-1.5 text-[11px] text-gray-600">
@@ -644,7 +408,7 @@
               <i class="fa-solid fa-code"></i>
             </div>
             <h4 class="font-display font-extrabold text-base text-gray-900">Clean-Code Crafting</h4>
-            <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+            <p class="text-base text-gray-500 mt-2 leading-relaxed">
               We build using modular components, semantic HTML5, Tailwind CSS styling, and high-performance backend logic without bloated builders.
             </p>
             <ul class="mt-4 pt-3 border-t border-purple-50 space-y-1.5 text-[11px] text-gray-600">
@@ -663,7 +427,7 @@
               <i class="fa-solid fa-robot"></i>
             </div>
             <h4 class="font-display font-extrabold text-base text-gray-900">Ecosystem &amp; AI Integration</h4>
-            <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+            <p class="text-base text-gray-500 mt-2 leading-relaxed">
               We connect GoHighLevel pipelines, automated SMS/email triggers, OpenAI RAG chatbots, and webhook synchronization loops.
             </p>
             <ul class="mt-4 pt-3 border-t border-purple-50 space-y-1.5 text-[11px] text-gray-600">
@@ -682,7 +446,7 @@
               <i class="fa-solid fa-rocket"></i>
             </div>
             <h4 class="font-display font-extrabold text-base text-gray-900">QA, Speed &amp; Handoff</h4>
-            <p class="text-xs text-gray-500 mt-2 leading-relaxed">
+            <p class="text-base text-gray-500 mt-2 leading-relaxed">
               We benchmark Core Web Vitals, audit cross-browser rendering, harden security headers, and provide complete documentation.
             </p>
             <ul class="mt-4 pt-3 border-t border-purple-50 space-y-1.5 text-[11px] text-gray-600">
@@ -700,21 +464,21 @@
          ========================================== -->
     <section class="py-20 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
           <div data-anim="fade-up">
             <span class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-brand-600 block mb-2">MODERN TECH ECOSYSTEM</span>
             <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-gray-900 tracking-tight">
               Tools &amp; Frameworks We Master
             </h2>
-            <p class="text-xs sm:text-sm text-gray-500 mt-1">
+            <p class="text-base text-base text-gray-500 mt-1">
               Zero legacy junk. We build with modern, battle-tested production technologies.
             </p>
           </div>
           <div data-anim="fade-up" data-delay="1">
             <a href="services.html" class="inline-flex items-center gap-2 text-xs font-bold text-brand-600 hover:text-brand-700 transition">
               <span>View detailed capabilities</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
             </a>
           </div>
         </div>
@@ -783,13 +547,13 @@
          ========================================== -->
     <section class="py-20 bg-[#faf8ff] border-t border-purple-100/70">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div class="text-center max-w-2xl mx-auto mb-14" data-anim="fade-up">
           <span class="text-[11px] font-extrabold uppercase tracking-[0.2em] text-brand-600 block mb-2">WHY CHOOSE US</span>
           <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-gray-900 tracking-tight">
             The Yankee Tech Difference
           </h2>
-          <p class="text-xs sm:text-sm text-gray-500 mt-2">
+          <p class="text-base text-base text-gray-500 mt-2">
             See how our engineering approach outperforms traditional slow web design agencies.
           </p>
         </div>
@@ -861,7 +625,7 @@
     <section class="py-20 dark-cosmic-bg text-white relative overflow-hidden">
       <!-- Glow ambient -->
       <div class="pointer-events-none absolute -bottom-20 right-1/4 w-96 h-96 bg-brand-600/30 rounded-full blur-3xl"></div>
-      
+
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6" data-anim="fade-up">
         <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/20 border border-brand-400/30 text-purple-200 text-[10px] font-extrabold uppercase tracking-widest">
           LET'S BUILD SOMETHING EXCEPTIONAL
@@ -869,14 +633,14 @@
         <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight">
           Ready to Modernize Your Digital Infrastructure?
         </h2>
-        <p class="text-xs sm:text-sm text-purple-200/80 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-base text-base text-purple-200/80 max-w-2xl mx-auto leading-relaxed">
           Whether you need a high-converting WordPress presence, custom Laravel platform, or an autonomous GoHighLevel automation engine, our senior team is ready to deliver.
         </p>
 
         <div class="flex flex-wrap items-center justify-center gap-4 pt-4">
           <a href="index.html#contact" class="btn-purple magnetic-btn text-white text-xs font-semibold px-7 py-3.5 rounded-full inline-flex items-center gap-2 shadow-glow">
             <span>Schedule a Free Strategy Call</span>
-            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
           </a>
           <a href="index.html#estimator" class="px-6 py-3.5 rounded-full text-xs font-semibold text-purple-100 bg-white/10 hover:bg-white/20 border border-white/15 transition inline-flex items-center gap-2">
             <span>Launch Live Price Estimator</span>
@@ -893,7 +657,7 @@
   <footer class="dark-cosmic-bg text-gray-300 pt-16 pb-12 border-t border-purple-900/60 text-xs">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-purple-900/60">
-        
+
         <!-- Col 1: Brand & Bio -->
         <div class="lg:col-span-2 space-y-4">
           <a href="index.html" class="flex items-center gap-3">
@@ -905,7 +669,7 @@
               <span class="block text-[10px] font-medium text-purple-300 tracking-wider uppercase mt-0.5">Infinite Possibilities</span>
             </div>
           </a>
-          <p class="text-xs text-purple-200/70 leading-relaxed max-w-sm">
+          <p class="text-base text-purple-200/70 leading-relaxed max-w-sm">
             Elite Full-Stack engineering studio. We build sub-second WordPress platforms, custom SaaS architectures, GoHighLevel ecosystems, and autonomous AI agents for high-growth enterprises worldwide.
           </p>
           <div class="flex items-center gap-3 pt-2">
@@ -955,7 +719,7 @@
             Subscribe for quarterly insights on 2026 web performance, GHL workflows, and autonomous AI agents.
           </p>
           <form onsubmit="handleNewsletter(event)" class="space-y-2">
-            <input type="email" id="newsletterEmail" required placeholder="Enter your business email" class="w-full px-3.5 py-2.5 rounded-xl bg-white/5 border border-purple-500/30 text-white placeholder-purple-300/40 text-xs focus:outline-none focus:border-brand-500 transition" />
+            <input type="email" id="newsletterEmail" required placeholder="Enter your business email" class="w-full px-3.5 py-2.5 rounded-xl bg-white/5 border border-purple-500/30 text-white placeholder-purple-300/40 text-base focus:outline-none focus:border-brand-500 transition" />
             <button type="submit" class="w-full btn-purple text-white text-xs font-semibold py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-sm">
               <span id="newsletterBtnText">Subscribe →</span>
             </button>

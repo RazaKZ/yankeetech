@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yankee Tech — Full-Stack Web Development, AI Automation & GHL/WordPress Integrations</title>
+  <meta name="description" content="Yankee Tech builds custom websites, web applications and automations. Explore our services, view selected projects and estimate your next build." />
+  <link rel="canonical" href="https://yankeeetech.com/" />
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts: Plus Jakarta Sans & Inter -->
@@ -16,7 +18,7 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <!-- Main JavaScript (Tailwind config, interactive logic & 2026 scroll animations) -->
-  <script src="script.js"></script>
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
@@ -88,7 +90,7 @@
 
 </head>
 
-<body class="antialiased selection:bg-brand-600 selection:text-white">
+<body class="cinematic-site antialiased selection:bg-brand-600 selection:text-white">
 
   <!-- Scroll Progress Bar -->
   <div id="scroll-progress"></div>
@@ -96,677 +98,74 @@
   <!-- ==========================================
        1. STICKY HEADER / NAVBAR
        ========================================== -->
-  <header
-    class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-purple-100/80 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
-      <!-- Brand Logo (YT Yankee Tech - Infinite Possibilities) -->
-      <a href="#home" class="flex items-center gap-3 group shrink-0">
-        <div
-          class="w-10 h-10 rounded-xl bg-[#120924] flex items-center justify-center shadow-md border border-purple-500/30 group-hover:border-purple-500 transition">
-          <span
-            class="font-display font-extrabold text-lg tracking-tighter bg-gradient-to-tr from-purple-400 via-fuchsia-400 to-indigo-300 bg-clip-text text-transparent">YT</span>
-        </div>
-        <div class="leading-none">
-          <span class="block font-display font-extrabold text-lg text-gray-900 tracking-tight">Yankee Tech</span>
-          <span class="block text-[10px] font-medium text-gray-400 tracking-wider uppercase mt-0.5">Infinite
-            Possibilities</span>
-        </div>
-      </a>
-
-      <!-- Center Nav Links: Home, About Us, Services (with 2026 Mega Menu), Contact Us -->
-      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold text-gray-700">
-        <!-- 1. Home -->
-        <a href="#home" class="text-brand-600 hover:text-brand-700 font-bold transition py-2">Home</a>
-
-        <!-- 2. About Us -->
-        <a href="about.html" class="hover:text-brand-600 transition py-2">About Us</a>
-
-        <!-- 3. Services with 2026 Trends Mega Menu -->
-        <div class="group/mega py-6">
-          <a href="services.html"
-            class="flex items-center gap-1.5 py-2 hover:text-brand-600 transition group-hover/mega:text-brand-600">
-            <span>Services</span>
-            <i
-              class="fa-solid fa-chevron-down text-[9px] text-gray-400 group-hover/mega:text-brand-600 group-hover/mega:rotate-180 transition-transform duration-300"></i>
-          </a>
-
-          <!-- 2026 Bento Mega Menu Dropdown -->
-          <div
-            class="absolute left-1/2 -translate-x-1/2 top-full w-full max-w-5xl px-4 sm:px-6 pointer-events-none opacity-0 invisible -translate-y-2 group-hover/mega:pointer-events-auto group-hover/mega:opacity-100 group-hover/mega:visible group-hover/mega:translate-y-0 transition-all duration-300 ease-out z-50">
-            <div
-              class="bg-white/95 backdrop-blur-2xl border border-purple-100/90 shadow-[0_25px_60px_-15px_rgba(91,12,212,0.18)] rounded-3xl p-6 lg:p-7 overflow-hidden ring-1 ring-purple-500/10">
-
-              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-
-                <!-- Column 1: Web & Platforms (5 cols) -->
-                <div class="lg:col-span-5 space-y-3">
-                  <div class="flex items-center justify-between pb-2 border-b border-purple-100">
-                    <span
-                      class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-600 flex items-center gap-1.5">
-                      <i class="fa-solid fa-code text-xs"></i>
-                      <span>WEB &amp; PLATFORM DEV</span>
-                    </span>
-                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest font-mono">CORE 01</span>
-                  </div>
-
-                  <div class="space-y-1">
-                    <!-- Item 1: WordPress & WooCommerce -->
-                    <a href="services.html#wordpress"
-                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div
-                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
-                        <i class="fa-brands fa-wordpress"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <div class="flex items-center justify-between">
-                          <h4
-                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
-                            <span>WordPress &amp; WooCommerce</span>
-                            <span
-                              class="px-1.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[9px] font-bold">95+
-                              Speed</span>
-                          </h4>
-                          <i
-                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
-                        </div>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
-                          Custom themes, Elementor, high-converting WooCommerce checkouts &amp; speed SEO.
-                        </p>
-                      </div>
-                    </a>
-
-                    <!-- Item 2: Full-Stack Web Apps -->
-                    <a href="services.html#fullstack"
-                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div
-                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
-                        <i class="fa-brands fa-laravel"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <div class="flex items-center justify-between">
-                          <h4
-                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
-                            <span>Full-Stack Web Apps</span>
-                            <span
-                              class="px-1.5 py-0.5 rounded-full bg-purple-100 text-brand-700 border border-purple-200 text-[9px] font-bold">Enterprise</span>
-                          </h4>
-                          <i
-                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
-                        </div>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
-                          Custom Laravel, React &amp; Next.js platforms, client portals, SaaS backends &amp; APIs.
-                        </p>
-                      </div>
-                    </a>
-
-                    <!-- Item 3: UI/UX Figma Design Systems -->
-                    <a href="services.html#design"
-                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div
-                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
-                        <i class="fa-solid fa-pen-ruler"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <div class="flex items-center justify-between">
-                          <h4
-                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
-                            <span>UI/UX Figma Design Systems</span>
-                          </h4>
-                          <i
-                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
-                        </div>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
-                          Conversion-first Figma component systems, UX wireframes &amp; high-fidelity prototypes.
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <!-- Column 2: AI & Operations Automation (4 cols) -->
-                <div class="lg:col-span-4 space-y-3">
-                  <div class="flex items-center justify-between pb-2 border-b border-purple-100">
-                    <span
-                      class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-600 flex items-center gap-1.5">
-                      <i class="fa-solid fa-robot text-xs"></i>
-                      <span>AI &amp; AUTOMATION</span>
-                    </span>
-                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest font-mono">SMART 02</span>
-                  </div>
-
-                  <div class="space-y-1">
-                    <!-- Item 4: GoHighLevel (GHL) Ecosystem -->
-                    <a href="services.html#ghl"
-                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div
-                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
-                        <i class="fa-solid fa-filter-circle-dollar"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <div class="flex items-center justify-between">
-                          <h4
-                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
-                            <span>GoHighLevel (GHL) Setup</span>
-                            <span
-                              class="px-1.5 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200 text-[9px] font-bold">Hot</span>
-                          </h4>
-                          <i
-                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
-                        </div>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
-                          Pipelines, automated SMS/email sequences, calendar funnels &amp; snapshots.
-                        </p>
-                      </div>
-                    </a>
-
-                    <!-- Item 5: AI Chatbots & Agents -->
-                    <a href="services.html#ai"
-                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div
-                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
-                        <i class="fa-solid fa-brain"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <div class="flex items-center justify-between">
-                          <h4
-                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
-                            <span>AI Agents &amp; Chatbots</span>
-                            <span
-                              class="px-1.5 py-0.5 rounded-full bg-fuchsia-50 text-fuchsia-700 border border-fuchsia-200 text-[9px] font-bold">2026
-                              AI</span>
-                          </h4>
-                          <i
-                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
-                        </div>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
-                          OpenAI &amp; Claude RAG support agents, automated 24/7 voice booking bots.
-                        </p>
-                      </div>
-                    </a>
-
-                    <!-- Item 6: 2-Way GHL + WordPress Sync -->
-                    <a href="services.html#sync"
-                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div
-                        class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:scale-105 group-hover/item:bg-brand-600 group-hover/item:text-white transition shadow-sm">
-                        <i class="fa-solid fa-arrows-rotate"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <div class="flex items-center justify-between">
-                          <h4
-                            class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition flex items-center gap-2">
-                            <span>GHL + WordPress Sync</span>
-                          </h4>
-                          <i
-                            class="fa-solid fa-arrow-right text-[10px] text-gray-300 group-hover/item:text-brand-600 group-hover/item:translate-x-1 transition-all"></i>
-                        </div>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">
-                          Real-time webhooks, n8n/Make automated flows, membership access &amp; sync.
-                        </p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <!-- Column 3: 2026 Spotlight Bento Card (3 cols) -->
-                <div
-                  class="lg:col-span-3 rounded-2xl bg-gradient-to-br from-[#120727] via-[#1a083a] to-[#2b0c57] text-white p-5 border border-purple-500/30 flex flex-col justify-between relative overflow-hidden shadow-xl group/card">
-                  <div
-                    class="absolute -top-12 -right-12 w-28 h-28 bg-brand-500/30 rounded-full blur-2xl pointer-events-none">
-                  </div>
-
-                  <div>
-                    <div class="flex items-center justify-between mb-3">
-                      <span
-                        class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-500/25 border border-brand-400/40 text-[9px] font-bold uppercase tracking-wider text-purple-200">
-                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Live Tool
-                      </span>
-                      <span class="text-[10px] text-purple-300 font-mono">2026 V2</span>
-                    </div>
-                    <h4 class="font-display font-extrabold text-sm text-white leading-snug">Instant Price Estimator</h4>
-                    <p class="text-[11px] text-purple-200/75 mt-1.5 leading-relaxed">
-                      Select your pages, workflows &amp; AI add-ons for instant quotes in USD, PKR, or GBP.
-                    </p>
-                  </div>
-
-                  <div class="mt-4 pt-3 border-t border-white/10 space-y-2">
-                    <a href="#estimator"
-                      class="w-full btn-purple text-white text-[11px] font-bold py-2.5 px-3.5 rounded-xl flex items-center justify-center gap-2 group-hover/card:shadow-glow transition">
-                      <span>Launch Estimator</span>
-                      <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </a>
-                    <div class="flex items-center justify-center gap-1 text-[10px] text-purple-300/80">
-                      <i class="fa-solid fa-bolt text-[9px] text-amber-400"></i>
-                      <span>Instant 30s calculation</span>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              <!-- Bottom Mega Menu Bar -->
-              <div
-                class="mt-5 pt-3 border-t border-purple-100/90 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs bg-purple-50/60 -mx-6 -mb-6 lg:-mx-7 lg:-mb-7 px-6 lg:px-7 py-3 rounded-b-3xl">
-                <div class="flex items-center gap-2 text-gray-600">
-                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                  <span class="font-semibold text-gray-900">Accepting New Client Projects</span>
-                  <span class="text-gray-400 hidden sm:inline">•</span>
-                  <span class="text-gray-500 hidden sm:inline">White-label agency &amp; custom enterprise
-                    agreements</span>
-                </div>
-                <a href="#contact"
-                  class="font-bold text-brand-600 hover:text-brand-700 inline-flex items-center gap-1.5 shrink-0 transition">
-                  <span>Book Free Technical Call</span>
-                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                </a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. Portfolio -->
-        <a href="portfolio.html" class="hover:text-brand-600 transition py-2">Portfolio</a>
-
-        <!-- 5. Use Cases -->
-        <a href="use-cases.html" class="hover:text-brand-600 transition py-2">Use Cases</a>
-
-        <!-- 6. Contact Us -->
-        <a href="#contact" class="hover:text-brand-600 transition py-2">Contact Us</a>
-      </nav>
-
-      <!-- Right CTA Pill & Hamburger -->
-      <div class="flex items-center gap-2.5 sm:gap-3">
-        <a href="#contact"
-          class="hidden sm:inline-flex btn-purple magnetic-btn text-white text-xs font-semibold px-4 sm:px-5 py-2.5 rounded-full items-center gap-2 shadow-sm">
-          <span>Book a Free Call</span>
-          <i class="fa-solid fa-arrow-right text-[10px]"></i>
-        </a>
-        <!-- Mobile Menu Button with larger touch target -->
-        <button id="mobileMenuBtn" aria-label="Toggle navigation menu"
-          class="md:hidden w-10 h-10 rounded-xl border border-purple-200/90 flex items-center justify-center text-gray-700 hover:bg-purple-50 transition active:scale-95">
-          <i class="fa-solid fa-bars text-base"></i>
-        </button>
-      </div>
+  <header class="studio-header">
+<div class="studio-container studio-nav">
+    <a class="studio-brand" href="index.html" aria-label="Yankee Tech home">
+    <span class="studio-logo">yt<span>.</span>
+    </span>
+    <span>Yankee Tech</span>
+    </a>
+    <nav class="studio-desktop-nav" aria-label="Main navigation">
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Our work</a>
+    <a href="about.html">About us</a>
+    <a href="index.html#blog">Insights</a>
+    </nav>
+    <a href="index.html#contact" class="studio-nav-cta">Let's talk</a>
+    <button id="mobileMenuBtn" class="studio-menu-button" type="button" aria-label="Toggle navigation" aria-controls="mobileMenu" aria-expanded="false">
+    <i class="fa-solid fa-bars" aria-hidden="true">
+    </i>
+    </button>
     </div>
-
-    <!-- Mobile Nav Drawer (Scrollable on small devices, auto-closes on tap) -->
-    <div id="mobileMenu"
-      class="hidden md:hidden bg-white/98 backdrop-blur-2xl border-b border-purple-100 px-5 sm:px-6 py-5 space-y-3 text-sm font-medium text-gray-700 shadow-2xl max-h-[calc(100vh-5rem)] overflow-y-auto">
-      <a href="#home" class="block py-1.5 text-brand-600 font-bold border-b border-purple-50">Home</a>
-      <a href="about.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">About Us</a>
-
-      <!-- Mobile Services Accordion -->
-      <div class="border-b border-purple-50 pb-1.5">
-        <button type="button"
-          onclick="document.getElementById('mobileServicesSub').classList.toggle('hidden'); document.getElementById('mobileServicesArrow').classList.toggle('rotate-180');"
-          class="w-full flex items-center justify-between py-1.5 hover:text-brand-600 transition text-left font-medium">
-          <span>Services</span>
-          <i id="mobileServicesArrow" class="fa-solid fa-chevron-down text-xs text-gray-400 transition-transform"></i>
-        </button>
-        <div id="mobileServicesSub"
-          class="hidden pl-3.5 pt-2 pb-1 space-y-2.5 border-l-2 border-purple-200 mt-1 text-xs text-gray-600">
-          <a href="services.html#wordpress" class="block py-1 hover:text-brand-600">WordPress &amp; WooCommerce</a>
-          <a href="services.html#fullstack" class="block py-1 hover:text-brand-600">Full-Stack Laravel &amp; React</a>
-          <a href="services.html#ghl" class="block py-1 hover:text-brand-600">GoHighLevel (GHL) Setup</a>
-          <a href="services.html#ai" class="block py-1 hover:text-brand-600">AI Agents &amp; Automation</a>
-          <a href="services.html#sync" class="block py-1 hover:text-brand-600">2-Way GHL + WP Sync</a>
-          <a href="services.html#design" class="block py-1 hover:text-brand-600">UI/UX Figma Design Systems</a>
-          <a href="#estimator" class="block py-1 text-brand-600 font-bold">⚡ Price Estimator</a>
-        </div>
-      </div>
-
-      <a href="portfolio.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Portfolio</a>
-      <a href="use-cases.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Use
-        Cases</a>
-      <a href="#contact" class="block py-1.5 hover:text-brand-600 transition">Contact Us</a>
-
-      <div class="pt-3">
-        <a href="#contact"
-          class="btn-purple text-white text-xs font-semibold py-3.5 px-5 rounded-full w-full flex items-center justify-center gap-2 shadow-sm">
-          <span>Book a Free Call</span>
-          <i class="fa-solid fa-arrow-right text-[10px]"></i>
-        </a>
-      </div>
-    </div>
-  </header>
+<nav id="mobileMenu" class="hidden studio-mobile-nav" aria-label="Mobile navigation">
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Our work</a>
+    <a href="about.html">About us</a>
+    <a href="use-cases.html">Use cases</a>
+    <a href="index.html#blog">Insights</a>
+    <a href="index.html#contact">Let's talk</a>
+    </nav>
+    </header>
 
   <!-- ==========================================
        2. HERO SECTION (Exact Mockup Composition)
        ========================================== -->
-  <section id="home"
-    class="hero-bg relative overflow-hidden pt-10 pb-14 lg:pt-14 lg:pb-20 border-b border-purple-100/60">
-    <!-- Decorative ambient purple glow behind right devices -->
-    <div
-      class="pointer-events-none absolute top-6 right-0 w-[550px] h-[480px] bg-gradient-to-bl from-purple-700/25 via-indigo-900/20 to-transparent rounded-full blur-3xl">
+<main id="main-content">
+<section id="home" class="cinema-hero" aria-label="Yankee Tech digital studio">
+  <div class="cinema-stage">
+    <div class="cinema-grain" aria-hidden="true"></div>
+    <div class="cinema-art" aria-hidden="true">
+      <div class="cinema-art-fallback"></div>
+      <canvas id="cinemaCanvas"></canvas>
     </div>
-
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-6 items-center">
-
-        <!-- Left Column: Copy, CTAs & Proof -->
-        <div class="lg:col-span-6 space-y-5">
-          <!-- Eyebrow Tag -->
-          <div data-anim="fade-up"
-            class="inline-flex flex-wrap items-center gap-1.5 sm:gap-2 text-[10px] sm:text-[11px] font-bold tracking-[0.14em] sm:tracking-[0.16em] uppercase text-brand-600 font-mono">
-            <span>FULL-STACK DEVELOPMENT</span>
-            <span class="text-purple-300">•</span>
-            <span>API INTEGRATIONS</span>
-            <span class="text-purple-300">•</span>
-            <span>AI AUTOMATION</span>
-          </div>
-
-          <!-- Main Headline (Developer Brief Page 2 & Appendix B) -->
-          <h1 data-anim="fade-up" data-delay="1"
-            class="font-display font-extrabold text-2xl sm:text-4xl lg:text-[44px] text-[#110c22] leading-[1.16] sm:leading-[1.14] tracking-tight">
-            Custom Web &amp; Software Development for Startups and Growing Businesses
-          </h1>
-
-          <!-- Subtitle (Developer Brief Page 2 & Appendix B) -->
-          <p data-anim="fade-up" data-delay="2" class="text-gray-600 text-xs sm:text-sm sm:leading-relaxed max-w-xl">
-            We design and build custom web applications, SaaS platforms and API integrations with Laravel, React and Next.js. Fixed-price milestones, full code ownership and a free consultation to start.
-          </p>
-
-          <!-- CTA Buttons (Developer Brief Page 2 & Appendix B) -->
-          <div data-anim="fade-up" data-delay="3"
-            class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
-            <a href="#contact"
-              class="w-full sm:w-auto btn-purple magnetic-btn text-white text-xs sm:text-sm font-semibold px-6 py-3.5 rounded-full inline-flex items-center justify-center gap-2.5 shadow-glow">
-              <span>Book a Free Technical Consultation</span>
-              <i class="fa-solid fa-arrow-right text-xs"></i>
-            </a>
-            <a href="#portfolio"
-              class="w-full sm:w-auto bg-white hover:bg-purple-50/80 text-gray-800 border border-purple-200 text-xs sm:text-sm font-semibold px-5 py-3.5 rounded-full inline-flex items-center justify-center gap-2 transition shadow-xs">
-              <span>See Our Work</span>
-              <i class="fa-solid fa-arrow-down text-[10px] text-brand-600"></i>
-            </a>
-          </div>
-
-          <!-- Proof Line (Developer Brief Page 2 & Appendix B: Milestone delivery, code ownership, 30-day support) -->
-          <div data-anim="fade-up" data-delay="4"
-            class="pt-5 border-t border-purple-200/60 max-w-lg">
-            <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs font-semibold text-gray-700">
-              <div class="flex items-center gap-2">
-                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-[10px]">
-                  <i class="fa-solid fa-check"></i>
-                </span>
-                <span>Milestone-Based Delivery</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="w-5 h-5 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center text-[10px]">
-                  <i class="fa-solid fa-code"></i>
-                </span>
-                <span>100% Code Ownership</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <span class="w-5 h-5 rounded-full bg-purple-100 text-purple-700 flex items-center justify-center text-[10px]">
-                  <i class="fa-solid fa-shield-heart"></i>
-                </span>
-                <span>30-Day Post-Launch Support</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column: Real Developer Architecture & System Dashboard Visual (Replaces competing hero estimator per Developer Brief Page 2) -->
-        <div data-anim="fade-left" data-delay="2" class="lg:col-span-6 relative">
-          <div class="relative mx-auto max-w-xl lg:max-w-none">
-            <!-- Modern Code & Architecture Container -->
-            <div
-              class="relative rounded-3xl p-5 sm:p-6 bg-gradient-to-br from-[#15072a] via-[#100320] to-[#20083a] shadow-2xl border border-purple-500/30 overflow-hidden text-white tilt-card">
-              
-              <!-- Neon Ambient Studio Glows -->
-              <div class="absolute -top-16 -right-16 w-52 h-52 bg-purple-600/30 rounded-full blur-3xl pointer-events-none"></div>
-              <div class="absolute -bottom-16 -left-16 w-52 h-52 bg-fuchsia-600/20 rounded-full blur-3xl pointer-events-none"></div>
-
-              <!-- Window Top Bar -->
-              <div class="flex items-center justify-between pb-3.5 border-b border-purple-500/20 relative z-10">
-                <div class="flex items-center gap-2">
-                  <div class="flex items-center gap-1.5">
-                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
-                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
-                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-                  </div>
-                  <span class="ml-2 font-mono text-[11px] text-purple-300 font-bold">production-stack.config.ts</span>
-                </div>
-                <div class="flex items-center gap-1.5 text-[10px] font-mono text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-md">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                  <span>99.99% UPTIME</span>
-                </div>
-              </div>
-
-              <!-- Architecture System Blocks Grid -->
-              <div class="pt-4 grid grid-cols-2 gap-2.5 relative z-10">
-                <!-- Block 1: Frontend Engine -->
-                <div class="p-3 rounded-2xl bg-purple-950/40 border border-purple-500/20 space-y-1">
-                  <div class="flex items-center justify-between">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-purple-400">FRONTEND LAYER</span>
-                    <i class="fa-brands fa-react text-sky-400 text-xs"></i>
-                  </div>
-                  <div class="text-xs font-bold text-white">Next.js 14 &amp; React 18</div>
-                  <div class="text-[10px] text-gray-400 font-mono">0.4s Core Web Vitals SLA</div>
-                </div>
-
-                <!-- Block 2: Backend & APIs -->
-                <div class="p-3 rounded-2xl bg-purple-950/40 border border-purple-500/20 space-y-1">
-                  <div class="flex items-center justify-between">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-purple-400">BACKEND API</span>
-                    <i class="fa-brands fa-laravel text-red-500 text-xs"></i>
-                  </div>
-                  <div class="text-xs font-bold text-white">Laravel 11 &amp; Node APIs</div>
-                  <div class="text-[10px] text-gray-400 font-mono">Redis Queue • PostgreSQL</div>
-                </div>
-
-                <!-- Block 3: CRM & Webhooks -->
-                <div class="p-3 rounded-2xl bg-purple-950/40 border border-purple-500/20 space-y-1">
-                  <div class="flex items-center justify-between">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-amber-400">CRM INTEGRATION</span>
-                    <i class="fa-solid fa-arrows-rotate text-amber-400 text-xs"></i>
-                  </div>
-                  <div class="text-xs font-bold text-white">GoHighLevel 2-Way Sync</div>
-                  <div class="text-[10px] text-gray-400 font-mono">&lt;400ms Webhook Latency</div>
-                </div>
-
-                <!-- Block 4: AI & Automations -->
-                <div class="p-3 rounded-2xl bg-purple-950/40 border border-purple-500/20 space-y-1">
-                  <div class="flex items-center justify-between">
-                    <span class="text-[9px] font-mono uppercase tracking-wider text-fuchsia-400">AI WORKFLOWS</span>
-                    <i class="fa-solid fa-brain text-fuchsia-400 text-xs"></i>
-                  </div>
-                  <div class="text-xs font-bold text-white">Autonomous RAG &amp; Bots</div>
-                  <div class="text-[10px] text-gray-400 font-mono">OpenAI • n8n • Pinecone</div>
-                </div>
-              </div>
-
-              <!-- Real-time Live Event Console Stream -->
-              <div class="mt-3.5 p-3 rounded-2xl bg-black/60 border border-purple-500/20 font-mono text-[10px] space-y-1.5 relative z-10">
-                <div class="flex items-center justify-between text-gray-400 pb-1 border-b border-white/5">
-                  <span class="flex items-center gap-1.5 text-[9px] uppercase tracking-wider text-purple-300">
-                    <i class="fa-solid fa-terminal text-[8px] text-brand-400"></i> LIVE EVENT LOGS
-                  </span>
-                  <span class="text-[9px] text-emerald-400">ALL SYSTEMS NOMINAL</span>
-                </div>
-                <div class="text-emerald-300/90 flex items-center justify-between truncate">
-                  <span>[0.12s] POST /api/v2/lead-intake -> 200 OK</span>
-                  <span class="text-gray-500 text-[9px]">GHL Synced</span>
-                </div>
-                <div class="text-purple-300/90 flex items-center justify-between truncate">
-                  <span>[0.08s] Stripe.PaymentIntent: Succeeded ($2,500)</span>
-                  <span class="text-gray-500 text-[9px]">Milestone #1</span>
-                </div>
-                <div class="text-sky-300/90 flex items-center justify-between truncate">
-                  <span>[0.04s] OpenAI GPT-4o: Qualified appointment booked</span>
-                  <span class="text-gray-500 text-[9px]">Calendar Set</span>
-                </div>
-              </div>
-
-              <!-- Quick Scoping Teaser in Visual Footer -->
-              <div class="mt-4 pt-3 border-t border-purple-500/20 flex items-center justify-between relative z-10 text-[11px]">
-                <div class="text-gray-300">
-                  <span>Need an exact scope &amp; price?</span>
-                </div>
-                <a href="#estimator" class="text-brand-400 hover:text-brand-300 font-bold inline-flex items-center gap-1 transition">
-                  <span>Use Project Estimator</span>
-                  <i class="fa-solid fa-arrow-down text-[10px]"></i>
-                </a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
+    <div class="cinema-copy">
+      <p class="cinema-eyebrow">Independent thinking. Connected technology.</p>
+      <h1 aria-label="We build your next advantage.">
+        <span class="cinema-line"><span>We build</span></span>
+        <span class="cinema-line"><span>your next</span></span>
+        <span class="cinema-line cinema-accent"><span>advantage.</span></span>
+      </h1>
+      <div class="cinema-intro-footer">
+        <p>Websites, software &amp; automation.<br>Made to move your business forward.</p>
+        <a class="cinema-cta" href="#contact"><span>Start a project</span><i class="fa-solid fa-plus" aria-hidden="true"></i></a>
       </div>
     </div>
-  </section>
-
-  <!-- ==========================================
-       3. OUR TECH STACK (Retitled per Developer Brief Page 2)
-       ========================================== -->
-  <section class="py-8 bg-white border-b border-gray-100 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p data-anim="fade-up" class="text-center text-[10px] font-bold tracking-[0.2em] uppercase text-gray-500 mb-6 font-mono">
-        OUR TECH STACK • MODERN FULL-STACK, CLOUD &amp; AUTOMATION FRAMEWORKS
-      </p>
-      <div class="marquee-wrap">
-        <div class="marquee-track">
-          <!-- Set 1 -->
-          <div class="flex items-center gap-2 text-gray-800 font-display font-bold text-sm sm:text-base shrink-0">
-            <i class="fa-brands fa-wordpress text-xl text-[#21759b]"></i>
-            <span>WordPress</span>
-          </div>
-          <div class="flex items-center gap-1.5 font-display font-extrabold text-sm sm:text-base shrink-0">
-            <span class="px-2 py-0.5 rounded bg-[#7f54b3] text-white text-xs">WOO</span>
-            <span class="text-gray-800 tracking-tight">COMMERCE</span>
-          </div>
-          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
-            <span class="flex items-end gap-0.5">
-              <span class="w-1 h-3 bg-amber-500 rounded-sm"></span>
-              <span class="w-1 h-4 bg-emerald-500 rounded-sm"></span>
-              <span class="w-1 h-5 bg-blue-600 rounded-sm"></span>
-            </span>
-            <span>HighLevel</span>
-          </div>
-          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-[#ff2d20] shrink-0">
-            <i class="fa-brands fa-laravel text-xl"></i>
-            <span>Laravel</span>
-          </div>
-          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
-            <i class="fa-brands fa-react text-xl text-sky-500"></i>
-            <span>React &amp; Next.js</span>
-          </div>
-          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
-            <i class="fa-solid fa-microchip text-lg text-brand-600"></i>
-            <span>OpenAI &amp; n8n</span>
-          </div>
-          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
-            <i class="fa-brands fa-figma text-lg text-pink-500"></i>
-            <span>Figma</span>
-          </div>
-          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-[#92003B] shrink-0">
-            <i class="fa-brands fa-elementor text-lg"></i>
-            <span>elementor</span>
-          </div>
-          <!-- Set 2 (seamless duplicate) -->
-          <div class="flex items-center gap-2 text-gray-800 font-display font-bold text-sm sm:text-base shrink-0">
-            <i class="fa-brands fa-wordpress text-xl text-[#21759b]"></i>
-            <span>WordPress</span>
-          </div>
-          <div class="flex items-center gap-1.5 font-display font-extrabold text-sm sm:text-base shrink-0">
-            <span class="px-2 py-0.5 rounded bg-[#7f54b3] text-white text-xs">WOO</span>
-            <span class="text-gray-800 tracking-tight">COMMERCE</span>
-          </div>
-          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
-            <span class="flex items-end gap-0.5">
-              <span class="w-1 h-3 bg-amber-500 rounded-sm"></span>
-              <span class="w-1 h-4 bg-emerald-500 rounded-sm"></span>
-              <span class="w-1 h-5 bg-blue-600 rounded-sm"></span>
-            </span>
-            <span>HighLevel</span>
-          </div>
-          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-[#ff2d20] shrink-0">
-            <i class="fa-brands fa-laravel text-xl"></i>
-            <span>Laravel</span>
-          </div>
-          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
-            <i class="fa-brands fa-react text-xl text-sky-500"></i>
-            <span>React &amp; Next.js</span>
-          </div>
-          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
-            <i class="fa-solid fa-microchip text-lg text-brand-600"></i>
-            <span>OpenAI &amp; n8n</span>
-          </div>
-          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-gray-800 shrink-0">
-            <i class="fa-brands fa-figma text-lg text-pink-500"></i>
-            <span>Figma</span>
-          </div>
-          <div class="flex items-center gap-2 font-display font-bold text-sm sm:text-base text-[#92003B] shrink-0">
-            <i class="fa-brands fa-elementor text-lg"></i>
-            <span>elementor</span>
-          </div>
-        </div>
-      </div>
+    <div class="cinema-second" aria-hidden="true">
+      <p>From the first idea to the next stage.</p>
+      <strong>Designed to connect.<br><em>Built to scale.</em></strong>
     </div>
-  </section>
-
-  <!-- ==========================================
-       3B. THE PROBLEM ("Is off-the-shelf software slowing your business down?")
-       ========================================== -->
-  <section class="py-16 lg:py-20 bg-gray-50/70 border-b border-purple-100/60">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div data-anim="fade-up">
-        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-600 block mb-2 font-mono">THE PROBLEM</span>
-        <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900 tracking-tight max-w-2xl mx-auto">
-          Is off-the-shelf software slowing your business down?
-        </h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 text-left">
-        <!-- Point 1 -->
-        <div data-anim="fade-up" data-delay="1" class="bg-white p-6 rounded-3xl border border-gray-200/80 shadow-xs space-y-3">
-          <div class="w-10 h-10 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-sm font-bold shadow-xs">
-            <i class="fa-solid fa-ban"></i>
-          </div>
-          <h3 class="font-display font-bold text-sm text-gray-900">Tools that don't fit your process</h3>
-          <p class="text-xs text-gray-500 leading-relaxed">
-            You're forced to adapt your workflow to rigid templates and generic SaaS apps instead of the software adapting to your business.
-          </p>
-        </div>
-
-        <!-- Point 2 -->
-        <div data-anim="fade-up" data-delay="2" class="bg-white p-6 rounded-3xl border border-gray-200/80 shadow-xs space-y-3">
-          <div class="w-10 h-10 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-sm font-bold shadow-xs">
-            <i class="fa-solid fa-triangle-exclamation"></i>
-          </div>
-          <h3 class="font-display font-bold text-sm text-gray-900">Slow, fragile systems</h3>
-          <p class="text-xs text-gray-500 leading-relaxed">
-            Pages that crash under traffic spikes, customer data that won't sync properly between platforms, and bug fixes that drag on for weeks.
-          </p>
-        </div>
-
-        <!-- Point 3 -->
-        <div data-anim="fade-up" data-delay="3" class="bg-white p-6 rounded-3xl border border-gray-200/80 shadow-xs space-y-3">
-          <div class="w-10 h-10 rounded-2xl bg-purple-50 text-brand-600 flex items-center justify-center text-sm font-bold shadow-xs">
-            <i class="fa-solid fa-link-slash"></i>
-          </div>
-          <h3 class="font-display font-bold text-sm text-gray-900">Disconnected tools</h3>
-          <p class="text-xs text-gray-500 leading-relaxed">
-            Your website, CRM, payment gateway, and reporting don't talk to each other, forcing your team to copy-paste data manually every day.
-          </p>
-        </div>
-      </div>
-
-      <!-- Bridge Solution Box -->
-      <div data-anim="fade-up" data-delay="4"
-        class="mt-8 p-5 rounded-2xl bg-purple-100/70 border border-purple-200 text-xs sm:text-sm text-purple-950 font-medium max-w-2xl mx-auto shadow-xs">
-        <span class="font-bold text-brand-700">The Yankee Tech Bridge:</span> We build software around how your business actually works, then connect it seamlessly to the tools you already use.
-      </div>
+    <div class="cinema-bottom">
+      <a href="#services">Explore our capabilities <span aria-hidden="true">↓</span></a>
+      <span>Design / Development / Automation</span>
+      <button class="cinema-motion-toggle" type="button" aria-pressed="false">Pause motion</button>
     </div>
-  </section>
-
-    <!-- ==========================================
-       4. SERVICES & DIGITAL CAPABILITIES
-       (Unified Master Grid per Developer Brief Page 2 & 13)
-       ========================================== -->
+    <div class="cinema-scroll-line" aria-hidden="true"><span></span></div>
+  </div>
+</section>
+<section class="cinema-type-band" aria-label="Design, build and connect">
+  <p>DESIGN. <em>BUILD.</em> CONNECT.</p>
+</section>
+<section class="studio-stack" aria-label="Technologies we work with"><div class="studio-container"><p>Built with tools you trust</p><div><span>Laravel</span><span>React</span><span>WordPress</span><span>GoHighLevel</span><span>WooCommerce</span><span>n8n</span></div></div></section>
   <section id="services" class="py-16 lg:py-24 bg-white scroll-mt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
@@ -775,20 +174,20 @@
         <div data-anim="fade-up">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-[10px] font-bold uppercase tracking-widest mb-3">
             <i class="fa-solid fa-layer-group text-xs"></i>
-            <span>FULL-STACK, AI &amp; INTEGRATION SERVICES</span>
+            <span>WHAT WE CAN BUILD</span>
           </div>
           <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-gray-900 tracking-tight">
-            Engineering Scalable Platforms, APIs &amp; Automations
+            Built around what your business needs.
           </h2>
-          <p class="text-xs sm:text-sm text-gray-600 mt-2 max-w-2xl leading-relaxed">
-            We design, build and integrate high-performance web applications, SaaS platforms and automation workflows. Fixed-price milestones, clean code you own, and zero agency fluff.
+          <p class="text-base text-base text-gray-600 mt-2 max-w-2xl leading-relaxed">
+            Launch a product, connect your tools or extend your team. We turn your requirements into a clear scope and a working solution.
           </p>
         </div>
         <div class="flex items-center gap-3 shrink-0">
           <a href="services.html"
             class="px-5 py-2.5 rounded-full border border-purple-200 hover:border-brand-600 hover:text-brand-600 text-xs font-semibold text-gray-700 inline-flex items-center gap-2 transition bg-purple-50/50">
-            <span>Explore All 12 Services</span>
-            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            <span>View all services</span>
+
           </a>
         </div>
       </div>
@@ -810,7 +209,7 @@
             <h3 class="font-display font-bold text-lg text-gray-900 mb-2.5 group-hover:text-brand-600 transition leading-snug">
               Custom Web Apps &amp; SaaS Development
             </h3>
-            <p class="text-xs text-gray-600 leading-relaxed mb-5">
+            <p class="text-base text-gray-600 leading-relaxed mb-5">
               Scalable web applications, client portals and SaaS products, from first prototype to production with user roles, auth and dashboards.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-6">
@@ -825,7 +224,7 @@
             <a href="service-laravel-react.html"
               class="inline-flex items-center gap-1 text-xs font-bold text-brand-600 group-hover:gap-2 transition-all">
               <span>View Specs</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
             </a>
           </div>
         </div>
@@ -844,7 +243,7 @@
             <h3 class="font-display font-bold text-lg text-gray-900 mb-2.5 group-hover:text-brand-600 transition leading-snug">
               API &amp; Third-Party Integrations
             </h3>
-            <p class="text-xs text-gray-600 leading-relaxed mb-5">
+            <p class="text-base text-gray-600 leading-relaxed mb-5">
               Connect your CRM, payments, GoHighLevel, accounting and internal tools with reliable, well-documented APIs, webhooks &amp; SSO.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-6">
@@ -859,7 +258,7 @@
             <a href="service-api-engineering.html"
               class="inline-flex items-center gap-1 text-xs font-bold text-brand-600 group-hover:gap-2 transition-all">
               <span>View Specs</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
             </a>
           </div>
         </div>
@@ -878,7 +277,7 @@
             <h3 class="font-display font-bold text-lg text-gray-900 mb-2.5 group-hover:text-brand-600 transition leading-snug">
               Laravel, React &amp; Next.js Development
             </h3>
-            <p class="text-xs text-gray-600 leading-relaxed mb-5">
+            <p class="text-base text-gray-600 leading-relaxed mb-5">
               Modern full-stack engineering with clean code, automated unit tests, CI/CD pipelines and documentation you 100% own.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-6">
@@ -893,7 +292,7 @@
             <a href="service-laravel-react.html"
               class="inline-flex items-center gap-1 text-xs font-bold text-brand-600 group-hover:gap-2 transition-all">
               <span>View Specs</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
             </a>
           </div>
         </div>
@@ -912,7 +311,7 @@
             <h3 class="font-display font-bold text-lg text-gray-900 mb-2.5 group-hover:text-brand-600 transition leading-snug">
               Dedicated Developers &amp; White-Label Team
             </h3>
-            <p class="text-xs text-gray-600 leading-relaxed mb-5">
+            <p class="text-base text-gray-600 leading-relaxed mb-5">
               Extend your team or your agency with senior developers, GHL architects and dedicated engineering, billed on transparent monthly retainers.
             </p>
             <div class="flex flex-wrap gap-1.5 mb-6">
@@ -927,7 +326,7 @@
             <a href="service-white-label-agency.html"
               class="inline-flex items-center gap-1 text-xs font-bold text-brand-600 group-hover:gap-2 transition-all">
               <span>View Specs</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
             </a>
           </div>
         </div>
@@ -942,7 +341,7 @@
               <i class="fa-solid fa-bolt text-amber-500 text-sm"></i>
               <span>Quick Solutions</span>
             </h3>
-            <p class="text-xs text-gray-500">Rapid turnaround packages with fixed scope and transparent pricing</p>
+            <p class="text-base text-gray-500">Rapid turnaround packages with fixed scope and transparent pricing</p>
           </div>
           <span class="text-xs font-mono text-purple-600 font-semibold">Milestone Payments (30 / 30 / 40)</span>
         </div>
@@ -1025,9 +424,8 @@
         <div class="mb-10" data-anim="fade-up">
           <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-600 block mb-1.5">ABOUT YANKEE
             TECH</span>
-          <h2 class="font-display font-extrabold text-xl sm:text-2xl text-gray-900">About Us &amp; Our Agile Engineering
-            Process</h2>
-          <p class="text-xs text-gray-500 mt-1 max-w-xl">
+          <h2 class="font-display font-extrabold text-xl sm:text-2xl text-gray-900">A clear path from idea to launch.</h2>
+          <p class="text-base text-gray-500 mt-1 max-w-xl">
             A transparent, sprint-based engineering model designed to deliver custom full-stack builds, AI agent
             automations, and frictionless GHL &amp; WordPress ecosystems.
           </p>
@@ -1044,11 +442,11 @@
               <span class="font-display font-extrabold text-xl text-gray-900">01</span>
               <h3 class="font-display font-bold text-sm text-gray-900">Discover &amp; Architect</h3>
             </div>
-            <p class="text-xs text-gray-500 leading-relaxed pl-7">
+            <p class="text-base text-gray-500 leading-relaxed pl-7">
               We audit your tech stack, map out GHL/WordPress workflows, and design a clear technical blueprint.
             </p>
             <div class="hidden lg:flex absolute top-1/2 -right-3 text-gray-400 text-xs">
-              <i class="fa-solid fa-arrow-right"></i>
+
             </div>
           </div>
 
@@ -1062,11 +460,11 @@
               <span class="font-display font-extrabold text-xl text-gray-900">02</span>
               <h3 class="font-display font-bold text-sm text-gray-900">Design &amp; Full-Stack Build</h3>
             </div>
-            <p class="text-xs text-gray-500 leading-relaxed pl-7">
+            <p class="text-base text-gray-500 leading-relaxed pl-7">
               We bring your vision to life with modern Figma UI/UX, clean full-stack or WordPress code, and custom APIs.
             </p>
             <div class="hidden lg:flex absolute top-1/2 -right-3 text-gray-400 text-xs">
-              <i class="fa-solid fa-arrow-right"></i>
+
             </div>
           </div>
 
@@ -1080,12 +478,12 @@
               <span class="font-display font-extrabold text-xl text-gray-900">03</span>
               <h3 class="font-display font-bold text-sm text-gray-900">Integrate AI &amp; Automate</h3>
             </div>
-            <p class="text-xs text-gray-500 leading-relaxed pl-7">
+            <p class="text-base text-gray-500 leading-relaxed pl-7">
               We connect GoHighLevel pipelines, AI agents, webhooks, and speed-optimize every page for 95+ Core Web
               Vitals.
             </p>
             <div class="hidden lg:flex absolute top-1/2 -right-3 text-gray-400 text-xs">
-              <i class="fa-solid fa-arrow-right"></i>
+
             </div>
           </div>
 
@@ -1097,10 +495,10 @@
             </div>
             <div class="flex items-baseline gap-2.5 mb-1.5">
               <span class="font-display font-extrabold text-xl text-gray-900">04</span>
-              <h3 class="font-display font-bold text-sm text-gray-900">Launch &amp; 24/7 Support</h3>
+              <h3 class="font-display font-bold text-sm text-gray-900">Launch &amp; Handover</h3>
             </div>
-            <p class="text-xs text-gray-500 leading-relaxed pl-7">
-              We deploy with zero downtime and stay with you for ongoing scaling, workflow monitoring, and support.
+            <p class="text-base text-gray-500 leading-relaxed pl-7">
+              We prepare your release, hand over the code and documentation, and agree the support you need.
             </p>
           </div>
         </div>
@@ -1131,7 +529,7 @@
           <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-white tracking-tight">
             Solutions &amp; Use Cases for Every Vision
           </h2>
-          <p class="text-xs text-purple-200/70 mt-1">
+          <p class="text-base text-purple-200/70 mt-1">
             We partner with startups, e-commerce brands, SaaS founders, and marketing agencies worldwide.
           </p>
         </div>
@@ -1139,7 +537,7 @@
           <a href="use-cases.html"
             class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-brand-600 text-purple-200 hover:text-white border border-purple-400/30 text-xs font-semibold transition">
             <span>Explore All Use Cases</span>
-            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
           </a>
         </div>
       </div>
@@ -1163,7 +561,7 @@
             </div>
             <span
               class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white text-xs group-hover:bg-brand-500 transition">
-              <i class="fa-solid fa-arrow-right"></i>
+
             </span>
           </div>
           <div class="relative z-10">
@@ -1190,7 +588,7 @@
             </div>
             <span
               class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white text-xs group-hover:bg-brand-500 transition">
-              <i class="fa-solid fa-arrow-right"></i>
+
             </span>
           </div>
           <div class="relative z-10">
@@ -1217,7 +615,7 @@
             </div>
             <span
               class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white text-xs group-hover:bg-brand-500 transition">
-              <i class="fa-solid fa-arrow-right"></i>
+
             </span>
           </div>
           <div class="relative z-10">
@@ -1244,7 +642,7 @@
             </div>
             <span
               class="w-7 h-7 rounded-full bg-white/10 flex items-center justify-center text-white text-xs group-hover:bg-brand-500 transition">
-              <i class="fa-solid fa-arrow-right"></i>
+
             </span>
           </div>
           <div class="relative z-10">
@@ -1278,21 +676,21 @@
         <div data-anim="fade-up">
           <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 border border-purple-200 text-brand-700 text-[10px] font-bold uppercase tracking-widest mb-2.5">
             <i class="fa-solid fa-briefcase"></i>
-            <span>PROVEN TRACK RECORD • REAL CLIENT RESULTS</span>
+            <span>SELECTED WORK</span>
           </div>
           <h2 class="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-gray-900 tracking-tight">
-            Featured Projects &amp; Case Studies
+            A closer look at our work.
           </h2>
-          <p class="text-xs sm:text-sm text-gray-500 max-w-xl leading-relaxed mt-2">
-            Explore how we build sub-second WordPress stores, scale multi-tenant SaaS web apps, and deploy autonomous GoHighLevel + AI pipelines that generate real revenue.
+          <p class="text-base text-base text-gray-500 max-w-xl leading-relaxed mt-2">
+            Explore websites, storefronts and business platforms across different industries. See the project details and visit the live sites.
           </p>
         </div>
 
         <div data-anim="fade-up" data-delay="1" class="flex flex-col sm:flex-row sm:items-center gap-3">
           <a href="portfolio.html"
             class="btn-purple magnetic-btn text-white text-xs font-semibold px-5 py-3 rounded-full inline-flex items-center justify-center gap-2 shadow-md">
-            <span>Explore All 12+ Projects</span>
-            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            <span>View the portfolio</span>
+
           </a>
         </div>
       </div>
@@ -1325,8 +723,9 @@
       <div id="portfolioGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- Case 1: Debt Recovery Hub (UK B2B Portal) -->
-        <div data-anim="fade-up" data-delay="1" data-category="fullstack"
+        <div data-category="fullstack"
           class="portfolio-card bg-white rounded-3xl border border-purple-100 p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+          <div class="case-art case-art-0" aria-hidden="true"><span>DRH</span><div class="case-art-shape"></div></div>
           <div class="h-1.5 w-full bg-gradient-to-r from-blue-600 to-indigo-600 absolute top-0 left-0"></div>
           <div>
             <div class="flex items-center justify-between gap-2 mb-3.5">
@@ -1342,15 +741,15 @@
               Debt Recovery Hub
             </h3>
             <span class="text-xs text-gray-400 font-medium block mb-2.5">B2B Commercial Recovery Platform • UK</span>
-            <p class="text-xs text-gray-500 leading-relaxed mb-4">
+            <p class="text-base text-gray-500 leading-relaxed mb-4">
               Custom enquiry matching engine connecting UK businesses with independent recovery agencies through multi-criteria debt evaluation and automated partner triage.
             </p>
 
             <!-- Metrics Pill Box -->
             <div class="bg-gray-50 rounded-2xl p-3 border border-gray-100 mb-4 grid grid-cols-2 gap-2 text-center">
               <div>
-                <span class="block font-display font-extrabold text-sm text-gray-900">-75%</span>
-                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Intake Triage Time</span>
+                <span class="block font-display font-extrabold text-sm text-gray-900">Lead intake</span>
+                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Enquiry workflow</span>
               </div>
               <div class="border-l border-gray-200">
                 <span class="block font-display font-extrabold text-sm text-emerald-600">100%</span>
@@ -1379,8 +778,9 @@
         </div>
 
         <!-- Case 2: Zero Through (London Cyber Security) -->
-        <div data-anim="fade-up" data-delay="2" data-category="fullstack"
+        <div data-category="fullstack"
           class="portfolio-card bg-white rounded-3xl border border-purple-100 p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+          <div class="case-art case-art-1" aria-hidden="true"><span>ZERO</span><div class="case-art-shape"></div></div>
           <div class="h-1.5 w-full bg-gradient-to-r from-purple-600 to-indigo-700 absolute top-0 left-0"></div>
           <div>
             <div class="flex items-center justify-between gap-2 mb-3.5">
@@ -1396,17 +796,17 @@
               Zero Through Consultancy
             </h3>
             <span class="text-xs text-gray-400 font-medium block mb-2.5">Global IT &amp; Cyber Security • London, UK</span>
-            <p class="text-xs text-gray-500 leading-relaxed mb-4">
+            <p class="text-base text-gray-500 leading-relaxed mb-4">
               High-performance corporate platform presenting enterprise SIEM/SOC services, penetration testing, and MDR solutions to UK &amp; European enterprise clients.
             </p>
 
             <div class="bg-gray-50 rounded-2xl p-3 border border-gray-100 mb-4 grid grid-cols-2 gap-2 text-center">
               <div>
-                <span class="block font-display font-extrabold text-sm text-emerald-600">&lt;0.8s</span>
-                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Page Load Speed</span>
+                <span class="block font-display font-extrabold text-sm text-emerald-600">Responsive</span>
+                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Website design</span>
               </div>
               <div class="border-l border-gray-200">
-                <span class="block font-display font-extrabold text-sm text-gray-900">100 / 100</span>
+                <span class="block font-display font-extrabold text-sm text-gray-900">Structured</span>
                 <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Core Web Vitals</span>
               </div>
             </div>
@@ -1431,8 +831,9 @@
         </div>
 
         <!-- Case 3: ClaimFirst (UK Legal Lead Funnel) -->
-        <div data-anim="fade-up" data-delay="3" data-category="ghl"
+        <div data-category="ghl"
           class="portfolio-card bg-white rounded-3xl border border-purple-100 p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+          <div class="case-art case-art-2" aria-hidden="true"><span>CLAIM</span><div class="case-art-shape"></div></div>
           <div class="h-1.5 w-full bg-gradient-to-r from-amber-500 to-orange-500 absolute top-0 left-0"></div>
           <div>
             <div class="flex items-center justify-between gap-2 mb-3.5">
@@ -1448,14 +849,14 @@
               ClaimFirst Car Finance Funnel
             </h3>
             <span class="text-xs text-gray-400 font-medium block mb-2.5">Legal Claims &amp; Motor Finance • UK</span>
-            <p class="text-xs text-gray-500 leading-relaxed mb-4">
+            <p class="text-base text-gray-500 leading-relaxed mb-4">
               Multi-step eligibility funnel processing PCP/HP mis-sold car finance claims with real-time lender validation, signature capture, and automated CRM intake.
             </p>
 
             <div class="bg-gray-50 rounded-2xl p-3 border border-gray-100 mb-4 grid grid-cols-2 gap-2 text-center">
               <div>
-                <span class="block font-display font-extrabold text-sm text-amber-600">+48%</span>
-                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Funnel Completion</span>
+                <span class="block font-display font-extrabold text-sm text-amber-600">Multi-step</span>
+                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Enquiry form</span>
               </div>
               <div class="border-l border-gray-200">
                 <span class="block font-display font-extrabold text-sm text-gray-900">Real-Time</span>
@@ -1483,8 +884,9 @@
         </div>
 
         <!-- Case 4: NeoLav Australia (Industrial Sanitation) -->
-        <div data-anim="fade-up" data-delay="1" data-category="wordpress"
+        <div data-category="wordpress"
           class="portfolio-card bg-white rounded-3xl border border-purple-100 p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+          <div class="case-art case-art-3" aria-hidden="true"><span>NEOLAV</span><div class="case-art-shape"></div></div>
           <div class="h-1.5 w-full bg-gradient-to-r from-teal-500 to-emerald-600 absolute top-0 left-0"></div>
           <div>
             <div class="flex items-center justify-between gap-2 mb-3.5">
@@ -1500,7 +902,7 @@
               NeoLav Australia
             </h3>
             <span class="text-xs text-gray-400 font-medium block mb-2.5">Industrial Infrastructure • Western Australia</span>
-            <p class="text-xs text-gray-500 leading-relaxed mb-4">
+            <p class="text-base text-gray-500 leading-relaxed mb-4">
               Modern commercial quotation portal showcasing portable sanitation infrastructure, mobile showers, and industrial trailers for mining and event procurement.
             </p>
 
@@ -1535,8 +937,9 @@
         </div>
 
         <!-- Case 5: L'Atelier Shu (Canada Bilingual Clinic) -->
-        <div data-anim="fade-up" data-delay="2" data-category="wordpress"
+        <div data-category="wordpress"
           class="portfolio-card bg-white rounded-3xl border border-purple-100 p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+          <div class="case-art case-art-4" aria-hidden="true"><span>SHU</span><div class="case-art-shape"></div></div>
           <div class="h-1.5 w-full bg-gradient-to-r from-rose-500 to-pink-600 absolute top-0 left-0"></div>
           <div>
             <div class="flex items-center justify-between gap-2 mb-3.5">
@@ -1552,7 +955,7 @@
               L'Atelier Shu &amp; Co
             </h3>
             <span class="text-xs text-gray-400 font-medium block mb-2.5">Aesthetic Studio &amp; Treatments • Canada</span>
-            <p class="text-xs text-gray-500 leading-relaxed mb-4">
+            <p class="text-base text-gray-500 leading-relaxed mb-4">
               High-end bilingual (French/English) studio web presence for laser and body contouring treatments, featuring treatment menus and online consultation booking.
             </p>
 
@@ -1587,8 +990,9 @@
         </div>
 
         <!-- Case 6: Globaro Shop (E-Commerce Storefront) -->
-        <div data-anim="fade-up" data-delay="3" data-category="wordpress"
+        <div data-category="wordpress"
           class="portfolio-card bg-white rounded-3xl border border-purple-100 p-6 flex flex-col justify-between shadow-sm relative overflow-hidden group">
+          <div class="case-art case-art-5" aria-hidden="true"><span>GLOBARO</span><div class="case-art-shape"></div></div>
           <div class="h-1.5 w-full bg-gradient-to-r from-violet-600 to-purple-600 absolute top-0 left-0"></div>
           <div>
             <div class="flex items-center justify-between gap-2 mb-3.5">
@@ -1604,14 +1008,14 @@
               Globaro Online Store
             </h3>
             <span class="text-xs text-gray-400 font-medium block mb-2.5">Global Retail &amp; Consumer Products</span>
-            <p class="text-xs text-gray-500 leading-relaxed mb-4">
+            <p class="text-base text-gray-500 leading-relaxed mb-4">
               Lightweight mobile-first online storefront built for rapid product browsing, asset-optimized imagery, and seamless single-page checkout flow.
             </p>
 
             <div class="bg-gray-50 rounded-2xl p-3 border border-gray-100 mb-4 grid grid-cols-2 gap-2 text-center">
               <div>
-                <span class="block font-display font-extrabold text-sm text-emerald-600">&lt;1.0s</span>
-                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Mobile Load Time</span>
+                <span class="block font-display font-extrabold text-sm text-emerald-600">Mobile</span>
+                <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Storefront design</span>
               </div>
               <div class="border-l border-gray-200">
                 <span class="block font-display font-extrabold text-sm text-gray-900">Global</span>
@@ -1653,8 +1057,8 @@
           <h3 class="font-display font-extrabold text-xl sm:text-2xl text-white">
             Need a high-impact platform or workflow built?
           </h3>
-          <p class="text-xs text-purple-200/80 max-w-lg">
-            Browse our full 12+ client portfolio or calculate your exact scope and investment in 30 seconds.
+          <p class="text-base text-purple-200/80 max-w-lg">
+            Explore our projects or use the estimator to plan an initial budget.
           </p>
         </div>
 
@@ -1693,8 +1097,8 @@
           <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-gray-900 tracking-tight">
             Interactive Project Price Estimator
           </h2>
-          <p class="text-xs sm:text-sm text-gray-600 mt-2 max-w-xl leading-relaxed">
-            Choose your project type, toggle the features you need, and see an estimated range with realistic timelines. Every project is fixed-price and paid in milestones.
+          <p class="text-base text-base text-gray-600 mt-2 max-w-xl leading-relaxed">
+            Choose a project type and the features you need to explore a starting budget. Your final quote and delivery dates are confirmed after we review the scope.
           </p>
         </div>
 
@@ -1952,7 +1356,7 @@
                 <span class="text-emerald-400 font-bold">±10% ESTIMATE</span>
               </div>
               <h3 id="summaryTrackTitle" class="font-display font-extrabold text-xl text-white">Starter SaaS MVP</h3>
-              <p class="text-xs text-purple-200/80 mt-1">Based on selected architecture &amp; feature set</p>
+              <p class="text-base text-purple-200/80 mt-1">Based on selected architecture &amp; feature set</p>
             </div>
 
             <!-- Big Investment Range -->
@@ -1993,7 +1397,7 @@
               <button type="button" onclick="applyEstimateToContact()"
                 class="w-full btn-purple magnetic-btn text-white font-display font-bold text-xs sm:text-sm py-4 px-6 rounded-full shadow-glow flex items-center justify-center gap-2">
                 <span>Book a Scoping Call With This Estimate</span>
-                <i class="fa-solid fa-arrow-right"></i>
+
               </button>
               <div class="flex items-center justify-between text-[11px] text-purple-300 px-1">
                 <button type="button" onclick="resetEstimator()" class="hover:text-white underline transition">
@@ -2017,181 +1421,7 @@
        9. CLIENT TESTIMONIALS & PRODUCTION FEEDBACK
        (Verified Client Project Feedback - No Stock Photos per Developer Brief Page 2 & 3)
        ========================================== -->
-  <section class="py-16 lg:py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <!-- Header -->
-      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
-        <div>
-          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[10px] font-bold uppercase tracking-widest mb-3">
-            <i class="fa-solid fa-circle-check text-xs"></i>
-            <span>VERIFIED PRODUCTION FEEDBACK</span>
-          </div>
-          <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-gray-900 tracking-tight">What Founders &amp; Partners Say</h2>
-          <p class="text-xs sm:text-sm text-gray-600 mt-2 max-w-lg">
-            Real feedback from clients and partner agencies whose production platforms and automation pipelines we engineered.
-          </p>
-        </div>
-        <div class="flex items-center gap-3">
-          <a href="portfolio.html"
-            class="px-4 py-2 rounded-full border border-purple-200 hover:border-brand-600 text-xs font-semibold text-gray-700 hover:text-brand-600 inline-flex items-center gap-1.5 transition bg-purple-50/50">
-            <span>Explore All Production Work</span>
-            <i class="fa-solid fa-arrow-right text-[10px]"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- 3 Testimonial Cards (Verified Production Attributions) -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-
-        <!-- Review 1: Debt Recovery Hub -->
-        <div data-anim="fade-up" data-delay="1"
-          class="rounded-3xl bg-[#faf8ff] border border-purple-100 p-6 sm:p-7 flex flex-col justify-between shadow-card hover:shadow-xl transition">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <div class="flex items-center gap-1 text-amber-400 text-xs">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              </div>
-              <span class="text-[10px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                Verified Platform
-              </span>
-            </div>
-            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-6 italic">
-              "Yankee Tech took our manual debt intake operations and turned them into a seamless, 100% paperless platform. Their senior Laravel &amp; Next.js execution exceeded our expectations on speed and reliability."
-            </p>
-          </div>
-          <div class="flex items-center justify-between pt-4 border-t border-purple-100">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 font-display font-extrabold text-sm flex items-center justify-center border border-purple-200">
-                DR
-              </div>
-              <div>
-                <div class="font-display font-bold text-xs text-gray-900">Debt Recovery Hub</div>
-                <div class="text-[10px] text-gray-500">Commercial Claims Platform • UK</div>
-              </div>
-            </div>
-            <a href="https://debtrecoveryhub.org/" target="_blank" rel="noopener noreferrer"
-              class="text-gray-400 hover:text-brand-600 transition" aria-label="Visit client website">
-              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Review 2: Zero Through -->
-        <div data-anim="fade-up" data-delay="2"
-          class="rounded-3xl bg-[#faf8ff] border border-purple-100 p-6 sm:p-7 flex flex-col justify-between shadow-card hover:shadow-xl transition">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <div class="flex items-center gap-1 text-amber-400 text-xs">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              </div>
-              <span class="text-[10px] font-mono font-bold text-sky-700 bg-sky-50 px-2 py-0.5 rounded-full border border-sky-200">
-                Cybersecurity Client
-              </span>
-            </div>
-            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-6 italic">
-              "In the IT security industry, speed and security headers are non-negotiable. Yankee Tech built our digital infrastructure with 98+ PageSpeed, zero bloat, and enterprise-grade precision."
-            </p>
-          </div>
-          <div class="flex items-center justify-between pt-4 border-t border-purple-100">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-700 font-display font-extrabold text-sm flex items-center justify-center border border-sky-200">
-                ZT
-              </div>
-              <div>
-                <div class="font-display font-bold text-xs text-gray-900">Zero Through</div>
-                <div class="text-[10px] text-gray-500">IT &amp; Cyber Security • London, UK</div>
-              </div>
-            </div>
-            <a href="https://zerothrough.co.uk/" target="_blank" rel="noopener noreferrer"
-              class="text-gray-400 hover:text-brand-600 transition" aria-label="Visit client website">
-              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Review 3: ClaimFirst Funnels -->
-        <div data-anim="fade-up" data-delay="3"
-          class="rounded-3xl bg-[#faf8ff] border border-purple-100 p-6 sm:p-7 flex flex-col justify-between shadow-card hover:shadow-xl transition">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <div class="flex items-center gap-1 text-amber-400 text-xs">
-                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                  class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              </div>
-              <span class="text-[10px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
-                GHL CRM Automation
-              </span>
-            </div>
-            <p class="text-xs sm:text-sm text-gray-700 leading-relaxed mb-6 italic">
-              "Their 2-way GoHighLevel webhook and dynamic vehicle claims calculator handles thousands of paid ad clicks daily without any desync or dropped leads. Easily the best engineering investment we made."
-            </p>
-          </div>
-          <div class="flex items-center justify-between pt-4 border-t border-purple-100">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 font-display font-extrabold text-sm flex items-center justify-center border border-emerald-200">
-                CF
-              </div>
-              <div>
-                <div class="font-display font-bold text-xs text-gray-900">ClaimFirst Claims</div>
-                <div class="text-[10px] text-gray-500">Automated Funnels • United Kingdom</div>
-              </div>
-            </div>
-            <a href="https://mis-sold-car-finance.claimfirst.co.uk/home/" target="_blank" rel="noopener noreferrer"
-              class="text-gray-400 hover:text-brand-600 transition" aria-label="Visit client website">
-              <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- ==========================================
-             10. SOME OF THE PLATFORMS WE WORK WITH
-             ========================================== -->
-        <div class="mt-16 pt-8 border-t border-gray-100">
-          <p class="text-center text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500 mb-6">
-            SOME OF THE PLATFORMS &amp; APIS WE INTEGRATE WITH
-          </p>
-          <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
-            <!-- Google -->
-            <span class="font-display font-bold text-lg tracking-tight">
-              <span class="text-blue-500">G</span><span class="text-red-500">o</span><span
-                class="text-amber-500">o</span><span class="text-blue-500">g</span><span
-                class="text-emerald-500">l</span><span class="text-red-500">e</span>
-            </span>
-            <!-- AWS / Amazon -->
-            <span class="font-display font-extrabold text-lg text-gray-800 flex items-center gap-1">
-              <span>aws</span>
-              <i class="fa-brands fa-aws text-amber-500 text-base"></i>
-            </span>
-            <!-- Meta -->
-            <span class="font-display font-bold text-lg text-gray-800 flex items-center gap-1.5">
-              <i class="fa-brands fa-meta text-blue-600"></i>
-              <span>Meta</span>
-            </span>
-            <!-- HubSpot -->
-            <span class="font-display font-extrabold text-lg text-gray-800 flex items-center gap-1">
-              <i class="fa-brands fa-hubspot text-[#ff7a59] text-xl"></i><span>HubSpot</span>
-            </span>
-            <!-- Stripe -->
-            <span class="font-display font-extrabold text-xl text-[#635bff] tracking-tight">stripe</span>
-            <!-- PayPal -->
-            <span class="font-display font-extrabold text-lg text-[#003087] flex items-center gap-1">
-              <i class="fa-brands fa-paypal text-[#0079C1]"></i>
-              <span>PayPal</span>
-            </span>
-            <!-- Zapier / n8n -->
-            <span class="font-display font-extrabold text-lg text-gray-800 flex items-center gap-1.5">
-              <span class="w-2.5 h-2.5 rounded-full bg-[#ff4a00]"></span>
-              <span>Zapier &amp; n8n</span>
-            </span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
 
   <!-- ==========================================
        11. CURVED DARK CONTACT SECTION
@@ -2229,12 +1459,10 @@
           <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-purple-300 block">LET'S WORK
             TOGETHER</span>
           <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white leading-tight">
-            Bring Your Ideas to Life<br />
-            With Yankee Tech
+            What would you like<br />to build next?
           </h2>
-          <p class="text-xs sm:text-sm text-purple-200/80 leading-relaxed max-w-md">
-            Whether you need a custom Full-Stack application, a high-speed WordPress website, or GoHighLevel &amp; AI
-            workflow automation, our engineering team is ready to help you scale.
+          <p class="text-base text-base text-purple-200/80 leading-relaxed max-w-md">
+            Tell us what you are building, who it is for and where you need help. Start with your project type and we will help you define the next steps.
           </p>
 
           <ul class="space-y-3 pt-2 text-xs sm:text-sm text-purple-100">
@@ -2254,7 +1482,7 @@
               <span class="w-5 h-5 rounded-full bg-brand-500 text-white flex items-center justify-center text-[10px]">
                 <i class="fa-solid fa-check"></i>
               </span>
-              <span>24/7 Ongoing DevOps &amp; Workflow Support</span>
+              <span>Post-launch support and handover</span>
             </li>
           </ul>
         </div>
@@ -2263,7 +1491,7 @@
         <div data-anim="fade-left" class="lg:col-span-7">
           <div
             class="bg-white text-gray-900 rounded-3xl p-6 sm:p-8 shadow-2xl border border-purple-100 max-w-2xl lg:ml-auto">
-            
+
             <!-- Header & Step Indicator -->
             <div class="mb-5 pb-5 border-b border-purple-100">
               <div class="flex items-center justify-between gap-2 mb-1">
@@ -2271,7 +1499,7 @@
                 <span class="text-[11px] font-mono font-bold text-gray-400">Step <span id="currentStepNumberDisplay">1</span> of 4</span>
               </div>
               <h3 class="font-display font-bold text-xl text-gray-900">Start Your Project Journey</h3>
-              <p class="text-xs text-gray-500 mt-0.5">Answer 4 quick questions for an architectural scope &amp; instant quote.</p>
+              <p class="text-base text-gray-500 mt-0.5">Share your goals, scope and preferred timeline.</p>
 
               <!-- Progress Bar -->
               <div class="mt-4">
@@ -2519,26 +1747,26 @@
                   <div>
                     <label class="block text-[11px] font-semibold text-gray-700 mb-1">Your Full Name *</label>
                     <input type="text" id="msName" required placeholder="Alex Mitchell"
-                      class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-xs text-gray-900 focus:outline-none focus:border-brand-500 focus:bg-white transition" />
+                      class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-base text-gray-900 focus:outline-none focus:border-brand-500 focus:bg-white transition" />
                   </div>
                   <div>
                     <label class="block text-[11px] font-semibold text-gray-700 mb-1">Work Email *</label>
                     <input type="email" id="msEmail" required placeholder="alex@company.com"
-                      class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-xs text-gray-900 focus:outline-none focus:border-brand-500 focus:bg-white transition" />
+                      class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-base text-gray-900 focus:outline-none focus:border-brand-500 focus:bg-white transition" />
                   </div>
                 </div>
 
                 <div>
                   <label class="block text-[11px] font-semibold text-gray-700 mb-1">WhatsApp / Phone Number</label>
                   <input type="tel" id="msPhone" placeholder="+1 (555) 000-0000"
-                    class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-xs text-gray-900 focus:outline-none focus:border-brand-500 focus:bg-white transition" />
+                    class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-base text-gray-900 focus:outline-none focus:border-brand-500 focus:bg-white transition" />
                 </div>
 
                 <div>
                   <label class="block text-[11px] font-semibold text-gray-700 mb-1">Project Notes &amp; Specific Requirements</label>
                   <textarea id="msNotes" rows="3"
                     placeholder="Tell us about your current stack, pain points, or specific custom integrations needed..."
-                    class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-xs text-gray-900 focus:outline-none focus:border-brand-500 focus:bg-white transition"></textarea>
+                    class="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-base text-gray-900 focus:outline-none focus:border-brand-500 focus:bg-white transition"></textarea>
                 </div>
               </div>
 
@@ -2554,7 +1782,7 @@
                   <button type="button" id="multiStepNextBtn" onclick="nextMultiStep()"
                     class="btn-purple magnetic-btn text-white text-xs font-semibold px-6 py-2.5 rounded-full inline-flex items-center gap-2 shadow-md">
                     <span>Continue to Next Step</span>
-                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
                   </button>
 
                   <button type="submit" id="multiStepSubmitBtn"
@@ -2574,7 +1802,7 @@
               </div>
               <div class="space-y-1">
                 <h4 class="font-display font-extrabold text-xl text-gray-900">Project Brief Received!</h4>
-                <p class="text-xs text-gray-500 max-w-sm mx-auto">
+                <p class="text-base text-gray-500 max-w-sm mx-auto">
                   We have locked in your project parameters. A senior solutions architect will contact you within 24 hours.
                 </p>
               </div>
@@ -2632,7 +1860,7 @@
             <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-gray-900 tracking-tight">
               Frequently Asked Questions
             </h2>
-            <p class="text-xs sm:text-sm text-gray-600 mt-3 max-w-sm leading-relaxed">
+            <p class="text-base text-base text-gray-600 mt-3 max-w-sm leading-relaxed">
               Everything you need to know about pricing, milestone delivery, code ownership, tech stack, and post-launch support.
             </p>
           </div>
@@ -2650,7 +1878,7 @@
             <a href="#contact"
               class="w-full btn-purple magnetic-btn text-white text-xs font-semibold py-3 px-5 rounded-full inline-flex items-center justify-center gap-2 shadow-sm">
               <span>Book a Free Technical Consultation</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
             </a>
           </div>
         </div>
@@ -2779,7 +2007,7 @@
             <span>ENGINEERING &amp; ARCHITECTURE GUIDES</span>
           </div>
           <h2 class="font-display font-extrabold text-2xl sm:text-4xl text-gray-900 tracking-tight">Latest Articles &amp; Insights</h2>
-          <p class="text-xs sm:text-sm text-gray-600 mt-2 max-w-lg">
+          <p class="text-base text-base text-gray-600 mt-2 max-w-lg">
             Practical engineering playbooks on SaaS MVP budgeting, GoHighLevel API integrations, and modern full-stack architectures.
           </p>
         </div>
@@ -2787,7 +2015,7 @@
           <a href="blog-hire-dedicated-developer.html"
             class="px-4 py-2 rounded-full border border-purple-200 hover:border-brand-600 text-xs font-semibold text-gray-700 hover:text-brand-600 inline-flex items-center gap-1.5 transition bg-purple-50/50">
             <span>Hiring Guide: Dedicated Developers</span>
-            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
           </a>
         </div>
       </div>
@@ -2804,7 +2032,7 @@
                 <span class="text-[10px] font-bold uppercase tracking-widest text-purple-200 bg-white/10 px-2.5 py-1 rounded-full">
                   SAAS &amp; FULL-STACK
                 </span>
-                <span class="text-xs text-purple-300 font-mono">6 min read</span>
+                <span class="text-xs text-purple-300 font-mono">3 min read</span>
               </div>
               <div class="z-10">
                 <i class="fa-solid fa-calculator text-3xl text-purple-400 group-hover:scale-110 transition duration-300"></i>
@@ -2812,10 +2040,10 @@
             </div>
             <div class="p-6">
               <h3 class="font-display font-bold text-base sm:text-lg text-gray-900 leading-snug mb-3 group-hover:text-brand-600 transition">
-                <a href="blog-saas-mvp-cost.html">How Much Does It Cost to Build a SaaS MVP in 2026?</a>
+                <a href="blog-saas-mvp-cost.html">Planning Your SaaS MVP Budget</a>
               </h3>
-              <p class="text-xs text-gray-600 leading-relaxed mb-4">
-                A realistic breakdown of SaaS MVP development costs in 2026. From scoping and architecture to auth, Stripe billing, and post-launch maintenance.
+              <p class="text-base text-gray-600 leading-relaxed mb-4">
+                Define your first release, understand the starting budget and plan the handover.
               </p>
             </div>
           </div>
@@ -2824,7 +2052,7 @@
             <a href="blog-saas-mvp-cost.html"
               class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 group-hover:gap-2.5 transition-all">
               <span>Read Full Article</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
             </a>
           </div>
         </article>
@@ -2838,7 +2066,7 @@
                 <span class="text-[10px] font-bold uppercase tracking-widest text-sky-200 bg-white/10 px-2.5 py-1 rounded-full">
                   GHL &amp; INTEGRATIONS
                 </span>
-                <span class="text-xs text-sky-300 font-mono">8 min read</span>
+                <span class="text-xs text-sky-300 font-mono">3 min read</span>
               </div>
               <div class="z-10">
                 <i class="fa-solid fa-plug-circle-bolt text-3xl text-sky-400 group-hover:scale-110 transition duration-300"></i>
@@ -2846,10 +2074,10 @@
             </div>
             <div class="p-6">
               <h3 class="font-display font-bold text-base sm:text-lg text-gray-900 leading-snug mb-3 group-hover:text-brand-600 transition">
-                <a href="blog-gohighlevel-api.html">How to Connect GoHighLevel to Your App or Website via API</a>
+                <a href="blog-gohighlevel-api.html">Planning a GoHighLevel Integration</a>
               </h3>
-              <p class="text-xs text-gray-600 leading-relaxed mb-4">
-                A complete developer guide to connecting GoHighLevel using the GHL API v2, OAuth2 token rotation, and bidirectional webhooks.
+              <p class="text-base text-gray-600 leading-relaxed mb-4">
+                Map your data, plan for failures and scope a connection between your website and CRM.
               </p>
             </div>
           </div>
@@ -2858,7 +2086,7 @@
             <a href="blog-gohighlevel-api.html"
               class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 group-hover:gap-2.5 transition-all">
               <span>Read Full Article</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
             </a>
           </div>
         </article>
@@ -2872,7 +2100,7 @@
                 <span class="text-[10px] font-bold uppercase tracking-widest text-rose-200 bg-white/10 px-2.5 py-1 rounded-full">
                   ARCHITECTURE &amp; TECH
                 </span>
-                <span class="text-xs text-rose-300 font-mono">7 min read</span>
+                <span class="text-xs text-rose-300 font-mono">3 min read</span>
               </div>
               <div class="z-10">
                 <i class="fa-brands fa-laravel text-3xl text-red-400 group-hover:scale-110 transition duration-300"></i>
@@ -2880,10 +2108,10 @@
             </div>
             <div class="p-6">
               <h3 class="font-display font-bold text-base sm:text-lg text-gray-900 leading-snug mb-3 group-hover:text-brand-600 transition">
-                <a href="blog-laravel-vs-nodejs.html">Laravel vs Node.js for Custom Business Applications in 2026</a>
+                <a href="blog-laravel-vs-nodejs.html">Laravel or Node.js for Your Business Application?</a>
               </h3>
-              <p class="text-xs text-gray-600 leading-relaxed mb-4">
-                An honest, hype-free comparison between Laravel 11 and Node.js for startups and growing businesses. Speed, costs, and scalability.
+              <p class="text-base text-gray-600 leading-relaxed mb-4">
+                Consider your workflows, existing stack and maintenance needs before choosing a backend.
               </p>
             </div>
           </div>
@@ -2892,7 +2120,7 @@
             <a href="blog-laravel-vs-nodejs.html"
               class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 group-hover:gap-2.5 transition-all">
               <span>Read Full Article</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
             </a>
           </div>
         </article>
@@ -2904,6 +2132,7 @@
   <!-- ==========================================
        14. DARK COSMIC FOOTER (Exact Mockup Match)
        ========================================== -->
+  </main>
   <footer class="dark-cosmic-bg text-white pt-16 pb-10 rounded-t-[36px] relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
@@ -2921,7 +2150,7 @@
                 Possibilities</span>
             </div>
           </div>
-          <p class="text-xs text-purple-200/70 leading-relaxed max-w-xs">
+          <p class="text-base text-purple-200/70 leading-relaxed max-w-xs">
             Building high-performing full-stack websites, automating business operations with AI, and integrating
             GoHighLevel &amp; WordPress ecosystems worldwide.
           </p>
@@ -2972,10 +2201,10 @@
         <!-- Col 4: Newsletter (3 cols) -->
         <div class="lg:col-span-3 space-y-3">
           <h4 class="font-display font-bold text-xs uppercase tracking-wider text-white">Newsletter</h4>
-          <p class="text-xs text-purple-200/75">Get the latest web engineering, GHL &amp; AI automation insights.</p>
+          <p class="text-base text-purple-200/75">Get the latest web engineering, GHL &amp; AI automation insights.</p>
           <form onsubmit="handleNewsletter(event)" class="space-y-2.5 pt-1">
             <input id="newsletterEmail" type="email" required placeholder="Your Email"
-              class="w-full px-4 py-2.5 rounded-xl bg-white text-gray-900 text-xs focus:outline-none" />
+              class="w-full px-4 py-2.5 rounded-xl bg-white text-gray-900 text-base focus:outline-none" />
             <button type="submit"
               class="w-full btn-purple text-white text-xs font-semibold py-2.5 px-5 rounded-xl inline-flex items-center justify-center gap-2">
               <span id="newsletterBtnText">Subscribe →</span>
@@ -3005,7 +2234,8 @@
   </footer>
 
   <!-- Main JavaScript -->
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
+  <script src="motion.js" defer></script>
 </body>
 
 </html>

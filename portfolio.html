@@ -19,7 +19,7 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <!-- Main JavaScript -->
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -32,211 +32,34 @@
   <!-- ==========================================
        1. STICKY HEADER / NAVBAR
        ========================================== -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-purple-100/80 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
-      <!-- Brand Logo (YT Yankee Tech - Infinite Possibilities) -->
-      <a href="index.html#home" class="flex items-center gap-3 group shrink-0">
-        <div
-          class="w-10 h-10 rounded-xl bg-[#120924] flex items-center justify-center shadow-md border border-purple-500/30 group-hover:border-purple-500 transition">
-          <span
-            class="font-display font-extrabold text-lg tracking-tighter bg-gradient-to-tr from-purple-400 via-fuchsia-400 to-indigo-300 bg-clip-text text-transparent">YT</span>
-        </div>
-        <div class="leading-none">
-          <span class="block font-display font-extrabold text-lg text-gray-900 tracking-tight">Yankee Tech</span>
-          <span class="block text-[10px] font-medium text-gray-400 tracking-wider uppercase mt-0.5">Infinite Possibilities</span>
-        </div>
-      </a>
-
-      <!-- Center Nav Links -->
-      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold text-gray-700">
-        <!-- 1. Home -->
-        <a href="index.html#home" class="hover:text-brand-600 transition py-2">Home</a>
-
-        <!-- 2. About Us -->
-        <a href="about.html" class="hover:text-brand-600 transition py-2">About Us</a>
-
-        <!-- 3. Services with Mega Menu -->
-        <div class="group/mega py-6">
-          <a href="services.html"
-            class="flex items-center gap-1.5 py-2 hover:text-brand-600 transition group-hover/mega:text-brand-600">
-            <span>Services</span>
-            <i class="fa-solid fa-chevron-down text-[9px] text-gray-400 group-hover/mega:text-brand-600 group-hover/mega:rotate-180 transition-transform duration-300"></i>
-          </a>
-
-          <!-- Bento Mega Menu Dropdown -->
-          <div
-            class="absolute left-1/2 -translate-x-1/2 top-full w-full max-w-5xl px-4 sm:px-6 pointer-events-none opacity-0 invisible -translate-y-2 group-hover/mega:pointer-events-auto group-hover/mega:opacity-100 group-hover/mega:visible group-hover/mega:translate-y-0 transition-all duration-300 ease-out z-50">
-            <div
-              class="bg-white/95 backdrop-blur-2xl border border-purple-100/90 shadow-[0_25px_60px_-15px_rgba(91,12,212,0.18)] rounded-3xl p-6 lg:p-7 overflow-hidden ring-1 ring-purple-500/10">
-
-              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-                <!-- Col 1: Web & Platforms -->
-                <div class="lg:col-span-5 space-y-3">
-                  <div class="flex items-center justify-between pb-2 border-b border-purple-100">
-                    <span class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-600 flex items-center gap-1.5">
-                      <i class="fa-solid fa-code text-xs"></i>
-                      <span>WEB &amp; PLATFORM DEV</span>
-                    </span>
-                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest font-mono">CORE 01</span>
-                  </div>
-                  <div class="space-y-1">
-                    <a href="service-wordpress.html"
-                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brand-600 group-hover/item:text-white transition">
-                        <i class="fa-brands fa-wordpress"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <h4 class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition">WordPress &amp; WooCommerce</h4>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">Custom themes, Elementor, high speed &amp; checkouts.</p>
-                      </div>
-                    </a>
-                    <a href="service-laravel-react.html"
-                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brand-600 group-hover/item:text-white transition">
-                        <i class="fa-brands fa-laravel"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <h4 class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition">Full-Stack Laravel &amp; React</h4>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">Scalable bespoke SaaS apps &amp; RESTful APIs.</p>
-                      </div>
-                    </a>
-                    <a href="service-woocommerce-stripe.html"
-                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brand-600 group-hover/item:text-white transition">
-                        <i class="fa-brands fa-stripe"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <h4 class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition">WooCommerce &amp; Stripe</h4>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">Sub-second conversion-first checkouts.</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <!-- Col 2: Automation & AI -->
-                <div class="lg:col-span-4 space-y-3">
-                  <div class="flex items-center justify-between pb-2 border-b border-purple-100">
-                    <span class="text-[10px] font-extrabold uppercase tracking-[0.16em] text-brand-600 flex items-center gap-1.5">
-                      <i class="fa-solid fa-bolt text-xs"></i>
-                      <span>AUTOMATION &amp; AI</span>
-                    </span>
-                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest font-mono">SCALE 02</span>
-                  </div>
-                  <div class="space-y-1">
-                    <a href="service-ghl-funnels.html"
-                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brand-600 group-hover/item:text-white transition">
-                        <i class="fa-solid fa-filter-circle-dollar"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <h4 class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition">GoHighLevel (GHL) Setup</h4>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">Pipelines, automations &amp; snapshots.</p>
-                      </div>
-                    </a>
-                    <a href="service-ai-chatbots.html"
-                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brand-600 group-hover/item:text-white transition">
-                        <i class="fa-solid fa-brain"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <h4 class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition">AI Agents &amp; Chatbots</h4>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">OpenAI RAG bots &amp; autonomous voice booking.</p>
-                      </div>
-                    </a>
-                    <a href="service-ghl-wordpress-sync.html"
-                      class="group/item flex items-start gap-3 p-2.5 rounded-2xl hover:bg-purple-50/80 border border-transparent hover:border-purple-200/70 transition">
-                      <div class="w-9 h-9 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-sm shrink-0 group-hover/item:bg-brand-600 group-hover/item:text-white transition">
-                        <i class="fa-solid fa-arrows-rotate"></i>
-                      </div>
-                      <div class="flex-1 min-w-0">
-                        <h4 class="font-display font-bold text-xs text-gray-900 group-hover/item:text-brand-600 transition">GHL + WordPress Sync</h4>
-                        <p class="text-[11px] text-gray-500 leading-snug mt-0.5">Real-time webhook sync &amp; SSO.</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-
-                <!-- Col 3: Spotlight Card -->
-                <div
-                  class="lg:col-span-3 rounded-2xl bg-gradient-to-br from-[#120727] via-[#1a083a] to-[#2b0c57] text-white p-5 border border-purple-500/30 flex flex-col justify-between relative overflow-hidden shadow-xl">
-                  <div>
-                    <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-brand-500/25 border border-brand-400/40 text-[9px] font-bold uppercase tracking-wider text-purple-200 mb-3">
-                      <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Live Estimator
-                    </span>
-                    <h4 class="font-display font-extrabold text-sm text-white">Instant Price Calculator</h4>
-                    <p class="text-[11px] text-purple-200/75 mt-1.5">
-                      Calculate your project pages, workflows &amp; AI add-ons in 30 seconds.
-                    </p>
-                  </div>
-                  <div class="mt-4 pt-3 border-t border-white/10">
-                    <a href="index.html#estimator"
-                      class="w-full btn-purple text-white text-[11px] font-bold py-2.5 px-3.5 rounded-xl flex items-center justify-center gap-2">
-                      <span>Launch Tool</span>
-                      <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Mega Menu Footer Bar -->
-              <div
-                class="mt-5 pt-3 border-t border-purple-100/90 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs bg-purple-50/60 -mx-6 -mb-6 lg:-mx-7 lg:-mb-7 px-6 lg:px-7 py-3 rounded-b-3xl">
-                <div class="flex items-center gap-2 text-gray-600">
-                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                  <span class="font-semibold text-gray-900">Accepting New Client Projects</span>
-                </div>
-                <a href="index.html#contact" class="font-bold text-brand-600 hover:text-brand-700 inline-flex items-center gap-1.5 transition">
-                  <span>Start Project Form</span>
-                  <i class="fa-solid fa-arrow-right text-[10px]"></i>
-                </a>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. Portfolio (ACTIVE) -->
-        <a href="portfolio.html" class="text-brand-600 font-bold hover:text-brand-700 transition py-2">Portfolio</a>
-
-        <!-- 5. Use Cases -->
-        <a href="use-cases.html" class="hover:text-brand-600 transition py-2">Use Cases</a>
-
-        <!-- 6. Contact Us -->
-        <a href="index.html#contact" class="hover:text-brand-600 transition py-2">Contact Us</a>
-      </nav>
-
-      <!-- Right CTA Pill & Hamburger -->
-      <div class="flex items-center gap-2.5 sm:gap-3">
-        <a href="index.html#contact"
-          class="hidden sm:inline-flex btn-purple magnetic-btn text-white text-xs font-semibold px-4 sm:px-5 py-2.5 rounded-full items-center gap-2 shadow-sm">
-          <span>Let's Talk</span>
-          <i class="fa-solid fa-arrow-right text-[10px]"></i>
-        </a>
-        <button id="mobileMenuBtn" aria-label="Toggle navigation menu"
-          class="md:hidden w-10 h-10 rounded-xl border border-purple-200/90 flex items-center justify-center text-gray-700 hover:bg-purple-50 transition active:scale-95">
-          <i class="fa-solid fa-bars text-base"></i>
-        </button>
-      </div>
+  <header class="studio-header">
+<div class="studio-container studio-nav">
+    <a class="studio-brand" href="index.html" aria-label="Yankee Tech home">
+    <span class="studio-logo">yt<span>.</span>
+    </span>
+    <span>Yankee Tech</span>
+    </a>
+    <nav class="studio-desktop-nav" aria-label="Main navigation">
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Our work</a>
+    <a href="about.html">About us</a>
+    <a href="index.html#blog">Insights</a>
+    </nav>
+    <a href="index.html#contact" class="studio-nav-cta">Let's talk</a>
+    <button id="mobileMenuBtn" class="studio-menu-button" type="button" aria-label="Toggle navigation" aria-controls="mobileMenu" aria-expanded="false">
+    <i class="fa-solid fa-bars" aria-hidden="true">
+    </i>
+    </button>
     </div>
-
-    <!-- Mobile Nav Drawer -->
-    <div id="mobileMenu"
-      class="hidden md:hidden bg-white/98 backdrop-blur-2xl border-b border-purple-100 px-5 sm:px-6 py-5 space-y-3 text-sm font-medium text-gray-700 shadow-2xl max-h-[calc(100vh-5rem)] overflow-y-auto">
-      <a href="index.html#home" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Home</a>
-      <a href="about.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">About Us</a>
-      <a href="services.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Services</a>
-      <a href="portfolio.html" class="block py-1.5 text-brand-600 font-bold border-b border-purple-50">Portfolio</a>
-      <a href="use-cases.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Use Cases</a>
-      <a href="index.html#contact" class="block py-1.5 hover:text-brand-600 transition">Contact Us</a>
-      <div class="pt-3">
-        <a href="index.html#contact"
-          class="btn-purple text-white text-xs font-semibold py-3.5 px-5 rounded-full w-full flex items-center justify-center gap-2 shadow-sm">
-          <span>Let's Talk</span>
-          <i class="fa-solid fa-arrow-right text-[10px]"></i>
-        </a>
-      </div>
-    </div>
-  </header>
+<nav id="mobileMenu" class="hidden studio-mobile-nav" aria-label="Mobile navigation">
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Our work</a>
+    <a href="about.html">About us</a>
+    <a href="use-cases.html">Use cases</a>
+    <a href="index.html#blog">Insights</a>
+    <a href="index.html#contact">Let's talk</a>
+    </nav>
+    </header>
 
   <!-- ==========================================
        2. HERO SECTION & STATS
@@ -259,7 +82,7 @@
         <h1 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl text-gray-900 tracking-tight leading-tight">
           Engineered for Speed, Scale &amp; Measurable ROI
         </h1>
-        <p class="text-sm sm:text-base text-gray-600 leading-relaxed mt-4">
+        <p class="text-base sm:text-base text-gray-600 leading-relaxed mt-4">
           A deep dive into our production deliveries across WordPress stores, full-stack SaaS apps, GoHighLevel agency funnels, and autonomous AI automation pipelines. Real challenges, architectural solutions, and quantified results.
         </p>
       </div>
@@ -269,7 +92,7 @@
         <div class="bg-white/80 backdrop-blur-sm p-4 sm:p-5 rounded-2xl border border-purple-100 shadow-sm">
           <span class="block font-display font-extrabold text-2xl sm:text-3xl text-gray-900">100+</span>
           <span class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mt-1">Delivered Projects</span>
-          <span class="block text-[10px] text-emerald-600 font-mono mt-0.5">100% on-time milestone SLA</span>
+          <span class="block text-[10px] text-emerald-600 font-mono mt-0.5">Connected on-time milestone SLA</span>
         </div>
         <div class="bg-white/80 backdrop-blur-sm p-4 sm:p-5 rounded-2xl border border-purple-100 shadow-sm">
           <span class="block font-display font-extrabold text-2xl sm:text-3xl text-brand-600">98.6%</span>
@@ -354,7 +177,7 @@
 
             <div class="bg-purple-50/50 rounded-2xl p-3.5 border border-purple-100 mb-5 grid grid-cols-2 gap-2 text-center">
               <div>
-                <span class="block font-display font-extrabold text-base text-gray-900">100%</span>
+                <span class="block font-display font-extrabold text-base text-gray-900">Connected</span>
                 <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Paperless Intake</span>
               </div>
               <div class="border-l border-purple-200/60">
@@ -510,7 +333,7 @@
 
             <div class="bg-blue-50/50 rounded-2xl p-3.5 border border-blue-100 mb-5 grid grid-cols-2 gap-2 text-center">
               <div>
-                <span class="block font-display font-extrabold text-base text-gray-900">&lt;0.8s</span>
+                <span class="block font-display font-extrabold text-base text-gray-900">Responsive</span>
                 <span class="block text-[9px] text-gray-500 uppercase tracking-tight">Load Time</span>
               </div>
               <div class="border-l border-blue-200/60">
@@ -686,7 +509,7 @@
             <span class="text-[11px] text-gray-500 font-mono">Architecture Demo</span>
             <a href="service-ai-voice-receptionist.html" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1">
               <span>View Specs</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
             </a>
           </div>
         </div>
@@ -736,7 +559,7 @@
             <span class="text-[11px] text-gray-500 font-mono">Architecture Demo</span>
             <a href="service-ghl-wordpress-sync.html" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1">
               <span>View Specs</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
             </a>
           </div>
         </div>
@@ -786,7 +609,7 @@
             <span class="text-[11px] text-gray-500 font-mono">Architecture Demo</span>
             <a href="service-laravel-react.html" class="text-xs font-bold text-brand-600 hover:text-brand-700 flex items-center gap-1">
               <span>View Specs</span>
-              <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
             </a>
           </div>
         </div>
@@ -800,76 +623,7 @@
        5. CLIENT TESTIMONIALS & PRODUCTION PROOF
        (Verified Production Project Feedback - No Stock Photos)
        ========================================== -->
-  <section class="py-16 lg:py-24 bg-white border-t border-purple-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-12">
-        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-600 block mb-2">VERIFIED PARTNER FEEDBACK</span>
-        <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900 tracking-tight">
-          What Founders &amp; Leaders Say
-        </h2>
-        <p class="text-xs text-gray-500 mt-2">Direct feedback from live platforms engineered by Yankee Tech.</p>
-      </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Review 1: Debt Recovery Hub -->
-        <div class="p-6 rounded-3xl bg-gray-50 border border-gray-200/80 space-y-4">
-          <div class="flex text-amber-400 text-xs gap-1">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p class="text-xs text-gray-600 leading-relaxed italic">
-            "Yankee Tech took our manual debt intake operations and turned them into a seamless, 100% paperless platform. Their senior Laravel &amp; Next.js execution exceeded our expectations on speed and reliability."
-          </p>
-          <div class="flex items-center gap-3 pt-2 border-t border-gray-200/60">
-            <div class="w-9 h-9 rounded-full bg-brand-600 text-white font-bold text-xs flex items-center justify-center">
-              DR
-            </div>
-            <div>
-              <span class="block font-bold text-xs text-gray-900">Debt Recovery Hub</span>
-              <span class="block text-[10px] text-gray-500">Commercial Claims Platform (UK)</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 2: Zero Through -->
-        <div class="p-6 rounded-3xl bg-gray-50 border border-gray-200/80 space-y-4">
-          <div class="flex text-amber-400 text-xs gap-1">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p class="text-xs text-gray-600 leading-relaxed italic">
-            "In the IT security industry, speed and security headers are non-negotiable. Yankee Tech built our digital infrastructure with 98+ PageSpeed, zero bloat, and enterprise-grade precision."
-          </p>
-          <div class="flex items-center gap-3 pt-2 border-t border-gray-200/60">
-            <div class="w-9 h-9 rounded-full bg-sky-600 text-white font-bold text-xs flex items-center justify-center">
-              ZT
-            </div>
-            <div>
-              <span class="block font-bold text-xs text-gray-900">Zero Through</span>
-              <span class="block text-[10px] text-gray-500">IT &amp; Cyber Security (London, UK)</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Review 3: ClaimFirst -->
-        <div class="p-6 rounded-3xl bg-gray-50 border border-gray-200/80 space-y-4">
-          <div class="flex text-amber-400 text-xs gap-1">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-          </div>
-          <p class="text-xs text-gray-600 leading-relaxed italic">
-            "Their 2-way GoHighLevel webhook and dynamic vehicle claims calculator handles thousands of paid ad clicks daily without any desync or dropped leads. Invaluable team."
-          </p>
-          <div class="flex items-center gap-3 pt-2 border-t border-gray-200/60">
-            <div class="w-9 h-9 rounded-full bg-emerald-600 text-white font-bold text-xs flex items-center justify-center">
-              CF
-            </div>
-            <div>
-              <span class="block font-bold text-xs text-gray-900">ClaimFirst Funnels</span>
-              <span class="block text-[10px] text-gray-500">Lead Generation &amp; CRM Sync (UK)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ==========================================
        6. INTERACTIVE CTA SECTION
@@ -885,7 +639,7 @@
         Ready to Build Your Next High-Impact Digital Solution?
       </h2>
 
-      <p class="text-xs sm:text-sm text-purple-200/80 max-w-xl mx-auto leading-relaxed">
+      <p class="text-base text-base text-purple-200/80 max-w-xl mx-auto leading-relaxed">
         Get a technical architecture proposal, turnaround estimate, and exact project roadmap within 24 hours.
       </p>
 
@@ -910,7 +664,7 @@
   <footer class="bg-[#0b0517] text-white pt-16 pb-12 border-t border-purple-900/40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-purple-900/40">
-        
+
         <!-- Col 1: Brand Info -->
         <div class="lg:col-span-2 space-y-4">
           <a href="index.html#home" class="flex items-center gap-3 group">
@@ -922,7 +676,7 @@
               <span class="block text-[10px] font-medium text-gray-400 tracking-wider uppercase mt-0.5">Infinite Possibilities</span>
             </div>
           </a>
-          <p class="text-xs text-gray-400 leading-relaxed max-w-sm">
+          <p class="text-base text-gray-400 leading-relaxed max-w-sm">
             Elite digital engineering studio building bespoke WordPress storefronts, full-stack web applications, automated GoHighLevel CRM funnels, and enterprise AI workflows.
           </p>
           <div class="flex items-center gap-3 text-sm text-purple-300 pt-1">

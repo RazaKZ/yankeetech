@@ -20,7 +20,7 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <!-- Main JavaScript -->
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -31,58 +31,34 @@
   <div id="scroll-progress"></div>
 
   <!-- Header / Navbar -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-purple-100/80 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
-      <a href="index.html#home" class="flex items-center gap-3 group shrink-0">
-        <div class="w-10 h-10 rounded-xl bg-[#120924] flex items-center justify-center shadow-md border border-purple-500/30 group-hover:border-purple-500 transition">
-          <span class="font-display font-extrabold text-lg tracking-tighter bg-gradient-to-tr from-purple-400 via-fuchsia-400 to-indigo-300 bg-clip-text text-transparent">YT</span>
-        </div>
-        <div class="leading-none">
-          <span class="block font-display font-extrabold text-lg text-gray-900 tracking-tight">Yankee Tech</span>
-          <span class="block text-[10px] font-medium text-gray-400 tracking-wider uppercase mt-0.5">Infinite Possibilities</span>
-        </div>
-      </a>
-
-      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold text-gray-700">
-        <a href="index.html#home" class="hover:text-brand-600 transition py-2">Home</a>
-        <a href="about.html" class="hover:text-brand-600 transition py-2">About Us</a>
-        <a href="services.html" class="hover:text-brand-600 transition py-2">Services</a>
-        <a href="portfolio.html" class="hover:text-brand-600 transition py-2">Portfolio</a>
-        <a href="use-cases.html" class="hover:text-brand-600 transition py-2">Use Cases</a>
-        <a href="index.html#contact" class="hover:text-brand-600 transition py-2">Contact Us</a>
-      </nav>
-
-      <div class="flex items-center gap-2.5 sm:gap-3">
-        <a href="index.html#contact"
-          class="hidden sm:inline-flex btn-purple magnetic-btn text-white text-xs font-semibold px-5 py-2.5 rounded-full items-center gap-2 shadow-sm">
-          <span>Book a Free Call</span>
-          <i class="fa-solid fa-arrow-right text-[10px]"></i>
-        </a>
-        <button id="mobileMenuBtn" aria-label="Toggle navigation menu"
-          class="md:hidden w-10 h-10 rounded-xl border border-purple-200/90 flex items-center justify-center text-gray-700 hover:bg-purple-50 transition active:scale-95">
-          <i class="fa-solid fa-bars text-base"></i>
-        </button>
-      </div>
+  <header class="studio-header">
+<div class="studio-container studio-nav">
+    <a class="studio-brand" href="index.html" aria-label="Yankee Tech home">
+    <span class="studio-logo">yt<span>.</span>
+    </span>
+    <span>Yankee Tech</span>
+    </a>
+    <nav class="studio-desktop-nav" aria-label="Main navigation">
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Our work</a>
+    <a href="about.html">About us</a>
+    <a href="index.html#blog">Insights</a>
+    </nav>
+    <a href="index.html#contact" class="studio-nav-cta">Let's talk</a>
+    <button id="mobileMenuBtn" class="studio-menu-button" type="button" aria-label="Toggle navigation" aria-controls="mobileMenu" aria-expanded="false">
+    <i class="fa-solid fa-bars" aria-hidden="true">
+    </i>
+    </button>
     </div>
-
-    <!-- Mobile Drawer -->
-    <div id="mobileMenu"
-      class="hidden md:hidden bg-white/98 backdrop-blur-2xl border-b border-purple-100 px-5 sm:px-6 py-5 space-y-3 text-sm font-medium text-gray-700 shadow-2xl">
-      <a href="index.html#home" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Home</a>
-      <a href="about.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">About Us</a>
-      <a href="services.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Services</a>
-      <a href="portfolio.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Portfolio</a>
-      <a href="use-cases.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Use Cases</a>
-      <a href="index.html#contact" class="block py-1.5 hover:text-brand-600 transition">Contact Us</a>
-      <div class="pt-3">
-        <a href="index.html#contact"
-          class="btn-purple text-white text-xs font-semibold py-3.5 px-5 rounded-full w-full flex items-center justify-center gap-2 shadow-sm">
-          <span>Book a Free Call</span>
-          <i class="fa-solid fa-arrow-right text-[10px]"></i>
-        </a>
-      </div>
-    </div>
-  </header>
+<nav id="mobileMenu" class="hidden studio-mobile-nav" aria-label="Mobile navigation">
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Our work</a>
+    <a href="about.html">About us</a>
+    <a href="use-cases.html">Use cases</a>
+    <a href="index.html#blog">Insights</a>
+    <a href="index.html#contact">Let's talk</a>
+    </nav>
+    </header>
 
   <!-- Main Content -->
   <main class="py-16 lg:py-20 bg-gray-50/50">
@@ -99,7 +75,7 @@
         <div>
           <span class="text-[10px] font-bold uppercase tracking-widest text-brand-600 block mb-2 font-mono">LEGAL COMPLIANCE &amp; DATA PRIVACY</span>
           <h1 class="font-display font-extrabold text-3xl sm:text-4xl text-gray-900 tracking-tight">Privacy Policy</h1>
-          <p class="text-xs text-gray-400 mt-2 font-mono">Last Updated: November 2026 • Effective Immediately</p>
+          <p class="text-base text-gray-400 mt-2 font-mono">Last Updated: November 2026 • Effective Immediately</p>
         </div>
 
         <div class="prose prose-purple max-w-none text-xs sm:text-sm text-gray-600 space-y-6 leading-relaxed">

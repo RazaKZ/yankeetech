@@ -337,13 +337,23 @@ function initMobileMenu() {
   const mobileMenu = document.getElementById('mobileMenu');
   if (mobileMenuBtn && mobileMenu) {
     mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+      const isOpen = !mobileMenu.classList.toggle('hidden');
+      mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        mobileMenuBtn.focus();
+      }
     });
 
     // Auto-close menu when any navigation link is clicked
     mobileMenu.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -355,33 +365,75 @@ function initMobileMenu() {
 
 // Reveal on Scroll Observer
 function initScrollAnimations() {
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const heroElements = document.querySelectorAll('.studio-intro > *, .studio-project, .studio-stack span');
+  heroElements.forEach((element, index) => {
+    element.dataset.anim = 'cinematic';
+    element.style.setProperty('--reveal-delay', `${Math.min(index % 6, 4) * 85}ms`);
+  });
   const animElements = document.querySelectorAll('[data-anim]');
-
-  if (prefersReducedMotion) {
-    animElements.forEach(el => el.classList.add('is-visible'));
+  const hero = document.querySelector('.studio-hero');
+  const reveal = element => {
+    element.classList.add('is-visible');
+    element.classList.remove('motion-pending');
+  };
+  if (!('IntersectionObserver' in window)) {
+    animElements.forEach(reveal);
     return;
   }
-
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
+        reveal(entry.target);
         obs.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -30px 0px'
+    threshold: 0,
+    rootMargin: '0px 0px -24px 0px'
   });
+  const heroObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => hero.classList.toggle('motion-in-view', entry.isIntersecting));
+  });
+  if (hero) heroObserver.observe(hero);
 
-  animElements.forEach(el => observer.observe(el));
+  function applyMotionPreference() {
+    document.documentElement.classList.toggle('motion-enabled', !motionPreference.matches);
+    observer.disconnect();
+    animElements.forEach(element => {
+      if (motionPreference.matches || element.classList.contains('is-visible')) {
+        reveal(element);
+      } else {
+        element.classList.add('motion-pending');
+        observer.observe(element);
+      }
+    });
+  }
+  applyMotionPreference();
+  motionPreference.addEventListener('change', applyMotionPreference);
+  // Keyboard navigation must always expose the focused control and its parents.
+  document.addEventListener('focusin', event => {
+    let element = event.target;
+    while (element instanceof Element) {
+      if (element.matches('[data-anim]')) {
+        reveal(element);
+        observer.unobserve(element);
+      }
+      element = element.parentElement;
+    }
+  });
 }
 
 // Animated Stats Counters
 function initCounters() {
   const counterEls = document.querySelectorAll('.counter-num');
   if (!counterEls.length) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) {
+    counterEls.forEach(element => {
+      element.textContent = element.dataset.count + (element.dataset.suffix || '');
+    });
+    return;
+  }
 
   const counterObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
@@ -421,8 +473,13 @@ function initScrollEvents() {
   const progressBar = document.getElementById('scroll-progress');
   const headerEl = document.querySelector('header');
   const scrollTopBtn = document.getElementById('scrollTopBtn');
+  const hero = document.querySelector('.studio-hero');
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const desktopViewport = window.matchMedia('(min-width: 901px)');
+  let framePending = false;
 
-  window.addEventListener('scroll', () => {
+  function updateScrollFrame() {
+    framePending = false;
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
@@ -446,11 +503,29 @@ function initScrollEvents() {
         scrollTopBtn.classList.remove('visible');
       }
     }
-  }, { passive: true });
+    if (hero) {
+      const bounds = hero.getBoundingClientRect();
+      const progress = Math.max(0, Math.min(1, -bounds.top / bounds.height));
+      const distance = motionPreference.matches || !desktopViewport.matches ? 0 : progress;
+      hero.style.setProperty('--hero-drift', `${distance * 70}px`);
+      hero.style.setProperty('--hero-turn', `${distance * -3}deg`);
+      hero.style.setProperty('--orb-turn', `${progress * 100}deg`);
+    }
+  }
+  function scheduleScrollFrame() {
+    if (framePending) return;
+    framePending = true;
+    requestAnimationFrame(updateScrollFrame);
+  }
+  window.addEventListener('scroll', scheduleScrollFrame, { passive: true });
+  window.addEventListener('resize', scheduleScrollFrame, { passive: true });
+  motionPreference.addEventListener('change', scheduleScrollFrame);
+  updateScrollFrame();
 }
 
 // 3D Card Tilt Effect
 function init3DTilt() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce), (pointer: coarse)').matches) return;
   const tiltCards = document.querySelectorAll('.tilt-card');
   tiltCards.forEach(card => {
     card.addEventListener('mousemove', e => {
@@ -472,6 +547,7 @@ function init3DTilt() {
 
 // Magnetic CTA Buttons
 function initMagneticButtons() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce), (pointer: coarse)').matches) return;
   const magneticBtns = document.querySelectorAll('.magnetic-btn');
   magneticBtns.forEach(btn => {
     btn.addEventListener('mousemove', e => {
@@ -871,13 +947,11 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 // Explicitly export functions to global window scope for inline HTML handlers
-window.setCurrency = setCurrency;
 window.selectTrack = selectTrack;
 window.selectEstimatorPreset = selectEstimatorPreset;
 window.updateEstimate = updateEstimate;
 window.resetEstimator = resetEstimator;
 window.applyEstimateToContact = applyEstimateToContact;
-window.clearAttachedEstimate = clearAttachedEstimate;
 window.toggleFaq = toggleFaq;
 window.handleContactSubmit = handleContactSubmit;
 window.handleNewsletter = handleNewsletter;

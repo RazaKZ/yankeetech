@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Custom WordPress & WooCommerce Development — Yankee Tech</title>
-  <meta name="description" content="We build custom, enterprise-grade WordPress themes and high-converting WooCommerce storefronts engineered with zero plugin bloat. Every build scores 95+ on Google PageSpeed Insights, featuring clean PHP, Tailwind CSS, modular ACF flexible content blocks, and native Redis caching." />
+  <meta name="description" content="Create a responsive website your team can manage, with custom layouts, clear navigation and integrations that fit your workflow." />
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -16,7 +16,7 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <!-- Main JavaScript -->
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -29,55 +29,34 @@
   <!-- ==========================================
        1. STICKY HEADER / NAVBAR
        ========================================== -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-purple-100/80 transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between relative">
-      <!-- Brand Logo -->
-      <a href="index.html" class="flex items-center gap-3 group shrink-0">
-        <div class="w-10 h-10 rounded-xl bg-[#120924] flex items-center justify-center shadow-md border border-purple-500/30 group-hover:border-purple-500 transition">
-          <span class="font-display font-extrabold text-lg tracking-tighter bg-gradient-to-tr from-purple-400 via-fuchsia-400 to-indigo-300 bg-clip-text text-transparent">YT</span>
-        </div>
-        <div class="leading-none">
-          <span class="block font-display font-extrabold text-lg text-gray-900 tracking-tight">Yankee Tech</span>
-          <span class="block text-[10px] font-medium text-gray-400 tracking-wider uppercase mt-0.5">Infinite Possibilities</span>
-        </div>
-      </a>
-
-      <!-- Center Nav Links -->
-      <nav class="hidden md:flex items-center gap-8 text-xs font-semibold text-gray-700">
-        <a href="index.html" class="hover:text-brand-600 transition py-2">Home</a>
-        <a href="about.html" class="hover:text-brand-600 transition py-2">About Us</a>
-        <a href="services.html" class="text-brand-600 font-bold bg-purple-50 border border-purple-200/60 px-3 py-1.5 rounded-full transition shadow-xs">Services</a>
-        <a href="index.html#use-cases" class="hover:text-brand-600 transition py-2">Use Cases</a>
-        <a href="index.html#contact" class="hover:text-brand-600 transition py-2">Contact Us</a>
-      </nav>
-
-      <!-- Right CTA -->
-      <div class="flex items-center gap-2.5 sm:gap-3">
-        <a href="index.html#contact" class="hidden sm:inline-flex btn-purple magnetic-btn text-white text-xs font-semibold px-4 sm:px-5 py-2.5 rounded-full items-center gap-2 shadow-sm">
-          <span>Let's Talk</span>
-          <i class="fa-solid fa-arrow-right text-[10px]"></i>
-        </a>
-        <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="md:hidden w-10 h-10 rounded-xl border border-purple-200/90 flex items-center justify-center text-gray-700 hover:bg-purple-50 transition active:scale-95">
-          <i class="fa-solid fa-bars text-base"></i>
-        </button>
-      </div>
+  <header class="studio-header">
+<div class="studio-container studio-nav">
+    <a class="studio-brand" href="index.html" aria-label="Yankee Tech home">
+    <span class="studio-logo">yt<span>.</span>
+    </span>
+    <span>Yankee Tech</span>
+    </a>
+    <nav class="studio-desktop-nav" aria-label="Main navigation">
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Our work</a>
+    <a href="about.html">About us</a>
+    <a href="index.html#blog">Insights</a>
+    </nav>
+    <a href="index.html#contact" class="studio-nav-cta">Let's talk</a>
+    <button id="mobileMenuBtn" class="studio-menu-button" type="button" aria-label="Toggle navigation" aria-controls="mobileMenu" aria-expanded="false">
+    <i class="fa-solid fa-bars" aria-hidden="true">
+    </i>
+    </button>
     </div>
-
-    <!-- Mobile Nav Drawer -->
-    <div id="mobileMenu" class="hidden md:hidden bg-white/98 backdrop-blur-2xl border-b border-purple-100 px-5 sm:px-6 py-5 space-y-3 text-sm font-medium text-gray-700 shadow-2xl max-h-[calc(100vh-5rem)] overflow-y-auto">
-      <a href="index.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Home</a>
-      <a href="about.html" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">About Us</a>
-      <a href="services.html" class="block py-1.5 text-brand-600 font-bold border-b border-purple-50">Services Overview</a>
-      <a href="index.html#use-cases" class="block py-1.5 hover:text-brand-600 transition border-b border-purple-50">Use Cases</a>
-      <a href="index.html#contact" class="block py-1.5 hover:text-brand-600 transition">Contact Us</a>
-      <div class="pt-2">
-        <a href="index.html#contact" class="btn-purple text-white text-xs font-semibold py-3 px-5 rounded-full w-full flex items-center justify-center gap-2 shadow-sm">
-          <span>Let's Talk</span>
-          <i class="fa-solid fa-arrow-right text-[10px]"></i>
-        </a>
-      </div>
-    </div>
-  </header>
+<nav id="mobileMenu" class="hidden studio-mobile-nav" aria-label="Mobile navigation">
+    <a href="services.html">Services</a>
+    <a href="portfolio.html">Our work</a>
+    <a href="about.html">About us</a>
+    <a href="use-cases.html">Use cases</a>
+    <a href="index.html#blog">Insights</a>
+    <a href="index.html#contact">Let's talk</a>
+    </nav>
+    </header>
 
   <main>
     <!-- ==========================================
@@ -105,42 +84,42 @@
             </div>
 
             <h1 data-anim="fade-up" data-delay="1" class="font-display font-extrabold text-3xl sm:text-4xl lg:text-[44px] text-[#110c22] leading-[1.15] tracking-tight">
-              Bespoke WordPress Architectures with Sub-Second Performance
-            </h1>
+          A WordPress website built around your business.
+        </h1>
 
-            <p data-anim="fade-up" data-delay="2" class="text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl">
-              We build custom, enterprise-grade WordPress themes and high-converting WooCommerce storefronts engineered with zero plugin bloat. Every build scores 95+ on Google PageSpeed Insights, featuring clean PHP, Tailwind CSS, modular ACF flexible content blocks, and native Redis caching.
-            </p>
+            <p data-anim="fade-up" data-delay="2" class="text-base sm:text-base text-gray-600 leading-relaxed max-w-2xl">
+          Create a responsive website your team can manage, with custom layouts, clear navigation and integrations that fit your workflow.
+        </p>
 
             <!-- Metrics Grid -->
             <div data-anim="fade-up" data-delay="3" class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-              
+
     <div class="bg-white/85 backdrop-blur-md p-3.5 rounded-2xl border border-purple-100/90 shadow-sm">
       <div class="font-display font-extrabold text-xl sm:text-2xl text-brand-700">95+</div>
       <div class="text-[11px] text-gray-500 font-medium mt-0.5">Mobile PageSpeed Score</div>
     </div>
-  
+
     <div class="bg-white/85 backdrop-blur-md p-3.5 rounded-2xl border border-purple-100/90 shadow-sm">
       <div class="font-display font-extrabold text-xl sm:text-2xl text-brand-700"><0.5s</div>
       <div class="text-[11px] text-gray-500 font-medium mt-0.5">Time to First Byte (TTFB)</div>
     </div>
-  
+
     <div class="bg-white/85 backdrop-blur-md p-3.5 rounded-2xl border border-purple-100/90 shadow-sm">
       <div class="font-display font-extrabold text-xl sm:text-2xl text-brand-700">100%</div>
       <div class="text-[11px] text-gray-500 font-medium mt-0.5">Custom Clean Code</div>
     </div>
-  
+
     <div class="bg-white/85 backdrop-blur-md p-3.5 rounded-2xl border border-purple-100/90 shadow-sm">
       <div class="font-display font-extrabold text-xl sm:text-2xl text-brand-700">0</div>
       <div class="text-[11px] text-gray-500 font-medium mt-0.5">Vulnerable Plugin Bloat</div>
     </div>
-  
+
             </div>
 
             <div data-anim="fade-up" data-delay="4" class="flex flex-wrap items-center gap-4 pt-3">
               <a href="index.html#estimator" onclick="selectEstimatorPreset('wordpress')" class="btn-purple magnetic-btn text-white text-xs font-semibold px-6 py-3.5 rounded-full inline-flex items-center gap-2 shadow-md">
                 <span>Configure Live Project Estimate</span>
-                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
               </a>
               <a href="index.html#contact" class="px-5 py-3.5 rounded-full text-xs font-semibold text-gray-700 bg-white/90 hover:bg-white border border-purple-200/80 transition hover:border-brand-400 inline-flex items-center gap-2 shadow-xs">
                 <span>Book Discovery Call</span>
@@ -157,14 +136,14 @@
                 <span class="text-[9px] font-mono text-emerald-400 bg-emerald-500/20 px-2 py-0.5 rounded-full">SPEC VERIFIED</span>
               </div>
               <div class="py-4">
-                
+
         <svg viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto drop-shadow-md">
           <rect x="20" y="20" width="360" height="200" rx="20" fill="#13072b" stroke="#843dff" stroke-width="1.5" />
           <path d="M 50 160 A 70 70 0 0 1 190 160" stroke="#31145f" stroke-width="14" fill="none" stroke-linecap="round" />
           <path d="M 50 160 A 70 70 0 0 1 185 148" stroke="#10b981" stroke-width="14" fill="none" stroke-linecap="round" stroke-dasharray="220" stroke-dashoffset="15" />
           <text x="120" y="142" text-anchor="middle" fill="#ffffff" font-size="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900">99</text>
           <text x="120" y="156" text-anchor="middle" fill="#34d399" font-size="9" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700">MOBILE SPEED</text>
-          
+
           <rect x="230" y="50" width="130" height="42" rx="10" fill="#1e0a40" stroke="#843dff" stroke-width="1" />
           <text x="245" y="68" fill="#ffffff" font-size="10" font-weight="700">Tailwind Engine</text>
           <text x="245" y="81" fill="#a78bfa" font-size="8" font-family="monospace">Zero CSS Bloat</text>
@@ -177,7 +156,7 @@
           <text x="245" y="178" fill="#ffffff" font-size="10" font-weight="700">WooCommerce Core</text>
           <text x="245" y="191" fill="#7dd3fc" font-size="8" font-family="monospace">1-Click Checkout</text>
         </svg>
-      
+
               </div>
               <div class="pt-2 border-t border-purple-500/20 flex items-center justify-between text-[10px] text-purple-300 font-mono">
                 <span>Yankee Tech Production Standard</span>
@@ -199,53 +178,53 @@
           <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900 tracking-tight">
             What Sets Our Engineering Apart
           </h2>
-          <p class="text-xs sm:text-sm text-gray-500 mt-2">
+          <p class="text-base text-base text-gray-500 mt-2">
             Engineered with strict code integrity, high scalability, and measurable commercial results.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          
+
     <div data-anim="fade-up" data-delay="1" class="rounded-3xl p-6 service-card-bg border border-purple-100 flex flex-col justify-between">
       <div class="space-y-3">
         <div class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-lg shadow-xs">
           <i class="fa-solid fa-code"></i>
         </div>
         <h3 class="font-display font-bold text-base text-gray-900">Custom Themes & Elementor Systems</h3>
-        <p class="text-xs text-gray-600 leading-relaxed">Pixel-perfect development tailored to your exact Figma designs with custom theme hierarchies and ACF flexible content blocks for easy marketing updates.</p>
+        <p class="text-base text-gray-600 leading-relaxed">Pixel-perfect development tailored to your exact Figma designs with custom theme hierarchies and ACF flexible content blocks for easy marketing updates.</p>
       </div>
     </div>
-  
+
     <div data-anim="fade-up" data-delay="2" class="rounded-3xl p-6 service-card-bg border border-purple-100 flex flex-col justify-between">
       <div class="space-y-3">
         <div class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-lg shadow-xs">
           <i class="fa-solid fa-gauge-high"></i>
         </div>
         <h3 class="font-display font-bold text-base text-gray-900">Core Web Vitals 95+ Optimization</h3>
-        <p class="text-xs text-gray-600 leading-relaxed">Sub-second page rendering via critical CSS extraction, modern WebP/AVIF formats, Redis object caching, and asset minification.</p>
+        <p class="text-base text-gray-600 leading-relaxed">Sub-second page rendering via critical CSS extraction, modern WebP/AVIF formats, Redis object caching, and asset minification.</p>
       </div>
     </div>
-  
+
     <div data-anim="fade-up" data-delay="3" class="rounded-3xl p-6 service-card-bg border border-purple-100 flex flex-col justify-between">
       <div class="space-y-3">
         <div class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-lg shadow-xs">
           <i class="fa-solid fa-cart-shopping"></i>
         </div>
         <h3 class="font-display font-bold text-base text-gray-900">High-Converting WooCommerce Checkouts</h3>
-        <p class="text-xs text-gray-600 leading-relaxed">Frictionless 1-step checkout funnels, Stripe/PayPal Apple Pay integrations, upsell workflows, and automated receipt delivery.</p>
+        <p class="text-base text-gray-600 leading-relaxed">Frictionless 1-step checkout funnels, Stripe/PayPal Apple Pay integrations, upsell workflows, and automated receipt delivery.</p>
       </div>
     </div>
-  
+
     <div data-anim="fade-up" data-delay="4" class="rounded-3xl p-6 service-card-bg border border-purple-100 flex flex-col justify-between">
       <div class="space-y-3">
         <div class="w-10 h-10 rounded-xl bg-purple-100 text-brand-600 flex items-center justify-center text-lg shadow-xs">
           <i class="fa-solid fa-shield-halved"></i>
         </div>
         <h3 class="font-display font-bold text-base text-gray-900">Enterprise Hardening & Security SLA</h3>
-        <p class="text-xs text-gray-600 leading-relaxed">Database prefix obfuscation, strict CORS/CSP headers, 2FA enforcement, and automated off-site encrypted backup routines.</p>
+        <p class="text-base text-gray-600 leading-relaxed">Database prefix obfuscation, strict CORS/CSP headers, 2FA enforcement, and automated off-site encrypted backup routines.</p>
       </div>
     </div>
-  
+
         </div>
       </div>
     </section>
@@ -260,49 +239,49 @@
           <h2 class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900 tracking-tight">
             How We Execute This Service
           </h2>
-          <p class="text-xs sm:text-sm text-gray-500 mt-2">
+          <p class="text-base text-base text-gray-500 mt-2">
             A 4-step agile lifecycle ensuring on-time delivery with zero technical surprises.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          
+
     <div data-anim="fade-up" data-delay="1" class="bg-white rounded-3xl p-6 border border-purple-100 shadow-sm relative group hover:border-brand-300 transition">
       <div class="flex items-center justify-between mb-3">
         <span class="font-mono text-xs font-bold text-purple-400">STAGE 01</span>
         <span class="w-7 h-7 rounded-lg bg-purple-50 text-brand-600 flex items-center justify-center text-[10px] font-bold">✓</span>
       </div>
       <h4 class="font-display font-bold text-sm text-gray-900">Blueprint & Architecture</h4>
-      <p class="text-xs text-gray-500 mt-2 leading-relaxed">We audit technical requirements, map database taxonomies, and establish design system components.</p>
+      <p class="text-base text-gray-500 mt-2 leading-relaxed">We audit technical requirements, map database taxonomies, and establish design system components.</p>
     </div>
-  
+
     <div data-anim="fade-up" data-delay="2" class="bg-white rounded-3xl p-6 border border-purple-100 shadow-sm relative group hover:border-brand-300 transition">
       <div class="flex items-center justify-between mb-3">
         <span class="font-mono text-xs font-bold text-purple-400">STAGE 02</span>
         <span class="w-7 h-7 rounded-lg bg-purple-50 text-brand-600 flex items-center justify-center text-[10px] font-bold">✓</span>
       </div>
       <h4 class="font-display font-bold text-sm text-gray-900">Modular Theme Coding</h4>
-      <p class="text-xs text-gray-500 mt-2 leading-relaxed">Semantic PHP 8.3 template coding with Tailwind CSS utilities and responsive breakpoints.</p>
+      <p class="text-base text-gray-500 mt-2 leading-relaxed">Semantic PHP 8.3 template coding with Tailwind CSS utilities and responsive breakpoints.</p>
     </div>
-  
+
     <div data-anim="fade-up" data-delay="3" class="bg-white rounded-3xl p-6 border border-purple-100 shadow-sm relative group hover:border-brand-300 transition">
       <div class="flex items-center justify-between mb-3">
         <span class="font-mono text-xs font-bold text-purple-400">STAGE 03</span>
         <span class="w-7 h-7 rounded-lg bg-purple-50 text-brand-600 flex items-center justify-center text-[10px] font-bold">✓</span>
       </div>
       <h4 class="font-display font-bold text-sm text-gray-900">Database & Speed Tuning</h4>
-      <p class="text-xs text-gray-500 mt-2 leading-relaxed">Redis object caching integration, query indexing, and Core Web Vitals optimization.</p>
+      <p class="text-base text-gray-500 mt-2 leading-relaxed">Redis object caching integration, query indexing, and Core Web Vitals optimization.</p>
     </div>
-  
+
     <div data-anim="fade-up" data-delay="4" class="bg-white rounded-3xl p-6 border border-purple-100 shadow-sm relative group hover:border-brand-300 transition">
       <div class="flex items-center justify-between mb-3">
         <span class="font-mono text-xs font-bold text-purple-400">STAGE 04</span>
         <span class="w-7 h-7 rounded-lg bg-purple-50 text-brand-600 flex items-center justify-center text-[10px] font-bold">✓</span>
       </div>
       <h4 class="font-display font-bold text-sm text-gray-900">Security Audit & Handoff</h4>
-      <p class="text-xs text-gray-500 mt-2 leading-relaxed">Vulnerability scanning, SSL/header hardening, and Loom video training for your marketing team.</p>
+      <p class="text-base text-gray-500 mt-2 leading-relaxed">Vulnerability scanning, SSL/header hardening, and Loom video training for your marketing team.</p>
     </div>
-  
+
         </div>
       </div>
     </section>
@@ -328,32 +307,32 @@
               </tr>
             </thead>
             <tbody class="divide-y divide-purple-50">
-              
+
     <tr>
       <td class="py-3.5 px-5 font-semibold text-gray-900">PHP Environment</td>
       <td class="py-3.5 px-5 font-mono font-bold text-brand-700 bg-purple-50/40">PHP 8.2 / 8.3 with OPcache</td>
     </tr>
-  
+
     <tr>
       <td class="py-3.5 px-5 font-semibold text-gray-900">Front-End Stack</td>
       <td class="py-3.5 px-5 font-mono font-bold text-brand-700 bg-purple-50/40">Tailwind CSS, Alpine.js / Vanilla JS</td>
     </tr>
-  
+
     <tr>
       <td class="py-3.5 px-5 font-semibold text-gray-900">Database & Caching</td>
       <td class="py-3.5 px-5 font-mono font-bold text-brand-700 bg-purple-50/40">MySQL 8 / MariaDB + Redis Object Cache</td>
     </tr>
-  
+
     <tr>
       <td class="py-3.5 px-5 font-semibold text-gray-900">Page Speed SLA</td>
       <td class="py-3.5 px-5 font-mono font-bold text-brand-700 bg-purple-50/40">95+ on Mobile & Desktop Guaranteed</td>
     </tr>
-  
+
     <tr>
       <td class="py-3.5 px-5 font-semibold text-gray-900">Post-Launch Warranty</td>
       <td class="py-3.5 px-5 font-mono font-bold text-brand-700 bg-purple-50/40">30 Days Full Technical Coverage</td>
     </tr>
-  
+
             </tbody>
           </table>
         </div>
@@ -373,7 +352,7 @@
         </div>
 
         <div class="space-y-3" data-anim="fade-up">
-          
+
     <div class="p-4 rounded-2xl border border-purple-100 bg-purple-50/20">
       <button type="button" onclick="toggleFaq(0)" class="w-full flex items-center justify-between text-left text-xs sm:text-sm font-bold text-gray-900">
         <span>Will my marketing team be able to update content without knowing code?</span>
@@ -383,7 +362,7 @@
         Yes! We configure ACF (Advanced Custom Fields) Pro and intuitive drag-and-drop flexible content blocks so your team can create new landing pages and swap copy without ever touching code or breaking layouts.
       </div>
     </div>
-  
+
     <div class="p-4 rounded-2xl border border-purple-100 bg-purple-50/20">
       <button type="button" onclick="toggleFaq(1)" class="w-full flex items-center justify-between text-left text-xs sm:text-sm font-bold text-gray-900">
         <span>Can you migrate our sluggish WordPress site to your clean-code architecture?</span>
@@ -393,7 +372,7 @@
         Absolutely. We regularly migrate clients from bloated 40-plugin setups to our lean framework, preserving all SEO URLs, metadata, and blog history while slicing load times by 70%.
       </div>
     </div>
-  
+
     <div class="p-4 rounded-2xl border border-purple-100 bg-purple-50/20">
       <button type="button" onclick="toggleFaq(2)" class="w-full flex items-center justify-between text-left text-xs sm:text-sm font-bold text-gray-900">
         <span>Do you work with Elementor Pro or strictly custom code?</span>
@@ -403,7 +382,7 @@
         We master both! When clients prefer Elementor Pro for rapid visual freedom, we build optimized child themes that bypass Elementor bloat. For maximum speed, we build custom Tailwind PHP templates.
       </div>
     </div>
-  
+
         </div>
       </div>
     </section>
@@ -421,7 +400,7 @@
         <h2 class="font-display font-extrabold text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight">
           Ready to Start Your Custom WordPress & WooCommerce Development?
         </h2>
-        <p class="text-xs sm:text-sm text-purple-200/80 max-w-2xl mx-auto leading-relaxed">
+        <p class="text-base text-base text-purple-200/80 max-w-2xl mx-auto leading-relaxed">
           Get an instant price estimate with our live calculator or schedule a 30-minute discovery call with our senior architects.
         </p>
 
@@ -432,7 +411,7 @@
           </a>
           <a href="index.html#contact" class="px-6 py-3.5 rounded-full text-xs font-semibold text-purple-100 bg-white/10 hover:bg-white/20 border border-white/15 transition inline-flex items-center gap-2">
             <span>Schedule Discovery Call</span>
-            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+
           </a>
         </div>
       </div>
@@ -455,7 +434,7 @@
               <span class="block text-[10px] font-medium text-purple-300 tracking-wider uppercase mt-0.5">Infinite Possibilities</span>
             </div>
           </a>
-          <p class="text-xs text-purple-200/70 leading-relaxed max-w-sm">
+          <p class="text-base text-purple-200/70 leading-relaxed max-w-sm">
             Elite Full-Stack engineering studio. We build sub-second WordPress platforms, custom SaaS architectures, GoHighLevel ecosystems, and autonomous AI agents for high-growth enterprises worldwide.
           </p>
         </div>
@@ -488,7 +467,7 @@
           <h4 class="font-display font-bold text-white text-xs uppercase tracking-wider mb-4">Newsletter</h4>
           <p class="text-[11px] text-purple-200/70 mb-3">Quarterly engineering insights on web performance and AI.</p>
           <form onsubmit="handleNewsletter(event)" class="space-y-2">
-            <input type="email" id="newsletterEmail" required placeholder="Business email" class="w-full px-3.5 py-2.5 rounded-xl bg-white/5 border border-purple-500/30 text-white placeholder-purple-300/40 text-xs focus:outline-none focus:border-brand-500 transition" />
+            <input type="email" id="newsletterEmail" required placeholder="Business email" class="w-full px-3.5 py-2.5 rounded-xl bg-white/5 border border-purple-500/30 text-white placeholder-purple-300/40 text-base focus:outline-none focus:border-brand-500 transition" />
             <button type="submit" class="w-full btn-purple text-white text-xs font-semibold py-2.5 rounded-xl flex items-center justify-center gap-1.5 shadow-sm">
               <span id="newsletterBtnText">Subscribe →</span>
             </button>
